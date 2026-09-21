@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Set up your standing order</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;700&display=block">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+:root{--navy:#133253;--slate:#133253;--muted:#4C5D70;--pink:#ED5E83;--indigo:#7C90E7}
+.page{position:relative;width:1182px;height:2640px;overflow:hidden;background:transparent;
+  font-family:'Montserrat',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:var(--navy)}
+.col{position:absolute;left:183px;top:0;width:770px}
+.page h1{margin:0;font:700 49px/57px 'Montserrat',sans-serif;letter-spacing:-.9px;color:var(--navy)}
+.p{margin:0;font:400 19.4px/29.5px 'Montserrat',sans-serif;color:var(--slate)}
+.btn{display:block;height:62px;border:0;border-radius:6px;background:var(--pink);color:#fff;
+  font:600 16px 'Montserrat',sans-serif;cursor:pointer}
+.page a{color:var(--pink);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.col h1{margin-top:92px}
+.p+.p{margin-top:23px}
+.intro{margin-top:71px}
+.blk{position:absolute;left:0;width:770px;text-align:center}
+.pay{top:446px;margin:0;font:400 35.4px/1 'Montserrat',sans-serif;color:var(--navy)}
+.pill{top:499px;left:276px;width:217px;height:62px;border-radius:6px;background:var(--indigo);
+  color:#fff;font:700 23.9px/62px 'Montserrat',sans-serif}
+.when{top:571px;margin:0;font:400 28.4px/1 'Montserrat',sans-serif;color:var(--navy)}
+.note{top:636px;margin:0;font:italic 400 14.2px/1 'Montserrat',sans-serif;color:var(--muted)}
+.accounts{top:681px;display:flex;justify-content:center;gap:27px}
+.acct{width:237px}
+.acct>h2{margin:0 0 12px;text-align:center;font:400 28.4px/1 'Montserrat',sans-serif;color:var(--navy)}
+.acct .box{height:247px;border-radius:8px;padding:20px 22px;color:#fff;text-align:left}
+.acct.from .box{background:#525152}
+.acct.to .box{background:var(--pink)}
+.acct dt{margin:0;font:700 16.8px/24px 'Montserrat',sans-serif}
+.acct dd{margin:0 0 14px;font:400 16.8px/24px "Roboto Mono",ui-monospace,monospace}
+.acct dd:last-child{margin-bottom:0}
+.acct dl{margin:0}
+.ask{top:1045px;margin:0;font:400 18.6px/1 'Montserrat',sans-serif;color:var(--slate)}
+.go{position:absolute;top:1095px;left:234px;width:300px}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="col">
+    <h1>Set up your standing order</h1>
+
+    <p class="p intro">Please open your banking app or online portal and use the below details to set up your payment. Once we receive the money you will see it in your Pension Account.</p>
+    <p class="p">Make sure to use the account you signed up with and add the payment reference below otherwise we&rsquo;ll have to return it and start again &#128517;</p>
+
+    <p class="blk pay">Your Payment</p>
+    <span class="blk pill">&pound;200</span>
+    <p class="blk when">1st of the month</p>
+    <p class="blk note">Remember, you can pause or change your payment at any time</p>
+
+    <div class="blk accounts">
+      <div class="acct from">
+        <h2>From</h2>
+        <div class="box"><dl>
+          <dt>Sort Code</dt><dd>121212</dd>
+          <dt>Account Number</dt><dd>12312322</dd>
+        </dl></div>
+      </div>
+      <div class="acct to">
+        <h2>To</h2>
+        <div class="box"><dl>
+          <dt>Sort Code</dt><dd>30-00-12</dd>
+          <dt>Account Number</dt><dd>17190968</dd>
+          <dt>Reference</dt><dd>dummy-7Colin09</dd>
+        </dl></div>
+      </div>
+    </div>
+
+    <p class="blk ask">Any questions, please don&rsquo;t hesitate to ask us via <a href="#">Live Chat</a>.</p>
+    <button class="btn go">I&rsquo;ve set up the standing order</button>
+  </div>
+</div>
+</body>
+</html>

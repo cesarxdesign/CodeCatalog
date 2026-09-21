@@ -1,0 +1,47 @@
+{
+  "id": "home",
+  "project": "penfold",
+  "platform": "mobile",
+  "order": 0,
+  "name": "Home",
+  "title": null,
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "57:8275",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": "https://claude.ai/artifact/U2hjfTuHHMJLEaUprzL9jn",
+  "aliases": [
+    "home"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.89%",
+    "al": "±1.0px",
+    "note": "Never scaled &mdash; every value is already whole; the one fraction, <code>39.5</code>, is a real half-pixel. Two fixes the image comparison caught: Figma strokes outside the box where a CSS border draws inside, and a <code>.num</code> class sitting before a font shorthand lost its tabular figures."
+  },
+  "screen_generated": false
+}

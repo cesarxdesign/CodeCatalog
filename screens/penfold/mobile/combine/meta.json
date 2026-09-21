@@ -1,0 +1,47 @@
+{
+  "id": "combine",
+  "project": "penfold",
+  "platform": "mobile",
+  "order": 5,
+  "name": "Combine",
+  "title": null,
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "59:8982",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": "https://claude.ai/artifact/U2hjfTuHHMJLEaUprzL9jn",
+  "aliases": [
+    "combine"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.64%",
+    "al": "±1.0px",
+    "note": "The buttons are anchored from the bottom (<code>bottom:80px</code>, <code>bottom:136px</code>), not the top. Figma reports h=51 for a 3-line note &mdash; exactly 17px each &mdash; where CSS <code>normal</code> gives 17.07 and lands the block 3px high."
+  },
+  "screen_generated": true
+}

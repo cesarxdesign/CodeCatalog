@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>3 things about pensions</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F6F6;--navy:#133253;--pink:#ED5E83;--blue:#5689EA;--green:#70E6B3}
+*{box-sizing:border-box}
+p,h1,h2{margin:0}
+html{background:var(--bg)}
+body{margin:0;padding:0;background:var(--bg);
+     font-family:'Montserrat',-apple-system,sans-serif;color:var(--navy)}
+/* the frame is no longer a fixed 2000px box - it grows with whatever is open */
+.page{width:1231px;margin:0 auto;padding:73px 89px 96px 80px}
+h1{font:700 49px/57px 'Montserrat';letter-spacing:-.9px}
+.hl{color:var(--pink)}
+.intro{margin-top:70px;font:400 19.4px/30px 'Montserrat'}
+
+.form{margin-top:49px;height:52px;display:flex;align-items:center;
+      font:400 19.4px/30px 'Montserrat';white-space:nowrap}
+.form .you{color:var(--pink);font-weight:700;margin-right:.32em}
+.form .box{width:111px;height:52px;background:#fff;border-radius:6px;
+           box-shadow:0 1px 4px rgba(19,50,83,.10);display:flex;align-items:center;
+           justify-content:center;font:700 28px/1 'Montserrat';margin:0 14px}
+.form .box.wide{width:170px}
+
+/* ---- accordion ---- */
+.acc{margin-top:60px;font:700 30px/34px 'Montserrat'}
+.acc+.acc,.body+.acc{margin-top:48px}
+.acc-btn{all:unset;box-sizing:border-box;display:flex;width:100%;cursor:pointer;
+         align-items:center;justify-content:space-between;gap:24px;
+         font:700 30px/34px 'Montserrat';color:var(--navy)}
+.acc-btn:focus-visible{outline:2px solid var(--pink);outline-offset:6px;border-radius:4px}
+.acc-btn:hover .acc-t{opacity:.72}
+/* the file draws a separate down-chevron; it is the same glyph turned a quarter */
+.chev{width:26px;height:26px;flex:0 0 auto;transition:transform .18s ease}
+.acc-btn[aria-expanded="true"] .chev{transform:rotate(90deg)}
+
+.body{margin-top:23px}
+.body[hidden]{display:none}
+.body p+p{margin-top:23px}
+.body .calc+p{margin-top:35px}
+.body p{font:400 19.4px/29.5px 'Montserrat'}
+.body p.note{font:italic 400 14.2px/22px 'Montserrat';color:#7F8B99}
+
+.calc{margin-top:36px;display:flex;align-items:flex-end;gap:34px}
+.calc .cell{display:flex;flex-direction:column}
+.calc .cap{font:700 19.4px/1 'Montserrat';margin-bottom:13px}
+.calc .val{height:52px;border-radius:6px;display:flex;align-items:center;
+           justify-content:center;font:700 26px/1 'Montserrat'}
+.calc .val.out{background:#fff;box-shadow:0 1px 4px rgba(19,50,83,.10);width:215px}
+.calc .val.mid{background:#7D82E8;color:#fff;width:215px}
+.calc .val.tot{background:#5C4FE0;color:#fff;width:215px}
+.calc .op{font:700 30px/1 'Montserrat';padding-bottom:14px}
+
+.chart{margin-top:32px;position:relative;height:349px}
+.legend{position:absolute;left:123px;top:7px;display:flex;gap:22px;align-items:center;
+        font:500 15px/1 'Montserrat'}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:7px;vertical-align:-2px}
+.row{position:absolute;left:0;height:93px}
+.row .lab{position:absolute;left:24px;width:86px;top:50%;transform:translateY(-50%);
+          text-align:right;font:400 19.4px/26px 'Montserrat';white-space:nowrap}
+.row .bar{position:absolute;left:123px;top:0;height:93px;display:flex}
+.row .val{position:absolute;top:50%;transform:translateY(-50%);
+          font:700 19px/1 'Montserrat';white-space:nowrap}
+.slider{position:absolute;left:0;top:266px;width:600px;height:76px}
+.slider .track{position:absolute;left:123px;top:22px;width:330px;height:9px;border-radius:5px;background:#E2E2E2}
+.slider .fill{position:absolute;left:123px;top:22px;height:9px;border-radius:5px;background:var(--pink)}
+.slider .knob{position:absolute;top:4px;width:46px;height:46px;border-radius:50%;
+              background:var(--navy);color:#fff;display:flex;align-items:center;
+              justify-content:center;font:700 18px/1 'Montserrat'}
+.slider .end{position:absolute;top:19px;font:400 17px/1 'Montserrat';color:#8A96A3}
+.slider .cap{position:absolute;left:123px;top:56px;width:330px;text-align:center;font:700 19px/1 'Montserrat'}
+
+.note{font:italic 400 14.2px/22px 'Montserrat';color:#7F8B99}
+.body .note{margin-top:22px}
+.cta{display:block;margin-top:55px;width:242px;height:63px;border:0;border-radius:6px;
+     background:var(--pink);color:#fff;font:600 19px/1 'Montserrat';cursor:pointer}
+.foot{margin-top:48px;font:italic 400 14.2px/22px 'Montserrat';color:#7F8B99}
+</style></head>
+<body>
+<main class="page">
+ <h1>Here&rsquo;s the <span class="hl">3 things</span> you really need to<br>know about pensions</h1>
+ <p class="intro">First, tell us a couple things about you so we can crunch the numbers</p>
+ <div class="form">
+  <span class="you">You:</span><span>I am</span>
+  <span class="box">34</span>
+  <span>years old, and this year I will earn roughly</span>
+  <span class="box wide">&pound;50,000</span>
+ </div>
+<h2 class="acc"><button type="button" class="acc-btn" aria-expanded="false" aria-controls="b1">
+  <span class="acc-t">1. You need to start saving <span class="hl">Now</span> to live well later</span><svg class="chev" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M9 4l9 9-9 9" stroke="#133253" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h2>
+<div class="body" id="b1" hidden><p>Could you live on <b>&pound;8,767</b> a year &#128528;? That&rsquo;s currently the maximum amount the government gives you in the state pension after reaching retirement age, which for you would be 68. The amount could be less if you haven&rsquo;t been paying in national insurance all your life.</p>
+<p>Most people think that&rsquo;s not enough so need another source of income after they stop work. The most common and tax efficient way to do this is usually though a pension.</p>
+<p>After you turn 55, you can convert whatever you have put aside in a pension during your working years into an annual income for the rest of your life. It could make all the difference in how you spend over a third of your lifetime!</p></div>
+
+<h2 class="acc"><button type="button" class="acc-btn" aria-expanded="false" aria-controls="b2">
+  <span class="acc-t">2. You can get <span class="hl">Free Cash</span> from the government</span><svg class="chev" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M9 4l9 9-9 9" stroke="#133253" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h2>
+<div class="body" id="b2" hidden><p>The government thinks pensions are great too, so most of the time when you pay in, they top it up with more free money based on how much tax you pay. We&rsquo;ve worked out how much you could get based on what you earn.</p>
+<p>See how much free money you could get for each payment in &#127881;</p>
+<div class="calc">
+  <div class="cell"><span class="cap">You pay in</span><span class="val out">&pound;309</span></div>
+  <span class="op">+</span>
+  <div class="cell"><span class="cap">The Government adds</span><span class="val mid">&pound;77</span></div>
+  <span class="op">=</span>
+  <div class="cell"><span class="cap">In total you get</span><span class="val tot">&pound;386</span></div>
+</div>
+<p class="note">You won&rsquo;t get these government top-ups if you pay in more than everything you earned in a year, or more than <b>&pound;40,000</b>. Tax benefits like this do depend on your individual circumstances and might change in the future. If you are a higher rate tax payer your basic rate tax is added by the pension provider, but you have to claim the higher rate tax back on your tax return and then add this to your pension.</p></div>
+
+<h2 class="acc"><button type="button" class="acc-btn" aria-expanded="false" aria-controls="b3">
+  <span class="acc-t">3. You have a secret weapon, we call it <span class="hl">Einstein Money</span></span><svg class="chev" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M9 4l9 9-9 9" stroke="#133253" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></h2>
+<div class="body" id="b3" hidden><p>Imagine you invite a friend to a party, and they invite two friends, and they invite two friends, and so on, and so on. Pretty soon 300 people are trashing your front room &#128560;.</p>
+<p>This is called &ldquo;compounding&rdquo;, and Einstein called it the most powerful force in the universe! This is what should happen to your money over a long time if you leave it in a pension. It&rsquo;s such a big deal that we&rsquo;ve given it a new name, Einstein Money.</p>
+<p>The main thing about Einstein Money is the younger you start saving, the more you&rsquo;re likely to get. See how much you might end up with in your pension pot from putting aside that <b>&pound;309</b>, depending on how old you were when you paid in.</p>
+<div class="chart">
+  <div class="legend"><span><i style="background:var(--blue)"></i>You</span><span><i style="background:var(--green)"></i>Government</span></div>
+  <div class="row" style="top:47px">
+    <span class="lab">Money<br>Paid In</span>
+    <div class="bar"><div style="width:62px;background:var(--blue);border-radius:3px 0 0 3px"></div><div style="width:17px;background:var(--green);border-radius:0 3px 3px 0"></div></div>
+    <span class="val" style="left:215px">&pound;386</span>
+  </div>
+  <div class="row" style="top:156px">
+    <span class="lab">Einstein<br>Money</span>
+    <div class="bar"><div style="width:333px;background:var(--pink);border-radius:3px"></div></div>
+    <span class="val" style="left:470px">&pound;1,643</span>
+  </div>
+  <div class="slider">
+    <span class="end" style="left:86px">18</span>
+    <div class="track"></div><div class="fill" style="width:81px"></div>
+    <div class="knob" style="left:208px">34</div>
+    <span class="end" style="left:462px">68</span>
+    <span class="cap">Age you pay in</span>
+  </div>
+</div>
+<p class="note">Calculation based on your age, the current state retirement age and a growth rate of 5%. Einstein Money is not guaranteed, but is a reasonable estimate of the effect of compound investment returns on the amount you put aside in a pension over a long period of time, using a widely used growth assumption.</p></div>
+
+<button class="cta">Get started</button>
+<p class="foot">With pensions, as with all investments, your capital is at risk and the value of your pension with Penfold may go up as well as down. You may get back less than you put in.</p>
+</main>
+<script>
+document.querySelectorAll('.acc-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var open=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',String(!open));
+    document.getElementById(btn.getAttribute('aria-controls')).hidden=open;
+  });
+});
+</script>
+</body></html>

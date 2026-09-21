@@ -1,0 +1,48 @@
+{
+  "id": "eligibility",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "onboarding",
+  "order": 8,
+  "name": "Eligibility",
+  "title": "You need 3 things",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "101:9525",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "eligibility",
+    "you need 3 things"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.87%",
+    "al": "±2px",
+    "note": "Headline is <code>H1.m Bold 28</code> at 104%, which Figma lays out on 29px lines. Input and Back chevrons are the exports turned to match the canvas (90&deg; and 180&deg;) &mdash; the frame-level response had dropped the rotation."
+  }
+}

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pick your risk level</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=block">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+
+:root{
+  --navy:#133253;
+  --slate:#133253;
+  --muted:#4C5D70;
+  --pink:#ED5E83;
+  --blue:#6076DC;
+  --blue-ink:#4C6FD5;
+  --grey-strong:#909090;
+  --grey-body:#9C9C9C;
+  --grey-muted:#AEAEAE;
+
+}
+
+
+.page{
+  position:relative;
+  width:1182px;height:2640px;overflow:hidden;
+  background:transparent;
+  font-family:'Montserrat',-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+
+
+/* ---------- intro ---------- */
+.intro{position:absolute;left:183px;top:0;width:770px}
+.intro h1{margin-top:92px;font:700 49px/57px 'Montserrat',sans-serif;letter-spacing:-.9px;color:var(--navy)}
+.intro p{margin:76px 0 0;font:400 19.4px/29.5px 'Montserrat',sans-serif;color:var(--slate)}
+.intro p+p{margin-top:23px}
+
+/* ---------- plan cards ---------- */
+.plans{position:absolute;left:56.5px;top:544.5px;display:flex;gap:36px}
+
+.plan{
+  position:relative;
+  width:317px;height:527px;padding:0 23px;
+  border:1px solid #DCDCDC;border-radius:9px;
+  background-color:#fff;
+  box-shadow:0 1px 2px rgba(0,0,0,.045);
+  text-align:center;
+}
+
+.plan h2       {margin:23px 0 0;font:700 29.2px/1 'Montserrat',sans-serif;color:var(--navy)}
+.plan .blurb   {margin:24px 0 0;font:400 19px/29px 'Montserrat',sans-serif;color:var(--slate)}
+.plan .fee     {margin:33px 0 0;font:400 14.2px/1 'Montserrat',sans-serif;color:var(--muted)}
+.plan .amount  {margin:6px 0 0;font:800 27.4px/1 'Montserrat',sans-serif;color:var(--navy)}
+
+.meter{display:flex;gap:2px;height:37px;margin-top:25px}
+.meter i{flex:1;border-radius:2px;background:#DADADA}
+.meter i.on{background:#415C78}
+
+.ends{display:flex;justify-content:space-between;font:400 14.2px/1 'Montserrat',sans-serif;color:var(--muted)}
+.ends.risk{margin-top:9px}
+.ends.reward{margin-top:4px;line-height:21px}
+.ends.reward span:last-child{text-align:right}
+
+.scale{display:block;width:264px;height:15px;margin-top:7px}
+.scale path{fill:var(--navy)}
+
+.pick{
+  display:block;width:100%;height:63px;margin-top:30px;
+  border:0;border-radius:6px;
+  background:var(--pink);color:#fff;
+  font:600 16px 'Montserrat',sans-serif;cursor:pointer;
+}
+
+/* dimmed “coming soon” variants */
+.plan.soon{background-color:#FAFAFA;border-color:#E6E6E6;box-shadow:none}
+.plan.soon h2,.plan.soon .amount{color:var(--grey-strong)}
+.plan.soon .blurb{color:var(--grey-body)}
+.plan.soon .fee,.plan.soon .ends{color:var(--grey-muted)}
+.plan.soon .meter i{background:#E8E8E8}
+.plan.soon .meter i.on{background:#A6A6A6}
+.plan.soon .scale path{fill:var(--grey-muted)}
+.plan.soon .pick{background:#E3E3E3;color:#F2F2F2;cursor:default}
+
+/* ---------- selected plan ---------- */
+.plan.chosen{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue)}
+.plan.chosen .pick{background:var(--blue)}
+
+/* ---------- risk section ---------- */
+.rl{position:absolute;left:183px;top:0;width:770px}
+.rl h2{margin:1129px 0 0;font:700 27.5px/1 'Montserrat',sans-serif;color:var(--navy)}
+.rl p{margin:24px 0 0;font:400 19.4px/29.5px 'Montserrat',sans-serif;color:var(--slate)}
+.rl p+p{margin-top:23px}
+.rl a{color:var(--pink);text-decoration:underline;text-underline-offset:1px;text-decoration-thickness:1px}
+
+.rl-scale{width:770px;margin-top:44px}
+.rl-ends{display:flex;justify-content:space-between}
+.rl-ends span:last-child{text-align:right}
+.rl-hi{font:400 22.2px/1 'Montserrat',sans-serif;color:var(--blue-ink)}
+.rl-lo{margin-top:9px;font:500 22.2px/31px 'Montserrat',sans-serif;color:var(--navy)}
+.rl-axis{display:block;width:770px;height:13px;margin-top:12px}
+.rl-axis path{fill:var(--blue-ink)}
+
+/* ---------- risk-level cards (horizontal scroller) ---------- */
+.levels{position:absolute;left:183px;top:1708px;width:999px;display:flex;gap:13px}
+.lvl{
+  flex:0 0 252px;height:496px;padding:0 21px;
+  border:1px solid #DCDCDC;border-radius:9px;background:#fff;
+  box-shadow:0 1px 2px rgba(0,0,0,.045);
+}
+.lvl h3{margin:27px 0 0;font:700 29.2px/1 'Montserrat',sans-serif;color:var(--navy);text-align:center}
+.lvl .lead{margin:29px 0 0;font:400 14.2px/1 'Montserrat',sans-serif;color:var(--slate)}
+.lvl ul{margin:8px 0 0;padding:0 0 0 20px;list-style:none;font:400 14.2px/21px 'Montserrat',sans-serif;color:var(--slate)}
+.lvl li{position:relative;margin-top:11px}
+.lvl li:first-child{margin-top:0}
+.lvl li::before{content:"";position:absolute;left:-20px;top:7px;width:7px;height:7px;background:var(--navy)}
+
+.pieblock{display:flex;align-items:center;gap:16px;margin-top:21px;padding-left:14px}
+.pie{width:64px;height:64px;border-radius:50%;flex:0 0 64px}
+.key{font:400 11.5px/18px 'Montserrat',sans-serif;color:var(--slate)}
+.key i{display:inline-block;width:8px;height:8px;margin-right:5px;vertical-align:1px}
+.key i.eq{background:var(--navy)}
+.key i.ot{background:#C8C8C8}
+
+.lvl .sheet{display:block;margin:19px 0 0;text-align:center;
+  font:600 18.6px/1 'Montserrat',sans-serif;color:var(--pink);
+  text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.lvl .choose{display:block;width:100%;height:62px;margin:27px 0 0;border:0;border-radius:6px;
+  background:var(--pink);color:#fff;font:600 16px 'Montserrat',sans-serif;cursor:pointer}
+.lvl.blank>*{visibility:hidden}
+
+.next{position:absolute;left:1092px;top:1930px;appearance:none;border:0;background:none;
+  color:var(--navy);font:600 46.1px/1 'Montserrat',sans-serif;cursor:pointer;padding:0}
+
+.closing{position:absolute;left:183px;top:2235px;width:770px}
+.closing p{margin:0;font:400 19.4px/29.5px 'Montserrat',sans-serif;color:var(--slate)}
+.closing p+p{margin-top:11px}
+
+/* ---------- footnote ---------- */
+.note{
+  position:absolute;left:183px;top:2505px;width:770px;margin:0;
+  font:400 14.2px/21px 'Montserrat',sans-serif;color:var(--muted);
+}
+.note a{color:var(--pink);text-decoration:underline;text-underline-offset:1px;text-decoration-thickness:1px}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="intro">
+    <h1>Choose how your money<br>is managed</h1>
+    <p>Our pension plans are managed by the largest money managers in the world. They work hard to protect and build your pot by investing it around the world, keeping costs as low as possible.</p>
+    <p>You have a few options for how your money will be managed, so please pick which one works for you. Each one is protected by FSCS* and you are free to switch between plans any time at all.</p>
+  </div>
+
+  <div class="plans">
+
+    <section class="plan chosen">
+      <h2>Basic</h2>
+      <p class="blurb">Low cost plans with a range of options based on how much risk you want to take</p>
+      <p class="fee">Total annual fee</p>
+      <p class="amount">0.80%</p>
+      <div class="meter"><i></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
+      <div class="ends risk"><span>Lower risk</span><span>Higher risk</span></div>
+      <svg class="scale" viewBox="0 0 264 15" aria-hidden="true"><path d="M0 7.5 L15 0 L15 15 Z M13 6.25 H251 V8.75 H13 Z M264 7.5 L249 0 L249 15 Z"/></svg>
+      <div class="ends reward"><span>Usually lower<br>rewards</span><span>Usually higher<br>rewards</span></div>
+      <button class="pick">Selected</button>
+    </section>
+
+    <section class="plan soon">
+      <h2>Advanced</h2>
+      <p class="blurb">Cutting-edge plans with a range of options and an added layer of protection</p>
+      <p class="fee">Total annual fee</p>
+      <p class="amount">0.75%</p>
+      <div class="meter"><i></i><i></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+      <div class="ends risk"><span>Lower risk</span><span>Higher risk</span></div>
+      <svg class="scale" viewBox="0 0 264 15" aria-hidden="true"><path d="M0 7.5 L15 0 L15 15 Z M13 6.25 H251 V8.75 H13 Z M264 7.5 L249 0 L249 15 Z"/></svg>
+      <div class="ends reward"><span>Usually lower<br>rewards</span><span>Usually higher<br>rewards</span></div>
+      <button class="pick" disabled>Coming soon</button>
+    </section>
+
+    <section class="plan soon">
+      <h2>Impact</h2>
+      <p class="blurb">Like our Advanced plan but adapted to make a positive impact on the world</p>
+      <p class="fee">Total annual fee</p>
+      <p class="amount">TBC</p>
+      <div class="meter"><i></i><i></i><i></i><i></i><i class="on"></i><i></i><i></i></div>
+      <div class="ends risk"><span>Lower risk</span><span>Higher risk</span></div>
+      <svg class="scale" viewBox="0 0 264 15" aria-hidden="true"><path d="M0 7.5 L15 0 L15 15 Z M13 6.25 H251 V8.75 H13 Z M264 7.5 L249 0 L249 15 Z"/></svg>
+      <div class="ends reward"><span>Usually lower<br>rewards</span><span>Usually higher<br>rewards</span></div>
+      <button class="pick" disabled>Coming soon</button>
+    </section>
+
+  </div>
+
+
+  <section class="rl">
+    <h2>Pick your risk level</h2>
+    <p>Each of our plans has options for how much &lsquo;risk&rsquo; you want to take. Basically, higher risk means your pot potentially making more <a href="#">Einstein Money</a> over the long term, but with more ups and downs along the way. Low risk might mean nice and steady growth with fewer bumps but possibly less money overall.</p>
+    <p>We let you stay in total control of your money by picking which risk level works best for you. Usually, people with several decades until retirement pick a higher risk rating, then switch to a lower rating when they get closer to stopping work. See our <a href="#">FAQ on risk</a> for more information.</p>
+    <p>Pick which one you think would be best for you based on the below guidance. You can switch anytime.</p>
+    <div class="rl-scale">
+      <div class="rl-ends rl-hi"><span>Lower risk</span><span>Higher risk</span></div>
+      <svg class="rl-axis" viewBox="0 0 770 13" aria-hidden="true"><path d="M0 6.5 L13 0.5 L13 12.5 Z M11 5.4 H759 V7.6 H11 Z M770 6.5 L757 0.5 L757 12.5 Z"/></svg>
+      <div class="rl-ends rl-lo"><span>Usually lower rewards<br>Shorter term investing</span><span>Usually higher rewards<br>Longer term investing</span></div>
+    </div>
+  </section>
+
+  <div class="levels">
+      <article class="lvl">
+        <h3>Basic 1</h3>
+        <p class="lead">Typically for this person:</p>
+        <ul><li>Closer to retiring</li><li>Wants to avoid loss as much as possible</li><li>Investing over the short term (0-2y)</li></ul>
+        <div class="pieblock">
+          <div class="pie" style="background:conic-gradient(var(--navy) 0 20%,#C8C8C8 20% 100%)"></div>
+          <div class="key"><i class="eq"></i>Equities<br><i class="ot"></i>Other</div>
+        </div>
+        <a class="sheet" href="#">See plan factsheet</a>
+        <button class="choose">Choose</button>
+      </article>
+      <article class="lvl">
+        <h3>Basic 2</h3>
+        <p class="lead">Typically for this person:</p>
+        <ul><li>Closer to retiring</li><li>Slow and steady growth is acceptable</li><li>Investing over the shorter term (2-5y)</li></ul>
+        <div class="pieblock">
+          <div class="pie" style="background:conic-gradient(var(--navy) 0 40%,#C8C8C8 40% 100%)"></div>
+          <div class="key"><i class="eq"></i>Equities<br><i class="ot"></i>Other</div>
+        </div>
+        <a class="sheet" href="#">See plan factsheet</a>
+        <button class="choose">Choose</button>
+      </article>
+      <article class="lvl">
+        <h3>Basic 3</h3>
+        <p class="lead">Typically for this person:</p>
+        <ul><li>Mid-way to retiring</li><li>OK to lose a little to make a little</li><li>Investing over the medium term (5-10y)</li></ul>
+        <div class="pieblock">
+          <div class="pie" style="background:conic-gradient(var(--navy) 0 60%,#C8C8C8 60% 100%)"></div>
+          <div class="key"><i class="eq"></i>Equities<br><i class="ot"></i>Other</div>
+        </div>
+        <a class="sheet" href="#">See plan factsheet</a>
+        <button class="choose">Choose</button>
+      </article>
+      <article class="lvl blank" aria-hidden="true">
+        <h3>&nbsp;</h3>
+      </article>
+  </div>
+  <button class="next" aria-label="More risk levels">&rsaquo;</button>
+
+  <div class="closing">
+    <p>Please remember that Penfold does not provide investment advice or personal recommendations, nor any management of the underlying portfolios, and is therefore not required to assess the suitability of these investments for you.</p>
+    <p>However, these funds are all low cost, highly diversified and widely used by other retail investors like you for long term investing.</p>
+  </div>
+
+  <p class="note">*Your investments are covered by the government&rsquo;s <a href="#">Financial Services Compensation Scheme</a> up to a limit of &pound;85,000. Please be aware that this does not cover a fall in the value of your investment.</p>
+</div>
+</body>
+</html>

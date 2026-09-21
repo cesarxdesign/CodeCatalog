@@ -1,0 +1,48 @@
+{
+  "id": "pause-resume",
+  "project": "penfold",
+  "platform": "mobile",
+  "order": 1,
+  "name": "Pause & resume",
+  "title": null,
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "57:8276",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": "https://claude.ai/artifact/U2hjfTuHHMJLEaUprzL9jn",
+  "aliases": [
+    "pause",
+    "pause resume"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.57%",
+    "al": "±1.0px",
+    "note": "The popup sits at <code>left:2px</code>, not 0 &mdash; reproduced as found. It also came out 2px tall, because the 1px CSS border added height that Figma&rsquo;s inside stroke does not."
+  },
+  "screen_generated": false
+}

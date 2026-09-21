@@ -1,0 +1,47 @@
+{
+  "id": "sign-up-form",
+  "project": "penfold",
+  "platform": "desktop",
+  "order": 3,
+  "name": "Sign-up form",
+  "title": "Sign up for your new pension in minutes!",
+  "frame": [
+    1182,
+    2640
+  ],
+  "interactive": true,
+  "states": [],
+  "provenance": "raster",
+  "source_scale": "1.00× · 1.07×",
+  "source_frames": "2 frames",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/frame-1.webp",
+      "source/frame-2.webp"
+    ],
+    "preview": "source/frame-1.webp"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": "https://claude.ai/artifact/AjnmqEfDAGk5YDcspydVWE",
+  "aliases": [
+    "06-sign-up-for-your-new-pension",
+    "sign up form",
+    "signup"
+  ],
+  "catalogue": {
+    "m1": "11",
+    "m1l": "field boxes, all exact",
+    "m2": "0px",
+    "m2l": "worst offset",
+    "note": "Two frames &mdash; the empty form and its filled tail &mdash; pieced into one working form. The field boxes were found by detecting their border lines rather than their fills: text breaks a fill into fragments, and fill detection kept splitting one field into three.",
+    "tag": "Interactive",
+    "frame_label": "1182 × 2640"
+  }
+}

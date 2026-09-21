@@ -1,0 +1,97 @@
+<!-- CodeCatalog · penfold/desktop/document-consent · 1182×2640 · built from screen.html · fp 8a5fe12242d6
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/desktop/document-consent" style="--cc-w:1182;--cc-h:2640;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:1182px;height:2640px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:1182px;height:2640px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+*{box-sizing:border-box}
+
+:host{
+  --navy:#133253;
+  --slate:#133253;
+  --pink:#ED5E83;
+}
+
+.page{
+  position:relative;
+  width:1182px;height:2640px;overflow:hidden;
+  background:transparent;
+  font-family:'Montserrat',-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+.page h1{position:absolute;left:183px;top:92px;margin:0;
+   font:700 49px/57px 'Montserrat',sans-serif;letter-spacing:-.9px;color:var(--navy)}
+
+.stack{position:absolute;left:183px;top:231px;width:770px}
+
+/* ---------- accordion ---------- */
+.doc{margin-top:26px}
+.doc:first-child{margin-top:0}
+.doc h2{
+  margin:0;height:76px;
+  display:flex;align-items:center;padding:0 26px;
+  background:var(--navy);color:#fff;
+  font:400 25.7px/1 'Montserrat',sans-serif;
+}
+.doc .body{
+  background:#fff;
+  padding:29px 24px 0;
+  position:relative;
+  height:473px;
+}
+.doc .body p{margin:0;font:400 14.2px/22px 'Montserrat',sans-serif;color:var(--slate)}
+.doc .body p+p{margin-top:23px}
+.doc .body a{display:block;margin-top:35px;
+  font:400 14.2px/1 'Montserrat',sans-serif;color:var(--pink);text-decoration:none}
+.doc .body a+a{margin-top:34px}
+
+.fade{position:absolute;left:0;right:0;top:379px;height:22px;
+  background:linear-gradient(to bottom,rgba(18,51,86,0) 0%,rgba(18,51,86,.075) 55%,rgba(18,51,86,0) 100%)}
+
+.accept{position:absolute;left:24px;top:416px;
+  display:flex;align-items:center;gap:12px;
+  font:400 17.7px/1 'Montserrat',sans-serif;color:var(--navy);cursor:pointer}
+.accept input{
+  appearance:none;-webkit-appearance:none;margin:0;
+  width:35px;height:35px;border:1px solid #E2E2E2;background:#fff;cursor:pointer;
+}
+.accept input:checked{border-color:var(--navy);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='35' height='35' viewBox='0 0 35 35'%3E%3Cpath d='M8 18 L15 25 L27 11' fill='none' stroke='%23123356' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+
+/* ---------- action ---------- */
+.all{
+  display:block;width:770px;height:64px;margin-top:24px;
+  border:0;border-radius:6px;
+  background:#D2D2D2;color:#EFEFEF;
+  font:600 16px 'Montserrat',sans-serif;cursor:default;
+}
+</style>
+<div class="page">
+  <h1>A few docs to agree to&hellip;</h1>
+
+  <div class="stack">
+    <section class="doc">
+      <h2>Penfold Terms</h2>
+      <div class="body">
+        <p>Penfold&rsquo;s role is to arrange your pension for you. This means everything from explaining what you need to know about pensions, helping you open one, helping you decide how much to save, and providing a range of features that help you manage your pension in the best way possible over your lifetime. It also means bringing together all the partners that make your pension work behind the scenes.</p>
+        <p>Please read and accept our terms and conditions document below which outlines in more detail our service and how this interacts with our partners. Please remember though Penfold should always be your first (and only) port of call for anything that you would like to do with your pension.</p>
+        <a href="#">Penfold Terms and Conditions</a>
+        <a href="#">Penfold Charges Guide</a>
+        <div class="fade"></div>
+        <label class="accept"><input type="checkbox"> Accept?</label>
+      </div>
+    </section>
+
+    <section class="doc"><h2>Scheme Administrator Terms</h2></section>
+    <section class="doc"><h2>Key Features Document</h2></section>
+    <section class="doc"><h2>Member Declaration</h2></section>
+
+    <button class="all" disabled>Accept all terms</button>
+  </div>
+</div>
+</template></div>
+</div>

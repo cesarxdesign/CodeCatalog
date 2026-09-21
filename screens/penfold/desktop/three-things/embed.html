@@ -1,0 +1,116 @@
+<!-- CodeCatalog · penfold/desktop/three-things · 1231×2640 · built from state-5.html · fp c912de13c21d
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/desktop/three-things" style="--cc-w:1231;--cc-h:2640;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:1231px;height:2640px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:1231px;height:2640px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+:host{--bg:#F6F6F6;--navy:#133253;--pink:#ED5E83;--blue:#5689EA;--green:#70E6B3}
+*{box-sizing:border-box}
+p,h1{margin:0}:host{font-family:'Montserrat',-apple-system,sans-serif;color:var(--navy)}
+.page{width:1231px;padding:73px 89px 0 80px}
+h1{font:700 49px/57px 'Montserrat';letter-spacing:-.9px}
+.hl{color:var(--pink)}
+.intro{margin-top:70px;font:400 19.4px/30px 'Montserrat'}
+
+.form{margin-top:49px;height:52px;display:flex;align-items:center;
+      font:400 19.4px/30px 'Montserrat';white-space:nowrap}
+.form .you{color:var(--pink);font-weight:700;margin-right:.32em}
+.form .box{width:111px;height:52px;background:#fff;border-radius:6px;
+           box-shadow:0 1px 4px rgba(19,50,83,.10);display:flex;align-items:center;
+           justify-content:center;font:700 28px/1 'Montserrat';margin:0 14px}
+.form .box.wide{width:170px}
+.form .box.ph{color:#C9CDD2;font-weight:500}
+
+.acc{margin-top:60px;display:flex;align-items:center;justify-content:space-between;
+     font:700 30px/34px 'Montserrat'}
+.acc+.acc,.body+.acc{margin-top:48px}
+.acc .chev{width:26px;height:26px;flex:0 0 auto}
+.body{margin-top:23px}
+.body p+p{margin-top:23px}
+/* .calc is a div, so `p+p` never fires for the note after it - it would get no
+   top margin at all and everything below would ride 13px high. */
+.body .calc+p{margin-top:35px}   /* must outrank .body .note (0,2,0) */
+.body p{font:400 19.4px/29.5px 'Montserrat'}
+/* .body p (0,1,1) outranks .note (0,1,0) and would reset the note's type.
+   Match specificity so the footnote keeps its own size. */
+.body p.note{font:italic 400 14.2px/22px 'Montserrat';color:#7F8B99}
+
+.calc{margin-top:36px;display:flex;align-items:flex-end;gap:34px}
+.calc .cell{display:flex;flex-direction:column}
+.calc .cap{font:700 19.4px/1 'Montserrat';margin-bottom:13px}
+.calc .val{height:52px;border-radius:6px;display:flex;align-items:center;
+           justify-content:center;font:700 26px/1 'Montserrat'}
+.calc .val.out{background:#fff;box-shadow:0 1px 4px rgba(19,50,83,.10);width:215px}
+.calc .val.mid{background:#7D82E8;color:#fff;width:215px}
+.calc .val.tot{background:#5C4FE0;color:#fff;width:215px}
+.calc .op{font:700 30px/1 'Montserrat';padding-bottom:14px}
+
+.chart{margin-top:32px;position:relative;height:349px}
+.legend{position:absolute;left:123px;top:7px;display:flex;gap:22px;align-items:center;
+        font:500 15px/1 'Montserrat'}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;margin-right:7px;vertical-align:-2px}
+.row{position:absolute;left:0;height:93px}
+.row .lab{position:absolute;left:24px;width:86px;top:50%;transform:translateY(-50%);
+          text-align:right;font:400 19.4px/26px 'Montserrat';white-space:nowrap}
+.row .bar{position:absolute;left:123px;top:0;height:93px;display:flex}
+.row .val{position:absolute;top:50%;transform:translateY(-50%);
+          font:700 19px/1 'Montserrat';white-space:nowrap}
+.slider{position:absolute;left:0;top:266px;width:600px;height:76px}
+.slider .track{position:absolute;left:123px;top:22px;width:330px;height:9px;border-radius:5px;background:#E2E2E2}
+.slider .fill{position:absolute;left:123px;top:22px;height:9px;border-radius:5px;background:var(--pink)}
+.slider .knob{position:absolute;top:4px;width:46px;height:46px;border-radius:50%;
+              background:var(--navy);color:#fff;display:flex;align-items:center;
+              justify-content:center;font:700 18px/1 'Montserrat'}
+.slider .end{position:absolute;top:19px;font:400 17px/1 'Montserrat';color:#8A96A3}
+.slider .cap{position:absolute;left:123px;top:56px;width:330px;text-align:center;font:700 19px/1 'Montserrat'}
+
+.note{font:italic 400 14.2px/22px 'Montserrat';color:#7F8B99}
+.body .note{margin-top:22px}
+.cta{display:block;margin-top:55px;width:242px;height:63px;border:0;border-radius:6px;
+     background:var(--pink);color:#fff;font:600 19px/1 'Montserrat';cursor:pointer}
+.foot{margin-top:48px;font:italic 400 14.2px/22px 'Montserrat';color:#7F8B99}
+</style>
+<div class="page">
+ <h1>Here&rsquo;s the <span class="hl">3 things</span> you really need to<br>know about pensions</h1>
+ <p class="intro">First, tell us a couple things about you so we can crunch the numbers</p>
+ <div class="form">
+  <span class="you">You:</span><span>I am</span>
+  <span class="box">34</span>
+  <span>years old, and this year I will earn roughly</span>
+  <span class="box wide">&pound;50,000</span>
+ </div>
+<div class="acc"><span>1. You need to start saving <span class="hl">Now</span> to live well later</span><span class="chev"><svg viewBox="0 0 26 26" fill="none"><path d="M9 4l9 9-9 9" stroke="#133253" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+<div class="acc"><span>2. You can get <span class="hl">Free Cash</span> from the government</span><span class="chev"><svg viewBox="0 0 26 26" fill="none"><path d="M9 4l9 9-9 9" stroke="#133253" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+<div class="acc"><span>3. You have a secret weapon, we call it <span class="hl">Einstein Money</span></span><span class="chev"><svg viewBox="0 0 26 26" fill="none"><path d="M4 9l9 9 9-9" stroke="#133253" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
+<div class="body"><p>Imagine you invite a friend to a party, and they invite two friends, and they invite two friends, and so on, and so on. Pretty soon 300 people are trashing your front room &#128560;.</p>
+<p>This is called &ldquo;compounding&rdquo;, and Einstein called it the most powerful force in the universe! This is what should happen to your money over a long time if you leave it in a pension. It&rsquo;s such a big deal that we&rsquo;ve given it a new name, Einstein Money.</p>
+<p>The main thing about Einstein Money is the younger you start saving, the more you&rsquo;re likely to get. See how much you might end up with in your pension pot from putting aside that <b>&pound;309</b>, depending on how old you were when you paid in.</p>
+<div class="chart">
+  <div class="legend"><span><i style="background:var(--blue)"></i>You</span><span><i style="background:var(--green)"></i>Government</span></div>
+  <div class="row" style="top:47px">
+    <span class="lab">Money<br>Paid In</span>
+    <div class="bar"><div style="width:62px;background:var(--blue);border-radius:3px 0 0 3px"></div><div style="width:17px;background:var(--green);border-radius:0 3px 3px 0"></div></div>
+    <span class="val" style="left:215px">&pound;386</span>
+  </div>
+  <div class="row" style="top:156px">
+    <span class="lab">Einstein<br>Money</span>
+    <div class="bar"><div style="width:333px;background:var(--pink);border-radius:3px"></div></div>
+    <span class="val" style="left:470px">&pound;1,643</span>
+  </div>
+  <div class="slider">
+    <span class="end" style="left:86px">18</span>
+    <div class="track"></div><div class="fill" style="width:81px"></div>
+    <div class="knob" style="left:208px">34</div>
+    <span class="end" style="left:462px">68</span>
+    <span class="cap">Age you pay in</span>
+  </div>
+</div>
+<p class="note">Calculation based on your age, the current state retirement age and a growth rate of 5%. Einstein Money is not guaranteed, but is a reasonable estimate of the effect of compound investment returns on the amount you put aside in a pension over a long period of time, using a widely used growth assumption.</p></div>
+<button class="cta">Get started</button>
+<p class="foot">With pensions, as with all investments, your capital is at risk and the value of your pension with Penfold may go up as well as down. You may get back less than you put in.</p>
+</div>
+</template></div>
+</div>

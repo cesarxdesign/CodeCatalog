@@ -1,0 +1,46 @@
+{
+  "id": "document-consent",
+  "project": "penfold",
+  "platform": "desktop",
+  "order": 5,
+  "name": "Document consent",
+  "title": "A few docs to agree to…",
+  "frame": [
+    1182,
+    2640
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "raster",
+  "source_scale": "1.58×",
+  "source_frames": "1 frame",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/original.webp"
+    ],
+    "preview": "source/original.webp"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "05-a-few-docs-to-agree-to",
+    "docs",
+    "document consent"
+  ],
+  "catalogue": {
+    "m1": "1.58×",
+    "m1l": "finest source in the set",
+    "m2": "+0.3%",
+    "m2l": "ink mass on the heading",
+    "note": "All four accordion headers within 1px. Weight was confirmed by ink mass &mdash; summing how much darker each glyph block is than its background &mdash; which came in at +0.3% against the source.",
+    "tag": "",
+    "frame_label": "1182 × 2640"
+  }
+}

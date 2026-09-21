@@ -1,0 +1,58 @@
+{
+  "id": "savings-calculator",
+  "project": "penfold",
+  "platform": "desktop",
+  "order": 2,
+  "name": "Savings calculator",
+  "title": "Help me decide how much to save",
+  "frame": [
+    1182,
+    2640
+  ],
+  "interactive": true,
+  "states": [
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "provenance": "raster",
+  "source_scale": "0.41×",
+  "source_frames": "4 frames",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/frame-1.png",
+      "source/frame-2.png",
+      "source/frame-3.png",
+      "source/frame-4.png",
+      "source/original.webp"
+    ],
+    "preview": "source/frame-1.png"
+  },
+  "embed_from": "screen.html",
+  "embed_state": [
+    "data-step",
+    "4"
+  ],
+  "live": "https://claude.ai/artifact/XKG4w64YFDXLLHRtXfDf6d",
+  "aliases": [
+    "12-help-me-decide-how-much-to-save",
+    "calc",
+    "savings calculator"
+  ],
+  "catalogue": {
+    "m1": "0.41×",
+    "m1l": "2.4 design px per image px",
+    "m2": "±5px",
+    "m2l": "worst step offset",
+    "note": "Four frames of a progressive form, folded into one page that builds over three taps. The coarsest source in the set &mdash; one image pixel carries 2.4 design pixels, and that is the floor on precision here. <em>The code pane shows the final state; the source pane shows frame 1.</em>",
+    "tag": "Interactive · 4 states",
+    "frame_label": "1182 × 2640"
+  }
+}

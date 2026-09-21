@@ -1,0 +1,101 @@
+<!-- CodeCatalog · penfold/desktop/sign-up-upper · 1182×2640 · built from screen.html · fp 525c62f77305
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/desktop/sign-up-upper" style="--cc-w:1182;--cc-h:2640;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:1182px;height:2640px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:1182px;height:2640px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+*{box-sizing:border-box}
+:host{
+  --navy:#133253; --slate:#133253; --muted:#4C5D70;
+  --pink:#ED5E83; --err:#D2453C; --focus:#8E6BB8;
+  --fill-auto:#F6F8BF; --line:#DEDEDE; --placeholder:#E2E2E2; --disabled:#D0D0D0;
+}
+.page{position:relative;width:1182px;height:2640px;overflow:hidden;background:transparent;
+  font-family:'Montserrat',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:var(--navy)}
+.page h1{margin:0;font:700 49px/57px 'Montserrat',sans-serif;letter-spacing:-.9px;color:var(--navy)}
+.lab{display:block;margin:0 0 4px;font:400 16.8px/19px 'Montserrat',sans-serif;color:var(--muted)}
+.f{display:block;width:100%;height:62px;border:1px solid var(--line);border-radius:4px;background:#fff;
+  padding:0 18px;font:400 19.4px/1 'Montserrat',sans-serif;color:var(--slate);font-family:'Montserrat',sans-serif}
+.f::placeholder{color:var(--placeholder)}
+.f:focus{outline:none}
+.f.auto{background:var(--fill-auto)}
+select.f{appearance:none;-webkit-appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M0 0 L5.5 7 L11 0 Z' fill='%233D5165'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 18px center}
+.err{margin:0;font:400 18.6px/1 'Montserrat',sans-serif;color:var(--err)}
+.btn{display:block;height:63px;border:0;border-radius:6px;background:var(--pink);color:#fff;
+  font:600 16px 'Montserrat',sans-serif;cursor:pointer}
+.btn[disabled]{background:var(--disabled);color:#F0F0F0;cursor:default}
+
+.col{position:absolute;left:183px;top:0;width:770px}
+.col h1{margin-top:92px}
+.row{margin-top:11px}
+.pair{display:flex;gap:26px}
+.pair>div{flex:0 0 377px}
+.f.ring{border:2px solid #B4C2E2;box-shadow:0 0 0 3px #9FB5E4}
+.f.bad{border:2px solid var(--err)}
+.hasicon{position:relative}
+.hasicon .icon{position:absolute;right:14px;bottom:0;height:62px;display:flex;align-items:center;gap:4px;
+  pointer-events:none;color:#5C6B7C}
+.accept{display:flex;align-items:center;gap:16px;margin-top:6px;
+  font:400 19.4px/1 'Montserrat',sans-serif;color:var(--navy);cursor:pointer}
+.accept input{appearance:none;-webkit-appearance:none;margin:0;flex:0 0 36px;width:36px;height:36px;
+  border:1px solid #E8E8E8;border-radius:3px;background:#fff;cursor:pointer}
+.accept input:checked{border-color:var(--pink);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath d='M9 18 L15 24 L27 12' fill='none' stroke='%23EB5F83' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.accept a{color:var(--pink);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.go{width:770px;margin-top:32px}
+.err{margin-top:20px}
+</style>
+<div class="page">
+  <div class="col">
+    <h1>Sign up for your new pension<br>in minutes!</h1>
+
+    <div class="row" style="margin-top:74px">
+      <label class="lab" for="f-title">Title</label>
+      <select class="f" id="f-title" style="width:192px"><option>Mr</option></select>
+    </div>
+
+    <div class="row pair">
+      <div>
+        <label class="lab" for="f-first">First Name</label>
+        <div class="hasicon">
+          <input class="f auto ring" id="f-first" value="Cesar">
+          <span class="icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><circle cx="8" cy="5" r="3"/><path d="M2 15c0-3.3 2.7-5 6-5s6 1.7 6 5z"/></svg>
+            <svg width="8" height="5" viewBox="0 0 8 5" fill="currentColor"><path d="M0 0 L4 5 L8 0 Z"/></svg>
+          </span>
+        </div>
+      </div>
+      <div>
+        <label class="lab" for="f-last">Last Name</label>
+        <input class="f auto" id="f-last" value="Garcia">
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:15px">
+      <label class="lab" for="f-phone">Phone number</label>
+      <input class="f auto" id="f-phone" style="width:377px" value="07709293700">
+    </div>
+
+    <div class="row" style="margin-top:11px">
+      <label class="lab" for="f-dob">Date of Birth</label>
+      <input class="f auto bad" id="f-dob" style="width:377px" value="13/11/1984">
+    </div>
+    <p class="err">Please use YYYY-MM-DD format</p>
+
+    <div class="row" style="margin-top:18px">
+      <label class="lab" for="f-pass">Password</label>
+      <input class="f" id="f-pass" type="password" style="width:377px" placeholder="Password">
+    </div>
+
+    <label class="accept"><input type="checkbox"><span>I have read and accept Penfold&rsquo;s <a href="#">privacy policy</a></span></label>
+
+    <button class="btn go" disabled>Set up your account</button>
+  </div>
+</div>
+</template></div>
+</div>

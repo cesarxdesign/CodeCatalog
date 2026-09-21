@@ -1,0 +1,204 @@
+<!-- CodeCatalog · penfold/desktop/sign-up-form · 1182×2640 · built from screen.html · fp 5ee4bde7c63e
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/desktop/sign-up-form" style="--cc-w:1182;--cc-h:2640;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:1182px;height:2640px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:1182px;height:2640px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+*{box-sizing:border-box}
+
+:host{
+  --navy:#133253;
+  --slate:#133253;
+  --muted:#4C5D70;
+  --pink:#ED5E83;
+  --ring:#9FB4E6;
+  --fill-auto:#F6F8BF;
+  --line:#DEDEDE;
+  --placeholder:#E2E2E2;
+}
+
+.page{
+  position:relative;
+  width:1182px;height:2640px;overflow:hidden;
+  background:transparent;
+  font-family:'Montserrat',-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  color:var(--navy);
+}
+.col{position:absolute;left:183px;top:0;width:770px}
+
+.page h1{margin-top:92px;font:700 49px/57px 'Montserrat',sans-serif;letter-spacing:-.9px;color:var(--navy)}
+
+.q{margin:74px 0 0;font:400 28.4px/1 'Montserrat',sans-serif;color:var(--navy)}
+.q u{text-decoration:underline;text-underline-offset:3px}
+
+.sect{margin:39px 0 0;font:400 28.4px/1 'Montserrat',sans-serif;color:var(--navy)}
+
+.row{margin-top:15px}
+.row label,.lab{display:block;margin:0 0 4px;font:400 16.8px/19px 'Montserrat',sans-serif;color:var(--muted)}
+
+.f{
+  display:block;width:100%;height:62px;
+  border:1px solid var(--line);border-radius:4px;
+  background:#fff;
+  padding:0 18px;
+  font:400 19.4px/1 'Montserrat',sans-serif;color:var(--slate);
+  font-family:'Montserrat',sans-serif;
+}
+.f::placeholder{color:var(--placeholder)}
+.f:focus{outline:none}
+.f.auto{background:var(--fill-auto)}
+.f.focus{border:2px solid var(--ring);box-shadow:0 0 0 3px rgba(159,180,230,.45)}
+
+select.f{appearance:none;-webkit-appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M0 0 L5.5 7 L11 0 Z' fill='%233D5165'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 18px center}
+
+.pair{display:flex;gap:13px}
+.pair>div{flex:1}
+.pair>div.narrow{flex:0 0 312px}
+.hasicon{position:relative}
+.hasicon .icon{position:absolute;right:14px;bottom:0;height:62px;display:flex;align-items:center;gap:4px;
+  pointer-events:none;color:#5C6B7C}
+.hasicon .icon svg{display:block}
+
+.acctrow{display:flex;gap:16px}
+.acctrow>div:first-child{flex:0 0 376px}
+.acctrow .cono{flex:1}
+.acctrow .cono .lab{margin-bottom:4px}
+.help a{color:var(--pink);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.submit{display:block;width:770px;height:63px;margin-top:28px;border:0;border-radius:6px;
+  background:var(--pink);color:#fff;font:600 16px 'Montserrat',sans-serif;cursor:pointer}
+.note{margin:13px 0 0;font:400 19.4px/1 'Montserrat',sans-serif;color:var(--muted)}
+.help{margin:14px 0 0;font:400 19px/1 'Montserrat',sans-serif;color:var(--muted)}
+
+/* ---------- check options ---------- */
+.opts{display:flex;margin-top:5px;font:400 19.4px/1 'Montserrat',sans-serif;color:var(--navy)}
+.opts label{display:flex;align-items:center;gap:16px;cursor:pointer}
+.opts input{
+  appearance:none;-webkit-appearance:none;margin:0;
+  flex:0 0 36px;width:36px;height:36px;
+  border:1px solid #E8E8E8;border-radius:3px;background:#fff;cursor:pointer;
+}
+.opts input:checked{border-color:var(--pink);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath d='M9 18 L15 24 L27 12' fill='none' stroke='%23EB5F83' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.opts.yesno label:first-child{width:104px}
+.opts.gender label:first-child{width:119px}
+.opts.acct  label:first-child{width:157px}
+.opts input:checked+span{color:var(--pink)}
+.opts.yesno label:first-child span{color:var(--pink)}
+
+/* search field with a clear button */
+.search{position:relative}
+.search .clear{position:absolute;right:18px;top:23px;height:62px;display:flex;align-items:center;
+  border:0;background:none;color:var(--slate);font:400 19.4px/1 'Montserrat',sans-serif;cursor:pointer}
+</style>
+<div class="page">
+  <div class="col">
+    <h1>Sign up for your new pension<br>in minutes!</h1>
+
+    <p class="q">Are you a tax resident of <u>only</u> the United Kingdom?</p>
+    <div class="opts yesno">
+      <label><input type="checkbox" checked><span>Yes</span></label>
+      <label><input type="checkbox"><span>No</span></label>
+    </div>
+
+    <h2 class="sect">Address</h2>
+
+    <div class="row search">
+      <label for="f-search">Search for your address</label>
+      <input class="f" id="f-search" placeholder="Find your address">
+      <button class="clear" aria-label="Clear">&times;</button>
+    </div>
+
+    <p class="note">Or manually enter below</p>
+
+    <div class="row pair" style="margin-top:20px">
+      <div class="narrow">
+        <label class="lab" for="f-house">House number</label>
+        <input class="f auto" id="f-house" value="2301, 155 Wandsworth Road">
+      </div>
+      <div>
+        <label class="lab" for="f-a1">Address line 1</label>
+        <input class="f" id="f-a1" value="d">
+      </div>
+    </div>
+
+    <div class="row" style="margin-top:12px">
+      <label for="f-a2">Address line 2</label>
+      <input class="f" id="f-a2" value="">
+    </div>
+    <div class="row" style="margin-top:14px">
+      <label for="f-town">Town or City</label>
+      <input class="f auto" id="f-town" value="London">
+    </div>
+    <div class="row" style="margin-top:10px">
+      <label for="f-county">County</label>
+      <input class="f auto" id="f-county" value="2301, 155 Wandsworth Road">
+    </div>
+    <div class="row" style="margin-top:12px">
+      <label for="f-post">Postcode</label>
+      <input class="f auto" id="f-post" value="SW8 2PY">
+    </div>
+
+    <h2 class="sect" style="margin-top:35px">Legal Gender</h2>
+    <div class="opts gender" style="margin-top:13px">
+      <label><input type="checkbox" checked><span>Male</span></label>
+      <label><input type="checkbox"><span>Female</span></label>
+    </div>
+
+    <h2 class="sect" style="margin-top:37px">Your Identity</h2>
+    <div class="row" style="margin-top:12px">
+      <label for="f-cob">Country of Birth</label>
+      <select class="f" id="f-cob" style="width:511px"><option>United Kingdom</option></select>
+    </div>
+    <div class="row" style="margin-top:13px">
+      <label for="f-cit">Citizenship</label>
+      <select class="f" id="f-cit" style="width:514px"><option>United Kingdom</option></select>
+    </div>
+    <div class="row" style="margin-top:10px">
+      <label for="f-ni">National Insurance Number</label>
+      <input class="f" id="f-ni" placeholder="AA000000A" value="ST261465B">
+    </div>
+    <p class="help">We need this to claim your free money from the government.</p>
+
+    <h2 class="sect" style="margin-top:40px">Bank details</h2>
+    <div class="row pair">
+      <div>
+        <label class="lab" for="f-acct">Account Number</label>
+        <input class="f" id="f-acct" placeholder="00000000" value="12312312">
+      </div>
+      <div>
+        <label class="lab" for="f-sort">Sort Code</label>
+        <input class="f" id="f-sort" placeholder="00-00-00" value="121212">
+      </div>
+    </div>
+    <p class="help" style="margin-top:10px">Make sure to only enter the account details that your payments will come from.</p>
+
+    <div class="acctrow" style="margin-top:23px">
+      <div>
+        <p class="lab">Bank Account Type</p>
+        <div class="opts acct" style="margin-top:10px">
+          <label><input type="checkbox"><span>Personal</span></label>
+          <label><input type="checkbox" checked><span>Business</span></label>
+        </div>
+      </div>
+      <div class="cono">
+        <label class="lab" for="f-co">Company Number</label>
+        <input class="f" id="f-co" value="123123">
+      </div>
+    </div>
+
+    <h2 class="sect" style="margin-top:33px">Employment Status</h2>
+    <div class="row" style="margin-top:13px">
+      <select class="f" style="width:207px;padding:0 12px;font-size:16.8px"><option>Self Employed</option></select>
+    </div>
+    <p class="help" style="margin-top:18px">If you&rsquo;re not sure please check <a href="#">this article</a> or speak to us via <a href="#">Live Chat</a></p>
+    <button class="submit">Set up your account</button>
+  </div>
+</div>
+</template></div>
+</div>

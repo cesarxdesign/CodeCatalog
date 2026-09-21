@@ -1,0 +1,140 @@
+<!-- CodeCatalog · penfold/mobile/growth · 375×812 · built from snippet.html · fp 8b0b3ad783fd
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/mobile/growth" style="--cc-w:375;--cc-h:812;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:375px;height:812px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:375px;height:812px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+:host{white-space:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-align:start;font-style:normal;font-variant:normal;line-height:normal;font-weight:400}
+*{box-sizing:border-box}
+p{margin:0}
+.fr{position:relative;width:375px;height:812px;overflow:hidden;
+    font-family:'Montserrat',-apple-system,sans-serif;color:#123456}
+.v{display:block;width:100%;height:100%}
+i{position:absolute;display:block;font-style:normal}
+.nw{white-space:nowrap}
+
+/* named type styles, as the file names them */
+.t-m12{font:500 12px/normal 'Montserrat'}
+.t-m14{font:500 14px/normal 'Montserrat'}
+.t-b20{font:700 20px/normal 'Montserrat'}
+.n-b16{font:700 16px/normal 'Montserrat';letter-spacing:-.8px}
+.n-b24{font:700 24px/normal 'Montserrat';letter-spacing:-.8px}
+.n-b28{font:700 28px/normal 'Montserrat';letter-spacing:-.8px}
+.h3b24{font:700 24px/normal 'Montserrat';letter-spacing:-1px}
+.h2b32{font:700 32px/48px 'Montserrat';letter-spacing:-1px}
+.b1r14{font:400 14px/1.4 'Montserrat'}
+.r10{font:400 10px/normal 'Montserrat'}
+.b10{font:700 10px/normal 'Montserrat'}
+.r8{font:400 8px/normal 'Montserrat'}
+/* AFTER the type classes: the `font` shorthand resets font-feature-settings,
+   so a .num declared before them is silently wiped. */
+.num{font-feature-settings:"lnum","tnum"}
+
+/* iOS chrome */
+.ios{position:absolute;left:0;top:0;width:375px;height:63px}
+.ios .url{position:absolute;left:0;right:0;top:40px;height:15px;text-align:center;
+          font:400 12px/normal -apple-system,'SF Pro Text',sans-serif;color:#000;letter-spacing:-.35px}
+.ios .status{position:absolute;left:0;top:0;width:375px;height:44px}
+.ios .time{position:absolute;left:19.89px;width:54px;top:calc(50% - 8px);text-align:center;
+           font:600 15px/18px -apple-system,'SF Pro Text',sans-serif;color:#000;letter-spacing:-.165px}
+.ios .batt{position:absolute;right:14.5px;top:calc(50% + .91px);transform:translateY(-50%);width:24.5px;height:11.5px}
+.ios .battfill{position:absolute;right:19px;top:calc(50% + .91px);transform:translateY(-50%);
+               width:18px;height:7.667px;border-radius:1.6px;background:#000}
+.ios .cell{position:absolute;right:64.4px;top:calc(50% + .95px);transform:translateY(-50%);width:17.1px;height:10.7px}
+.ios .wifi{position:absolute;right:44px;top:calc(50% + .93px);transform:translateY(-50%);width:15.4px;height:11.057px}
+.ios .dvd{position:absolute;left:0;right:0;bottom:0;height:1px;background:rgba(0,0,0,.1)}
+
+/* module header (Back / title) */
+.mh{position:absolute;left:0;top:63px;width:375px;height:72px}
+.mh .bg{position:absolute;inset:0;background:#fff;box-shadow:0 .333px 0 0 #D8D8D8}
+.mh .ttl{position:absolute;right:32px;top:calc(50% - 1px);transform:translateY(-50%);
+         text-align:right;white-space:nowrap;display:flex;flex-direction:column;justify-content:center}
+.mh .back{position:absolute;left:0;top:50%;transform:translateY(-50%);display:flex;align-items:center}
+/* the export is icon/chevron/Right; the file uses it as Left. The transform is
+   NOT baked into the asset, so it must be applied here. */
+.mh .back .ch{width:40px;height:40px;position:relative;flex:0 0 auto;transform:rotate(180deg)}
+.mh .back .lab{padding:4px;display:flex;align-items:center;overflow:hidden}
+.mh .back .lab p{white-space:nowrap}
+
+.fr{background:#f5f5f5}
+.card{position:absolute;border-radius:12px}
+.card.lg{width:217px;height:314px;background:#fff;box-shadow:0 2px 20px 0 rgba(0,0,0,.12)}
+.card.sm{width:217px;height:115px;background:#fff;box-shadow:0 2px 6px 0 rgba(0,0,0,.08)}
+.card.off{width:217px;height:115px;background:#fbfbfb}
+.ctr{text-align:center}
+.bul{position:absolute;line-height:0}
+.bul p{line-height:.5}
+.bul p+p{margin-top:12px}
+.sub{position:absolute;line-height:0;text-align:center}
+.sub p{line-height:6px}
+.sub p+p{margin-top:12px}
+.keyt{position:absolute;line-height:.7;white-space:nowrap}
+.dot8{position:absolute;width:8px;height:8px}
+.s32{position:absolute;width:32px;height:32px}
+.chev44{position:absolute;width:44px;height:44px}
+.info{position:absolute;inset:54.56% 26.4% 42.98% 68.27%}
+.info p{position:absolute;inset:10% 35% 5% 40%;color:#fff;white-space:nowrap;
+        font:700 14px/normal 'Montserrat'}
+.grey{color:#ccc}
+
+:host{display:block;container-type:inline-size}
+.fr{transform-origin:0 0;transform:scale(calc(100cqw / 375.0000px));border-radius:var(--frameR,0)}
+</style>
+<div class="fr">
+
+ <i class="h3b24 ctr nw" style="left:21.87%;right:61.6%;top:calc(50% - 251px)">Fund</i>
+
+ <div class="card sm" style="left:calc(16.67% + 16.5px);top:192px"></div>
+ <i class="h3b24 nw" style="left:27.47%;right:38.93%;top:calc(50% - 199px)">BlackRock</i>
+ <i class="b1r14" style="left:27.47%;right:26.67%;top:calc(50% - 158px)">Annual fee</i>
+ <i class="h3b24 nw" style="left:27.47%;right:54.4%;top:calc(50% - 143px)">0.75%</i>
+ <i class="s32" style="left:calc(66.67% + 2px);top:263px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="s13-Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8365 32 32 24.8366 32 16C32 7.16341 24.8365 0 16 0C7.16345 0 0 7.16341 0 16C0 24.8366 7.16345 32 16 32ZM22.2761 13.6095C22.7968 13.0888 22.7968 12.2445 22.2761 11.7239C21.7555 11.2031 20.9112 11.2031 20.3905 11.7239L14 18.1144L11.6095 15.7239C11.0888 15.2031 10.2445 15.2031 9.72388 15.7239C9.20317 16.2445 9.20317 17.0888 9.72388 17.6095L13.0572 20.9428C13.3073 21.1929 13.6464 21.3333 14 21.3333C14.3536 21.3333 14.6927 21.1929 14.9428 20.9428L22.2761 13.6095Z" fill="#43A800"/></svg></i>
+
+ <div class="card off" style="left:calc(91.67% - 15.75px);top:192px"></div>
+ <i class="h3b24 nw grey" style="left:93.87%;right:-21.87%;top:calc(50% - 199px)">Eco fund</i>
+ <i class="b1r14 grey" style="left:93.87%;right:-39.73%;top:calc(50% - 158px)">Coming soon</i>
+
+ <i class="h3b24 ctr nw" style="left:35.47%;right:35.2%;top:calc(50% - 67px)">Risk level</i>
+ <i class="sub b1r14" style="left:7.47%;right:7.2%;top:calc(50% - 31px);white-space:nowrap">
+   <p>More risk, tends to perform better over longer</p><p>periods of time.</p></i>
+
+ <div class="card lg" style="left:calc(16.67% + 16.5px);top:423px"></div>
+ <i class="h3b24 nw" style="left:27.47%;right:52.27%;top:calc(50% + 33px)">Level 1</i>
+ <div class="info"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle id="s14-Ellipse" cx="10" cy="10" r="10" fill="#FF5081"/></svg><p>i</p></div>
+ <i style="left:calc(33.33% + 13px);top:498px;width:100px;height:100px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s15-Group 52"><circle id="s15-Ellipse 7" cx="50.0001" cy="50" r="50" transform="rotate(-90 50.0001 50)" fill="#4ECFEF"/><path id="s15-Ellipse 6" d="M50.0001 5.44383e-06C38.4323 5.94947e-06 27.2224 4.01097 18.2804 11.3495C9.33841 18.688 3.21757 28.9 0.960815 40.2455C-1.29594 51.591 0.45101 63.368 5.90402 73.5698C11.357 83.7717 20.1787 91.7672 30.8659 96.194C41.5531 100.621 53.4447 101.205 64.5143 97.847C75.584 94.4891 85.1469 87.3968 91.5736 77.7785C98.0003 68.1603 100.893 56.6112 99.7593 45.0992C98.6255 33.5871 93.5351 22.8243 85.3554 14.6447L50.0001 50L50.0001 5.44383e-06Z" fill="#123456"/></g></svg></i>
+ <i class="bul b1r14" style="left:25.07%;right:25.33%;top:calc(50% + 222px)">
+   <p>&middot; Lower risk</p><p>&middot; Slow and steady growth</p><p>&middot; Short term investment</p></i>
+ <i class="dot8" style="left:calc(16.67% + 39.5px);top:698px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><circle id="s16-Ellipse 8" cx="4" cy="4" r="4" fill="#123456"/></svg></i>
+ <i class="dot8" style="left:calc(16.67% + 39.5px);top:712px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><circle id="s17-Ellipse 9" cx="4" cy="4" r="4" fill="#4ECFEF"/></svg></i>
+ <i class="keyt r8" style="left:30.67%;right:56.27%;top:calc(50% + 293px)">Equity | 85%</i>
+ <i class="keyt r8" style="left:30.67%;right:56.8%;top:calc(50% + 307px)">Bonds | 15%</i>
+ <i class="s32" style="left:calc(66.67% + 2px);top:693px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle id="s18-Ellipse 4" cx="16" cy="16" r="15.5" stroke="#CCCCCC"/></svg></i>
+
+ <div class="card lg" style="left:calc(91.67% - 15.75px);top:423px"></div>
+ <i class="h3b24 nw" style="left:93.87%;right:-15.47%;top:calc(50% + 33px)">Level 2</i>
+ <i style="left:calc(100% + 12px);top:498px;width:100px;height:100px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s19-Group 52"><circle id="s19-Ellipse 7" cx="50.0001" cy="50" r="50" transform="rotate(-90 50.0001 50)" fill="#4ECFEF"/><path id="s19-Ellipse 6" d="M50.0001 5.44383e-06C38.4323 5.94947e-06 27.2224 4.01097 18.2804 11.3495C9.33841 18.688 3.21757 28.9 0.960815 40.2455C-1.29594 51.591 0.45101 63.368 5.90402 73.5698C11.357 83.7717 20.1787 91.7672 30.8659 96.194C41.5531 100.621 53.4447 101.205 64.5143 97.847C75.584 94.4891 85.1469 87.3968 91.5736 77.7785C98.0003 68.1603 100.893 56.6112 99.7593 45.0992C98.6255 33.5871 93.5351 22.8243 85.3554 14.6447L50.0001 50L50.0001 5.44383e-06Z" fill="#123456"/></g></svg></i>
+ <i class="bul b1r14" style="left:91.47%;right:-41.07%;top:calc(50% + 222px)">
+   <p>&middot; Lower risk</p><p>&middot; Slow and steady growth</p><p>&middot; Short term investment</p></i>
+ <i class="dot8" style="left:calc(100% - 24px);top:698px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><circle id="s20-Ellipse 8" cx="4" cy="4" r="4" fill="#123456"/></svg></i>
+ <i class="dot8" style="left:calc(100% - 24px);top:712px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><circle id="s21-Ellipse 9" cx="4" cy="4" r="4" fill="#4ECFEF"/></svg></i>
+ <i class="keyt r8" style="left:97.07%;right:-10.13%;top:calc(50% + 293px)">Equity | 85%</i>
+ <i class="keyt r8" style="left:97.07%;right:-9.6%;top:calc(50% + 307px)">Bonds | 15%</i>
+ <i class="s32" style="left:calc(100% + 126px);top:693px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle id="s22-Ellipse 4" cx="16" cy="16" r="15.5" stroke="#CCCCCC"/></svg></i>
+
+ <i class="chev44" style="left:16px;top:558px;transform:rotate(180deg)"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s23-icon/chevron"><path id="s23-Vector 1" d="M21 18L25 22L21 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/></g></svg></i>
+
+<div class="ios"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 375 63" fill="none" xmlns="http://www.w3.org/2000/svg"><foreignObject x="-40.7742" y="-40.7742" width="456.548" height="144.548"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20.39px);clip-path:url(#s24-bgblur_0_0_31_clip_path);height:100%;width:100%"></div></foreignObject><path id="s24-Background" data-figma-bg-blur-radius="40.7742" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z" fill="#F8F8F8" fill-opacity="0.7"/><defs><clipPath id="s24-bgblur_0_0_31_clip_path" transform="translate(40.7742 40.7742)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z"/></clipPath></defs></svg><i class="dvd"></i>
+<p class="url">getpenfold.com</p>
+<div class="status"><p class="time">9:24</p>
+<i class="cell"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 17.0996 10.7002" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="s25-Combined Shape" d="M1.5 6.7002C1.77879 6.7002 1.91826 6.6996 2.03418 6.72266C2.51021 6.81734 2.88187 7.18999 2.97656 7.66602C2.99961 7.78193 3 7.92144 3 8.2002V9.2002C3 9.47886 2.99961 9.61848 2.97656 9.73438C2.88178 10.2102 2.51005 10.5821 2.03418 10.6768C1.91826 10.6998 1.77879 10.7002 1.5 10.7002C1.22121 10.7002 1.08174 10.6998 0.96582 10.6768C0.48995 10.5821 0.118223 10.2102 0.0234375 9.73438C0.000385105 9.61848 1.19764e-09 9.47886 0 9.2002V8.2002C0 7.92144 0.000388227 7.78193 0.0234375 7.66602C0.118125 7.18999 0.489792 6.81734 0.96582 6.72266C1.08174 6.6996 1.22121 6.7002 1.5 6.7002ZM6.2998 4.7002C6.57845 4.7002 6.7181 4.69964 6.83398 4.72266C7.31001 4.81734 7.68266 5.18999 7.77734 5.66602C7.80036 5.7819 7.7998 5.92156 7.7998 6.2002V9.2002C7.7998 9.47886 7.8004 9.61848 7.77734 9.73438C7.6826 10.2103 7.30996 10.5821 6.83398 10.6768C6.71808 10.6998 6.57854 10.7002 6.2998 10.7002C6.02113 10.7002 5.88152 10.6998 5.76562 10.6768C5.28983 10.582 4.918 10.2102 4.82324 9.73438C4.80019 9.61848 4.7998 9.47886 4.7998 9.2002V6.2002C4.7998 5.92146 4.8002 5.78192 4.82324 5.66602C4.91792 5.19004 5.28968 4.8174 5.76562 4.72266C5.88152 4.6996 6.02113 4.7002 6.2998 4.7002ZM10.9004 2.40039C11.1789 2.40039 11.3187 2.3998 11.4346 2.42285C11.9104 2.51767 12.2823 2.89032 12.377 3.36621C12.3999 3.48207 12.4004 3.62185 12.4004 3.90039V9.2002C12.4004 9.47886 12.4 9.61848 12.377 9.73438C12.2822 10.2101 11.9103 10.5819 11.4346 10.6768C11.3187 10.6998 11.1789 10.7002 10.9004 10.7002C10.6218 10.7002 10.4821 10.6998 10.3662 10.6768C9.89025 10.5821 9.51761 10.2103 9.42285 9.73438C9.3998 9.61848 9.40039 9.47886 9.40039 9.2002V3.90039C9.40039 3.62187 9.39986 3.48206 9.42285 3.36621C9.51754 2.89018 9.89018 2.51754 10.3662 2.42285C10.4821 2.39986 10.6219 2.40039 10.9004 2.40039ZM15.5996 0C15.8782 0 16.0179 0.000424711 16.1338 0.0234375C16.6098 0.118124 16.9825 0.489805 17.0771 0.96582C17.1002 1.08174 17.0996 1.22121 17.0996 1.5V9.2002C17.0996 9.47886 17.1002 9.61848 17.0771 9.73438C16.9824 10.2103 16.6097 10.5821 16.1338 10.6768C16.0179 10.6998 15.8782 10.7002 15.5996 10.7002C15.3211 10.7002 15.1813 10.6998 15.0654 10.6768C14.5897 10.5819 14.2178 10.2101 14.123 9.73438C14.1 9.61848 14.0996 9.47886 14.0996 9.2002V1.5C14.0996 1.22121 14.1 1.08174 14.123 0.96582C14.2177 0.489994 14.5897 0.118285 15.0654 0.0234375C15.1813 0.000390368 15.3211 4.79655e-09 15.5996 0Z" fill="black"/></svg></i><i class="wifi"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 15.4 11.0572" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="s26-Wi-Fi" fill-rule="evenodd" clip-rule="evenodd" d="M7.70042 2.29636C9.93483 2.29646 12.0838 3.15501 13.7032 4.69457C13.8251 4.81343 14.02 4.81193 14.1401 4.69121L15.3058 3.51479C15.3666 3.45356 15.4005 3.37062 15.4 3.28433C15.3995 3.19803 15.3646 3.11549 15.3031 3.05498C11.0528 -1.01833 4.3474 -1.01833 0.0970716 3.05498C0.0355014 3.11545 0.000571881 3.19796 7.20154e-06 3.28426C-0.000567562 3.37055 0.033283 3.45352 0.0940465 3.51479L1.26005 4.69121C1.38006 4.81211 1.57513 4.81361 1.697 4.69457C3.31657 3.15491 5.46579 2.29636 7.70042 2.29636V2.29636ZM7.70042 6.12375C8.92809 6.12367 10.1119 6.57999 11.022 7.40402C11.145 7.52097 11.3389 7.51844 11.4589 7.39831L12.6232 6.22189C12.6845 6.16019 12.7186 6.07648 12.7177 5.98949C12.7168 5.90251 12.6811 5.8195 12.6185 5.75906C9.84735 3.18131 5.55584 3.18131 2.78469 5.75906C2.72209 5.8195 2.68637 5.90255 2.68555 5.98956C2.68473 6.07657 2.71887 6.16028 2.78031 6.22189L3.9443 7.39831C4.06427 7.51844 4.25817 7.52097 4.38125 7.40402C5.29065 6.58053 6.47357 6.12426 7.70042 6.12375V6.12375ZM9.93797 8.93135C10.0002 8.87024 10.0345 8.78614 10.0327 8.69891C10.031 8.61168 9.99327 8.52905 9.92855 8.47053C8.64232 7.38263 6.75852 7.38263 5.47229 8.47053C5.40753 8.529 5.36977 8.6116 5.36792 8.69883C5.36608 8.78606 5.40031 8.87019 5.46254 8.93135L7.4769 10.9639C7.53594 11.0236 7.61643 11.0572 7.70042 11.0572C7.78441 11.0572 7.8649 11.0236 7.92394 10.9639L9.93797 8.93135Z" fill="black"/></svg></i>
+<i class="batt"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 24.5 11.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="s27-Rectangle" d="M18.4102 0C19.6582 0 20.1111 0.130042 20.5674 0.374023C21.0237 0.618053 21.3819 0.976321 21.626 1.43262C21.87 1.88887 22 2.34185 22 3.58984V7.91016C22 9.15815 21.87 9.61113 21.626 10.0674C21.3819 10.5237 21.0237 10.8819 20.5674 11.126C20.1111 11.37 19.6582 11.5 18.4102 11.5H3.58984C2.34185 11.5 1.88887 11.37 1.43262 11.126C0.976321 10.8819 0.618053 10.5237 0.374023 10.0674C0.130042 9.61113 0 9.15815 0 7.91016V3.58984C0 2.34185 0.130042 1.88887 0.374023 1.43262C0.618053 0.976321 0.976321 0.618053 1.43262 0.374023C1.88887 0.130042 2.34185 0 3.58984 0H18.4102ZM3.58984 1C2.60305 1 2.25812 1.06668 1.9043 1.25586C1.62227 1.40669 1.40669 1.62227 1.25586 1.9043C1.06668 2.25812 1 2.60305 1 3.58984V7.91016C1 8.89695 1.06668 9.24188 1.25586 9.5957C1.40669 9.87773 1.62227 10.0933 1.9043 10.2441C2.25812 10.4333 2.60305 10.5 3.58984 10.5H18.4102C19.397 10.5 19.7419 10.4333 20.0957 10.2441C20.3777 10.0933 20.5933 9.87773 20.7441 9.5957C20.9333 9.24188 21 8.89695 21 7.91016V3.58984C21 2.60305 20.9333 2.25812 20.7441 1.9043C20.5933 1.62227 20.3777 1.40669 20.0957 1.25586C19.7419 1.06668 19.397 1 18.4102 1H3.58984ZM23 3.69043C23.0184 3.69985 24.5 4.46155 24.5 5.69043C24.4997 6.92675 23 7.69043 23 7.69043V3.69043Z" fill="black" fill-opacity="0.36"/></svg></i><i class="battfill"></i></div></div>
+<div class="mh"><div class="bg"></div>
+<i class="ttl n-b28 num">Invest</i>
+<div class="back"><div class="ch"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s28-icon/chevron"><path id="s28-Vector" d="M19 15L23 20L19 25" stroke="#123456" stroke-width="3" stroke-linecap="round"/></g></svg></div>
+<div class="lab"><p class="t-b20">Back</p></div></div></div>
+</div>
+</template></div>
+</div>

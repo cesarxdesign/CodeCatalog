@@ -1,0 +1,58 @@
+{
+  "id": "plan-selection",
+  "project": "penfold",
+  "platform": "desktop",
+  "order": 1,
+  "name": "Plan selection",
+  "title": "Choose how your money is managed",
+  "frame": [
+    1182,
+    2640
+  ],
+  "interactive": true,
+  "states": [
+    "plans",
+    "risk",
+    "accept"
+  ],
+  "provenance": "raster",
+  "source_scale": "1.00× · 0.79× · 0.99×",
+  "source_frames": "3 frames",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "state-choose.html",
+      "state-risk.html"
+    ],
+    "source": [
+      "source/frame-1.webp",
+      "source/frame-2.webp",
+      "source/frame-3.webp"
+    ],
+    "preview": "source/frame-1.webp"
+  },
+  "embed_from": "screen.html",
+  "embed_state": [
+    "data-state",
+    "plans"
+  ],
+  "live": "https://claude.ai/artifact/TeVWzZNF7wdb9zd1ngUfxG",
+  "aliases": [
+    "03-plan-selection-flow",
+    "flow",
+    "plan selection"
+  ],
+  "catalogue": {
+    "m1": "1.00×",
+    "m1l": "source scale",
+    "m2": "±1px",
+    "m2l": "cards on their source y",
+    "note": "Three connected frames &mdash; the plan list, the risk scale it scrolls to, and the state after a plan is picked &mdash; folded into one page that builds over two taps. Cards land within 1px; the acceptance panel&rsquo;s bands within 4px. <em>Both panes show the opening state; the other two are in the live comparison.</em>",
+    "tag": "Interactive · 3 states",
+    "frame_label": "1182 × 2640 (3560 when open)"
+  }
+}

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=375">
+<title>Penfold · Eligibility</title>
+<style>html,body{margin:0;background:#F4F4F4}</style>
+</head><body>
+<!-- CodeCatalog · penfold/mobile/eligibility · 375×812 · built from snippet.html · fp 7528b69480dd
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/mobile/eligibility" style="--cc-w:375;--cc-h:812;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:375px;height:812px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:375px;height:812px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+:host{white-space:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-align:start;font-style:normal;font-variant:normal;line-height:normal;font-weight:400}
+:host {
+  --navy: #123456;
+  --white: #FFFFFF;
+  --grey-cc: #CCCCCC;
+  --grey-d8: #D8D8D8;
+  --pinkfold: #FF5081;
+  --dolfknip: #5081FF;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+svg { display: block; }
+
+.frame {
+  position: relative;
+  width: 375px;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy);
+  /* every Montserrat run in the file has LIGA and CLIG off */
+  font-feature-settings: "liga" 0, "clig" 0;
+}
+.abs { position: absolute; }
+/* runs that also carry LNUM + TNUM (declared as a full list: it replaces, not merges) */
+.num { font-feature-settings: "liga" 0, "clig" 0, "lnum" 1, "tnum" 1; }
+
+/* Text boxes keep Figma's box; flex centres any overflow evenly. */
+.tx   { position: absolute; display: flex; white-space: nowrap; }
+.tx-c { justify-content: center; text-align: center; }
+.tx-r { justify-content: flex-end; text-align: right; }
+.tx-l { justify-content: flex-start; text-align: left; }
+
+/* ---------- iOS Nav Bar (contracted) / iOS/smallSafariHeader ---------- */
+.ios        { left: 0; top: 0; width: 375px; height: 63px; }
+.ios-bg     { left: 0; top: 0; width: 375px; height: 63px;
+              -webkit-backdrop-filter: blur(20.39px); backdrop-filter: blur(20.39px); } /* BACKGROUND_BLUR 40.77 */
+/* Divider: 0.5px black under a 20% group opacity, spanning y 62.5-63 = half of row 62
+   at 0.2, drawn as one crisp row at 0.1 */
+.ios-div    { left: 0; top: 62px; width: 375px; height: 1px; background: rgba(0, 0, 0, 0.1); }
+.ios-status { left: 0; top: 0; width: 375px; height: 44px; }
+.ios-ctr    { left: 293.5px; top: 17.16px; width: 67px; height: 11.5px; }
+.ios-fill   { left: 44.5px; top: 1.9167px; width: 18px; height: 7.6667px; background: #000; border-radius: 1.6px; }
+.t-ios-time { font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif; font-feature-settings: normal;
+              font-weight: 600; font-size: 15px; line-height: 18px; letter-spacing: -0.165px; color: #000; }
+.t-ios-url  { font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif; font-feature-settings: normal;
+              font-weight: 400; font-size: 12px; line-height: 15px; letter-spacing: -0.35px; color: #000; }
+/* CSS adds letter-spacing after the last glyph; Figma's box does not */
+.t-ios-time .trk { margin-right: 0.165px; }
+.t-ios-url  .trk { margin-right: 0.35px; }
+
+
+.frame { height: 812px; background: #FBFBFB; }
+
+/* type - line heights are Figma's text-box height / line count */
+.t-h1     { font-weight: 700; font-size: 28px; line-height: 29px; letter-spacing: -1px; }   /* H1.m Bold 28, 104% */
+.t-h1 .trk { margin-right: 1px; }
+.t-lbl-s  { font-weight: 500; font-size: 12px; line-height: 20px; }                         /* LabelS.m Medium 12 */
+.t-lbl-m  { font-weight: 500; font-size: 16px; line-height: 22px; }                         /* LabelS Medium 16 */
+.t-b1     { font-weight: 400; font-size: 14px; line-height: 20px; }                         /* B1.m Regular 14, 140% */
+.t-bold20 { font-weight: 700; font-size: 20px; line-height: 24px; }                         /* Label Bold 20 */
+.b700 { font-weight: 700; }
+
+/* button/NotifyMe */
+.notify    { left: 109px; top: 638px; width: 157px; height: 48px; }
+.notify-bg { left: 0; top: 0; width: 157px; height: 48px; background: var(--pinkfold); border-radius: 8px; }
+
+/* inputBox/mobile.old */
+.inp       { left: 78px; width: 219px; height: 60px; }
+.inp-box   { left: 0; top: 20px; width: 219px; height: 40px; background: var(--white); border-radius: 8px;
+             box-shadow: inset 0 0 0 2px var(--grey-cc); }                                   /* 2px inside stroke */
+/* icon/chevronRight exports pointing right; the instance turns it to point down */
+.inp-chev  { left: 171px; top: 19px; width: 44px; height: 44px; transform: rotate(90deg); }
+
+/* headline: three explicit lines, each centred on its own */
+.h1        { left: 42px; top: 159px; width: 290px; height: 87px; }
+.h1-ln     { display: flex; justify-content: center; white-space: nowrap; }
+
+/* checkbox/YesNo */
+.yn        { top: 32px; width: 83px; height: 44px; }                                         /* Group 7 origin 55,522 */
+
+/* header/module.mobile */
+.hdr       { left: 0; top: 63px; width: 375px; height: 72px; }
+/* #FBFBFB at 92% + BACKGROUND_BLUR 4; 0.333px #CCC outside stroke as one crisp row at
+   the alpha its coverage produces - the frame clips the sides */
+.hdr-bg    { left: 0; top: 0; width: 375px; height: 72px; background: rgba(251, 251, 251, 0.92);
+             -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+             box-shadow: 0 0 0 1px rgba(204, 204, 204, 0.333); }
+.back      { left: 246px; top: 12px; width: 121px; height: 48px; }
+/* icon/chevron exports pointing right; the instance is turned 180deg */
+.back-chev { left: 2px; top: 2px; width: 44px; height: 44px; transform: rotate(180deg); }
+.logo      { left: 28px; top: 14px; width: 52px; height: 44px; }
+</style>
+<div class="frame" data-frame data-node-id="101:9525">
+
+  <div class="abs notify" data-node-id="101:9526">
+    <div class="abs notify-bg"></div>
+    <!-- button/nextChevy: its icon instance has no children, so the export is empty -->
+    <svg class="abs" style="display:block;left:106px;top:2px" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+</g>
+</g>
+</svg>
+    <p class="tx tx-c t-bold20" style="left:24px;top:12px;width:109px;height:24px;color:var(--white)">Let’s go</p>
+  </div>
+
+  <div class="abs inp" style="top:286px" data-node-id="101:9527">
+    <div class="abs inp-box"></div>
+    <svg class="abs inp-chev" style="display:block;" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M22 18L26 22L22 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg>
+    <p class="tx tx-l t-lbl-s" style="left:12px;top:30px;width:195px;height:20px">Jonny</p>
+    <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">First name</p>
+  </div>
+  <div class="abs inp" style="top:422px" data-node-id="101:9528">
+    <div class="abs inp-box"></div>
+    <svg class="abs inp-chev" style="display:block;" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M22 18L26 22L22 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg>
+    <p class="tx tx-l t-lbl-s" style="left:12px;top:30px;width:195px;height:20px">13-11-1997</p>
+    <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Date of birth</p>
+  </div>
+  <div class="abs inp" style="top:354px" data-node-id="101:9529">
+    <div class="abs inp-box"></div>
+    <svg class="abs inp-chev" style="display:block;" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M22 18L26 22L22 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg>
+    <p class="tx tx-l t-lbl-s" style="left:12px;top:30px;width:195px;height:20px">Two-byFour</p>
+    <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Last name</p>
+  </div>
+
+  <div class="abs h1 t-h1" data-node-id="101:9530">
+    <p class="h1-ln"><span class="trk">You need 3 things:</span></p>
+    <p class="h1-ln"><span class="trk">name, birthdate, and</span></p>
+    <p class="h1-ln"><span class="trk">be a UK tax resident</span></p>
+  </div>
+
+  <div class="abs" style="left:55px;top:522px;width:265px;height:76px" data-node-id="101:9531">
+    <div class="abs yn" style="left:49px" data-node-id="101:9532">
+      <p class="tx tx-l t-lbl-m" style="left:42px;top:11px;height:22px">Yes</p>
+      <svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<rect x="11" y="11" width="22" height="22" rx="3" fill="white" stroke="#FF5081" stroke-width="2"/>
+<path d="M17 21L22 26L33 15" stroke="#FF5081" stroke-width="2"/>
+</g>
+</svg>
+    </div>
+    <div class="abs yn" style="left:137px" data-node-id="101:9533">
+      <p class="tx tx-l t-lbl-m" style="left:42px;top:11px;height:22px">No</p>
+      <svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<rect x="11" y="11" width="22" height="22" rx="3" fill="white" stroke="#123456" stroke-width="2"/>
+</g>
+</svg>
+    </div>
+    <p class="abs t-b1" style="left:0;top:0;width:265px;height:20px;text-align:center" data-node-id="101:9534">Are you a tax resident of <span class="b700">only</span> the UK?</p>
+  </div>
+
+  <div class="abs hdr" data-node-id="101:9535">
+    <div class="abs hdr-bg"></div>
+    <div class="abs back" data-node-id="I101:9535;10:19">
+      <p class="tx tx-c t-bold20" style="left:48px;top:12px;width:53px;height:24px">Back</p>
+      <svg class="abs back-chev" style="display:block;" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.5398 16.4161C18.8659 17.0105 18.8162 18.0224 19.4288 18.6763L22.5429 22L19.4288 25.3237C18.8162 25.9776 18.8659 26.9895 19.5398 27.5839C20.2136 28.1783 21.2565 28.1301 21.8691 27.4763L27 22L21.8691 16.5237C21.2565 15.8699 20.2136 15.8217 19.5398 16.4161Z" fill="#123456"/>
+</g>
+</svg>
+    </div>
+    <svg class="abs logo" style="display:block;" role="img" aria-label="Penfold beta" preserveAspectRatio="none" overflow="visible" width="52" height="44" viewBox="0 0 52 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<path d="M27.3226 31.4476C26.4358 31.4476 25.6554 31.7787 25.1351 32.4527V29H24V37.7736H25.0878V36.7804C25.5963 37.4898 26.4003 37.8446 27.3226 37.8446C29.1554 37.8446 30.4915 36.5557 30.4915 34.6402C30.4915 32.7247 29.1554 31.4476 27.3226 31.4476ZM27.228 36.8513C26.0338 36.8513 25.1233 35.9763 25.1233 34.6402C25.1233 33.304 26.0338 32.4409 27.228 32.4409C28.4341 32.4409 29.3446 33.304 29.3446 34.6402C29.3446 35.9763 28.4341 36.8513 27.228 36.8513Z" fill="#123456"/>
+<path d="M38.6697 34.6757C38.6697 32.7483 37.3808 31.4476 35.5717 31.4476C33.7626 31.4476 32.4265 32.7838 32.4265 34.6402C32.4265 36.5084 33.7744 37.8446 35.7964 37.8446C36.8369 37.8446 37.7001 37.4898 38.2677 36.8277L37.641 36.0946C37.1798 36.603 36.565 36.8513 35.8319 36.8513C34.5903 36.8513 33.7035 36.1182 33.5616 35.0186H38.646C38.6579 34.9121 38.6697 34.7703 38.6697 34.6757ZM35.5717 32.4054C36.6714 32.4054 37.4636 33.1503 37.5819 34.2027H33.5616C33.6798 33.1385 34.4839 32.4054 35.5717 32.4054Z" fill="#123456"/>
+<path d="M44.3608 36.5912C44.1243 36.7804 43.805 36.8868 43.474 36.8868C42.8473 36.8868 42.4925 36.5084 42.4925 35.8344V32.4409H44.2898V31.5067H42.4925V30.1351H41.3574V31.5067H40.2932V32.4409H41.3574V35.8817C41.3574 37.1469 42.0787 37.8446 43.3439 37.8446C43.8523 37.8446 44.3726 37.7027 44.7155 37.4071L44.3608 36.5912Z" fill="#123456"/>
+<path d="M49.3159 31.4476C48.3108 31.4476 47.3767 31.7314 46.7264 32.2517L47.1993 33.103C47.6841 32.6892 48.4409 32.429 49.1858 32.429C50.3091 32.429 50.8649 32.9848 50.8649 33.9426V34.1672H49.0676C47.1993 34.1672 46.549 34.9949 46.549 36C46.549 37.0878 47.4477 37.8446 48.8666 37.8446C49.848 37.8446 50.5456 37.5135 50.924 36.9459V37.7736H52V33.9898C52 32.2753 51.0304 31.4476 49.3159 31.4476ZM49.0558 36.9696C48.1926 36.9696 47.6723 36.5794 47.6723 35.9527C47.6723 35.4206 47.9916 34.9831 49.1149 34.9831H50.8649V35.8581C50.5811 36.5794 49.9071 36.9696 49.0558 36.9696Z" fill="#123456"/>
+</g>
+<g>
+<path d="M0 38L11 44V0L0 6V38Z" fill="#FF5081"/>
+<path d="M11 10V0L28 9V19L11 10Z" fill="#123456"/>
+<path d="M28 9L11 18V28L28 19V9Z" fill="#4ECFEF"/>
+</g>
+</g>
+</svg>
+  </div>
+
+  <div class="abs ios" data-node-id="101:9536">
+    <div class="abs ios-bg">
+      <svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="375" height="63" viewBox="0 0 375 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-40.7742" y="-40.7742" width="456.548" height="144.548"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20.39px);clip-path:url(#eligibility-9-bgblur_0_0_95_clip_path);height:100%;width:100%"></div></foreignObject><path data-figma-bg-blur-radius="40.7742" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z" fill="#F8F8F8" fill-opacity="0.7"/>
+<defs>
+<clipPath id="eligibility-9-bgblur_0_0_95_clip_path" transform="translate(40.7742 40.7742)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z"/>
+</clipPath></defs>
+</svg>
+      <div class="abs ios-div"></div>
+    </div>
+    <p class="tx tx-c t-ios-url" style="left:145px;top:40px;width:84px;height:15px"><span class="trk">getpenfold.com</span></p>
+    <div class="abs ios-status">
+      <p class="tx tx-c t-ios-time" style="left:19.894px;top:14px;width:54px;height:18px"><span class="trk">9:41</span></p>
+      <div class="abs ios-ctr">
+        <svg class="abs" style="display:block;left:42.5px;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="24.5" height="11.5" viewBox="0 0 24.5 11.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.4102 0C19.6582 0 20.1111 0.130042 20.5674 0.374023C21.0237 0.618053 21.3819 0.976321 21.626 1.43262C21.87 1.88887 22 2.34185 22 3.58984V7.91016C22 9.15815 21.87 9.61113 21.626 10.0674C21.3819 10.5237 21.0237 10.8819 20.5674 11.126C20.1111 11.37 19.6582 11.5 18.4102 11.5H3.58984C2.34185 11.5 1.88887 11.37 1.43262 11.126C0.976321 10.8819 0.618053 10.5237 0.374023 10.0674C0.130042 9.61113 0 9.15815 0 7.91016V3.58984C0 2.34185 0.130042 1.88887 0.374023 1.43262C0.618053 0.976321 0.976321 0.618053 1.43262 0.374023C1.88887 0.130042 2.34185 0 3.58984 0H18.4102ZM3.58984 1C2.60305 1 2.25812 1.06668 1.9043 1.25586C1.62227 1.40669 1.40669 1.62227 1.25586 1.9043C1.06668 2.25812 1 2.60305 1 3.58984V7.91016C1 8.89695 1.06668 9.24188 1.25586 9.5957C1.40669 9.87773 1.62227 10.0933 1.9043 10.2441C2.25812 10.4333 2.60305 10.5 3.58984 10.5H18.4102C19.397 10.5 19.7419 10.4333 20.0957 10.2441C20.3777 10.0933 20.5933 9.87773 20.7441 9.5957C20.9333 9.24188 21 8.89695 21 7.91016V3.58984C21 2.60305 20.9333 2.25812 20.7441 1.9043C20.5933 1.62227 20.3777 1.40669 20.0957 1.25586C19.7419 1.06668 19.397 1 18.4102 1H3.58984ZM23 3.69043C23.0184 3.69985 24.5 4.46155 24.5 5.69043C24.4997 6.92675 23 7.69043 23 7.69043V3.69043Z" fill="black" fill-opacity="0.36"/>
+</svg>
+        <div class="abs ios-fill"></div>
+        <svg class="abs" style="display:block;left:0;top:0.4401px" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="17.0996" height="10.7002" viewBox="0 0 17.0996 10.7002" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 6.7002C1.77879 6.7002 1.91826 6.6996 2.03418 6.72266C2.51021 6.81734 2.88187 7.18999 2.97656 7.66602C2.99961 7.78193 3 7.92144 3 8.2002V9.2002C3 9.47886 2.99961 9.61848 2.97656 9.73438C2.88178 10.2102 2.51005 10.5821 2.03418 10.6768C1.91826 10.6998 1.77879 10.7002 1.5 10.7002C1.22121 10.7002 1.08174 10.6998 0.96582 10.6768C0.48995 10.5821 0.118223 10.2102 0.0234375 9.73438C0.000385105 9.61848 1.19764e-09 9.47886 0 9.2002V8.2002C0 7.92144 0.000388227 7.78193 0.0234375 7.66602C0.118125 7.18999 0.489792 6.81734 0.96582 6.72266C1.08174 6.6996 1.22121 6.7002 1.5 6.7002ZM6.2998 4.7002C6.57845 4.7002 6.7181 4.69964 6.83398 4.72266C7.31001 4.81734 7.68266 5.18999 7.77734 5.66602C7.80036 5.7819 7.7998 5.92156 7.7998 6.2002V9.2002C7.7998 9.47886 7.8004 9.61848 7.77734 9.73438C7.6826 10.2103 7.30996 10.5821 6.83398 10.6768C6.71808 10.6998 6.57854 10.7002 6.2998 10.7002C6.02113 10.7002 5.88152 10.6998 5.76562 10.6768C5.28983 10.582 4.918 10.2102 4.82324 9.73438C4.80019 9.61848 4.7998 9.47886 4.7998 9.2002V6.2002C4.7998 5.92146 4.8002 5.78192 4.82324 5.66602C4.91792 5.19004 5.28968 4.8174 5.76562 4.72266C5.88152 4.6996 6.02113 4.7002 6.2998 4.7002ZM10.9004 2.40039C11.1789 2.40039 11.3187 2.3998 11.4346 2.42285C11.9104 2.51767 12.2823 2.89032 12.377 3.36621C12.3999 3.48207 12.4004 3.62185 12.4004 3.90039V9.2002C12.4004 9.47886 12.4 9.61848 12.377 9.73438C12.2822 10.2101 11.9103 10.5819 11.4346 10.6768C11.3187 10.6998 11.1789 10.7002 10.9004 10.7002C10.6218 10.7002 10.4821 10.6998 10.3662 10.6768C9.89025 10.5821 9.51761 10.2103 9.42285 9.73438C9.3998 9.61848 9.40039 9.47886 9.40039 9.2002V3.90039C9.40039 3.62187 9.39986 3.48206 9.42285 3.36621C9.51754 2.89018 9.89018 2.51754 10.3662 2.42285C10.4821 2.39986 10.6219 2.40039 10.9004 2.40039ZM15.5996 0C15.8782 0 16.0179 0.000424711 16.1338 0.0234375C16.6098 0.118124 16.9825 0.489805 17.0771 0.96582C17.1002 1.08174 17.0996 1.22121 17.0996 1.5V9.2002C17.0996 9.47886 17.1002 9.61848 17.0771 9.73438C16.9824 10.2103 16.6097 10.5821 16.1338 10.6768C16.0179 10.6998 15.8782 10.7002 15.5996 10.7002C15.3211 10.7002 15.1813 10.6998 15.0654 10.6768C14.5897 10.5819 14.2178 10.2101 14.123 9.73438C14.1 9.61848 14.0996 9.47886 14.0996 9.2002V1.5C14.0996 1.22121 14.1 1.08174 14.123 0.96582C14.2177 0.489994 14.5897 0.118285 15.0654 0.0234375C15.1813 0.000390368 15.3211 4.79655e-09 15.5996 0Z" fill="black"/>
+</svg>
+        <svg class="abs" style="display:block;left:22.1001px;top:0.24px" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="15.4" height="11.0572" viewBox="0 0 15.4 11.0572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.70042 2.29636C9.93483 2.29646 12.0838 3.15501 13.7032 4.69457C13.8251 4.81343 14.02 4.81193 14.1401 4.69121L15.3058 3.51479C15.3666 3.45356 15.4005 3.37062 15.4 3.28433C15.3995 3.19803 15.3646 3.11549 15.3031 3.05498C11.0528 -1.01833 4.3474 -1.01833 0.0970716 3.05498C0.0355014 3.11545 0.000571881 3.19796 7.20154e-06 3.28426C-0.000567562 3.37055 0.033283 3.45352 0.0940465 3.51479L1.26005 4.69121C1.38006 4.81211 1.57513 4.81361 1.697 4.69457C3.31657 3.15491 5.46579 2.29636 7.70042 2.29636V2.29636ZM7.70042 6.12375C8.92809 6.12367 10.1119 6.57999 11.022 7.40402C11.145 7.52097 11.3389 7.51844 11.4589 7.39831L12.6232 6.22189C12.6845 6.16019 12.7186 6.07648 12.7177 5.98949C12.7168 5.90251 12.6811 5.8195 12.6185 5.75906C9.84735 3.18131 5.55584 3.18131 2.78469 5.75906C2.72209 5.8195 2.68637 5.90255 2.68555 5.98956C2.68473 6.07657 2.71887 6.16028 2.78031 6.22189L3.9443 7.39831C4.06427 7.51844 4.25817 7.52097 4.38125 7.40402C5.29065 6.58053 6.47357 6.12426 7.70042 6.12375V6.12375ZM9.93797 8.93135C10.0002 8.87024 10.0345 8.78614 10.0327 8.69891C10.031 8.61168 9.99327 8.52905 9.92855 8.47053C8.64232 7.38263 6.75852 7.38263 5.47229 8.47053C5.40753 8.529 5.36977 8.6116 5.36792 8.69883C5.36608 8.78606 5.40031 8.87019 5.46254 8.93135L7.4769 10.9639C7.53594 11.0236 7.61643 11.0572 7.70042 11.0572C7.78441 11.0572 7.8649 11.0236 7.92394 10.9639L9.93797 8.93135Z" fill="black"/>
+</svg>
+      </div>
+    </div>
+  </div>
+
+</div>
+</template></div>
+</div>
+</body></html>

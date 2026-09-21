@@ -1,0 +1,53 @@
+{
+  "id": "three-things",
+  "project": "penfold",
+  "platform": "desktop",
+  "order": 0,
+  "name": "3 things about pensions",
+  "title": "Here's the 3 things you really need to know about pensions",
+  "frame": [
+    1231,
+    2640
+  ],
+  "interactive": true,
+  "states": [
+    "all closed",
+    "any section open"
+  ],
+  "provenance": "raster",
+  "source_scale": "1.00×",
+  "source_frames": "1 frame → 6 states",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "state-5.html",
+      "states.html"
+    ],
+    "source": [
+      "source/detail.png",
+      "source/original.webp"
+    ],
+    "preview": "source/original.webp"
+  },
+  "embed_from": "state-5.html",
+  "embed_state": null,
+  "live": "https://claude.ai/artifact/RZU8ZkWyzYyg97JD9qYWV8",
+  "aliases": [
+    "13-three-things-about-pensions",
+    "three",
+    "three things"
+  ],
+  "catalogue": {
+    "m1": "1",
+    "m1l": "image in, six states out",
+    "m2": "1231",
+    "m2l": "frame width &mdash; the odd one out",
+    "note": "The first screen of the whole set, and the only one at 1231 wide. One image arrived &mdash; state five of six, with the third section open &mdash; and it was measured and built on its own. The other five states were then written from it, which the flow layout makes cheap: opening a section pushes everything below it without a single position changing. The live version folds all six back into one full-height page with a working accordion, all three sections closed to start. <em>The code pane here shows state five, the one that came from the picture.</em>",
+    "tag": "Interactive · 3 sections",
+    "frame_label": "1231 × 2640"
+  }
+}

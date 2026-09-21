@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>How much would you like to save each month?</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=block">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+:root{
+  --navy:#133253; --slate:#133253; --muted:#4C5D70;
+  --pink:#ED5E83; --err:#D2453C; --focus:#8E6BB8;
+  --fill-auto:#F6F8BF; --line:#DEDEDE; --placeholder:#E2E2E2; --disabled:#D0D0D0;
+}
+.page{position:relative;width:1182px;height:2640px;overflow:hidden;background:transparent;
+  font-family:'Montserrat',-apple-system,sans-serif;-webkit-font-smoothing:antialiased;color:var(--navy)}
+.page h1{margin:0;font:700 49px/57px 'Montserrat',sans-serif;letter-spacing:-.9px;color:var(--navy)}
+.lab{display:block;margin:0 0 4px;font:400 16.8px/19px 'Montserrat',sans-serif;color:var(--muted)}
+.f{display:block;width:100%;height:62px;border:1px solid var(--line);border-radius:4px;background:#fff;
+  padding:0 18px;font:400 19.4px/1 'Montserrat',sans-serif;color:var(--slate);font-family:'Montserrat',sans-serif}
+.f::placeholder{color:var(--placeholder)}
+.f:focus{outline:none}
+.f.auto{background:var(--fill-auto)}
+select.f{appearance:none;-webkit-appearance:none;cursor:pointer;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M0 0 L5.5 7 L11 0 Z' fill='%233D5165'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 18px center}
+.err{margin:0;font:400 18.6px/1 'Montserrat',sans-serif;color:var(--err)}
+.btn{display:block;height:63px;border:0;border-radius:6px;background:var(--pink);color:#fff;
+  font:600 16px 'Montserrat',sans-serif;cursor:pointer}
+.btn[disabled]{background:var(--disabled);color:#F0F0F0;cursor:default}
+
+.col{position:absolute;left:183px;top:0;width:770px}
+.col h1{margin-top:92px}
+.choices{display:flex;gap:11px;margin-top:35px;align-items:stretch}  /* both cards take the taller one's height */
+.choice{flex:0 0 377px;background:#fff;padding:26px 17px 22px;display:flex;flex-direction:column}
+.choice p{margin:0 0 18px;font:400 20.4px/29px 'Montserrat',sans-serif;color:var(--navy)}
+.choice .btn{width:100%;margin-top:auto}   /* sits on the card floor, so the two agree */
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="col">
+    <h1>How much would you like to<br>save each month?</h1>
+    <div class="choices">
+      <section class="choice">
+        <p>I know how much I want to save each month, just get me going.</p>
+        <button class="btn">Set up pension (2 mins)</button>
+      </section>
+      <section class="choice">
+        <p>I have no idea what I&rsquo;m doing. Help me decide!</p>
+        <button class="btn">Start wizard (5 mins)</button>
+      </section>
+    </div>
+  </div>
+</div>
+</body>
+</html>

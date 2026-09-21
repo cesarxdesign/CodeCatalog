@@ -1,0 +1,48 @@
+{
+  "id": "onboarding-final",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "onboarding",
+  "order": 12,
+  "name": "Onboarding final",
+  "title": "Final",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "101:9705",
+  "export_size": [
+    376,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "onboarding final",
+    "final"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.07%",
+    "al": "±2px",
+    "note": "Figma measures &ldquo;&hellip;one-off top-up&rdquo; wider than Chrome (294.85 of 295px there) and wraps before &ldquo;top-up&rdquo;; the build keeps Figma&rsquo;s break."
+  }
+}

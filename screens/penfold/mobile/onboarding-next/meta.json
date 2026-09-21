@@ -1,0 +1,48 @@
+{
+  "id": "onboarding-next",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "onboarding",
+  "order": 10,
+  "name": "Onboarding next",
+  "title": "Next",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "101:9584",
+  "export_size": [
+    376,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "onboarding next",
+    "next"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.02%",
+    "al": "±2px",
+    "note": "Same template as the first step: green, yellow, grey progress; the second step is outlined as the current one."
+  }
+}

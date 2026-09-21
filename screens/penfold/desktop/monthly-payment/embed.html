@@ -1,0 +1,89 @@
+<!-- CodeCatalog · penfold/desktop/monthly-payment · 1182×2640 · built from screen.html · fp f2c50899fa96
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/desktop/monthly-payment" style="--cc-w:1182;--cc-h:2640;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:1182px;height:2640px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:1182px;height:2640px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+*{box-sizing:border-box}
+
+:host{
+  --navy:#133253;
+  --slate:#133253;
+  --muted:#4C5D70;
+  --pink:#ED5E83;
+  --blue:#6076DC;
+}
+
+.page{
+  position:relative;
+  width:1182px;height:2640px;overflow:hidden;
+  background:transparent;
+  font-family:'Montserrat',-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+.page h1{position:absolute;left:183px;top:92px;margin:0;
+   font:700 49px/57px 'Montserrat',sans-serif;letter-spacing:-.9px;color:var(--navy)}
+
+/* ---------- controls ---------- */
+.field{
+  position:absolute;left:183px;
+  width:217px;height:60px;
+  border:1px solid #D8D8D8;border-radius:8px;
+  background:#fff;
+  font:700 27.5px/1 'Montserrat',sans-serif;color:var(--navy);
+}
+.amount{
+  top:213px;
+  text-align:center;
+  border:2px solid #B4C2E2;
+  box-shadow:0 0 0 3px #9FB5E4;
+}
+.amount:focus{outline:none}
+
+.day{
+  top:302px;
+  appearance:none;-webkit-appearance:none;
+  padding:0 0 0 37px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='7' viewBox='0 0 13 7'%3E%3Cpath d='M0 0 L6.5 7 L13 0 Z' fill='%23123356'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 20px center;
+  cursor:pointer;
+}
+.day:focus{outline:none;border-color:var(--blue)}
+
+/* ---------- labels ---------- */
+.lead{position:absolute;left:418px;margin:0;
+  font:400 19.4px/1 'Montserrat',sans-serif;color:var(--slate)}
+.sub{position:absolute;left:418px;margin:0;
+  font:400 14.2px/1 'Montserrat',sans-serif;color:var(--muted)}
+.l1{top:231px}
+.l2{top:258px}
+.l3{top:319px}
+
+/* ---------- action ---------- */
+.next{
+  position:absolute;left:183px;top:410px;
+  width:770px;height:63px;
+  border:0;border-radius:6px;
+  background:var(--pink);color:#fff;
+  font:600 14.2px 'Montserrat',sans-serif;cursor:pointer;
+}
+</style>
+<div class="page">
+  <h1>Set your monthly payment</h1>
+
+  <input class="field amount" value="&pound;970" aria-label="Monthly payment amount">
+  <p class="lead l1">per month</p>
+  <p class="sub l2">(you can change this later)</p>
+
+  <select class="field day" aria-label="Payment day"><option>1st</option><option>2nd</option><option>3rd</option><option>4th</option><option>5th</option><option>6th</option><option>7th</option><option>8th</option><option>9th</option><option>10th</option><option>11th</option><option>12th</option><option>13th</option><option>14th</option><option>15th</option><option>16th</option><option>17th</option><option>18th</option><option>19th</option><option>20th</option><option>21st</option><option>22nd</option><option>23rd</option><option>24th</option><option>25th</option><option>26th</option><option selected>27th</option><option>28th</option></select>
+  <p class="lead l3">of the month</p>
+
+  <button class="next">Next</button>
+</div>
+</template></div>
+</div>

@@ -1,0 +1,48 @@
+{
+  "id": "payment",
+  "project": "penfold",
+  "platform": "mobile",
+  "order": 2,
+  "name": "Payment",
+  "title": null,
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "58:8628",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": "https://claude.ai/artifact/U2hjfTuHHMJLEaUprzL9jn",
+  "aliases": [
+    "pay2",
+    "payment"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.32%",
+    "al": "±1.0px",
+    "note": "The fractions here are real: <code>47.5</code> centres a 280px button, and the chart bars carry genuine fractional heights. Four fixes, including a back chevron that is a <code>chevron/Right</code> export used as a left, and a &ldquo;?&rdquo; badge 2px off-centre because <code>text-align</code> cannot move an anonymous flex item."
+  },
+  "screen_generated": false
+}

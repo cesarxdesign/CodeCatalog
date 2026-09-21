@@ -1,0 +1,172 @@
+<!doctype html><meta charset="utf-8"><title>Penfold · Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#dcdce0;display:flex;justify-content:center;padding:40px 0 80px}.scr{width:375px}</style>
+<div class="scr ph" style="--iw:375;--ih:812"><template shadowrootmode="open">
+<style>
+:host{white-space:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-align:start;font-style:normal;font-variant:normal;line-height:normal;font-weight:400}
+*{box-sizing:border-box}
+p{margin:0}
+.fr{position:relative;width:375px;height:812px;background:#F4F4F4;overflow:hidden;
+    font-family:'Montserrat',-apple-system,sans-serif;color:#123456}
+.v{display:block;width:100%;height:100%}
+.a{position:absolute}
+
+/* ---- type scale, named as the file names them ---- */
+.t-m12{font:500 12px/normal 'Montserrat'}
+.t-m14{font:500 14px/normal 'Montserrat'}
+.t-b16{font:700 16px/normal 'Montserrat'}
+.t-b20{font:700 20px/normal 'Montserrat'}
+.t-r14{font:400 14px/normal 'Montserrat'}
+.t-r16{font:400 16px/normal 'Montserrat'}
+.t-r10{font:400 10px/14px 'Montserrat'}
+.t-m10{font:500 10px/normal 'Montserrat'}
+.n-sb12{font:600 12px/normal 'Montserrat';letter-spacing:-.4px}
+.n-b16{font:700 16px/normal 'Montserrat';letter-spacing:-.8px}
+/* AFTER the type classes: the `font` shorthand resets font-feature-settings,
+   so a .num declared before them is silently wiped. */
+.num{font-feature-settings:"lnum","tnum"}
+
+/* ---- iOS chrome ---- */
+.ios{position:absolute;left:0;top:0;width:375px;height:63px}
+.ios .url{position:absolute;left:0;right:0;top:40px;height:15px;text-align:center;
+          font:400 12px/normal -apple-system,'SF Pro Text',sans-serif;color:#000;letter-spacing:-.35px}
+.ios .status{position:absolute;left:0;top:0;width:375px;height:44px}
+.ios .time{position:absolute;left:19.89px;width:54px;top:calc(50% - 8px);text-align:center;
+           font:600 15px/18px -apple-system,'SF Pro Text',sans-serif;color:#000;letter-spacing:-.165px}
+.ios .batt{position:absolute;right:14.5px;top:calc(50% + .91px);transform:translateY(-50%);width:24.5px;height:11.5px}
+.ios .battfill{position:absolute;right:19px;top:calc(50% + .91px);transform:translateY(-50%);
+               width:18px;height:7.667px;border-radius:1.6px;background:#000}
+.ios .cell{position:absolute;right:64.4px;top:calc(50% + .95px);transform:translateY(-50%);width:17.1px;height:10.7px}
+.ios .wifi{position:absolute;right:44px;top:calc(50% + .93px);transform:translateY(-50%);width:15.4px;height:11.057px}
+.ios .dvd{position:absolute;left:0;right:0;bottom:0;height:1px;
+/* Figma: a 0.5px line at 20% straddling the header boundary. A browser puts a
+   sub-pixel path on the neighbouring row, so ink one crisp row at the alpha the
+   half-coverage resolves to (0.2 x 0.5 = 0.1). Same pixels, deterministic row. */
+          background:rgba(0,0,0,.1)}
+
+/* ---- dashboard header ---- */
+.hdr{position:absolute;left:0;top:63px;width:375px;height:72px}
+.hdr .bg{position:absolute;inset:0;background:#fff;
+         /* Figma strokes this frame OUTSIDE the box; a CSS border draws inside.
+            box-shadow puts the ink outside, and .fr's overflow clips the sides -
+            which is what the Figma export shows (no visible left/right stroke). */
+         box-shadow:0 .333px 0 0 #D8D8D8}   /* bottom edge only: the export shows no
+            ink on the top or side edges of this frame */
+.hdr .row{position:absolute;left:16px;top:16px;display:flex;gap:24px;align-items:center;overflow:hidden}
+.hdr .logo{width:28px;height:44px;position:relative;overflow:hidden;flex:0 0 auto}
+.hdr .logo i{position:absolute;left:0;top:0;width:140px;height:44px;display:block}
+.hdr .info{display:flex;gap:16px;align-items:flex-end;overflow:hidden}
+.hdr .col{display:flex;flex-direction:column;gap:4px;align-items:flex-start;white-space:nowrap}
+.hdr .gd{display:flex;gap:4px;align-items:flex-end}
+.hdr .pct{width:44px;height:18px;position:relative}
+.hdr .pct p{position:absolute;left:0;right:0;bottom:5.56%;color:#68D422}
+.hdr .menu{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:40px;height:40px}
+
+/* ---- pills (fund selection / payment details) ---- */
+.pill{height:40px;border-radius:8px;position:relative;flex:0 0 auto}
+.pill span{position:absolute;inset:8px 16px;display:flex;flex-direction:column;
+           justify-content:center;text-align:center;color:#fff}
+.pcol{display:flex;flex-direction:column;gap:4px;align-items:center;overflow:hidden}
+.pcol>.cap{text-align:center;white-space:nowrap}
+
+/* ---- goal + stats ---- */
+.goalrow{display:flex;gap:7px;align-items:center}
+.goalrow>div{width:184px;display:flex;flex-direction:column;overflow:hidden;padding:16px 32px}
+.goalrow .g{align-items:flex-start}
+.goalrow .s{align-items:flex-end}
+.pad4{height:24px;display:flex;padding:4px;overflow:hidden;align-items:flex-start}
+.pad4.mid{align-items:center;padding:4px 0}
+.nowrap{white-space:nowrap}
+
+/* ---- donut ---- */
+.donutbox{padding:24px 32px;display:flex;align-items:center}
+.donut{width:311px;height:250px;position:relative;flex:0 0 auto}
+.dframe{position:absolute;inset:9.6% 17.36% 9.6% 17.68%}
+.dframe i{position:absolute;display:block}
+.dframe .bg{left:0;top:0;width:202px;height:202px}
+.dframe .upc{left:1px;top:1px;width:200px;height:200px}
+.dframe .paid{left:6.769px;top:1px;width:194.234px;height:200px}
+.dframe .shade{left:0;top:0;width:202px;height:202px;mix-blend-mode:multiply}
+.dframe .dot{width:4px;height:4px;mix-blend-mode:screen}
+.dlabs{position:absolute;inset:9.6% 17.36% 9.6% 17.68%;white-space:nowrap}
+.dlabs>i{position:absolute;display:block}
+.dlabs .two{display:flex;flex-direction:column;justify-content:center}
+.dcopy{position:absolute;inset:30.4% 30.55% 30.8% 30.87%;display:flex;flex-direction:column;
+       gap:8px;align-items:center;overflow:hidden}
+.dcopy .grp{display:flex;flex-direction:column;align-items:center;overflow:hidden;
+            text-align:center;white-space:nowrap}
+.dcopy .div{width:120px;height:1px;position:relative;flex:0 0 auto}
+
+/* ---- action pucks ---- */
+.pucks{display:flex;gap:16px;align-items:center;justify-content:center}
+.puck{width:88px;height:88px;position:relative;flex:0 0 auto}
+.puck .bg{position:absolute;left:0;top:0;width:88px;height:88px;background:#FBFBFB;
+          border:1px solid #fff;border-radius:61px;box-shadow:0 4px 8px 0 rgba(0,0,0,.08)}
+.puck i{position:absolute;left:14px;top:14px;width:60px;height:60px;display:block}
+.puck p{position:absolute;left:calc(50% + .5px);transform:translateX(-50%);top:96px;
+        text-align:center;white-space:nowrap}
+
+.all{position:absolute;left:0;top:135px;width:375px;display:flex;flex-direction:column;
+     align-items:stretch;overflow:hidden}
+.all>.tb{padding:24px 32px;display:flex;gap:16px;align-items:center;justify-content:flex-start;overflow:hidden}
+.all>.pucks{padding:48px 0}
+
+:host{display:block;container-type:inline-size}
+.fr{transform-origin:0 0;transform:scale(calc(100cqw / 375.0000px));border-radius:var(--frameR,0)}
+</style>
+<div class="fr">
+<div class="all">
+ <div class="tb">
+  <div class="pcol"><p class="cap t-m12">Fund selection</p><div class="pill" style="background:#5081FF;width:148px"><span class="t-b16">Level 1</span></div></div>
+  <div class="pcol"><p class="cap t-m12">Payment details</p><div class="pill" style="background:#5081FF;width:147px"><span class="t-b16">£422 on 2nd</span></div></div>
+ </div>
+ <div class="goalrow">
+  <div class="g"><p class="t-b20">Yearly goal</p><div class="pad4"><p class="n-sb12 num nowrap">Jul &lsquo;19 &mdash; Jun &lsquo;20</p></div></div>
+  <div class="s"><p class="t-b20 nowrap" style="text-align:right">£2,600</p><div class="pad4 mid"><p class="t-r10 nowrap" style="text-align:right">72% complete</p></div></div>
+ </div>
+ <div class="donutbox"><div class="donut">
+<div class="dlabs n-sb12 num">
+ <i style="left:40.1%;right:40.59%;top:calc(50% - 108px);transform:translateY(-100%);text-align:center">Jul &lsquo;19</i>
+ <i style="left:39.11%;right:39.6%;top:calc(50% + 108px);text-align:center">Jan &lsquo;20</i>
+ <i class="two" style="left:103.47%;right:-19.8%;top:50%;transform:translateY(-50%)"><p>Oct</p><p>2019</p></i>
+ <i class="two" style="left:-19.8%;right:103.47%;top:50%;transform:translateY(-50%);text-align:right"><p>Apr</p><p>2020</p></i>
+</div><div class="dcopy">
+ <div class="grp" style="color:#123456"><p class="t-r16">Paid in</p><p class="n-b16 num">£1,350</p></div>
+ <div class="div"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 120 1" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="s1-divider" fill-rule="evenodd" clip-rule="evenodd" d="M120 1H0V0H120V1Z" fill="#FBFBFB"/></svg></div>
+ <div class="grp"><p class="t-r16">+Upcoming</p><p class="n-b16 num">£1,600</p></div>
+</div>
+<div class="dframe">
+ <i class="bg"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s2-BG"><mask id="s2-path-1-outside-1_0_346" maskUnits="userSpaceOnUse" x="0" y="0" width="202" height="202" fill="black"><rect fill="white" width="202" height="202"/><path d="M201 101C201 156.228 156.228 201 101 201C45.7715 201 1 156.228 1 101C1 45.7715 45.7715 1 101 1C156.228 1 201 45.7715 201 101ZM21 101C21 145.183 56.8172 181 101 181C145.183 181 181 145.183 181 101C181 56.8172 145.183 21 101 21C56.8172 21 21 56.8172 21 101Z"/></mask><path d="M201 101C201 156.228 156.228 201 101 201C45.7715 201 1 156.228 1 101C1 45.7715 45.7715 1 101 1C156.228 1 201 45.7715 201 101ZM21 101C21 145.183 56.8172 181 101 181C145.183 181 181 145.183 181 101C181 56.8172 145.183 21 101 21C56.8172 21 21 56.8172 21 101Z" fill="white"/><path d="M201 101C201 156.228 156.228 201 101 201C45.7715 201 1 156.228 1 101C1 45.7715 45.7715 1 101 1C156.228 1 201 45.7715 201 101ZM21 101C21 145.183 56.8172 181 101 181C145.183 181 181 145.183 181 101C181 56.8172 145.183 21 101 21C56.8172 21 21 56.8172 21 101Z" stroke="white" stroke-width="2" mask="url(#s2-path-1-outside-1_0_346)"/></g></svg></i>
+ <i class="upc"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="s3-Upcoming/Pending" d="M22.7259 79.2945C24.1554 73.9599 20.9895 68.4765 15.6549 67.0471C10.3202 65.6177 4.83684 68.7835 3.40742 74.1181L13.0667 76.7063L22.7259 79.2945ZM100 10V20C116.715 20 133.011 25.2359 146.598 34.9723L152.423 26.8438L158.248 18.7153C141.264 6.54484 120.894 0 100 0V10ZM152.423 26.8438L146.598 34.9723C160.185 44.7087 170.381 58.4565 175.754 74.2848L185.224 71.0704L194.693 67.856C187.977 48.0706 175.232 30.8858 158.248 18.7153L152.423 26.8438ZM185.224 71.0704L175.754 74.2848C181.127 90.1132 181.407 107.227 176.555 123.223L186.125 126.126L195.694 129.028C201.759 109.034 201.409 87.6415 194.693 67.856L185.224 71.0704ZM186.125 126.126L176.555 123.223C171.703 139.218 161.962 153.293 148.701 163.468L154.789 171.402L160.876 179.335C177.453 166.616 189.629 149.023 195.694 129.028L186.125 126.126ZM154.789 171.402L148.701 163.468C135.44 173.644 119.324 179.41 102.618 179.957L102.945 189.952L103.272 199.946C124.155 199.263 144.3 192.055 160.876 179.335L154.789 171.402ZM102.945 189.952L102.618 179.957C85.911 180.504 69.4528 175.804 55.5544 166.518L49.9987 174.832L44.443 183.147C61.816 194.755 82.3888 200.63 103.272 199.946L102.945 189.952ZM49.9987 174.832L55.5544 166.518C41.656 157.231 31.0156 143.824 25.1276 128.18L15.7685 131.703L6.40944 135.225C13.7695 154.78 27.07 171.539 44.443 183.147L49.9987 174.832ZM15.7685 131.703L25.1276 128.18C19.2395 112.536 18.3997 95.4404 22.7259 79.2945L13.0667 76.7063L3.40742 74.1181C-2.00042 94.3005 -0.950602 115.67 6.40944 135.225L15.7685 131.703Z" fill="#FDD0D0"/></svg></i>
+ <i class="paid"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 194.234 200" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="s4-Paid" d="M19.3618 128.18C17.4163 123.011 11.6491 120.398 6.4802 122.343C1.31134 124.289 -1.30177 130.056 0.643651 135.225L10.0027 131.703L19.3618 128.18ZM94.2342 10V20C110.95 20 127.245 25.2359 140.832 34.9723L146.657 26.8438L152.482 18.7153C135.498 6.54484 115.129 0 94.2342 0V10ZM146.657 26.8438L140.832 34.9723C154.42 44.7087 164.616 58.4565 169.989 74.2848L179.458 71.0704L188.927 67.856C182.211 48.0706 169.466 30.8858 152.482 18.7153L146.657 26.8438ZM179.458 71.0704L169.989 74.2848C175.362 90.1132 175.642 107.227 170.789 123.223L180.359 126.126L189.928 129.028C195.994 109.034 195.644 87.6415 188.927 67.856L179.458 71.0704ZM180.359 126.126L170.789 123.223C165.937 139.218 156.196 153.293 142.935 163.468L149.023 171.402L155.11 179.335C171.687 166.616 183.863 149.023 189.928 129.028L180.359 126.126ZM149.023 171.402L142.935 163.468C129.674 173.644 113.558 179.41 96.8518 179.957L97.179 189.952L97.5062 199.946C118.389 199.263 138.534 192.055 155.11 179.335L149.023 171.402ZM97.179 189.952L96.8518 179.957C80.1453 180.504 63.687 175.804 49.7886 166.518L44.2329 174.832L38.6772 183.147C56.0503 194.755 76.623 200.63 97.5062 199.946L97.179 189.952ZM44.2329 174.832L49.7886 166.518C35.8902 157.231 25.2498 143.824 19.3618 128.18L10.0027 131.703L0.643651 135.225C8.00369 154.78 21.3042 171.539 38.6772 183.147L44.2329 174.832Z" fill="#FF5081"/></svg></i>
+ <i class="shade"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s5-shadowing effects" style="mix-blend-mode:multiply"><mask id="s5-path-1-outside-1_0_339" maskUnits="userSpaceOnUse" x="0" y="0" width="202" height="202" fill="black"><rect fill="white" width="202" height="202"/><path d="M201 101C201 156.228 156.228 201 101 201C45.7715 201 1 156.228 1 101C1 45.7715 45.7715 1 101 1C156.228 1 201 45.7715 201 101ZM21 101C21 145.183 56.8172 181 101 181C145.183 181 181 145.183 181 101C181 56.8172 145.183 21 101 21C56.8172 21 21 56.8172 21 101Z"/></mask><g filter="url(#s5-filter0_i_0_339)"><path d="M201 101C201 156.228 156.228 201 101 201C45.7715 201 1 156.228 1 101C1 45.7715 45.7715 1 101 1C156.228 1 201 45.7715 201 101ZM21 101C21 145.183 56.8172 181 101 181C145.183 181 181 145.183 181 101C181 56.8172 145.183 21 101 21C56.8172 21 21 56.8172 21 101Z" fill="white"/></g><path d="M201 101C201 156.228 156.228 201 101 201C45.7715 201 1 156.228 1 101C1 45.7715 45.7715 1 101 1C156.228 1 201 45.7715 201 101ZM21 101C21 145.183 56.8172 181 101 181C145.183 181 181 145.183 181 101C181 56.8172 145.183 21 101 21C56.8172 21 21 56.8172 21 101Z" stroke="#FBFBFB" stroke-width="2" mask="url(#s5-path-1-outside-1_0_339)"/></g><defs><filter id="s5-filter0_i_0_339" x="0" y="0" width="202" height="203" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="1"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.24 0"/><feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_339"/></filter></defs></svg></i>
+ <i class="dot" style="left:99px;top:9px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s6-Ellipse 12" style="mix-blend-mode:screen"><circle cx="2" cy="2" r="2" fill="white"/></g></svg></i>
+ <i class="dot" style="left:99px;top:189px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s7-Ellipse 12" style="mix-blend-mode:screen"><circle cx="2" cy="2" r="2" fill="white"/></g></svg></i>
+ <i class="dot" style="left:9px;top:99px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s8-Ellipse 14" style="mix-blend-mode:screen"><ellipse cx="2" cy="2" rx="2" ry="2" fill="white"/></g></svg></i>
+ <i class="dot" style="left:189px;top:99px"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s9-Ellipse 14" style="mix-blend-mode:screen"><ellipse cx="2" cy="2" rx="2" ry="2" fill="white"/></g></svg></i>
+</div></div></div>
+ <div class="pucks"><div class="puck"><p class="t-m14">Combine</p><div class="bg"></div><i><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s10-iconBig/combine"><path id="s10-Vector" d="M30 45C38.2843 45 45 38.2843 45 30C45 21.7157 38.2843 15 30 15C21.7157 15 15 21.7157 15 30C15 38.2843 21.7157 45 30 45Z" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path id="s10-Vector_2" d="M30 24V36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path id="s10-Vector_3" d="M24 30H36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path id="s10-Vector_4" d="M48.6563 48.9563L40.5 40.8" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg></i></div><div class="puck"><p class="t-m14">Top up</p><div class="bg"></div><i><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s11-iconBig/topup"><path id="s11-Vector" d="M40.5 16.5H19.5C17.8431 16.5 16.5 17.8431 16.5 19.5V40.5C16.5 42.1569 17.8431 43.5 19.5 43.5H40.5C42.1569 43.5 43.5 42.1569 43.5 40.5V19.5C43.5 17.8431 42.1569 16.5 40.5 16.5Z" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path id="s11-Vector_2" d="M30 24V36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path id="s11-Vector_3" d="M24 30H36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg></i></div><div class="puck"><p class="t-m14">Share for £25</p><div class="bg"></div><i><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s12-iconBig/share"><path id="s12-Vector" d="M43.5 29.1V39.9C43.5 40.8548 43.1207 41.7705 42.4456 42.4456C41.7705 43.1207 40.8548 43.5 39.9 43.5H20.1C19.1452 43.5 18.2295 43.1207 17.5544 42.4456C16.8793 41.7705 16.5 40.8548 16.5 39.9V20.1C16.5 19.1452 16.8793 18.2295 17.5544 17.5544C18.2295 16.8793 19.1452 16.5 20.1 16.5H30.9" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path id="s12-Vector_2" d="M38.1 11.1H48.9V21.9" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path id="s12-Vector_3" d="M29.1 30.9L48.9 11.1" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g></svg></i></div></div>
+</div>
+<div class="hdr"><div class="bg"></div>
+<div class="row">
+ <div class="logo"><i><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s13-logo/short"><path id="s13-Vector" d="M0 38L11 44V0L0 6V38Z" fill="#FF5081"/><path id="s13-Vector_2" d="M11 10V0L28 9V19L11 10Z" fill="#123456"/><path id="s13-Vector_3" d="M28 9L11 18V28L28 19V9Z" fill="#4ECFEF"/></g></svg></i></div>
+ <div class="info">
+  <div class="col"><p class="t-m14">Total pot</p><p class="n-b16 num">£5,392</p></div>
+  <div class="col"><p class="t-m14">Growth</p>
+   <div class="gd"><p class="n-b16 num">£529</p>
+    <div class="pct"><p class="n-sb12 num">+5.23%</p></div></div>
+  </div>
+ </div>
+</div>
+<i class="menu a"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="s14-icon/menuDropdown"><g id="s14-vector"><path d="M8 9H32V11H8V9Z" fill="#123456"/><path d="M8 19H32V21H8V19Z" fill="#123456"/><path d="M16 29H32V31H16V29Z" fill="#123456"/></g></g></svg></i></div>
+<div class="ios"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 375 63" fill="none" xmlns="http://www.w3.org/2000/svg"><foreignObject x="-40.7742" y="-40.7742" width="456.548" height="144.548"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20.39px);clip-path:url(#s15-bgblur_0_0_312_clip_path);height:100%;width:100%"></div></foreignObject><path id="s15-Background" data-figma-bg-blur-radius="40.7742" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z" fill="#F8F8F8" fill-opacity="0.7"/><defs><clipPath id="s15-bgblur_0_0_312_clip_path" transform="translate(40.7742 40.7742)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z"/></clipPath></defs></svg>
+<i class="a dvd"></i>
+<p class="url">getpenfold.com</p>
+<div class="status">
+<p class="time">8:24</p>
+<i class="cell"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 17.0996 10.7002" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="s17-Combined Shape" d="M1.5 6.7002C1.77879 6.7002 1.91826 6.6996 2.03418 6.72266C2.51021 6.81734 2.88187 7.18999 2.97656 7.66602C2.99961 7.78193 3 7.92144 3 8.2002V9.2002C3 9.47886 2.99961 9.61848 2.97656 9.73438C2.88178 10.2102 2.51005 10.5821 2.03418 10.6768C1.91826 10.6998 1.77879 10.7002 1.5 10.7002C1.22121 10.7002 1.08174 10.6998 0.96582 10.6768C0.48995 10.5821 0.118223 10.2102 0.0234375 9.73438C0.000385105 9.61848 1.19764e-09 9.47886 0 9.2002V8.2002C0 7.92144 0.000388227 7.78193 0.0234375 7.66602C0.118125 7.18999 0.489792 6.81734 0.96582 6.72266C1.08174 6.6996 1.22121 6.7002 1.5 6.7002ZM6.2998 4.7002C6.57845 4.7002 6.7181 4.69964 6.83398 4.72266C7.31001 4.81734 7.68266 5.18999 7.77734 5.66602C7.80036 5.7819 7.7998 5.92156 7.7998 6.2002V9.2002C7.7998 9.47886 7.8004 9.61848 7.77734 9.73438C7.6826 10.2103 7.30996 10.5821 6.83398 10.6768C6.71808 10.6998 6.57854 10.7002 6.2998 10.7002C6.02113 10.7002 5.88152 10.6998 5.76562 10.6768C5.28983 10.582 4.918 10.2102 4.82324 9.73438C4.80019 9.61848 4.7998 9.47886 4.7998 9.2002V6.2002C4.7998 5.92146 4.8002 5.78192 4.82324 5.66602C4.91792 5.19004 5.28968 4.8174 5.76562 4.72266C5.88152 4.6996 6.02113 4.7002 6.2998 4.7002ZM10.9004 2.40039C11.1789 2.40039 11.3187 2.3998 11.4346 2.42285C11.9104 2.51767 12.2823 2.89032 12.377 3.36621C12.3999 3.48207 12.4004 3.62185 12.4004 3.90039V9.2002C12.4004 9.47886 12.4 9.61848 12.377 9.73438C12.2822 10.2101 11.9103 10.5819 11.4346 10.6768C11.3187 10.6998 11.1789 10.7002 10.9004 10.7002C10.6218 10.7002 10.4821 10.6998 10.3662 10.6768C9.89025 10.5821 9.51761 10.2103 9.42285 9.73438C9.3998 9.61848 9.40039 9.47886 9.40039 9.2002V3.90039C9.40039 3.62187 9.39986 3.48206 9.42285 3.36621C9.51754 2.89018 9.89018 2.51754 10.3662 2.42285C10.4821 2.39986 10.6219 2.40039 10.9004 2.40039ZM15.5996 0C15.8782 0 16.0179 0.000424711 16.1338 0.0234375C16.6098 0.118124 16.9825 0.489805 17.0771 0.96582C17.1002 1.08174 17.0996 1.22121 17.0996 1.5V9.2002C17.0996 9.47886 17.1002 9.61848 17.0771 9.73438C16.9824 10.2103 16.6097 10.5821 16.1338 10.6768C16.0179 10.6998 15.8782 10.7002 15.5996 10.7002C15.3211 10.7002 15.1813 10.6998 15.0654 10.6768C14.5897 10.5819 14.2178 10.2101 14.123 9.73438C14.1 9.61848 14.0996 9.47886 14.0996 9.2002V1.5C14.0996 1.22121 14.1 1.08174 14.123 0.96582C14.2177 0.489994 14.5897 0.118285 15.0654 0.0234375C15.1813 0.000390368 15.3211 4.79655e-09 15.5996 0Z" fill="black"/></svg></i>
+<i class="wifi"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 15.4 11.0572" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="s18-Wi-Fi" fill-rule="evenodd" clip-rule="evenodd" d="M7.70042 2.29636C9.93483 2.29646 12.0838 3.15501 13.7032 4.69457C13.8251 4.81343 14.02 4.81193 14.1401 4.69121L15.3058 3.51479C15.3666 3.45356 15.4005 3.37062 15.4 3.28433C15.3995 3.19803 15.3646 3.11549 15.3031 3.05498C11.0528 -1.01833 4.3474 -1.01833 0.0970716 3.05498C0.0355014 3.11545 0.000571881 3.19796 7.20154e-06 3.28426C-0.000567562 3.37055 0.033283 3.45352 0.0940465 3.51479L1.26005 4.69121C1.38006 4.81211 1.57513 4.81361 1.697 4.69457C3.31657 3.15491 5.46579 2.29636 7.70042 2.29636V2.29636ZM7.70042 6.12375C8.92809 6.12367 10.1119 6.57999 11.022 7.40402C11.145 7.52097 11.3389 7.51844 11.4589 7.39831L12.6232 6.22189C12.6845 6.16019 12.7186 6.07648 12.7177 5.98949C12.7168 5.90251 12.6811 5.8195 12.6185 5.75906C9.84735 3.18131 5.55584 3.18131 2.78469 5.75906C2.72209 5.8195 2.68637 5.90255 2.68555 5.98956C2.68473 6.07657 2.71887 6.16028 2.78031 6.22189L3.9443 7.39831C4.06427 7.51844 4.25817 7.52097 4.38125 7.40402C5.29065 6.58053 6.47357 6.12426 7.70042 6.12375V6.12375ZM9.93797 8.93135C10.0002 8.87024 10.0345 8.78614 10.0327 8.69891C10.031 8.61168 9.99327 8.52905 9.92855 8.47053C8.64232 7.38263 6.75852 7.38263 5.47229 8.47053C5.40753 8.529 5.36977 8.6116 5.36792 8.69883C5.36608 8.78606 5.40031 8.87019 5.46254 8.93135L7.4769 10.9639C7.53594 11.0236 7.61643 11.0572 7.70042 11.0572C7.78441 11.0572 7.8649 11.0236 7.92394 10.9639L9.93797 8.93135Z" fill="black"/></svg></i>
+<i class="batt"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="100%" height="100%" viewBox="0 0 24.5 11.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="s19-Rectangle" d="M18.4102 0C19.6582 0 20.1111 0.130042 20.5674 0.374023C21.0237 0.618053 21.3819 0.976321 21.626 1.43262C21.87 1.88887 22 2.34185 22 3.58984V7.91016C22 9.15815 21.87 9.61113 21.626 10.0674C21.3819 10.5237 21.0237 10.8819 20.5674 11.126C20.1111 11.37 19.6582 11.5 18.4102 11.5H3.58984C2.34185 11.5 1.88887 11.37 1.43262 11.126C0.976321 10.8819 0.618053 10.5237 0.374023 10.0674C0.130042 9.61113 0 9.15815 0 7.91016V3.58984C0 2.34185 0.130042 1.88887 0.374023 1.43262C0.618053 0.976321 0.976321 0.618053 1.43262 0.374023C1.88887 0.130042 2.34185 0 3.58984 0H18.4102ZM3.58984 1C2.60305 1 2.25812 1.06668 1.9043 1.25586C1.62227 1.40669 1.40669 1.62227 1.25586 1.9043C1.06668 2.25812 1 2.60305 1 3.58984V7.91016C1 8.89695 1.06668 9.24188 1.25586 9.5957C1.40669 9.87773 1.62227 10.0933 1.9043 10.2441C2.25812 10.4333 2.60305 10.5 3.58984 10.5H18.4102C19.397 10.5 19.7419 10.4333 20.0957 10.2441C20.3777 10.0933 20.5933 9.87773 20.7441 9.5957C20.9333 9.24188 21 8.89695 21 7.91016V3.58984C21 2.60305 20.9333 2.25812 20.7441 1.9043C20.5933 1.62227 20.3777 1.40669 20.0957 1.25586C19.7419 1.06668 19.397 1 18.4102 1H3.58984ZM23 3.69043C23.0184 3.69985 24.5 4.46155 24.5 5.69043C24.4997 6.92675 23 7.69043 23 7.69043V3.69043Z" fill="black" fill-opacity="0.36"/></svg></i>
+<i class="battfill"></i>
+</div></div>
+</div></template></div>

@@ -1,0 +1,48 @@
+{
+  "id": "standing-order",
+  "project": "penfold",
+  "platform": "desktop",
+  "order": 9,
+  "name": "Standing order",
+  "title": "Set up your standing order",
+  "frame": [
+    1182,
+    2640
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "raster",
+  "source_scale": "0.81×",
+  "source_frames": "1 frame",
+  "fonts": [
+    "Montserrat",
+    "Roboto Mono"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/crop.png",
+      "source/original.webp"
+    ],
+    "preview": "source/crop.png"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "10-set-up-your-standing-order",
+    "so",
+    "standing order"
+  ],
+  "catalogue": {
+    "m1": "0.81×",
+    "m1l": "1.2 design px per image px",
+    "m2": "0px",
+    "m2l": "every element",
+    "note": "Chained margins fought back here &mdash; two rounds of correction both wanted negative values &mdash; so the seven centred blocks are absolutely positioned at their measured y instead, and all landed at once.",
+    "tag": "",
+    "frame_label": "1182 × 2640"
+  }
+}

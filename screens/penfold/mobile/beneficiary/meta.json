@@ -1,0 +1,48 @@
+{
+  "id": "beneficiary",
+  "project": "penfold",
+  "platform": "mobile",
+  "order": 6,
+  "name": "Beneficiary",
+  "title": null,
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "59:9003",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": "https://claude.ai/artifact/U2hjfTuHHMJLEaUprzL9jn",
+  "aliases": [
+    "ben",
+    "beneficiary"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.12%",
+    "al": "±1.0px",
+    "note": "Two checkboxes overlap at the same spot: the later checked image covers the unchecked box, but the unchecked node carries the label text, so both are needed. The dropdown chevron is another <code>chevron/Down</code> wrapping a right-pointing export."
+  },
+  "screen_generated": true
+}

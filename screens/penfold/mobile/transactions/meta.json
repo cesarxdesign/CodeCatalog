@@ -1,0 +1,48 @@
+{
+  "id": "transactions",
+  "project": "penfold",
+  "platform": "mobile",
+  "order": 7,
+  "name": "Transactions",
+  "title": null,
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "48:6231",
+  "export_size": [
+    280,
+    607
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": "https://claude.ai/artifact/U2hjfTuHHMJLEaUprzL9jn",
+  "aliases": [
+    "transactions",
+    "tx"
+  ],
+  "catalogue": {
+    "sc": "0.746̅",
+    "diff": "3.05%",
+    "al": "±1.34px",
+    "note": "The export came out of Figma scaled down to 280 wide. <code>280/375</code> and <code>606.293/812</code> give the same factor on both axes, so every child divided back to whole numbers &mdash; the build is authored at full 375 and the export is the low-resolution one here. Four fixes, including two icons deduped by name &mdash; both called <code>combine.disabled</code>, different strokes &mdash; and a <code>.filters</code> rule outranking <code>.fillet</code> and painting a block over row 1."
+  },
+  "screen_generated": false
+}

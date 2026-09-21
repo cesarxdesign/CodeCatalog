@@ -1,0 +1,48 @@
+{
+  "id": "growth",
+  "project": "penfold",
+  "platform": "mobile",
+  "order": 3,
+  "name": "Growth",
+  "title": null,
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "58:8868",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": "https://claude.ai/artifact/U2hjfTuHHMJLEaUprzL9jn",
+  "aliases": [
+    "grow",
+    "growth"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.66%",
+    "al": "±1.0px",
+    "note": "Reproduced as found: the frame fill is <code>#F5F5F5</code>, not <code>#F4F4F4</code>, and the clock reads 9:24. Cards at x=328 run to x=529 and are clipped &mdash; that overflow is the design, not an error."
+  },
+  "screen_generated": false
+}

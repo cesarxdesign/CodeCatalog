@@ -1,0 +1,47 @@
+{
+  "id": "login",
+  "project": "penfold",
+  "platform": "mobile",
+  "order": 4,
+  "name": "Login",
+  "title": null,
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "59:8970",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": "https://claude.ai/artifact/U2hjfTuHHMJLEaUprzL9jn",
+  "aliases": [
+    "login"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.22%",
+    "al": "±1.0px",
+    "note": "<code>67.5</code> and <code>calc(8.33% + 36.25px)</code> are the file&rsquo;s own values, not rounding. The toggle mask was set from a different 176px-wide instance; this asset is 240&times;32, so the right-hand label was being clipped."
+  },
+  "screen_generated": true
+}
