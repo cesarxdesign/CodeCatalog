@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=375,initial-scale=1">
+<title>Personal Details</title>
+<style>
+/*@FONTS*/
+/*@COMMON*/
+
+.frame { height: 2329px; background: #F6F6F6; }
+.grp   { display: contents; }   /* Figma groups: pass-through, children keep frame coordinates */
+
+/* type - line heights are Figma's text-box height / line count */
+.t-h3     { font-weight: 700; font-size: 24px; line-height: 48px; letter-spacing: -1px; }    /* H3 Bold 24 */
+.t-h3m    { font-weight: 700; font-size: 24px; line-height: 29px; letter-spacing: -1px; }    /* H3.m Bold 24 */
+.t-h1     { font-weight: 700; font-size: 28px; line-height: 29px; letter-spacing: -1px; }    /* H1.m Bold 28, 104% */
+.t-h1 .trk { margin-right: 1px; }
+.t-lbl-s  { font-weight: 500; font-size: 12px; line-height: 20px; }                          /* LabelS.m Medium 12 */
+.t-b2m    { font-weight: 400; font-size: 10px; line-height: 14px; }                          /* B2.m Regular 10 */
+.t-b2     { font-weight: 400; font-size: 12px; line-height: 15px; }                          /* B2 Regular 12 */
+/* B3 Regular Spaced 11 is 150%; Figma's 391px box holds 23 lines, so 17px each */
+.t-b3     { font-weight: 400; font-size: 11px; line-height: 17px; }
+.t-notice { font-weight: 600; font-size: 12px; line-height: 15px; letter-spacing: 2px; text-transform: uppercase; color: var(--pinkfold); }
+.t-term   { font-weight: 700; font-size: 12px; line-height: 20px; color: #1B3454; }
+.t-bold20 { font-weight: 700; font-size: 20px; line-height: 24px; }                          /* T2 Bold 20 */
+.pink { color: var(--pinkfold); }
+.ph   { color: var(--grey-cc); }
+.it   { font-style: italic; }
+
+/* inputBox/mobile */
+.in      { height: 60px; }
+.in-box  { left: 0; top: 20px; width: 100%; height: 40px; background: var(--white); border-radius: 6px;
+           box-shadow: inset 0 0 0 2px var(--grey-cc); }                                     /* 2px inside stroke */
+/* icon/chevron exports pointing right; the instance turns it to point down */
+.in-chev { top: 19px; width: 44px; height: 44px; transform: rotate(90deg); }
+.w166 { width: 166px; } .w166 .in-chev { left: 118px; }
+.w219 { width: 219px; }
+.w335 { width: 335px; }
+.w112 { width: 112px; }
+
+/* button/Save */
+.save    { left: 131px; top: 1755px; width: 114px; height: 48px; background: var(--pinkfold); border-radius: 8px; }
+
+/* Group 72 */
+.terms-row-icon { left: 302px; width: 18px; height: 18px; }
+.flip-y  { transform: scaleY(-1); }
+
+/* combo/navbar/mobile/module - 0.333px #CCC outside stroke as one crisp row at the
+   alpha its coverage produces; the frame clips the sides */
+.hdr     { left: 0; top: 63px; width: 375px; height: 72px; }
+.hdr-bg  { left: 0; top: 0; width: 375px; height: 72px; background: var(--white);
+           box-shadow: 0 0 0 1px rgba(204, 204, 204, 0.333); }
+.back    { left: 4px; top: 16px; width: 120px; height: 44px; }
+/* icon/chevron exports pointing right; the instance is turned 180deg */
+.back-chev { left: 2px; top: 0; width: 44px; height: 44px; transform: rotate(180deg); }
+</style>
+</head>
+<body>
+<div class="frame" data-frame data-node-id="101:9604">
+
+  <!-- Group 162: Address -->
+  <div class="grp" data-node-id="101:9610">
+    <p class="tx tx-l t-h3" style="left:28px;top:557px;height:48px">Address</p>
+    <div class="abs in w166" style="left:20px;top:817px" data-node-id="101:9612">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Town/City</p>
+    </div>
+    <div class="abs in w335" style="left:20px;top:749px" data-node-id="101:9613">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Address line 2</p>
+    </div>
+    <div class="abs in w335" style="left:20px;top:681px" data-node-id="101:9614">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Address line 1</p>
+    </div>
+    <div class="abs in w219" style="left:20px;top:613px" data-node-id="101:9615">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s ph" style="left:12px;top:30px;height:20px">Enter postcode to lookup</p>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Postcode lookup</p>
+    </div>
+    <div class="abs in w112" style="left:243px;top:613px" data-node-id="101:9616">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">House no.</p>
+    </div>
+    <!-- 101:9617 (County, with chevron) sits in the same box directly under 101:9618,
+         whose opaque field covers it completely - only the top one is built -->
+    <div class="abs in w166" style="left:189px;top:817px" data-node-id="101:9618">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">County</p>
+    </div>
+  </div>
+
+  <!-- Group 163: Legal -->
+  <div class="grp" data-node-id="101:9619">
+    <div class="abs t-b2m" style="left:28px;top:1177px;white-space:nowrap" data-node-id="101:9620">
+      <p>If unsure please check</p>
+      <p><span class="pink">this article</span>.</p>
+    </div>
+    <p class="tx tx-l t-h3" style="left:28px;top:917px;height:48px">Legal</p>
+    <div class="abs in w166" style="left:189px;top:973px" data-node-id="101:9622">
+      <div class="abs in-box"></div>
+      <img class="abs in-chev" src="assets/icon-chevron.svg" alt="">
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Legal gender</p>
+    </div>
+    <div class="abs in w166" style="left:189px;top:1041px" data-node-id="101:9623">
+      <div class="abs in-box"></div>
+      <img class="abs in-chev" src="assets/icon-chevron.svg" alt="">
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Citizenship</p>
+    </div>
+    <div class="abs in w166" style="left:20px;top:973px" data-node-id="101:9624">
+      <div class="abs in-box"></div>
+      <img class="abs in-chev" src="assets/icon-chevron.svg" alt="">
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Salutation</p>
+    </div>
+    <div class="abs in w166" style="left:20px;top:1041px" data-node-id="101:9625">
+      <div class="abs in-box"></div>
+      <img class="abs in-chev" src="assets/icon-chevron.svg" alt="">
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Country of birth</p>
+    </div>
+    <div class="abs in w166" style="left:189px;top:1109px" data-node-id="101:9626">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s ph" style="left:12px;top:30px;height:20px">AA000000A</p>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">National Insurance no.</p>
+    </div>
+    <div class="abs in w166" style="left:20px;top:1109px" data-node-id="101:9627">
+      <div class="abs in-box"></div>
+      <img class="abs in-chev" src="assets/icon-chevron.svg" alt="">
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Employment status</p>
+    </div>
+  </div>
+
+  <div class="abs save" data-node-id="101:9628">
+    <p class="tx tx-c t-bold20" style="left:32px;top:12px;width:50px;height:24px;color:var(--white)">Save</p>
+  </div>
+
+  <!-- Group 29: notice -->
+  <div class="grp" data-node-id="101:9629">
+    <p class="tx tx-l t-notice" style="left:40px;top:1843px;height:15px">Important notice</p>
+    <div class="abs t-b3" style="left:40px;top:1878px;width:295px" data-node-id="101:9631">
+      <p>Penfold and Gaudi intend to move the Penfold Pension to a new registered pension scheme in due course, with no additional cost or charge to you.</p>
+      <p>&#8203;</p>
+      <p>By accepting these terms you acknowledge the above and note that:</p>
+      <p>&#8203;</p>
+      <p class="it">On and from the date we give you notice that the transfer of your interests in the Penfold Pension under the Scheme to an arrangement for you under another registered pension scheme selected by us will happen, you hereby authorise and instruct Penfold and Gaudi to transfer your contributions to and Investments in the Penfold Pension held at that date, and apply any cash or investment received in your Penfold Pension after that date to the arrangement under the registered pension scheme selected by us for your benefit, along with all your information and transaction history held under your Penfold Pension to that new registered pension scheme all as more particularly described in the notice that will be given by us to you telling you of that move.</p>
+    </div>
+  </div>
+
+  <!-- Group 164: Main -->
+  <div class="grp" data-node-id="101:9632">
+    <div class="abs in w219" style="left:20px;top:367px" data-node-id="101:9633">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s ph" style="left:12px;top:30px;height:20px">user@domain.com</p>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Email</p>
+    </div>
+    <div class="abs in w219" style="left:20px;top:435px" data-node-id="101:9634">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s ph" style="left:12px;top:30px;height:20px">user@domain.com</p>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Password</p>
+    </div>
+    <p class="tx tx-l t-b2m" style="left:28px;top:503px;height:14px" data-node-id="101:9635"><span class="pink">Change password</span>.</p>
+    <div class="abs in w166" style="left:189px;top:299px" data-node-id="101:9636">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Phone</p>
+    </div>
+    <p class="tx tx-l t-h3" style="left:28px;top:175px;height:48px">Main</p>
+    <div class="abs in w166" style="left:20px;top:231px" data-node-id="101:9638">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s" style="left:12px;top:30px;height:20px">Jonny</p>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">First name</p>
+    </div>
+    <div class="abs in w166" style="left:20px;top:299px" data-node-id="101:9639">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s" style="left:12px;top:30px;height:20px">13-11-1997</p>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Date of birth</p>
+    </div>
+    <div class="abs in w166" style="left:189px;top:231px" data-node-id="101:9640">
+      <div class="abs in-box"></div>
+      <p class="tx tx-l t-lbl-s" style="left:12px;top:30px;height:20px">Two-byFour</p>
+      <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Last name</p>
+    </div>
+  </div>
+
+  <!-- Group 72: terms -->
+  <div class="grp" data-node-id="101:9641">
+    <img class="abs" style="left:0;top:1264px" src="assets/terms-bg.svg" alt="" data-node-id="101:9642">
+    <div class="abs" style="left:45px;top:1631px;width:83px;height:44px" data-node-id="101:9646">
+      <p class="tx tx-l t-b2" style="left:46px;top:14px;height:15px">I understand and accept all of the above.</p>
+      <!-- the frame-level response shows this unchecked; the instance is check/checked -->
+      <img class="abs" style="left:0;top:0" src="assets/check-checked.svg" alt="">
+    </div>
+    <p class="abs t-b2" style="left:28px;top:1323px;width:320px" data-node-id="101:9647">These include both general Penfold terms and conditions, as well as our partners’.</p>
+    <div class="grp" data-node-id="101:9648">
+      <p class="tx tx-l t-term" style="left:55px;top:1373px;height:20px">Penfold Terms</p>
+      <img class="abs terms-row-icon" style="top:1373.5208px" src="assets/terms-chevron-circle.svg" alt="">
+      <p class="tx tx-l t-term" style="left:55px;top:1401px;height:20px">Scheme Administrator Terms</p>
+      <img class="abs terms-row-icon" style="top:1401.4834px" src="assets/terms-chevron-circle.svg" alt="">
+      <p class="tx tx-l t-term" style="left:55px;top:1429px;height:20px">Key Features Document</p>
+      <img class="abs terms-row-icon" style="top:1429.4463px" src="assets/terms-chevron-circle.svg" alt="">
+      <p class="tx tx-l t-term" style="left:55px;top:1457px;height:20px">Member Declaration</p>
+      <img class="abs terms-row-icon" style="top:1457.4463px" src="assets/terms-chevron-circle.svg" alt="">
+      <p class="tx tx-l t-term" style="left:55px;top:1485px;height:20px">UK Tax Residency</p>
+      <div class="abs t-b2m" style="left:59px;top:1513px;width:239px" data-node-id="101:9671">
+        <p>At the moment we are only able to offer a Penfold pension to those who have a UK tax residency. This is because you need to be subject to tax in the UK to qualify for the government top ups into your pension.</p>
+        <p>By proceeding you confirm you are a UK Tax Resident.</p>
+      </div>
+      <!-- the open row's chevron is the same asset flipped vertically -->
+      <img class="abs terms-row-icon flip-y" style="top:1485.4463px" src="assets/terms-chevron-circle.svg" alt="">
+    </div>
+    <p class="tx tx-l t-h3m" style="left:28px;top:1294px;height:29px">Terms and Conditions</p>
+  </div>
+
+  <div class="abs hdr" data-node-id="101:9676">
+    <div class="abs hdr-bg"></div>
+    <div class="abs back" data-node-id="I101:9676;114:490">
+      <p class="tx tx-r t-bold20" style="left:47px;top:10px;width:53px;height:24px">Back</p>
+      <img class="abs back-chev" src="assets/icon-chevron.svg" alt="">
+    </div>
+    <p class="tx tx-r t-h1" style="left:247px;top:21px;width:96px;height:29px"><span class="trk">Details</span></p>
+  </div>
+
+  <!--@IOS id="101:9677" time="9:41"-->
+
+</div>
+</body>
+</html>

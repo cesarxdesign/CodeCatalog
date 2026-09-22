@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=375,initial-scale=1">
+<title>Onboarding Next</title>
+<style>
+/*@FONTS*/
+/*@COMMON*/
+
+.frame { height: 812px; background: #F4F4F4; }
+
+/* type - line heights are Figma's text-box height / line count */
+.t-label  { font-weight: 700; font-size: 24px; line-height: 29px; letter-spacing: -0.8px; }   /* N/B 24 */
+.t-body   { font-weight: 400; font-size: 14px; line-height: 17px; }                           /* T/R 14 */
+.t-btn    { font-weight: 700; font-size: 20px; line-height: 24px; color: var(--white); }      /* T/B 20 */
+.t-title  { font-weight: 700; font-size: 28px; line-height: 34px; letter-spacing: -0.8px; }   /* N/B 28 */
+.t-title .trk { margin-right: 0.8px; }
+/* each label keeps Figma's own box width (Figma measures this Montserrat build 0.1-1.6px
+   wider than Chrome); CENTER-aligned inside it, as in the file */
+.t-step   { flex: none; display: flex; justify-content: center; font-size: 24px; line-height: 29px; letter-spacing: -0.8px; white-space: nowrap; }
+.t-step .trk { margin-right: 0.8px; }
+.w400 { font-weight: 400; } .w600 { font-weight: 600; } .w700 { font-weight: 700; }
+
+/* padding(vertical: 40).spacing(16) */
+.intro     { left: 32px; top: 135px; display: flex; flex-direction: column; gap: 16px;
+             padding: 40px 0; align-items: center; }
+.intro-lbl { width: 311px; }
+.pad8      { display: flex; align-items: center; gap: 10px; padding: 8px; }
+.intro-txt { width: 295px; }
+
+/* progressButton */
+.progress  { left: 96px; top: 596px; display: flex; flex-direction: column; gap: 24px; align-items: center; }
+.bars      { display: flex; gap: 8px; align-items: center; }
+.btn       { position: relative; width: 184px; height: 40px; background: var(--dolfknip); border-radius: 8px; }
+
+/* header/mobile/dashboard - 0.333px #D8D8D8 outside stroke, one crisp row at the
+   alpha its coverage produces. Its side bleed (the frame does not clip in Figma) is
+   left to the viewport. */
+.hdr       { left: 0; top: 63px; width: 375px; height: 72px; }
+.hdr-bg    { left: 0; top: 0; width: 375px; height: 72px; background: var(--white);
+             box-shadow: 0 0 0 1px rgba(216, 216, 216, 0.333); }
+.hdr-menu  { left: 319px; top: 16px; width: 40px; height: 40px; }
+.hdr-logo  { left: 16px; top: 16px; width: 28px; height: 44px; overflow: hidden; }
+
+/* Frame 25 */
+.steps     { left: 68px; top: 380px; width: 238px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.step      { display: flex; gap: 4px; align-items: center; overflow: hidden; }
+.step-fill { align-self: stretch; }
+</style>
+</head>
+<body>
+<div class="frame" data-frame data-node-id="101:9584">
+
+  <div class="abs intro" data-node-id="101:9585">
+    <p class="intro-lbl t-label num" data-node-id="101:9586">Next</p>
+    <div class="pad8" data-node-id="101:9587">
+      <div class="intro-txt t-body" data-node-id="101:9588">
+        <p>Next up we need some personal information to set up your account.</p>
+        <p>&#8203;</p>
+        <p>You'll need your National Insurance number so worth having a look for this first.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="abs progress" data-node-id="101:9589">
+    <div class="bars" data-node-id="101:9590">
+      <img src="assets/progression-green.svg" alt="">
+      <img src="assets/progression-yellow.svg" alt="">
+      <img src="assets/progression-off.svg" alt="">
+    </div>
+    <div class="btn" data-node-id="101:9591">
+      <p class="tx tx-c t-btn" style="left:16px;top:8px;width:152px;height:24px">Continue</p>
+    </div>
+  </div>
+
+  <div class="abs hdr" data-node-id="101:9592">
+    <div class="abs hdr-bg"></div>
+    <p class="tx tx-c t-title num" style="left:120px;top:18px;width:135px;height:34px"><span class="trk">Welcome</span></p>
+    <div class="abs hdr-menu"><img src="assets/icon-menu-dropdown.svg" alt="Menu"></div>
+    <div class="abs hdr-logo"><img src="assets/logo-small-short.svg" alt="Penfold"></div>
+  </div>
+
+  <!--@IOS id="101:9593" time="8:24"-->
+
+  <div class="abs steps" data-node-id="101:9594">
+    <div class="step" data-node-id="101:9595">
+      <img src="assets/success-solid.svg" alt="">
+      <p class="t-step w700 num" style="width:172px"><span class="trk">Growth profile</span></p>
+    </div>
+    <div class="step step-fill" data-node-id="101:9598">
+      <img src="assets/success-outline.svg" alt="">
+      <p class="t-step w600 num" style="width:185px"><span class="trk">Personal details</span></p>
+    </div>
+    <div class="step step-fill" data-node-id="101:9601">
+      <img src="assets/success-faded.svg" alt="">
+      <p class="t-step w400 num" style="width:185px"><span class="trk">Payment details</span></p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

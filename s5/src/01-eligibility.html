@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=375,initial-scale=1">
+<title>Eligibility Check</title>
+<style>
+/*@FONTS*/
+/*@COMMON*/
+
+.frame { height: 812px; background: #FBFBFB; }
+
+/* type - line heights are Figma's text-box height / line count */
+.t-h1     { font-weight: 700; font-size: 28px; line-height: 29px; letter-spacing: -1px; }   /* H1.m Bold 28, 104% */
+.t-h1 .trk { margin-right: 1px; }
+.t-lbl-s  { font-weight: 500; font-size: 12px; line-height: 20px; }                         /* LabelS.m Medium 12 */
+.t-lbl-m  { font-weight: 500; font-size: 16px; line-height: 22px; }                         /* LabelS Medium 16 */
+.t-b1     { font-weight: 400; font-size: 14px; line-height: 20px; }                         /* B1.m Regular 14, 140% */
+.t-bold20 { font-weight: 700; font-size: 20px; line-height: 24px; }                         /* Label Bold 20 */
+.b700 { font-weight: 700; }
+
+/* button/NotifyMe */
+.notify    { left: 109px; top: 638px; width: 157px; height: 48px; }
+.notify-bg { left: 0; top: 0; width: 157px; height: 48px; background: var(--pinkfold); border-radius: 8px; }
+
+/* inputBox/mobile.old */
+.inp       { left: 78px; width: 219px; height: 60px; }
+.inp-box   { left: 0; top: 20px; width: 219px; height: 40px; background: var(--white); border-radius: 8px;
+             box-shadow: inset 0 0 0 2px var(--grey-cc); }                                   /* 2px inside stroke */
+/* icon/chevronRight exports pointing right; the instance turns it to point down */
+.inp-chev  { left: 171px; top: 19px; width: 44px; height: 44px; transform: rotate(90deg); }
+
+/* headline: three explicit lines, each centred on its own */
+.h1        { left: 42px; top: 159px; width: 290px; height: 87px; }
+.h1-ln     { display: flex; justify-content: center; white-space: nowrap; }
+
+/* checkbox/YesNo */
+.yn        { top: 32px; width: 83px; height: 44px; }                                         /* Group 7 origin 55,522 */
+
+/* header/module.mobile */
+.hdr       { left: 0; top: 63px; width: 375px; height: 72px; }
+/* #FBFBFB at 92% + BACKGROUND_BLUR 4; 0.333px #CCC outside stroke as one crisp row at
+   the alpha its coverage produces - the frame clips the sides */
+.hdr-bg    { left: 0; top: 0; width: 375px; height: 72px; background: rgba(251, 251, 251, 0.92);
+             -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px);
+             box-shadow: 0 0 0 1px rgba(204, 204, 204, 0.333); }
+.back      { left: 246px; top: 12px; width: 121px; height: 48px; }
+/* icon/chevron exports pointing right; the instance is turned 180deg */
+.back-chev { left: 2px; top: 2px; width: 44px; height: 44px; transform: rotate(180deg); }
+.logo      { left: 28px; top: 14px; width: 52px; height: 44px; }
+</style>
+</head>
+<body>
+<div class="frame" data-frame data-node-id="101:9525">
+
+  <div class="abs notify" data-node-id="101:9526">
+    <div class="abs notify-bg"></div>
+    <!-- button/nextChevy: its icon instance has no children, so the export is empty -->
+    <img class="abs" style="left:106px;top:2px" src="assets/button-next-chevy.svg" alt="">
+    <p class="tx tx-c t-bold20" style="left:24px;top:12px;width:109px;height:24px;color:var(--white)">Let’s go</p>
+  </div>
+
+  <div class="abs inp" style="top:286px" data-node-id="101:9527">
+    <div class="abs inp-box"></div>
+    <img class="abs inp-chev" src="assets/icon-chevron-right.svg" alt="">
+    <p class="tx tx-l t-lbl-s" style="left:12px;top:30px;width:195px;height:20px">Jonny</p>
+    <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">First name</p>
+  </div>
+  <div class="abs inp" style="top:422px" data-node-id="101:9528">
+    <div class="abs inp-box"></div>
+    <img class="abs inp-chev" src="assets/icon-chevron-right.svg" alt="">
+    <p class="tx tx-l t-lbl-s" style="left:12px;top:30px;width:195px;height:20px">13-11-1997</p>
+    <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Date of birth</p>
+  </div>
+  <div class="abs inp" style="top:354px" data-node-id="101:9529">
+    <div class="abs inp-box"></div>
+    <img class="abs inp-chev" src="assets/icon-chevron-right.svg" alt="">
+    <p class="tx tx-l t-lbl-s" style="left:12px;top:30px;width:195px;height:20px">Two-byFour</p>
+    <p class="tx tx-l t-lbl-s" style="left:4px;top:0;height:20px">Last name</p>
+  </div>
+
+  <div class="abs h1 t-h1" data-node-id="101:9530">
+    <p class="h1-ln"><span class="trk">You need 3 things:</span></p>
+    <p class="h1-ln"><span class="trk">name, birthdate, and</span></p>
+    <p class="h1-ln"><span class="trk">be a UK tax resident</span></p>
+  </div>
+
+  <div class="abs" style="left:55px;top:522px;width:265px;height:76px" data-node-id="101:9531">
+    <div class="abs yn" style="left:49px" data-node-id="101:9532">
+      <p class="tx tx-l t-lbl-m" style="left:42px;top:11px;height:22px">Yes</p>
+      <img class="abs" style="left:0;top:0" src="assets/check-checked.svg" alt="">
+    </div>
+    <div class="abs yn" style="left:137px" data-node-id="101:9533">
+      <p class="tx tx-l t-lbl-m" style="left:42px;top:11px;height:22px">No</p>
+      <img class="abs" style="left:0;top:0" src="assets/check-checked-navy.svg" alt="">
+    </div>
+    <p class="abs t-b1" style="left:0;top:0;width:265px;height:20px;text-align:center" data-node-id="101:9534">Are you a tax resident of <span class="b700">only</span> the UK?</p>
+  </div>
+
+  <div class="abs hdr" data-node-id="101:9535">
+    <div class="abs hdr-bg"></div>
+    <div class="abs back" data-node-id="I101:9535;10:19">
+      <p class="tx tx-c t-bold20" style="left:48px;top:12px;width:53px;height:24px">Back</p>
+      <img class="abs back-chev" src="assets/icon-chevron-filled.svg" alt="">
+    </div>
+    <img class="abs logo" src="assets/logo-p-beta.svg" alt="Penfold beta">
+  </div>
+
+  <!--@IOS id="101:9536" time="9:41"-->
+
+</div>
+</body>
+</html>

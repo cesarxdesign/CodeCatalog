@@ -1,0 +1,49 @@
+:root {
+  --navy: #123456;
+  --white: #FFFFFF;
+  --grey-cc: #CCCCCC;
+  --grey-d8: #D8D8D8;
+  --pinkfold: #FF5081;
+  --dolfknip: #5081FF;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { margin: 0; padding: 0; width: 375px; }
+img { display: block; max-width: none; }
+
+.frame {
+  position: relative;
+  width: 375px;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy);
+  /* every Montserrat run in the file has LIGA and CLIG off */
+  font-feature-settings: "liga" 0, "clig" 0;
+}
+.abs { position: absolute; }
+/* runs that also carry LNUM + TNUM (declared as a full list: it replaces, not merges) */
+.num { font-feature-settings: "liga" 0, "clig" 0, "lnum" 1, "tnum" 1; }
+
+/* Text boxes keep Figma's box; flex centres any overflow evenly. */
+.tx   { position: absolute; display: flex; white-space: nowrap; }
+.tx-c { justify-content: center; text-align: center; }
+.tx-r { justify-content: flex-end; text-align: right; }
+.tx-l { justify-content: flex-start; text-align: left; }
+
+/* ---------- iOS Nav Bar (contracted) / iOS/smallSafariHeader ---------- */
+.ios        { left: 0; top: 0; width: 375px; height: 63px; }
+.ios-bg     { left: 0; top: 0; width: 375px; height: 63px;
+              -webkit-backdrop-filter: blur(20.39px); backdrop-filter: blur(20.39px); } /* BACKGROUND_BLUR 40.77 */
+/* Divider: 0.5px black under a 20% group opacity, spanning y 62.5-63 = half of row 62
+   at 0.2, drawn as one crisp row at 0.1 */
+.ios-div    { left: 0; top: 62px; width: 375px; height: 1px; background: rgba(0, 0, 0, 0.1); }
+.ios-status { left: 0; top: 0; width: 375px; height: 44px; }
+.ios-ctr    { left: 293.5px; top: 17.16px; width: 67px; height: 11.5px; }
+.ios-fill   { left: 44.5px; top: 1.9167px; width: 18px; height: 7.6667px; background: #000; border-radius: 1.6px; }
+.t-ios-time { font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif; font-feature-settings: normal;
+              font-weight: 600; font-size: 15px; line-height: 18px; letter-spacing: -0.165px; color: #000; }
+.t-ios-url  { font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif; font-feature-settings: normal;
+              font-weight: 400; font-size: 12px; line-height: 15px; letter-spacing: -0.35px; color: #000; }
+/* CSS adds letter-spacing after the last glyph; Figma's box does not */
+.t-ios-time .trk { margin-right: 0.165px; }
+.t-ios-url  .trk { margin-right: 0.35px; }
