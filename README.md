@@ -6,6 +6,16 @@ CSS, never a picture of one. One collection so far: Penfold, 11 desktop and 13 m
 The catalogue page is `index.html`, published as a private artifact:
 https://claude.ai/artifact/1CZSApDnuYYFpJevBbscv2
 
+## Where the latest lives
+
+This folder, on `main`, is the only latest. The published artifact is a copy of `index.html`
+and nothing else. Both carry a build stamp (`<meta name="cc-build">`); if the artifact's stamp
+differs from `index.html`'s, the artifact is stale and gets republished from here. Never
+build from the artifact.
+
+Top level holds only: README, BACKLOG, `catalog.json`, `index.html`, `screens/`, `tools/`,
+`figma2code/`. Anything else is out of place.
+
 ## Before trusting it
 
     python3 tools/check.py
@@ -118,6 +128,8 @@ copy or a git clone does not look stale.
     source   screens/**/source/          exports and Figma renders, as supplied
     derived  screens/**/screen.html, state-*.html, states.html, snippet.html, meta.json
     out      screens/**/embed.html, catalog.json, index.html    built, never hand-edited
+    work     figma2code/onboarding/      the build that produced the five mobile onboarding screens
+             figma2code/dashboard/       the Dashboard pair (desktop, mobile, ref), built, not yet imported
 
 ## The shared desktop shell
 

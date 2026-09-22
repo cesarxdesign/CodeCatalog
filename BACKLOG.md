@@ -11,4 +11,4 @@ What is next. An empty backlog means finished, and that is information.
 - [ ] Give the 19 older screens a `flow` in their meta.json (the desktop set reads as one sign-up
       flow; the older mobile set is the logged-in app). They show under "All flows" until then.
 - [ ] Add the Dashboard pair (desktop 1200×812 and mobile 375×812, Figma section 96:9520) - built
-      with figma2code on 2026-09-21 but not yet imported.
+      with figma2code on 2026-09-21 but not yet imported. It waits in `figma2code/dashboard/`.
