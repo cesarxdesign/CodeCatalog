@@ -3,15 +3,15 @@
 Coded screens, kept as a library to lift into the folio. Every screen here is live HTML and
 CSS, never a picture of one. One collection so far: Penfold, 11 desktop and 13 mobile.
 
-The catalogue page is `index.html`, published as a private artifact:
-https://claude.ai/artifact/1CZSApDnuYYFpJevBbscv2
+The catalogue page is `index.html`, served by GitHub Pages straight from `main`:
+https://cesarxdesign.github.io/CodeCatalog/
+Every push updates it. The old claude.ai artifact is retired; do not publish there.
 
 ## Where the latest lives
 
-This folder, on `main`, is the only latest. The published artifact is a copy of `index.html`
-and nothing else. Both carry a build stamp (`<meta name="cc-build">`); if the artifact's stamp
-differs from `index.html`'s, the artifact is stale and gets republished from here. Never
-build from the artifact.
+This folder, on `main`, is the only latest, and the link above is served from it, so the
+two cannot drift. Screen names come from each screen's `meta.json`; to rename a screen, change
+it there and push.
 
 Top level holds only: README, BACKLOG, `catalog.json`, `index.html`, `screens/`, `tools/`,
 `figma2code/`. Anything else is out of place.
@@ -110,7 +110,7 @@ The current view lives in the URL, so a filtered view can be bookmarked or share
     edit a screen.html or meta.json
     python3 tools/build.py            regenerates embeds, catalog.json, index.html
     python3 tools/check.py            must end OK
-    republish index.html to the artifact URL above, with `url` - a new URL loses saved names
+    commit and push; the link updates within a minute
     if the screen is clickable: republish its screen.html to its `live` URL too
 
 Adding a screen: a new folder with `screen.html`, `source/` and a `meta.json` shaped like its
@@ -156,8 +156,8 @@ and **confirmation** centres on the shared column (568) rather than its export's
 - The mobile status bars use `-apple-system, 'SF Pro Text'`: Apple's system face on Apple
   devices, plain sans elsewhere. Deliberate - SF Pro cannot be served as a web font.
 - A `#id` selector cannot hold the `/` in a key. Look sections up with `getElementById`.
-- Names typed into the catalogue page's Rename box live in the artifact's database, keyed
-  by screen key, not in this repo.
+- The page's Rename box only changes names in the browser you typed them in. Real names are the
+  `name` in each meta.json, in git. No names were ever saved in the old artifact's database.
 
 ## History
 
