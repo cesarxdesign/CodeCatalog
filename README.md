@@ -5,9 +5,7 @@ CSS, never a picture of one. One collection so far: Penfold, 11 desktop and 13 m
 
 The catalogue page is `index.html`, served straight from `main` on
 GitHub Pages at https://cesarxdesign.github.io/CodeCatalog/. Every push to `main` updates it
-within a minute. The old address, https://cesar-codecatalog.vercel.app, only redirects there:
-Vercel deploys `vercel.json` alone (see `.vercelignore`), since each full deploy counts against
-its free storage. The old claude.ai artifact is retired; do not publish there.
+within a minute. (It was also on Vercel until 2026-09-25; that project is deleted.) The old claude.ai artifact is retired; do not publish there.
 
 ## Where the latest lives
 
