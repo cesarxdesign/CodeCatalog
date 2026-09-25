@@ -3,10 +3,11 @@
 Coded screens, kept as a library to lift into the folio. Every screen here is live HTML and
 CSS, never a picture of one. One collection so far: Penfold, 11 desktop and 13 mobile.
 
-The catalogue page is `index.html`, served straight from `main` at
-https://cesar-codecatalog.vercel.app (its own Vercel project, nothing to do with the folio's)
-and on GitHub Pages at https://cesarxdesign.github.io/CodeCatalog/.
-Every push to `main` updates both within a minute. The old claude.ai artifact is retired; do not publish there.
+The catalogue page is `index.html`, served straight from `main` on
+GitHub Pages at https://cesarxdesign.github.io/CodeCatalog/. Every push to `main` updates it
+within a minute. The old address, https://cesar-codecatalog.vercel.app, only redirects there:
+Vercel deploys `vercel.json` alone (see `.vercelignore`), since each full deploy counts against
+its free storage. The old claude.ai artifact is retired; do not publish there.
 
 ## Where the latest lives
 
