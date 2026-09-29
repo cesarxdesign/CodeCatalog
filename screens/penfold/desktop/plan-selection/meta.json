@@ -81,20 +81,6 @@
       "from": "screen.html",
       "seq": 23,
       "tile": "Plan selection 23"
-    },
-    {
-      "id": "state-choose",
-      "name": "state-choose.html",
-      "from": "state-choose.html",
-      "seq": 23.5,
-      "tile": "Plan selection, state-choose.html"
-    },
-    {
-      "id": "state-risk",
-      "name": "state-risk.html",
-      "from": "state-risk.html",
-      "seq": 23.6,
-      "tile": "Plan selection, state-risk.html"
     }
   ],
   "seq": 19,
