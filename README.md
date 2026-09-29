@@ -100,7 +100,8 @@ A desktop screen with more than one state shows each state as a tile of its own 
 right after the screen: 3 things about pensions (all closed, and states 1 to 6 from `states.html`),
 Plan selection (risk levels, risk acceptance), Savings
 calculator (steps 1 to 3; the screen's own tile is step 4) and Document consent (all four documents
-open, from `state-expanded.html`). 23 desktop views from 11 screens.
+open, from `state-expanded.html`). Sign-up, upper half has one variant made for the folio,
+`state-with-email.html`: the email screen folded in as a field, before the password. 24 desktop views from 11 screens.
 Plan selection's `state-choose.html` and `state-risk.html` stay in its folder but have no tile:
 they repeat the plans and risk-levels states.
 
