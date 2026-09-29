@@ -1,0 +1,30 @@
+{
+  "id": "hero",
+  "project": "penfold",
+  "kind": "image",
+  "name": "Hero",
+  "alt": "Five Penfold app screens on tilted phones beside the Penfold logo",
+  "frame": [
+    2500,
+    1406
+  ],
+  "provenance": "figma export",
+  "figma_file": "vvVaFY1cktLJX3hplEdUie",
+  "figma_node": "45:1144",
+  "figma_layer": "800x418 - phone grid",
+  "exported": "2026-09-29",
+  "files": {
+    "web": "image.webp",
+    "export": "export.png"
+  },
+  "sizes": {
+    "web": [
+      2500,
+      1406
+    ],
+    "export": [
+      2500,
+      1406
+    ]
+  }
+}

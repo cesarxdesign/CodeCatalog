@@ -1,0 +1,30 @@
+{
+  "id": "sketches-strip",
+  "project": "penfold",
+  "kind": "image",
+  "name": "Sketches strip",
+  "alt": "A strip of hand-drawn Penfold sketches: notes, a 3D pot, dashboard layouts, the donut and transaction rows",
+  "frame": [
+    3974,
+    1210
+  ],
+  "provenance": "figma export",
+  "figma_file": "vvVaFY1cktLJX3hplEdUie",
+  "figma_node": "45:884",
+  "figma_layer": "Frame 5",
+  "exported": "2026-09-29",
+  "files": {
+    "web": "image.webp",
+    "export": "export.png"
+  },
+  "sizes": {
+    "web": [
+      7948,
+      2420
+    ],
+    "export": [
+      11922,
+      3630
+    ]
+  }
+}
