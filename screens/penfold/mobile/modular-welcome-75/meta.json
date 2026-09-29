@@ -1,0 +1,49 @@
+{
+  "id": "modular-welcome-75",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "modular-onboarding",
+  "order": 23,
+  "name": "Modular welcome, 75%",
+  "title": "Welcome",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2052:6486",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "modular welcome 75",
+    "welcome 75%",
+    "final step"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.03%",
+    "al": "±1px",
+    "note": "Same build as the 25% welcome with two modules in the complete state (<code>#43A800</code>) and the module block 11px higher, as the file has it. The 21px button labels and the 24.25px heading sit 1px high: baseline rounding differs between Chrome and Figma."
+  }
+}

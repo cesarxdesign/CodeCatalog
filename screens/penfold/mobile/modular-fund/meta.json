@@ -1,0 +1,50 @@
+{
+  "id": "modular-fund",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "modular-onboarding",
+  "order": 22,
+  "name": "Modular fund",
+  "title": "Select risk level",
+  "frame": [
+    375,
+    1241
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2052:6303",
+  "export_size": [
+    375,
+    1241
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "modular fund",
+    "fund",
+    "select risk level",
+    "risk level"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.05%",
+    "al": "±1px",
+    "note": "All four carousel cards are built at their Figma offsets; the frame clips them at 375, leaving card one and a 33px sliver of card two. Headings at 24&ndash;28px and the 10px labels sit 1px high (baseline rounding), and the three 18px chevron rings at y&nbsp;=&nbsp;886.52 snap half a pixel."
+  }
+}

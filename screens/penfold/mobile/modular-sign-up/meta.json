@@ -1,0 +1,49 @@
+{
+  "id": "modular-sign-up",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "modular-onboarding",
+  "order": 20,
+  "name": "Modular sign-up",
+  "title": "Sign up for free",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2052:6791",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "modular sign-up",
+    "sign up",
+    "sign up for free"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.87%",
+    "al": "±1px",
+    "note": "The frame-level response described the wrong variants: an unchecked box and a chevron menu button where the canvas shows a checked box and a &ldquo;HOME&rdquo; label, so both came from the instances&rsquo; own ids. 28px heading sits 1px high: Chrome and Figma round the baseline differently."
+  }
+}

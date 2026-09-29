@@ -1,0 +1,49 @@
+{
+  "id": "modular-dashboard",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "modular-onboarding",
+  "order": 24,
+  "name": "Modular dashboard",
+  "title": "Yearly goal",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2052:6500",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "modular dashboard",
+    "dashboard",
+    "yearly goal"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.49%",
+    "al": "±1px",
+    "note": "The two module buttons are the 181px component scaled to 140, so their values are fractional on purpose (16.24px label, 39.4475px fill) and the 6px radius scales to 4.641px, which the export confirms. The pink arc keeps the file&rsquo;s own &minus;90&deg; rotation inside a 195.106px box."
+  }
+}

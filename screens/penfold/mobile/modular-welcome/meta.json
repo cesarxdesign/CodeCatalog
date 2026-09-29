@@ -1,0 +1,49 @@
+{
+  "id": "modular-welcome",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "modular-onboarding",
+  "order": 21,
+  "name": "Modular welcome",
+  "title": "Welcome",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2052:6276",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "modular welcome",
+    "welcome",
+    "welcome 25%"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.63%",
+    "al": "±1px",
+    "note": "The hamburger&rsquo;s icon export is navy <code>#123456</code> but the canvas overrides it to <code>#292929</code>; the node-level asset export carries the override. The progress bars are flipped in the file, yet the track&rsquo;s inner shadow still falls from the top, so the track is built unflipped."
+  }
+}

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=375">
+<title>Penfold · Modular dashboard</title>
+<style>html,body{margin:0;background:#F4F4F4}</style>
+</head><body>
+<!-- CodeCatalog · penfold/mobile/modular-dashboard · 375×812 · built from snippet.html · fp 17b25af016e1
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/mobile/modular-dashboard" style="--cc-w:375;--cc-h:812;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:375px;height:812px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:375px;height:812px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+:host{white-space:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-align:start;font-style:normal;font-variant:normal;line-height:normal;font-weight:400}
+:host {
+  --navy: #123456;
+  --white: #FFFFFF;
+  --grey-cc: #CCCCCC;
+  --pinkfold: #FF5081;
+  --light-blue: #4ECFEF;
+  --cool-grey: #FBFBFB;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+svg { display: block; }
+
+.frame {
+  position: relative;
+  width: 375px;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy);
+}
+.abs { position: absolute; }
+/* runs that carry LNUM + TNUM in the file */
+.num { font-feature-settings: "lnum" 1, "tnum" 1; }
+
+/* Text boxes keep Figma's box; flex centres any overflow evenly. */
+.tx   { position: absolute; display: flex; white-space: nowrap; }
+.tx-c { justify-content: center; text-align: center; }
+.tx-r { justify-content: flex-end; text-align: right; }
+.tx-l { justify-content: flex-start; text-align: left; }
+/* multi-line text boxes: a column, each line its own block */
+.tb   { position: absolute; display: flex; flex-direction: column; white-space: nowrap; }
+.tb-c { align-items: center; text-align: center; }
+.tb-r { align-items: flex-end; text-align: right; }
+.tb-l { align-items: flex-start; text-align: left; }
+
+/* ---------- iOS Nav Bar (contracted) ---------- */
+.ios        { left: 0; top: 0; width: 375px; height: 63px; }
+.ios-bg     { left: 0; top: 0; width: 375px; height: 63px; }
+/* Divider: 0.5px black under a 20% group opacity, spanning y 62.5-63 = half of row 62
+   at 0.2, drawn as one crisp row at 0.1 */
+.ios-div    { left: 0; top: 62px; width: 375px; height: 1px; background: rgba(0, 0, 0, 0.1); }
+.ios-status { left: 0; top: 0; width: 375px; height: 44px; }
+.ios-ctr    { left: 293.5px; top: 17.16px; width: 67px; height: 11.5px; }
+.ios-fill   { left: 44.5px; top: 1.9167px; width: 18px; height: 7.6667px; background: #000; border-radius: 1.6px; }
+/* Figma names SF Pro Text; the system face is listed first on purpose (library convention) */
+.t-ios-time { font-family: -apple-system, 'SF Pro Text', sans-serif; font-feature-settings: normal;
+              font-weight: 600; font-size: 15px; line-height: 18px; letter-spacing: -0.165px; color: #000; }
+.t-ios-url  { font-family: -apple-system, 'SF Pro Text', sans-serif; font-feature-settings: normal;
+              font-weight: 400; font-size: 12px; line-height: 15px; letter-spacing: -0.35px; color: #000; }
+/* CSS adds letter-spacing after the last glyph; Figma's box does not */
+.t-ios-time .trk { margin-right: 0.165px; }
+.t-ios-url  .trk { margin-right: 0.35px; }
+
+/* ---------- header/mobile ---------- */
+.hdr       { left: 0; top: 63px; width: 375px; height: 72px; }
+/* 0.333px #CCCCCC stroke, outside the box (the export inks row 135, not row 134):
+   one crisp row at the alpha its coverage produces. Side bleed is clipped by the frame. */
+.hdr-bg    { left: 0; top: 0; width: 375px; height: 72px; background: var(--white);
+             box-shadow: 0 0 0 1px rgba(204, 204, 204, 0.333); }
+.hdr-logo  { left: 24px; top: 16px; width: 140px; height: 44px; }
+.hdr-btn   { left: 251px; top: 14px; width: 120px; height: 44px; }
+.hdr-ico   { left: 66px; top: 0; width: 44px; height: 44px; }
+/* icon/hamberder's vector, 24x22 at 10,11 of the 44 box. The instance overrides its fill to
+   Dark #292929; the icon-level export still carries the main component's #123456. */
+.hdr-vec   { left: 10px; top: 11px; width: 24px; height: 22px; }
+
+.frame { height: 812px; background: #F6F6F6; }
+
+.t-yg     { font-weight: 700; font-size: 21px; line-height: 26px; letter-spacing: -0.42px; }
+.t-b12t   { font-weight: 700; font-size: 12px; line-height: 15px; letter-spacing: -0.24px; }
+.t-b12    { font-weight: 700; font-size: 12px; line-height: 15px; }
+.t-r16    { font-weight: 400; font-size: 16px; line-height: 20px; }
+.t-b16    { font-weight: 700; font-size: 16px; line-height: 20px; }
+.t-t3     { font-weight: 500; font-size: 16px; line-height: 22px; }     /* T3 Medium 16 */
+.t-m12    { font-weight: 500; font-size: 12px; line-height: 15px; }
+.green    { color: #43A800; }
+
+/* button/module.active, the 181x71 component scaled to 140 wide (x0.7735): every
+   fractional value here is the file's own */
+.mod      { top: 161px; width: 140px; height: 54.9171px; }
+.mod-bg   { left: 0; top: 15.4696px; width: 140px; height: 39.4475px; background: #6076DD;
+            border-radius: 4.641px; }   /* the component's 6px radius at the instance's scale; the export confirms it scaled */
+.t-mlabel { font-weight: 700; font-size: 16.24px; line-height: 20px; color: var(--white); }
+.t-mtitle { font-weight: 700; font-size: 10.83px; line-height: 15px; }
+
+/* donut */
+.ring     { left: 88px; top: 365px; width: 200px; height: 200px; }
+.arc-box  { left: 92.89px; top: 365px; width: 195.106px; height: 200px; display: flex; align-items: center; justify-content: center; }
+.arc-rot  { flex: none; transform: rotate(-90deg); }
+.arc      { position: relative; width: 200px; height: 195.106px; }
+.arc-in   { left: 0; right: 0; bottom: 0; top: 1.44%; }
+.dot      { width: 4px; height: 4px; mix-blend-mode: screen; }
+.mid      { left: 145px; top: 415px; width: 87px; height: 100px; }
+
+/* Group 118-120: action pucks */
+.puck     { width: 88px; height: 88px; background: var(--cool-grey); border-radius: 61px;
+            box-shadow: inset 0 0 0 1px var(--white), 0 4px 8px 0 rgba(0, 0, 0, 0.08); }
+.puck-ico { width: 60px; height: 60px; }
+.t-m14    { font-weight: 500; font-size: 14px; line-height: 22px; }
+</style>
+<div class="frame" data-frame data-node-id="2052:6500">
+
+  <p class="tx tx-l t-yg" style="left:28px;top:257px;width:116px;height:26px" data-node-id="2052:6501">Yearly goal</p>
+  <p class="tx tx-l t-b12t" style="left:30px;top:287px;width:98px;height:15px" data-node-id="2052:6502">Jul &lsquo;19 &mdash; Jun &lsquo;20</p>
+  <div data-node-id="2052:6503">
+    <div class="abs mod" style="left:38px" data-node-id="2052:6504">
+      <div class="abs mod-bg"></div>
+      <p class="tx tx-c t-mlabel" style="left:41.5414px;top:24.7514px;width:57px;height:20px">Basic 1</p>
+      <p class="tx tx-c t-mtitle" style="left:22.1436px;top:0px;width:95px;height:15px">Investment fund</p>
+    </div>
+    <div class="abs mod" style="left:198px" data-node-id="2052:6505">
+      <div class="abs mod-bg"></div>
+      <p class="tx tx-c t-mlabel" style="left:17.5414px;top:24.7514px;width:104px;height:20px">&pound;422 on 2nd</p>
+      <p class="tx tx-c t-mtitle" style="left:29.1436px;top:0px;width:81px;height:15px">Next payment</p>
+    </div>
+  </div>
+
+  <div data-node-id="2052:6506">
+    <div class="abs puck" style="left:40px;top:658px" data-node-id="2052:6507"></div>
+    <p class="tx tx-c t-m14" style="left:51px;top:758px;width:66px;height:22px" data-node-id="2052:6508">Combine</p>
+    <div class="abs puck-ico" style="left:54px;top:673px" data-node-id="2052:6509"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M30 45C38.2843 45 45 38.2843 45 30C45 21.7157 38.2843 15 30 15C21.7157 15 15 21.7157 15 30C15 38.2843 21.7157 45 30 45Z" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 24V36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 30H36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48.6563 48.9563L40.5 40.8" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg></div>
+  </div>
+
+  <div data-node-id="2052:6510">
+    <div class="abs puck" style="left:144px;top:658px" data-node-id="2052:6511"></div>
+    <p class="tx tx-c t-m14" style="left:164px;top:758px;width:49px;height:22px" data-node-id="2052:6512">Top up</p>
+    <div class="abs puck-ico" style="left:158px;top:673px" data-node-id="2052:6513"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M40.5 16.5H19.5C17.8431 16.5 16.5 17.8431 16.5 19.5V40.5C16.5 42.1569 17.8431 43.5 19.5 43.5H40.5C42.1569 43.5 43.5 42.1569 43.5 40.5V19.5C43.5 17.8431 42.1569 16.5 40.5 16.5Z" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 24V36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 30H36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg></div>
+  </div>
+
+  <div data-node-id="2052:6514">
+    <div class="abs puck" style="left:248px;top:658px" data-node-id="2052:6515"></div>
+    <p class="tx tx-c t-m14" style="left:264px;top:758px;width:56px;height:22px" data-node-id="2052:6516">Referral</p>
+    <div class="abs puck-ico" style="left:262px;top:673px" data-node-id="2052:6517"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M43.5 29.1V39.9C43.5 40.8548 43.1207 41.7705 42.4456 42.4456C41.7705 43.1207 40.8548 43.5 39.9 43.5H20.1C19.1452 43.5 18.2295 43.1207 17.5544 42.4456C16.8793 41.7705 16.5 40.8548 16.5 39.9V20.1C16.5 19.1452 16.8793 18.2295 17.5544 17.5544C18.2295 16.8793 19.1452 16.5 20.1 16.5H30.9" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38.1 11.1H48.9V21.9" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M29.1 30.9L48.9 11.1" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg></div>
+  </div>
+
+  <div data-node-id="2052:6518">
+    <div class="tb tb-c mid" data-node-id="2052:6519">
+      <p class="t-r16">Paid in</p>
+      <p class="t-b16">&pound;1,350</p>
+      <p class="t-b16">&#8203;</p>
+      <p class="t-r16">Yearly goal</p>
+      <p class="t-b16">&pound;1,600</p>
+    </div>
+    <p class="tx tx-c t-b12" style="left:168px;top:342px;width:38px;height:15px" data-node-id="2052:6520">Jul &lsquo;19</p>
+    <p class="tx tx-c t-b12" style="left:165px;top:573px;width:45px;height:15px" data-node-id="2052:6521">Jan &lsquo;20</p>
+    <div class="tb tb-l t-b12" style="left:296px;top:450px;width:28px;height:30px" data-node-id="2052:6522"><p>Oct</p><p>2019</p></div>
+    <div class="tb tb-r t-b12" style="left:49px;top:450px;width:31px;height:30px" data-node-id="2052:6523"><p>Apr</p><p>2020</p></div>
+    <div class="abs" style="left:128px;top:465px;width:120px;height:1px" data-node-id="2052:6524"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="120" height="1" viewBox="0 0 120 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M120 1H0V0H120V1Z" fill="#FBFBFB"/>
+</svg></div>
+    <div data-node-id="2052:6525">
+      <div class="abs ring" data-node-id="2052:6526"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#modular-dashboard-5-filter0_i_0_162)">
+<path d="M200 100C200 155.228 155.228 200 100 200C44.7715 200 0 155.228 0 100C0 44.7715 44.7715 0 100 0C155.228 0 200 44.7715 200 100ZM20 100C20 144.183 55.8172 180 100 180C144.183 180 180 144.183 180 100C180 55.8172 144.183 20 100 20C55.8172 20 20 55.8172 20 100Z" fill="white"/>
+</g>
+<defs>
+<filter id="modular-dashboard-5-filter0_i_0_162" x="0" y="0" width="200" height="200.896" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="0.895833"/>
+<feGaussianBlur stdDeviation="1.79167"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_162"/>
+</filter>
+</defs>
+</svg></div>
+      <div class="abs arc-box" data-node-id="2052:6528">
+        <div class="arc-rot"><div class="arc"><div class="abs arc-in"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="200" height="192.297" viewBox="0 0 200 192.297" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M200 92.297C200 110.739 194.9 128.822 185.264 144.547C175.628 160.271 161.831 173.025 145.399 181.398C128.967 189.77 110.54 193.436 92.1541 191.989C73.7687 190.542 56.1416 184.039 41.2215 173.199C26.3014 162.359 14.6696 147.604 7.61209 130.565C0.554553 113.527 -1.65379 94.8687 1.23121 76.6536C4.11621 58.4384 11.9822 41.3758 23.9594 27.3522C33.7652 15.8711 46.0139 6.79317 59.7578 0.751564C64.8137 -1.47094 70.4818 1.44938 72.1885 6.70192C73.8951 11.9545 70.9843 17.5401 65.9855 19.8883C55.7287 24.7065 46.5765 31.6664 39.1676 40.3412C29.5857 51.56 23.293 65.2101 20.985 79.7822C18.677 94.3544 20.4437 109.281 26.0897 122.912C31.7357 136.542 41.0412 148.346 52.9772 157.018C64.9133 165.69 79.015 170.893 93.7233 172.05C108.432 173.208 123.174 170.276 136.319 163.578C149.465 156.879 160.502 146.677 168.211 134.097C175.92 121.517 180 107.051 180 92.297H200Z" fill="#FF5081"/>
+</svg></div></div></div>
+      </div>
+    </div>
+    <div class="abs dot" style="left:186px;top:373px" data-node-id="2052:6531"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:screen">
+<circle cx="2" cy="2" r="2" fill="white"/>
+</g>
+</svg></div>
+    <div class="abs dot" style="left:186px;top:553px" data-node-id="2052:6532"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:screen">
+<circle cx="2" cy="2" r="2" fill="white"/>
+</g>
+</svg></div>
+    <div class="abs dot" style="left:96px;top:463px" data-node-id="2052:6533"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:screen">
+<ellipse cx="2" cy="2" rx="2" ry="2" fill="white"/>
+</g>
+</svg></div>
+    <div class="abs dot" style="left:276px;top:463px" data-node-id="2052:6534"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:screen">
+<ellipse cx="2" cy="2" rx="2" ry="2" fill="white"/>
+</g>
+</svg></div>
+    <div class="abs" style="left:108px;top:385px;width:160px;height:160px" data-node-id="2052:6535"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="80" cy="80" r="79.5" stroke="#FBFBFB"/>
+</svg></div>
+    <div class="abs" style="left:87px;top:364px;width:202px;height:202px" data-node-id="2052:6536"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="202" height="202" viewBox="0 0 202 202" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="101" cy="101" r="100.5" stroke="#F5F5F5"/>
+</svg></div>
+  </div>
+
+  <div class="abs hdr" data-node-id="2052:6537">
+    <div class="abs hdr-bg"></div>
+    <div class="abs hdr-btn">
+      <div class="abs hdr-ico"><div class="abs hdr-vec"><svg class="abs" style="display:block;left:0;top:0" role="img" aria-label="Menu" preserveAspectRatio="none" overflow="visible" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M0 0H24V2H0V0Z" fill="#292929"/>
+<path d="M0 10H24V12H0V10Z" fill="#292929"/>
+<path d="M0 20H24V22H0V20Z" fill="#292929"/>
+</g>
+</svg></div></div>
+    </div>
+    <div class="abs hdr-logo"><svg class="abs" style="display:block;left:0;top:0" role="img" aria-label="Penfold beta" preserveAspectRatio="none" overflow="visible" width="140" height="44" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<path d="M27.3226 31.4476C26.4358 31.4476 25.6554 31.7787 25.1351 32.4527V29H24V37.7736H25.0878V36.7804C25.5963 37.4898 26.4003 37.8446 27.3226 37.8446C29.1554 37.8446 30.4915 36.5557 30.4915 34.6402C30.4915 32.7247 29.1554 31.4476 27.3226 31.4476ZM27.228 36.8513C26.0338 36.8513 25.1233 35.9763 25.1233 34.6402C25.1233 33.304 26.0338 32.4409 27.228 32.4409C28.4341 32.4409 29.3446 33.304 29.3446 34.6402C29.3446 35.9763 28.4341 36.8513 27.228 36.8513Z" fill="#123456"/>
+<path d="M38.6697 34.6757C38.6697 32.7483 37.3808 31.4476 35.5717 31.4476C33.7626 31.4476 32.4265 32.7838 32.4265 34.6402C32.4265 36.5084 33.7744 37.8446 35.7964 37.8446C36.8369 37.8446 37.7001 37.4898 38.2677 36.8277L37.641 36.0946C37.1798 36.603 36.565 36.8513 35.8319 36.8513C34.5903 36.8513 33.7035 36.1182 33.5616 35.0186H38.646C38.6579 34.9121 38.6697 34.7703 38.6697 34.6757ZM35.5717 32.4054C36.6714 32.4054 37.4636 33.1503 37.5819 34.2027H33.5616C33.6798 33.1385 34.4839 32.4054 35.5717 32.4054Z" fill="#123456"/>
+<path d="M44.3608 36.5912C44.1243 36.7804 43.805 36.8868 43.474 36.8868C42.8473 36.8868 42.4925 36.5084 42.4925 35.8344V32.4409H44.2898V31.5067H42.4925V30.1351H41.3574V31.5067H40.2932V32.4409H41.3574V35.8817C41.3574 37.1469 42.0787 37.8446 43.3439 37.8446C43.8523 37.8446 44.3726 37.7027 44.7155 37.4071L44.3608 36.5912Z" fill="#123456"/>
+<path d="M49.3159 31.4476C48.3108 31.4476 47.3767 31.7314 46.7264 32.2517L47.1993 33.103C47.6841 32.6892 48.4409 32.429 49.1858 32.429C50.3091 32.429 50.8649 32.9848 50.8649 33.9426V34.1672H49.0676C47.1993 34.1672 46.549 34.9949 46.549 36C46.549 37.0878 47.4477 37.8446 48.8666 37.8446C49.848 37.8446 50.5456 37.5135 50.924 36.9459V37.7736H52V33.9898C52 32.2753 51.0304 31.4476 49.3159 31.4476ZM49.0558 36.9696C48.1926 36.9696 47.6723 36.5794 47.6723 35.9527C47.6723 35.4206 47.9916 34.9831 49.1149 34.9831H50.8649V35.8581C50.5811 36.5794 49.9071 36.9696 49.0558 36.9696Z" fill="#123456"/>
+</g>
+<g>
+<path d="M0 38L11 44V0L0 6V38Z" fill="#FF5081"/>
+<path d="M11 10V0L28 9V19L11 10Z" fill="#123456"/>
+<path d="M28 9L11 18V28L28 19V9Z" fill="#4ECFEF"/>
+</g>
+</g>
+</svg></div>
+    <div data-node-id="I2052:6537;96:186">
+      <p class="tx tx-l t-t3" style="left:166px;top:18px;width:83px;height:22px">Gain/Loss:</p>
+      <p class="tx tx-l t-b16" style="left:166px;top:40px;width:57px;height:20px">+&pound;0.00</p>
+      <p class="tx tx-r t-m12 green" style="left:235px;top:44px;width:44px;height:15px">+0.00%</p>
+    </div>
+    <div data-node-id="I2052:6537;96:183">
+      <p class="tx tx-l t-t3" style="left:100px;top:18px;width:32px;height:22px">Pot:</p>
+      <p class="tx tx-l t-b16" style="left:100px;top:40px;width:47px;height:20px">&pound;0.00</p>
+    </div>
+  </div>
+
+  <div class="abs ios" data-node-id="2052:6538">
+    <div class="abs ios-bg">
+      <svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="375" height="63" viewBox="0 0 375 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-40.7742" y="-40.7742" width="456.548" height="144.548"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20.39px);clip-path:url(#modular-dashboard-15-bgblur_0_0_141_clip_path);height:100%;width:100%"></div></foreignObject><path data-figma-bg-blur-radius="40.7742" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z" fill="#F8F8F8" fill-opacity="0.7"/>
+<defs>
+<clipPath id="modular-dashboard-15-bgblur_0_0_141_clip_path" transform="translate(40.7742 40.7742)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z"/>
+</clipPath></defs>
+</svg>
+      <div class="abs ios-div"></div>
+    </div>
+    <p class="tx tx-c t-ios-url" style="left:145px;top:40px;width:84px;height:15px"><span class="trk">getpenfold.com</span></p>
+    <div class="abs ios-status">
+      <p class="tx tx-c t-ios-time" style="left:19.894px;top:14px;width:54px;height:18px"><span class="trk">9:24</span></p>
+      <div class="abs ios-ctr">
+        <svg class="abs" style="display:block;left:42.5px;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="24.5" height="11.5" viewBox="0 0 24.5 11.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.58944 0H18.4106C19.6587 0 20.1113 0.129956 20.5676 0.373986C21.0239 0.618016 21.382 0.97612 21.626 1.43242C21.87 1.88871 22 2.34131 22 3.58944V7.91056C22 9.15869 21.87 9.61129 21.626 10.0676C21.382 10.5239 21.0239 10.882 20.5676 11.126C20.1113 11.37 19.6587 11.5 18.4106 11.5H3.58944C2.34131 11.5 1.88871 11.37 1.43242 11.126C0.97612 10.882 0.618016 10.5239 0.373986 10.0676C0.129956 9.61129 0 9.15869 0 7.91056V3.58944C0 2.34131 0.129956 1.88871 0.373986 1.43242C0.618016 0.97612 0.97612 0.618016 1.43242 0.373986C1.88871 0.129956 2.34131 0 3.58944 0ZM3.58944 1C2.60246 1 2.2579 1.06654 1.90401 1.2558C1.62199 1.40663 1.40663 1.62199 1.2558 1.90401C1.06654 2.2579 1 2.60246 1 3.58944V7.91056C1 8.89754 1.06654 9.2421 1.2558 9.59599C1.40663 9.87801 1.62199 10.0934 1.90401 10.2442C2.2579 10.4335 2.60246 10.5 3.58944 10.5H18.4106C19.3975 10.5 19.7421 10.4335 20.096 10.2442C20.378 10.0934 20.5934 9.87801 20.7442 9.59599C20.9335 9.2421 21 8.89754 21 7.91056V3.58944C21 2.60246 20.9335 2.2579 20.7442 1.90401C20.5934 1.62199 20.378 1.40663 20.096 1.2558C19.7421 1.06654 19.3975 1 18.4106 1H3.58944ZM24.5 5.69C24.5 6.92657 23 7.69 23 7.69V3.69C23 3.69 24.5 4.45343 24.5 5.69Z" fill="black" fill-opacity="0.36"/>
+</svg>
+        <div class="abs ios-fill"></div>
+        <svg class="abs" style="display:block;left:0;top:0.4401px" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="17.1" height="10.7" viewBox="0 0 17.1 10.7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.123 0.965892C14.1 1.08181 14.1 1.22121 14.1 1.5V9.2C14.1 9.47879 14.1 9.61819 14.123 9.73411C14.2177 10.2101 14.5899 10.5823 15.0659 10.6769C15.1818 10.7 15.3212 10.7 15.6 10.7C15.8788 10.7 16.0182 10.7 16.1341 10.6769C16.6101 10.5823 16.9822 10.2101 17.0769 9.73411C17.1 9.61819 17.1 9.47879 17.1 9.2V1.5C17.1 1.22121 17.1 1.08181 17.0769 0.965892C16.9822 0.489863 16.6101 0.117746 16.1341 0.0230577C16.0182 0 15.8788 0 15.6 0C15.3212 0 15.1818 0 15.0659 0.0230577C14.5899 0.117746 14.2177 0.489863 14.123 0.965892ZM9.39999 3.9C9.39999 3.62121 9.39999 3.48181 9.42305 3.36589C9.51774 2.88986 9.88986 2.51775 10.3659 2.42306C10.4818 2.4 10.6212 2.4 10.9 2.4C11.1788 2.4 11.3182 2.4 11.4341 2.42306C11.9101 2.51775 12.2822 2.88986 12.3769 3.36589C12.4 3.48181 12.4 3.62121 12.4 3.9V9.2C12.4 9.4788 12.4 9.61819 12.3769 9.73411C12.2822 10.2101 11.9101 10.5823 11.4341 10.6769C11.3182 10.7 11.1788 10.7 10.9 10.7C10.6212 10.7 10.4818 10.7 10.3659 10.6769C9.88986 10.5823 9.51774 10.2101 9.42305 9.73411C9.39999 9.61819 9.39999 9.4788 9.39999 9.2V3.9ZM4.82305 5.6659C4.79999 5.78182 4.79999 5.92121 4.79999 6.2V9.2C4.79999 9.4788 4.79999 9.61819 4.82305 9.73411C4.91773 10.2101 5.28985 10.5823 5.76588 10.6769C5.8818 10.7 6.02119 10.7 6.29999 10.7C6.57878 10.7 6.71818 10.7 6.8341 10.6769C7.31012 10.5823 7.68224 10.2101 7.77693 9.73411C7.79999 9.61819 7.79999 9.4788 7.79999 9.2V6.2C7.79999 5.92121 7.79999 5.78182 7.77693 5.6659C7.68224 5.18987 7.31012 4.81775 6.8341 4.72306C6.71818 4.7 6.57878 4.7 6.29999 4.7C6.02119 4.7 5.8818 4.7 5.76588 4.72306C5.28985 4.81775 4.91773 5.18987 4.82305 5.6659ZM0.0230577 7.6659C0 7.78182 0 7.92121 0 8.2V9.2C0 9.4788 0 9.61819 0.0230577 9.73411C0.117746 10.2101 0.489863 10.5823 0.965892 10.6769C1.08181 10.7 1.22121 10.7 1.5 10.7C1.77879 10.7 1.91819 10.7 2.03411 10.6769C2.51014 10.5823 2.88225 10.2101 2.97694 9.73411C3 9.61819 3 9.4788 3 9.2V8.2C3 7.92121 3 7.78182 2.97694 7.6659C2.88225 7.18987 2.51014 6.81775 2.03411 6.72306C1.91819 6.7 1.77879 6.7 1.5 6.7C1.22121 6.7 1.08181 6.7 0.965892 6.72306C0.489863 6.81775 0.117746 7.18987 0.0230577 7.6659Z" fill="black"/>
+</svg>
+        <svg class="abs" style="display:block;left:22.1001px;top:0.24px" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="15.4" height="11.0572" viewBox="0 0 15.4 11.0572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.70042 2.29636C9.93483 2.29646 12.0838 3.15501 13.7032 4.69457C13.8251 4.81343 14.02 4.81193 14.1401 4.69121L15.3058 3.51479C15.3666 3.45356 15.4005 3.37062 15.4 3.28433C15.3995 3.19803 15.3646 3.11549 15.3031 3.05498C11.0528 -1.01833 4.3474 -1.01833 0.0970716 3.05498C0.0355014 3.11545 0.000571881 3.19796 7.20154e-06 3.28426C-0.000567562 3.37055 0.033283 3.45352 0.0940465 3.51479L1.26005 4.69121C1.38006 4.81211 1.57513 4.81361 1.697 4.69457C3.31657 3.15491 5.46579 2.29636 7.70042 2.29636V2.29636ZM7.70042 6.12375C8.92809 6.12367 10.1119 6.57999 11.022 7.40402C11.145 7.52097 11.3389 7.51844 11.4589 7.39831L12.6232 6.22189C12.6845 6.16019 12.7186 6.07648 12.7177 5.98949C12.7168 5.90251 12.6811 5.8195 12.6185 5.75906C9.84735 3.18131 5.55584 3.18131 2.78469 5.75906C2.72209 5.8195 2.68637 5.90255 2.68555 5.98956C2.68473 6.07657 2.71887 6.16028 2.78031 6.22189L3.9443 7.39831C4.06427 7.51844 4.25817 7.52097 4.38125 7.40402C5.29065 6.58053 6.47357 6.12426 7.70042 6.12375V6.12375ZM9.93797 8.93135C10.0002 8.87024 10.0345 8.78614 10.0327 8.69891C10.031 8.61168 9.99327 8.52905 9.92855 8.47053C8.64232 7.38263 6.75852 7.38263 5.47229 8.47053C5.40753 8.529 5.36977 8.6116 5.36792 8.69883C5.36608 8.78606 5.40031 8.87019 5.46254 8.93135L7.4769 10.9639C7.53594 11.0236 7.61643 11.0572 7.70042 11.0572C7.78441 11.0572 7.8649 11.0236 7.92394 10.9639L9.93797 8.93135Z" fill="black"/>
+</svg>
+      </div>
+    </div>
+  </div>
+
+</div>
+</template></div>
+</div>
+</body></html>
