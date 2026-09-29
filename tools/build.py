@@ -134,7 +134,8 @@ for dirpath, _, files in os.walk('screens'):
     views = []
     for v in meta.get('views', []):
         vcss, vbody, vframe = view_parts(dirpath, meta, v)
-        views.append(dict(id=v['id'], name=v['name'], css=vcss, body=vbody, frame=vframe, src=v.get('from', 'screen.html')))
+        views.append(dict(id=v['id'], name=v['name'], css=vcss, body=vbody, frame=vframe, src=v.get('from', 'screen.html'),
+                          tile=v.get('tile'), seq=v.get('seq')))
     screens.append(dict(key=key, dir=dirpath, meta=meta, css=css, body=body, fp=fp, views=views))
 
 order = {'desktop': 0, 'mobile': 1}
@@ -166,7 +167,8 @@ json_dumps = json.dumps
 D = []; M = []
 for s in screens:
     m = s['meta']; c = m['catalogue']
-    d = dict(k=s['key'], n=m['name'], iw=m['frame'][0], ih=m['frame'][1], live=m.get('live'),
+    # "tile" names a tile after its step in the flow ("3 things 05"); "seq" is its place in the flow
+    d = dict(k=s['key'], n=m.get('tile') or m['name'], seq=m.get('seq', 1000 + m['order']), iw=m['frame'][0], ih=m['frame'][1], live=m.get('live'),
              p=m['project'], fl=m.get('flow') or '',
              s=preview_b64(s['dir'], m, s['key']), css=s['css'], body=s['body'])
     if m['platform'] == 'desktop':
@@ -174,13 +176,16 @@ for s in screens:
                  m1=c['m1'], m1l=c['m1l'], m2=c['m2'], m2l=c['m2l'], note=c['note'])
         D.append(d)
         for v in s['views']:            # every further state of the screen gets a tile of its own
-            D.append(dict(d, k=s['key'] + '@' + v['id'], n=m['name'] + ' &middot; ' + v['name'],
+            D.append(dict(d, k=s['key'] + '@' + v['id'], n=v['tile'] or m['name'] + ' &middot; ' + v['name'],
+                          seq=v['seq'] if v['seq'] is not None else d['seq'] + .5,
                           iw=v['frame'][0], ih=v['frame'][1], css=v['css'], body=v['body'], live=None, s='',   # the source picture stays with the screen
                           f='%d × %d' % tuple(v['frame']), tag=v['src']))
     else:
         d.update(sc=c['sc'], diff=c['diff'], al=c['al'], note=c['note'], node=m['figma_node'],
                  rw=m['export_size'][0], rh=m['export_size'][1])
         M.append(d)
+
+D.sort(key=lambda d: (d['p'], d['seq']))     # desktop tiles run in the order of the flow
 
 def scr(s):
     return ('<div class="scr">'
@@ -267,6 +272,7 @@ page=f"""<!doctype html>
   --ink:#16202B; --muted:#5E6C7A; --line:#D3DAE2; --accent:#C9204E;
   --sans:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
   --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --tw:260;   /* width of a grid thumbnail, px: big enough to read a screen before picking it */
 }}
 @media (prefers-color-scheme:dark){{:root:not([data-theme="light"]){{
   --bg:#2C2C2C; --panel:#1F1F1F; --sunk:#262626;
@@ -285,7 +291,7 @@ h1{{font-size:23px;font-weight:600;margin:0;letter-spacing:-.015em;text-wrap:bal
 
 /* two panes, each scrolling on its own: everything about the catalogue on the left,
    nothing but the selected screen on the right */
-.panes{{display:grid;grid-template-columns:var(--side,400px) 9px minmax(0,1fr);height:100vh}}
+.panes{{display:grid;grid-template-columns:var(--side,min(888px,62vw)) 9px minmax(0,1fr);height:100vh}}
 .side{{min-width:0;overflow-y:auto;padding:28px 20px 40px 24px;background:var(--panel);scrollbar-width:thin}}
 /* the divider: drag it, or focus it and use the arrow keys; double-click puts it back */
 .grip{{position:relative;cursor:col-resize;background:var(--panel);touch-action:none}}
@@ -310,14 +316,14 @@ body:not([data-bento="on"]) .bento{{display:none}}
 body[data-plat="desk"] .grp.mob,body[data-plat="mob"] .grp.desk{{display:none}}
 .grp{{display:flex;flex-direction:column;gap:9px}}
 .glab{{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}}
-.row{{display:grid;grid-template-columns:repeat(auto-fill,104px);gap:16px 14px}}
+.row{{display:grid;grid-template-columns:repeat(auto-fill,calc(var(--tw)*1px));gap:22px 20px}}
 .fs{{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;flex:0 0 auto;
-    display:flex;flex-direction:column;gap:7px;width:104px;text-align:left;font-family:inherit}}
-.fsimg{{display:block;height:132px;width:104px;overflow:hidden;border-radius:5px;background:#F6F6F6;
+    display:flex;flex-direction:column;gap:9px;width:calc(var(--tw)*1px);text-align:left;font-family:inherit}}
+.fsimg{{display:block;height:calc(var(--tw)*2.17px);width:calc(var(--tw)*1px);overflow:hidden;border-radius:7px;background:#F6F6F6;
        border:1px solid var(--line);box-shadow:0 1px 4px rgba(0,0,0,.14);line-height:0}}
-.tscr{{display:block;transform-origin:top left;transform:scale(calc(104 / var(--iw)));
+.tscr{{display:block;transform-origin:top left;transform:scale(calc(var(--tw) / var(--iw)));
       width:calc(var(--iw)*1px);height:calc(var(--ih)*1px)}}
-.fs .fsn{{font-size:11.5px;color:var(--muted);line-height:1.3}}
+.fs .fsn{{font-size:13.5px;color:var(--muted);line-height:1.3}}
 .fs[aria-pressed="true"] .fsimg{{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent),0 2px 8px rgba(0,0,0,.2)}}
 .fs[aria-pressed="true"] .fsn{{color:var(--ink);font-weight:600}}
 .fs:focus-visible .fsimg{{outline:2px solid var(--accent);outline-offset:2px}}
@@ -392,6 +398,7 @@ code{{font-family:var(--mono);font-size:12.5px;background:var(--sunk);padding:1p
 .foot{{display:grid;gap:12px}}
 @media (max-width:900px){{
   .panes{{grid-template-columns:minmax(0,1fr);height:auto}}
+  :root{{--tw:160}}
   .grip{{display:none}}
   .side{{overflow:visible;border-bottom:1px solid var(--line);padding:24px 16px}}
   .view{{overflow:visible;padding:24px 16px 40px}}
@@ -594,7 +601,7 @@ grip.addEventListener('pointerdown',function(e){{
   }}
   grip.addEventListener('pointermove',move); grip.addEventListener('pointerup',up); grip.addEventListener('pointercancel',up);
 }});
-grip.addEventListener('dblclick',function(){{ setSide(400,true); }});
+grip.addEventListener('dblclick',function(){{ setSide(Math.min(888,innerWidth*.62),true); }});
 grip.addEventListener('keydown',function(e){{
   if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight') return;
   e.preventDefault(); setSide(sideNow()+(e.key==='ArrowRight'?24:-24),true);

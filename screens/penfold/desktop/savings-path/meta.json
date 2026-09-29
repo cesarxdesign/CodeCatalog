@@ -43,5 +43,7 @@
     "note": "Two option cards, landing to the pixel. The heavy grey rectangle the export showed around each card was an artefact rather than design, and has been taken out. The buttons are pushed to the card floor with <code>margin-top:auto</code> in a stretched flex row, so they stay level with each other however long the copy runs.",
     "tag": "",
     "frame_label": "1182 × 2640"
-  }
+  },
+  "seq": 9,
+  "tile": "Savings path 09"
 }

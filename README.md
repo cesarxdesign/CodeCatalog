@@ -99,11 +99,13 @@ already shows all of them. Mobile screens link to the Figma-vs-code comparison.
 A desktop screen with more than one state shows each state as a tile of its own on the catalogue page,
 right after the screen: 3 things about pensions (all closed, and states 1 to 6 from `states.html`),
 Plan selection (risk levels, risk acceptance, `state-choose.html`, `state-risk.html`) and Savings
-calculator (steps 1 to 3; the screen's own tile is step 4). 25 desktop views from 11 screens.
+calculator (steps 1 to 3; the screen's own tile is step 4). 24 desktop views from 11 screens.
 
 They come from `"views"` in the screen's meta.json. Each has an `id` and a `name`, and any of `from` (the
 file), `state` (`[attribute, value]` set on `.page`), `pane` (one `<section class="v-pane">` of a page that
-holds several) and `frame`. A view's key is the screen's key plus `@id`, e.g.
+holds several) and `frame`. `tile` names a tile after its step in the first onboarding flow ("3 things 05") and
+`seq` is its place in that flow; desktop tiles run in `seq` order. Both can sit on the screen itself too.
+Steps with no tile (13, 14, 18, 21, 22, 25 to 30) are states that were never built. A view's key is the screen's key plus `@id`, e.g.
 `penfold/desktop/three-things@state-3`. catalog.json lists them under each screen's `views`.
 
 ## Projects and flows

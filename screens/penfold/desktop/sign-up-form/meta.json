@@ -43,5 +43,7 @@
     "note": "Two frames &mdash; the empty form and its filled tail &mdash; pieced into one working form. The field boxes were found by detecting their border lines rather than their fills: text breaks a fill into fragments, and fill detection kept splitting one field into three.",
     "tag": "Interactive",
     "frame_label": "1182 × 2640"
-  }
+  },
+  "seq": 31,
+  "tile": "Sign-up form 31"
 }

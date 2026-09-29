@@ -63,7 +63,9 @@
         "data-step",
         "1"
       ],
-      "from": "screen.html"
+      "from": "screen.html",
+      "seq": 10,
+      "tile": "Savings calculator 10"
     },
     {
       "id": "step-2",
@@ -72,7 +74,9 @@
         "data-step",
         "2"
       ],
-      "from": "screen.html"
+      "from": "screen.html",
+      "seq": 11,
+      "tile": "Savings calculator 11"
     },
     {
       "id": "step-3",
@@ -81,7 +85,11 @@
         "data-step",
         "3"
       ],
-      "from": "screen.html"
+      "from": "screen.html",
+      "seq": 12,
+      "tile": "Savings calculator 12"
     }
-  ]
+  ],
+  "seq": 15,
+  "tile": "Savings calculator 15 16"
 }

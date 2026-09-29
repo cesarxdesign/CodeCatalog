@@ -54,43 +54,51 @@
     {
       "id": "all-closed",
       "name": "all closed",
-      "from": "screen.html"
+      "from": "screen.html",
+      "seq": 6.5,
+      "tile": "3 things, all closed"
     },
     {
       "id": "state-1",
       "name": "state 1 of 6",
       "pane": "p1",
-      "from": "states.html"
+      "from": "states.html",
+      "seq": 1,
+      "tile": "3 things 01"
     },
     {
       "id": "state-2",
       "name": "state 2 of 6",
       "pane": "p2",
-      "from": "states.html"
+      "from": "states.html",
+      "seq": 2,
+      "tile": "3 things 02"
     },
     {
       "id": "state-3",
       "name": "state 3 of 6",
       "pane": "p3",
-      "from": "states.html"
+      "from": "states.html",
+      "seq": 3,
+      "tile": "3 things 03"
     },
     {
       "id": "state-4",
       "name": "state 4 of 6",
       "pane": "p4",
-      "from": "states.html"
-    },
-    {
-      "id": "state-5",
-      "name": "state 5 of 6",
-      "pane": "p5",
-      "from": "states.html"
+      "from": "states.html",
+      "seq": 4,
+      "tile": "3 things 04"
     },
     {
       "id": "state-6",
       "name": "state 6 of 6",
       "pane": "p6",
-      "from": "states.html"
+      "from": "states.html",
+      "seq": 6,
+      "tile": "3 things 06"
     }
-  ]
+  ],
+  "seq": 5,
+  "tile": "3 things 05"
 }
