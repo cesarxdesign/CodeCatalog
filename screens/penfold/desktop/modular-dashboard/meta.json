@@ -1,0 +1,50 @@
+{
+  "id": "modular-dashboard",
+  "project": "penfold",
+  "platform": "desktop",
+  "flow": "modular-onboarding",
+  "order": 24,
+  "name": "Modular dashboard",
+  "title": "Yearly progress",
+  "frame": [
+    1200,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "19:5393",
+  "source_scale": "1.00×",
+  "source_frames": "Figma frame",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "modular dashboard",
+    "yearly progress",
+    "dashboard donut"
+  ],
+  "seq": 124,
+  "tile": "Modular dashboard",
+  "catalogue": {
+    "m1": "0.68%",
+    "m1l": "pixels differing from the Figma render",
+    "m2": "0.25px",
+    "m2l": "worst offset",
+    "note": "The pink arc is a vector rotated &minus;90&deg; in the file; a CSS rotate landed it half a pixel out, so the rotation is done inside one SVG transform around the untouched export. Navbar and month-marker text carry a 1px baseline correction measured against the render.",
+    "tag": "",
+    "frame_label": "1200 × 812"
+  }
+}

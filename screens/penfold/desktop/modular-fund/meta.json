@@ -1,0 +1,51 @@
+{
+  "id": "modular-fund",
+  "project": "penfold",
+  "platform": "desktop",
+  "flow": "modular-onboarding",
+  "order": 22,
+  "name": "Modular fund",
+  "title": "Select risk level",
+  "frame": [
+    1200,
+    1373
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "19:5244",
+  "source_scale": "1.00×",
+  "source_frames": "Figma frame",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "modular fund",
+    "invest",
+    "select risk level",
+    "risk acceptance"
+  ],
+  "seq": 122,
+  "tile": "Modular fund",
+  "catalogue": {
+    "m1": "0.85%",
+    "m1l": "pixels differing from the Figma render",
+    "m2": "1px",
+    "m2l": "worst offset",
+    "note": "The frame-level response described the checkbox as unchecked; the instance itself is the checked variant, taken from its own node. The pie, the left arrow and the lower-risk chevrons are the exported artwork rotated as the canvas shows them.",
+    "tag": "",
+    "frame_label": "1200 × 1373"
+  }
+}

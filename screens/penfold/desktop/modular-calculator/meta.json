@@ -1,0 +1,51 @@
+{
+  "id": "modular-calculator",
+  "project": "penfold",
+  "platform": "desktop",
+  "flow": "modular-onboarding",
+  "order": 21,
+  "name": "Modular calculator",
+  "title": "Decide how much to save.",
+  "frame": [
+    1200,
+    1249
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "19:5153",
+  "source_scale": "1.00×",
+  "source_frames": "Figma frame",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "modular calculator",
+    "contribution",
+    "decide how much to save",
+    "savings calculator v2"
+  ],
+  "seq": 121,
+  "tile": "Modular calculator",
+  "catalogue": {
+    "m1": "1.51%",
+    "m1l": "pixels differing from the Figma render",
+    "m2": "2px",
+    "m2l": "worst offset",
+    "note": "The Figma frame carries an 80px drop shadow, so the render was cropped back to the 1200 &times; 1249 frame. The chart baseline is a 1px line sitting on a half pixel; it is inked as two rows at half strength, which is what Figma draws.",
+    "tag": "",
+    "frame_label": "1200 × 1249"
+  }
+}

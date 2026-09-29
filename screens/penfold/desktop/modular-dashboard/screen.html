@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1200,initial-scale=1">
+<title>Yearly progress</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=block">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+.page{position:relative;width:1200px;height:812px;overflow:hidden;background:#f6f6f6;
+  font-family:'Montserrat',sans-serif;color:#123456}
+.page p{margin:0}
+/* Baseline correction, measured against the Figma render and NOT a value from the file:
+   at these sizes Chrome snaps the baseline one row above where Figma inks it (measured +1.00 to +1.25px).
+   Positions and line heights on the elements themselves are the file's own. */
+.bl1{translate:0 1px}
+.ast{display:block}
+.abs{position:absolute}
+
+/* ---------- navbar: combo/navbar/desktop/dashboard, 1440 wide, hangs 120px off each side ---------- */
+.nav{position:absolute;left:-120px;top:0;width:1440px;height:71px}
+/* Figma stroke inks the row OUTSIDE the box (y=71); top and sides are clipped by the frame */
+.nav-bg{position:absolute;inset:0;background:#fff;box-shadow:0 0 0 1px #ccc}
+.nav-k{position:absolute;white-space:nowrap;font-weight:500;font-size:16px;line-height:22px;color:#123456}
+.nav-v{position:absolute;display:flex;flex-direction:column;justify-content:flex-end;white-space:nowrap;
+  font-weight:700;font-size:16px;line-height:20px;color:#123456}
+.nav-pc{position:absolute;display:flex;flex-direction:column;justify-content:flex-end;white-space:nowrap;
+  font-weight:500;font-size:12px;line-height:15px;color:#43a800;text-align:right}
+.nav-logo{position:absolute;left:242px;top:13px;width:140px;height:44px}
+.nav-menu{position:absolute;left:1073px;top:14px;width:120px;height:44px}
+.nav-menu-t{position:absolute;left:55px;top:14px;width:45px;height:15px;white-space:nowrap;text-align:right;
+  font-weight:600;font-size:12px;line-height:15px;letter-spacing:2px;text-transform:uppercase;color:#123456}
+.nav-menu-trk{margin-right:-2px} /* cancels the trailing tracking CSS adds and Figma does not */
+
+/* ---------- button/module ---------- */
+.mod{position:absolute}
+.mod-bg{position:absolute;left:0;right:0;bottom:0;background:#6076dd;border-radius:6px}
+.mod-label{position:absolute;display:flex;flex-direction:column;justify-content:center;
+  font-weight:700;color:#fff;text-align:center;white-space:nowrap}
+.mod-title{position:absolute;display:flex;flex-direction:column;justify-content:flex-end;
+  font-weight:700;color:#123456;white-space:nowrap;line-height:1.4}
+
+/* ---------- round tiles ---------- */
+.tile-bg{position:absolute;width:88px;height:88px;border-radius:61px;background:#fbfbfb;
+  box-shadow:inset 0 0 0 1px #fff,0 4px 8px 0 rgba(0,0,0,.08)}
+.tile-t{position:absolute;height:22px;font-weight:500;font-size:14px;line-height:22px;text-align:center;white-space:nowrap;color:#123456}
+.tile-i{position:absolute;width:60px;height:60px}
+
+.d-h1{position:absolute;left:225px;top:119px;white-space:nowrap;font-weight:700;font-size:37.722px;line-height:46px}
+.d-sub{position:absolute;left:229px;top:184px;white-space:nowrap;font-weight:400;font-size:21.778px;line-height:1.3}
+.d-cen{position:absolute;left:547px;top:337px;width:111.756px;height:128.455px;display:flex;flex-direction:column;justify-content:center;
+  text-align:center;font-weight:700;font-size:20px;line-height:24px;white-space:pre-wrap}
+.d-cen-r{font-weight:400}
+.d-mark{position:absolute;display:flex;flex-direction:column;font-weight:700;font-size:16px;line-height:20px;white-space:nowrap}
+.d-line{position:absolute;left:533px;top:400px;width:140px;height:2px}
+.d-e2{position:absolute;left:474px;top:272px;width:258px;height:258px}
+/* pinkfold: the file rotates a 258 x 251.686 box by -90deg inside a 251.686 x 258 slot, artwork inset 1.44 percent (3.624px) from the box top.
+   Done as one SVG transform because a CSS rotate let Chrome snap the layer about half a pixel off. */
+.d-pf{position:absolute;left:480px;top:272px;width:251.686px;height:258px}
+.d-pf-svg{display:block;overflow:visible}
+.d-e16{position:absolute;left:500px;top:298px;width:206px;height:206px}
+.d-e17{position:absolute;left:472px;top:271px;width:261px;height:261px}
+.d-dot{position:absolute;width:5.138px;height:5.138px;mix-blend-mode:screen}
+</style>
+</head>
+<body>
+<div class="page">
+  <p class="d-h1">Yearly progress</p>
+  <p class="d-sub">Jul &lsquo;19 &mdash; Jun &lsquo;20</p>
+  <div class="nav">
+    <div class="nav-bg"></div>
+    <p class="nav-k bl1" style="left:335px;top:15px;width:76px">Total Pot:</p>
+    <div class="nav-v bl1" style="left:335px;top:37px;width:47px;height:20px"><p>&pound;0.00</p></div>
+    <p class="nav-k bl1" style="left:449px;top:15px;width:126px">Total Gain/Loss:</p>
+    <div class="nav-v bl1" style="left:449px;top:37px;width:57px;height:20px"><p>+&pound;0.00</p></div>
+    <div class="nav-pc" style="left:531px;top:41px;width:44px;height:15px"><p>+0.00%</p></div>
+    <p class="nav-k bl1" style="left:610px;top:15px;width:132px">Paying Monthly:</p>
+    <div class="nav-v bl1" style="left:610px;top:37px;width:41px;height:20px"><p>&pound;367</p></div>
+    <div class="nav-logo"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="140" height="44" viewBox="0 0 140 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="d-logo-logo_P_beta">
+<g id="d-logo-beta">
+<path d="M27.3226 31.4476C26.4358 31.4476 25.6554 31.7787 25.1351 32.4527V29H24V37.7736H25.0878V36.7804C25.5963 37.4898 26.4003 37.8446 27.3226 37.8446C29.1554 37.8446 30.4915 36.5557 30.4915 34.6402C30.4915 32.7247 29.1554 31.4476 27.3226 31.4476ZM27.228 36.8513C26.0338 36.8513 25.1233 35.9763 25.1233 34.6402C25.1233 33.304 26.0338 32.4409 27.228 32.4409C28.4341 32.4409 29.3446 33.304 29.3446 34.6402C29.3446 35.9763 28.4341 36.8513 27.228 36.8513Z" fill="#123456"/>
+<path d="M38.6697 34.6757C38.6697 32.7483 37.3808 31.4476 35.5717 31.4476C33.7626 31.4476 32.4265 32.7838 32.4265 34.6402C32.4265 36.5084 33.7744 37.8446 35.7964 37.8446C36.8369 37.8446 37.7001 37.4898 38.2677 36.8277L37.641 36.0946C37.1798 36.603 36.565 36.8513 35.8319 36.8513C34.5903 36.8513 33.7035 36.1182 33.5616 35.0186H38.646C38.6579 34.9121 38.6697 34.7703 38.6697 34.6757ZM35.5717 32.4054C36.6714 32.4054 37.4636 33.1503 37.5819 34.2027H33.5616C33.6798 33.1385 34.4839 32.4054 35.5717 32.4054Z" fill="#123456"/>
+<path d="M44.3608 36.5912C44.1243 36.7804 43.805 36.8868 43.474 36.8868C42.8473 36.8868 42.4925 36.5084 42.4925 35.8344V32.4409H44.2898V31.5067H42.4925V30.1351H41.3574V31.5067H40.2932V32.4409H41.3574V35.8817C41.3574 37.1469 42.0787 37.8446 43.3439 37.8446C43.8523 37.8446 44.3726 37.7027 44.7155 37.4071L44.3608 36.5912Z" fill="#123456"/>
+<path d="M49.3159 31.4476C48.3108 31.4476 47.3767 31.7314 46.7264 32.2517L47.1993 33.103C47.6841 32.6892 48.4409 32.429 49.1858 32.429C50.3091 32.429 50.8649 32.9848 50.8649 33.9426V34.1672H49.0676C47.1993 34.1672 46.549 34.9949 46.549 36C46.549 37.0878 47.4477 37.8446 48.8666 37.8446C49.848 37.8446 50.5456 37.5135 50.924 36.9459V37.7736H52V33.9898C52 32.2753 51.0304 31.4476 49.3159 31.4476ZM49.0558 36.9696C48.1926 36.9696 47.6723 36.5794 47.6723 35.9527C47.6723 35.4206 47.9916 34.9831 49.1149 34.9831H50.8649V35.8581C50.5811 36.5794 49.9071 36.9696 49.0558 36.9696Z" fill="#123456"/>
+</g>
+<g id="d-logo-logo_P">
+<path id="d-logo-Vector" d="M0 38L11 44V0L0 6V38Z" fill="#FF5081"/>
+<path id="d-logo-Vector_2" d="M11 10V0L28 9V19L11 10Z" fill="#123456"/>
+<path id="d-logo-Vector_3" d="M28 9L11 18V28L28 19V9Z" fill="#4ECFEF"/>
+</g>
+</g>
+</svg></div>
+    <div class="nav-menu"><p class="nav-menu-t"><span class="nav-menu-trk">Menu</span></p></div>
+  </div>
+  <div class="d-cen"><p class="d-cen-r">Paid in</p><p>&pound;1,350</p><p>&#8203;</p><p class="d-cen-r">Yearly goal</p><p>&pound;1,600</p></div>
+  <div class="d-mark bl1" style="left:575.862px;top:243px;width:51px;height:20px;justify-content:flex-end;text-align:center"><p>Jul &lsquo;19</p></div>
+  <p class="d-mark bl1" style="display:block;left:572px;top:540px;width:59px;text-align:center">Jan &lsquo;20</p>
+  <div class="d-mark bl1" style="left:741px;top:381px;width:37px;height:40px;justify-content:center"><p>Oct</p><p>2019</p></div>
+  <div class="d-mark bl1" style="left:423px;top:381.732px;width:41px;height:40px;justify-content:center;text-align:right"><p>Apr</p><p>2020</p></div>
+  <div class="d-line"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="140" height="2" viewBox="0 0 140 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="d-line-Line_3__Stroke_" fill-rule="evenodd" clip-rule="evenodd" d="M140 2H0V0H140V2Z" fill="#FBFBFB"/>
+</svg></div>
+  <div class="d-e2"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="258" height="258" viewBox="0 0 258 258" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="d-e2-Ellipse_2" filter="url(#d-e2-filter0_i_0_96)">
+<path d="M258 129C258 200.245 200.245 258 129 258C57.7553 258 0 200.245 0 129C0 57.7553 57.7553 0 129 0C200.245 0 258 57.7553 258 129ZM25.8 129C25.8 185.996 72.0042 232.2 129 232.2C185.996 232.2 232.2 185.996 232.2 129C232.2 72.0042 185.996 25.8 129 25.8C72.0042 25.8 25.8 72.0042 25.8 129Z" fill="white"/>
+</g>
+<defs>
+<filter id="d-e2-filter0_i_0_96" x="0" y="0" width="258" height="259.156" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.15562"/>
+<feGaussianBlur stdDeviation="2.31125"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_0_96"/>
+</filter>
+</defs>
+</svg></div>
+  <div class="d-pf"><svg class="d-pf-svg" width="251.686" height="258" viewBox="0 0 251.686 258" fill="none" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(0 -1 1 0 0 258)"><svg y="3.624" preserveAspectRatio="none" overflow="visible" style="display: block;" width="258" height="248.063" viewBox="0 0 258 248.063" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="d-pf-pinkfold" d="M258 119.063C258 142.854 251.421 166.181 238.991 186.465C226.56 206.75 208.762 223.202 187.565 234.003C166.367 244.804 142.596 249.532 118.879 247.665C95.1617 245.799 72.4227 237.41 53.1758 223.426C33.9289 209.443 18.9238 190.409 9.8196 168.429C0.715373 146.45 -2.13339 122.381 1.58826 98.8831C5.3099 75.3855 15.457 53.3748 30.9077 35.2843C43.5571 20.4738 59.3579 8.76319 77.0875 0.969517C83.6096 -1.89752 90.9216 1.8697 93.1231 8.64548C95.3247 15.4212 91.5697 22.6267 85.1213 25.6559C71.8901 31.8714 60.0837 40.8496 50.5261 52.0401C38.1656 66.5124 30.0479 84.121 27.0706 102.919C24.0933 121.717 26.3723 140.972 33.6557 158.556C40.9391 176.14 52.9431 191.367 68.3406 202.554C83.7381 213.741 101.929 220.452 120.903 221.945C139.877 223.438 158.894 219.655 175.852 211.015C192.81 202.374 207.048 189.213 216.992 172.985C226.937 156.757 232.2 138.095 232.2 119.063H258Z" fill="#FF5081"/>
+</svg></g></svg></div>
+  <div class="d-e16"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="206" height="206" viewBox="0 0 206 206" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle id="d-e16-Ellipse_16" cx="103" cy="103" r="102" stroke="#FBFBFB" stroke-width="2"/>
+</svg></div>
+  <div class="d-e17"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="261" height="261" viewBox="0 0 261 261" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle id="d-e17-Ellipse_17" cx="130.5" cy="130.5" r="129.5" stroke="#F5F5F5" stroke-width="2"/>
+</svg></div>
+  <div class="d-dot" style="left:599.98px;top:283.82px"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="5.13821" height="5.13821" viewBox="0 0 5.13821 5.13821" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="d-dot1-Ellipse_12" style="mix-blend-mode:screen">
+<circle cx="2.56911" cy="2.56911" r="2.56911" fill="white"/>
+</g>
+</svg></div>
+  <div class="d-dot" style="left:599.98px;top:515.04px"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="5.13821" height="5.13821" viewBox="0 0 5.13821 5.13821" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="d-dot2-Ellipse_12" style="mix-blend-mode:screen">
+<circle cx="2.56911" cy="2.56911" r="2.56911" fill="white"/>
+</g>
+</svg></div>
+  <div class="d-dot" style="left:484.37px;top:399.43px"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="5.13821" height="5.13821" viewBox="0 0 5.13821 5.13821" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="d-dot3-Ellipse_14" style="mix-blend-mode:screen">
+<circle cx="2.56911" cy="2.56911" r="2.56911" fill="white"/>
+</g>
+</svg></div>
+  <div class="d-dot" style="left:715.59px;top:399.43px"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="5.13821" height="5.13821" viewBox="0 0 5.13821 5.13821" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="d-dot4-Ellipse_14" style="mix-blend-mode:screen">
+<circle cx="2.56911" cy="2.56911" r="2.56911" fill="white"/>
+</g>
+</svg></div>
+  <div class="mod" style="left:753px;top:110px;width:140px;height:54.917px">
+    <div class="mod-bg" style="top:15.47px"></div>
+    <div class="mod-label" style="left:41.541px;top:24.751px;width:57px;height:20px;font-size:16.24px;line-height:20px"><p>Basic 1</p></div>
+    <div class="mod-title" style="left:22.144px;top:0;width:95px;height:15px;font-size:10.83px;text-align:center"><p>Investment fund</p></div>
+  </div>
+  <div class="mod" style="left:913px;top:110px;width:140px;height:54.917px">
+    <div class="mod-bg" style="top:15.47px"></div>
+    <div class="mod-label" style="left:17.541px;top:24.751px;width:104px;height:20px;font-size:16.24px;line-height:20px"><p>&pound;422 on 2nd</p></div>
+    <div class="mod-title" style="left:29.144px;top:0;width:81px;height:15px;font-size:10.83px;text-align:center"><p>Next payment</p></div>
+  </div>
+  <div class="tile-bg" style="left:660px;top:648px"></div>
+  <p class="tile-t" style="left:676px;top:748px;width:56px">Referral</p>
+  <div class="tile-i" style="left:674px;top:663px"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="d-share-icon_Share_big">
+<path id="d-share-Vector" d="M43.5 29.1V39.9C43.5 40.8548 43.1207 41.7705 42.4456 42.4456C41.7705 43.1207 40.8548 43.5 39.9 43.5H20.1C19.1452 43.5 18.2295 43.1207 17.5544 42.4456C16.8793 41.7705 16.5 40.8548 16.5 39.9V20.1C16.5 19.1452 16.8793 18.2295 17.5544 17.5544C18.2295 16.8793 19.1452 16.5 20.1 16.5H30.9" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="d-share-Vector_2" d="M38.1 11.1H48.9V21.9" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="d-share-Vector_3" d="M29.1 30.9L48.9 11.1" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg></div>
+  <div class="tile-bg" style="left:556px;top:648px"></div>
+  <p class="tile-t" style="left:576px;top:748px;width:49px">Top up</p>
+  <div class="tile-i" style="left:570px;top:663px"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="d-topup-icon_Topup_big">
+<path id="d-topup-Vector" d="M40.5 16.5H19.5C17.8431 16.5 16.5 17.8431 16.5 19.5V40.5C16.5 42.1569 17.8431 43.5 19.5 43.5H40.5C42.1569 43.5 43.5 42.1569 43.5 40.5V19.5C43.5 17.8431 42.1569 16.5 40.5 16.5Z" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="d-topup-Vector_2" d="M30 24V36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="d-topup-Vector_3" d="M24 30H36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg></div>
+  <div class="tile-bg" style="left:452px;top:648px"></div>
+  <p class="tile-t" style="left:463px;top:748px;width:66px">Combine</p>
+  <div class="tile-i" style="left:466px;top:663px"><svg class="ast" preserveAspectRatio="none" overflow="visible" style="display: block;" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="d-combine-icon_Combine_big">
+<path id="d-combine-Vector" d="M30 45C38.2843 45 45 38.2843 45 30C45 21.7157 38.2843 15 30 15C21.7157 15 15 21.7157 15 30C15 38.2843 21.7157 45 30 45Z" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="d-combine-Vector_2" d="M30 24V36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="d-combine-Vector_3" d="M24 30H36" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="d-combine-Vector_4" d="M48.6563 48.9563L40.5 40.8" stroke="#123456" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg></div>
+</div>
+</body>
+</html>

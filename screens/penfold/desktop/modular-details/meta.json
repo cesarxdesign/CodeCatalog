@@ -1,0 +1,51 @@
+{
+  "id": "modular-details",
+  "project": "penfold",
+  "platform": "desktop",
+  "flow": "modular-onboarding",
+  "order": 23,
+  "name": "Modular details",
+  "title": "Personal info",
+  "frame": [
+    1200,
+    2478
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "19:5322",
+  "source_scale": "1.00×",
+  "source_frames": "Figma frame",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "modular details",
+    "personal info",
+    "terms and conditions",
+    "important notice"
+  ],
+  "seq": 123,
+  "tile": "Modular details",
+  "catalogue": {
+    "m1": "0.92%",
+    "m1l": "pixels differing from the Figma render",
+    "m2": "1px",
+    "m2l": "worst offset",
+    "note": "Eighteen input boxes built from one component; the five dropdown chevrons are the right-pointing export turned 90&deg;. One line break in the italic notice is forced, because today&rsquo;s Montserrat italic runs a hair narrower than the one Figma used and would otherwise wrap a word early.",
+    "tag": "",
+    "frame_label": "1200 × 2478"
+  }
+}
