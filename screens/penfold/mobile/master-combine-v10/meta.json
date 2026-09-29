@@ -1,0 +1,49 @@
+{
+  "id": "master-combine-v10",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "master-combine",
+  "order": 60,
+  "name": "Combine, v1.0 (pop-up)",
+  "title": "We’ll search and combine all your pensions for you.",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "136:6808",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "master combine v1.0",
+    "combine pop-up",
+    "combine request"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.45%",
+    "al": "±0.6px",
+    "note": "The request form with the combo/navbar/mobile/module header (H1.m title, 44px chevron). Group 156 has no fill here, so the #F4F4F4 frame shows through. The H1.m title and the SemiBold 16 and 10 text rendered about 1px high in Chrome and move down 1px: a measured correction, not a Figma value. The status bar names SF Pro Text and renders in the system face."
+  }
+}

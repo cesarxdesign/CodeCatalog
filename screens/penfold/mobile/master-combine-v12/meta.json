@@ -1,0 +1,48 @@
+{
+  "id": "master-combine-v12",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "master-combine",
+  "order": 62,
+  "name": "Combine, v1.2 (transfer declaration)",
+  "title": "Combine",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "136:5925",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "master combine v1.2",
+    "combine declaration"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.84%",
+    "al": "±0.6px",
+    "note": "An instance of the v1.2 component, drilled: three fields and the pension transfer declaration checkbox. Chrome set the 14, 12 and 10px text and the 16px field text about 1px higher than Figma&rsquo;s render, so those styles move down 1px: a measured correction, not a Figma value. Underlined links draw a heavier underline than Figma&rsquo;s (both use the font&rsquo;s own thickness). The status bar names SF Pro Text and renders in the system face."
+  }
+}

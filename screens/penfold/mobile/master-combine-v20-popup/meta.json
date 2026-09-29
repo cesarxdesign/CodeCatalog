@@ -1,0 +1,49 @@
+{
+  "id": "master-combine-v20-popup",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "master-combine",
+  "order": 64,
+  "name": "Combine, v2.0 with amount help pop-up",
+  "title": "Pension amount (aprox.)",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "136:7083",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "master combine v2.0 popup",
+    "combine amount help",
+    "ideal pot popup"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.86%",
+    "al": "±0.6px",
+    "note": "v2.0 under popup/idealPot.fullFrame: a 4px backdrop blur (Figma&rsquo;s radius 8) under a 40% #F4F4F4 fill from y&nbsp;135, and the idealPot card (1px #F0F0F0 inside stroke, radius 32). The Dismiss button sits centred at x&nbsp;50.5 in the file. Chrome set the 14, 12 and 10px text and the 16px field text about 1px higher than Figma&rsquo;s render, so those styles move down 1px: a measured correction, not a Figma value. The status bar names SF Pro Text and renders in the system face."
+  }
+}
