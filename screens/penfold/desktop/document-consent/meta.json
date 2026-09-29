@@ -20,7 +20,9 @@
   "files": {
     "screen": "screen.html",
     "embed": "embed.html",
-    "extra": [],
+    "extra": [
+      "state-expanded.html"
+    ],
     "source": [
       "source/original.webp"
     ],
@@ -43,6 +45,15 @@
     "tag": "",
     "frame_label": "1182 × 2640"
   },
+  "views": [
+    {
+      "id": "expanded",
+      "name": "all four documents open",
+      "from": "state-expanded.html",
+      "seq": 24.5,
+      "tile": "Document consent, all open"
+    }
+  ],
   "seq": 24,
   "tile": "Document consent 24"
 }

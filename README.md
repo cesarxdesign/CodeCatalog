@@ -98,10 +98,14 @@ already shows all of them. Mobile screens link to the Figma-vs-code comparison.
 
 A desktop screen with more than one state shows each state as a tile of its own on the catalogue page,
 right after the screen: 3 things about pensions (all closed, and states 1 to 6 from `states.html`),
-Plan selection (risk levels, risk acceptance) and Savings
-calculator (steps 1 to 3; the screen's own tile is step 4). 22 desktop views from 11 screens.
+Plan selection (risk levels, risk acceptance), Savings
+calculator (steps 1 to 3; the screen's own tile is step 4) and Document consent (all four documents
+open, from `state-expanded.html`). 23 desktop views from 11 screens.
 Plan selection's `state-choose.html` and `state-risk.html` stay in its folder but have no tile:
 they repeat the plans and risk-levels states.
+
+Document consent's open view has no source picture. Only the Penfold Terms copy comes from the export;
+the text under the other three documents is placeholder, written to differ in length.
 
 They come from `"views"` in the screen's meta.json. Each has an `id` and a `name`, and any of `from` (the
 file), `state` (`[attribute, value]` set on `.page`), `pane` (one `<section class="v-pane">` of a page that
