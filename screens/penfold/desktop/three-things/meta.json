@@ -49,5 +49,48 @@
     "note": "The first screen of the whole set, and the only one at 1231 wide. One image arrived &mdash; state five of six, with the third section open &mdash; and it was measured and built on its own. The other five states were then written from it, which the flow layout makes cheap: opening a section pushes everything below it without a single position changing. The live version folds all six back into one full-height page with a working accordion, all three sections closed to start. <em>The code pane here shows state five, the one that came from the picture.</em>",
     "tag": "Interactive · 3 sections",
     "frame_label": "1231 × 2640"
-  }
+  },
+  "views": [
+    {
+      "id": "all-closed",
+      "name": "all closed",
+      "from": "screen.html"
+    },
+    {
+      "id": "state-1",
+      "name": "state 1 of 6",
+      "pane": "p1",
+      "from": "states.html"
+    },
+    {
+      "id": "state-2",
+      "name": "state 2 of 6",
+      "pane": "p2",
+      "from": "states.html"
+    },
+    {
+      "id": "state-3",
+      "name": "state 3 of 6",
+      "pane": "p3",
+      "from": "states.html"
+    },
+    {
+      "id": "state-4",
+      "name": "state 4 of 6",
+      "pane": "p4",
+      "from": "states.html"
+    },
+    {
+      "id": "state-5",
+      "name": "state 5 of 6",
+      "pane": "p5",
+      "from": "states.html"
+    },
+    {
+      "id": "state-6",
+      "name": "state 6 of 6",
+      "pane": "p6",
+      "from": "states.html"
+    }
+  ]
 }

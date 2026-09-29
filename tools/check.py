@@ -127,9 +127,10 @@ else:
     for key, d, m in screens:
         jobs.append((key, os.path.join(d, 'embed.html'), 'embed', True))
         jobs.append((key, os.path.join(d, 'screen.html'), 'screen', m['platform'] == 'mobile'))
+    jobs.append(('index.html', 'index.html', 'page', True))   # the catalogue page itself
     with ThreadPoolExecutor(4) as ex:
         for res in ex.map(lambda j: probe(*j) if os.path.exists(j[1]) else (j[0], j[2], 'file missing'), jobs):
-            if res: bad(res[0], '%s.html: %s' % (res[1], res[2]))
+            if res: bad(res[0], res[2] if res[1] == 'page' else '%s.html: %s' % (res[1], res[2]))
     rendered = len(jobs)
 
 # ---------- report ----------

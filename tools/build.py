@@ -66,6 +66,18 @@ def shadow_parts(folder, meta):
            "font-family:'Montserrat',-apple-system,sans-serif;color:#133253}\n" % (w, h)) + css.strip()
     return css, body
 
+def view_parts(folder, meta, view):
+    """A further view of a screen: another state of it, or a separate state file. Same shadow-root
+    treatment as the screen itself. meta.json lists them under "views"; each has an id and a name and
+    any of: "from" (the file), "state" ([attribute, value] set on .page), "pane" (the id of one
+    <section class="v-pane"> to take from a page that holds several), "frame" ([w, h])."""
+    m = dict(meta, embed_from=view.get('from', 'screen.html'), embed_state=view.get('state'),
+             frame=view.get('frame', meta['frame']))
+    css, body = shadow_parts(folder, m)
+    if view.get('pane'):
+        body = re.search(r'<section class="v-pane" id="%s"[^>]*>([\s\S]*?)</section>' % re.escape(view['pane']), body).group(1)
+    return css, body, m['frame']
+
 def embed_html(key, meta, css, body, fp):
     w, h = meta['frame']
     link = font_link(fonts_used(css))
@@ -119,7 +131,11 @@ for dirpath, _, files in os.walk('screens'):
     if meta.get('screen_generated') or not os.path.exists(os.path.join(dirpath, 'screen.html')):
         wr(os.path.join(dirpath, 'screen.html'), standalone_from_embed(key, meta, emb))
         meta['screen_generated'] = True
-    screens.append(dict(key=key, dir=dirpath, meta=meta, css=css, body=body, fp=fp))
+    views = []
+    for v in meta.get('views', []):
+        vcss, vbody, vframe = view_parts(dirpath, meta, v)
+        views.append(dict(id=v['id'], name=v['name'], css=vcss, body=vbody, frame=vframe, src=v.get('from', 'screen.html')))
+    screens.append(dict(key=key, dir=dirpath, meta=meta, css=css, body=body, fp=fp, views=views))
 
 order = {'desktop': 0, 'mobile': 1}
 screens.sort(key=lambda s: (s['meta']['project'], order[s['meta']['platform']], s['meta']['order']))
@@ -140,6 +156,8 @@ catalog = {
       files={k: (s['dir'].replace(os.sep, '/') + '/' + v if isinstance(v, str)
                  else [s['dir'].replace(os.sep, '/') + '/' + x for x in v])
              for k, v in s['meta']['files'].items()},
+      views=[dict(key=s['key'] + '@' + v['id'], name=v['name'],
+                  file=s['dir'].replace(os.sep, '/') + '/' + v['src']) for v in s['views']],
   ) for s in screens]}
 wr('catalog.json', json.dumps(catalog, indent=2, ensure_ascii=False) + '\n')
 
@@ -155,6 +173,10 @@ for s in screens:
         d.update(f=c['frame_label'], sc=m['source_scale'], src=m['source_frames'], tag=c.get('tag', ''),
                  m1=c['m1'], m1l=c['m1l'], m2=c['m2'], m2l=c['m2l'], note=c['note'])
         D.append(d)
+        for v in s['views']:            # every further state of the screen gets a tile of its own
+            D.append(dict(d, k=s['key'] + '@' + v['id'], n=m['name'] + ' &middot; ' + v['name'],
+                          iw=v['frame'][0], ih=v['frame'][1], css=v['css'], body=v['body'], live=None, s='',   # the source picture stays with the screen
+                          f='%d × %d' % tuple(v['frame']), tag=v['src']))
     else:
         d.update(sc=c['sc'], diff=c['diff'], al=c['al'], note=c['note'], node=m['figma_node'],
                  rw=m['export_size'][0], rh=m['export_size'][1])
@@ -182,20 +204,24 @@ strip = ('<div class="grp desk"><span class="glab">measured from pictures &middo
          + '<div class="grp mob"><span class="glab">read from the Figma file</span><div class="row">'
          + "".join(chip(s,1) for s in M) + '</div></div>')
 
+def vname(s):
+    return f'<span class="vname" data-k="{s["k"]}" tabindex="0" title="Click to rename">{s["n"]}</span>'
+
 def sec_d(s,i):
     return f'''<section id="sec-{s['k']}" style="--iw:{s['iw']};--ih:{s['ih']}" {'' if i==0 else 'hidden'}>
 <div class="stage"><div class="pair">
- <div class="pane ref"><div class="tag"><span class="k">Source</span><span class="d">Figma export &middot; {s['sc']}</span></div>
-  <div class="shot"><img src="data:image/jpeg;base64,{s['s']}" alt="Source export of {s['n']}" loading="lazy"></div></div>
- <div class="pane build"><div class="tag"><span class="k">Code</span><span class="d">live HTML &amp; CSS &middot; {s['f']}</span></div>
+ {('<div class="pane ref"><div class="tag"><span class="k">Source</span><span class="d">Figma export &middot; %s</span></div><div class="shot"><img src="data:image/jpeg;base64,%s" alt="Source export" loading="lazy"></div></div>' % (s['sc'], s['s'])) if s['s'] else ''}
+ <div class="pane build"><div class="tag"><span class="k">Code</span><span class="d">live HTML &amp; CSS &middot; {s['f']}</span>{vname(s)}</div>
   <div class="box"><div class="fit">{scr(s)}</div></div></div>
-</div></div>
-<div class="notes">
+</div></div></section>'''
+
+def notes_d(s,i):
+    return f'''<div class="notes" data-k="{s['k']}" {'' if i==0 else 'hidden'}>
  <div class="card"><h2>Source</h2><p><span class="big">{s['m1']}</span>{s['m1l']}</p></div>
  <div class="card"><h2>Fit</h2><p><span class="big">{s['m2']}</span>{s['m2l']}</p></div>
  <div class="card c2"><h2>Notes</h2><p>{s['note']}</p>
   {('<p class="lnkrow"><a class="lnk" href="%s" target="_blank" rel="noopener">Open the clickable version &rarr;</a></p>' % s['live']) if s.get('live') else ''}</div>
-</div></section>'''
+</div>'''
 
 def sec_m(s):
     b=dict(iw=s['iw'],ih=s['ih'])
@@ -204,19 +230,23 @@ def sec_m(s):
 <div class="stage"><div class="pair">
  <div class="pane ref"><div class="tag"><span class="k">Figma</span><span class="d">exported &middot; {s['rw']}&times;{s['rh']}{upscale}</span></div>
   <div class="shot"><img src="data:image/jpeg;base64,{s['s']}" alt="Figma export of {s['n']}" loading="lazy"></div></div>
- <div class="pane build"><div class="tag"><span class="k">Code</span><span class="d">live HTML &amp; CSS &middot; {b['iw']}&times;{b['ih']}</span></div>
+ <div class="pane build"><div class="tag"><span class="k">Code</span><span class="d">live HTML &amp; CSS &middot; {b['iw']}&times;{b['ih']}</span>{vname(s)}</div>
   <div class="box"><div class="fit">{scr(s)}</div></div></div>
-</div></div>
-<div class="notes">
+</div></div></section>'''
+
+def notes_m(s):
+    b=dict(iw=s['iw'],ih=s['ih'])
+    return f'''<div class="notes" data-k="{s['k']}" hidden>
  <div class="card"><h2>Scale factor</h2><p><span class="big">{s['sc']}</span>{'never scaled' if s['sc']=='1.0' else 'same factor on both axes'}</p></div>
  <div class="card"><h2>Pixel difference</h2><p><span class="big">{s['diff']}</span>glyph outlines only &mdash; no filled shape differs</p></div>
  <div class="card"><h2>Alignment</h2><p><span class="big">{s['al']}</span>every measurable element</p></div>
  <div class="card"><h2>Node</h2><p><span class="big sm">{s['node']}</span>{b['iw']} &times; {b['ih']} in code</p></div>
  <div class="card c4"><h2>Notes</h2><p>{s['note']}</p>
   {('<p class="lnkrow"><a class="lnk" href="%s" target="_blank" rel="noopener">Open the live Figma-vs-code comparison &rarr;</a></p>' % s['live']) if s.get('live') else ''}</div>
-</div></section>'''
+</div>'''
 
 secs = "".join(sec_d(s,i) for i,s in enumerate(D)) + "".join(sec_m(s) for s in M)
+notes = "".join(notes_d(s,i) for i,s in enumerate(D)) + "".join(notes_m(s) for s in M)
 META={}
 for s in D: META[s['k']]=dict(n=s['n'],f=s['f'],sc=s['sc'],src=s['src'],tag=s['tag'],p=s['p'],fl=s['fl'])
 for s in M:
@@ -245,20 +275,42 @@ page=f"""<!doctype html>
   --bg:#2C2C2C; --panel:#1F1F1F; --sunk:#262626;
   --ink:#E8EAED; --muted:#969CA4; --line:#3C3C3C; --accent:#FF5081;}}
 *{{box-sizing:border-box}}
-body{{background:var(--bg);color:var(--ink);font-family:var(--sans);margin:0;padding:0 16px;line-height:1.5}}
-.wrap{{max-width:1180px;margin:0 auto;padding-block:32px 56px}}
-header{{display:flex;flex-wrap:wrap;gap:20px 32px;align-items:flex-end;justify-content:space-between;
+body{{background:var(--bg);color:var(--ink);font-family:var(--sans);margin:0;line-height:1.5}}
+header{{display:flex;flex-direction:column;gap:16px;
        padding-bottom:20px;border-bottom:1px solid var(--line)}}
 h1{{font-size:23px;font-weight:600;margin:0;letter-spacing:-.015em;text-wrap:balance}}
 .sub{{color:var(--muted);font-size:13.5px;margin:6px 0 0;max-width:66ch}}
-.node{{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:3px;text-align:right}}
+.node{{font-family:var(--mono);font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:3px}}
 .node b{{color:var(--ink);font-weight:500}}
 
-.strip{{display:flex;gap:26px;overflow-x:auto;padding:4px 2px 18px;scrollbar-width:thin}}
+/* two panes, each scrolling on its own: everything about the catalogue on the left,
+   nothing but the selected screen on the right */
+.panes{{display:grid;grid-template-columns:var(--side,400px) 9px minmax(0,1fr);height:100vh}}
+.side{{min-width:0;overflow-y:auto;padding:28px 20px 40px 24px;background:var(--panel);scrollbar-width:thin}}
+/* the divider: drag it, or focus it and use the arrow keys; double-click puts it back */
+.grip{{position:relative;cursor:col-resize;background:var(--panel);touch-action:none}}
+.grip::after{{content:"";position:absolute;inset:0 0 0 auto;width:1px;background:var(--line)}}
+.grip:hover::after,.grip:focus-visible::after,body.dragging .grip::after{{width:3px;background:var(--accent)}}
+.grip:focus-visible{{outline:none}}
+body.dragging{{cursor:col-resize;user-select:none;-webkit-user-select:none}}
+body.dragging .view{{pointer-events:none}}
+.view{{min-width:0;overflow:auto;padding:22px 28px 40px}}
+/* the screen's name, at the right end of the Code label row; click it to rename */
+.vname{{margin:-2px -6px -2px auto;padding:1px 6px;border-radius:5px;cursor:text;flex:0 1 auto;min-width:0;
+       font-size:13.5px;font-weight:600;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+.vname:hover{{background:var(--sunk)}}
+.vname:focus-visible{{outline:2px solid var(--accent);outline-offset:1px}}
+.vbody{{display:flex;gap:28px;align-items:flex-start}}
+.prev{{flex:1 1 0;min-width:0}}
+/* the bento: the notes on the selected screen and on the set, beside the preview when asked for */
+.bento{{flex:0 0 340px;position:sticky;top:0;max-height:calc(100vh - 44px);overflow-y:auto;scrollbar-width:thin}}
+body:not([data-bento="on"]) .bento{{display:none}}
+.strip{{margin-top:6px}}
+.grp+.grp{{margin-top:24px}}
 body[data-plat="desk"] .grp.mob,body[data-plat="mob"] .grp.desk{{display:none}}
-.grp{{display:flex;flex-direction:column;gap:9px;flex:0 0 auto}}
+.grp{{display:flex;flex-direction:column;gap:9px}}
 .glab{{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}}
-.row{{display:flex;gap:10px}}
+.row{{display:grid;grid-template-columns:repeat(auto-fill,104px);gap:16px 14px}}
 .fs{{appearance:none;border:0;background:transparent;padding:0;cursor:pointer;flex:0 0 auto;
     display:flex;flex-direction:column;gap:7px;width:104px;text-align:left;font-family:inherit}}
 .fsimg{{display:block;height:132px;width:104px;overflow:hidden;border-radius:5px;background:#F6F6F6;
@@ -271,59 +323,63 @@ body[data-plat="desk"] .grp.mob,body[data-plat="mob"] .grp.desk{{display:none}}
 .fs:focus-visible .fsimg{{outline:2px solid var(--accent);outline-offset:2px}}
 
 .bar{{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:center;margin:20px 0 14px}}
-.seg{{display:inline-flex;background:var(--sunk);border:1px solid var(--line);border-radius:7px;padding:2px;gap:2px}}
+.seg{{display:inline-flex;flex-wrap:wrap;max-width:100%;background:var(--sunk);border:1px solid var(--line);border-radius:7px;padding:2px;gap:2px}}
 .seg button{{appearance:none;border:0;background:transparent;cursor:pointer;font-family:var(--mono);
   font-size:11.5px;letter-spacing:.03em;color:var(--muted);padding:5px 11px;border-radius:5px}}
 .seg button[aria-pressed="true"]{{background:var(--panel);color:var(--ink);font-weight:500;box-shadow:0 1px 2px rgba(0,0,0,.14)}}
 .seg button:focus-visible{{outline:2px solid var(--accent);outline-offset:1px}}
 .seg button i{{font-style:normal;opacity:.5;font-size:10.5px}}
 .seg button:disabled{{opacity:.4;cursor:default}}
-.pick{{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}}
-.pick select{{appearance:none;-webkit-appearance:none;cursor:pointer;color:var(--ink);font-family:var(--mono);font-size:11.5px;
+.pick{{display:inline-flex;flex-wrap:wrap;max-width:100%;align-items:center;gap:7px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}}
+.pick select{{max-width:100%;appearance:none;-webkit-appearance:none;cursor:pointer;color:var(--ink);font-family:var(--mono);font-size:11.5px;
   background:var(--sunk) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23969CA4' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 9px center;
   border:1px solid var(--line);border-radius:7px;padding:6px 28px 6px 10px}}
 .pick select:focus-visible{{outline:2px solid var(--accent);outline-offset:1px}}
 .fs[hidden],.grp[hidden]{{display:none}}
-.ren{{appearance:none;background:var(--sunk);border:1px solid var(--line);border-radius:7px;cursor:pointer;
-  font-family:var(--mono);font-size:11.5px;color:var(--muted);padding:6px 11px}}
-.ren:hover{{color:var(--ink)}}
-.ren:focus-visible{{outline:2px solid var(--accent);outline-offset:1px}}
-.fsn.editing{{color:var(--ink);background:var(--panel);border-radius:3px;
-  box-shadow:0 0 0 2px var(--accent);outline:none;padding:0 3px;cursor:text}}
-.hint{{color:var(--muted);font-size:12px;font-family:var(--mono)}}
+.tog{{appearance:none;display:inline-flex;align-items:center;gap:8px;background:var(--sunk);border:1px solid var(--line);
+  border-radius:7px;cursor:pointer;font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;color:var(--muted);padding:6px 11px 6px 9px}}
+.tog::before{{content:"";width:22px;height:12px;border-radius:6px;flex:0 0 auto;
+  background:radial-gradient(circle at 6px 6px,var(--panel) 4px,transparent 4.5px) var(--muted);opacity:.55}}
+.tog[aria-pressed="true"]{{color:var(--ink)}}
+.tog[aria-pressed="true"]::before{{opacity:1;
+  background:radial-gradient(circle at 16px 6px,#fff 4px,transparent 4.5px) var(--accent)}}
+.tog:focus-visible{{outline:2px solid var(--accent);outline-offset:1px}}
+.vname.editing{{color:var(--ink);background:var(--panel);border-radius:3px;
+  box-shadow:inset 0 0 0 2px var(--accent);outline:none;cursor:text;text-overflow:clip}}
 
 .stage{{overflow-x:auto;padding-bottom:6px}}
 .pair{{display:flex;gap:28px;justify-content:center;min-width:min-content;padding:4px 0 8px}}
-section{{--pw:544}}
-body[data-view="code"] section{{--pw:800}}
+section{{--pw:var(--dpw,544)}}   /* --dpw: what fits the preview pane, set by fitPreview() */
 .pane{{display:flex;flex-direction:column;flex:0 0 auto;width:calc(var(--pw)*1px)}}
 .tag{{display:flex;align-items:baseline;gap:8px;padding:0 0 9px 1px}}
+.tag .k{{flex:0 0 auto}} .tag .d{{flex:0 100 auto}}
 .tag .k{{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;
         font-weight:500;padding:2px 7px;border-radius:4px;color:#fff}}
 .pane.ref .tag .k{{background:var(--muted)}}
 .pane.build .tag .k{{background:var(--accent)}}
-.tag .d{{font-size:12px;color:var(--muted);font-family:var(--mono);white-space:nowrap}}
+.tag .d{{font-size:12px;color:var(--muted);font-family:var(--mono);white-space:nowrap;
+        min-width:0;overflow:hidden;text-overflow:ellipsis}}
 
 /* the source shot: a picture, capped in height and scrollable */
 .shot{{background:#F6F6F6;line-height:0;box-shadow:0 2px 10px rgba(0,0,0,.22);border-radius:3px;
-      max-height:760px;overflow:auto;width:100%}}
+      max-height:calc(100vh - 100px);overflow:auto;width:100%}}
 .shot img{{display:block;width:100%;height:auto}}
 /* the build: live DOM, scaled with a transform so type stays vector-sharp */
 .box{{background:#F6F6F6;box-shadow:0 2px 10px rgba(0,0,0,.22);border-radius:3px;
-     max-height:760px;overflow:auto;width:100%}}
+     max-height:calc(100vh - 100px);overflow:auto;width:100%}}
 .fit{{width:calc(var(--pw)*1px);height:calc(var(--ih) * var(--pw) / var(--iw) * 1px);overflow:hidden}}
 .scr{{transform-origin:top left;transform:scale(calc(var(--pw)/var(--iw)));
      width:calc(var(--iw)*1px);height:calc(var(--ih)*1px)}}
-body[data-view="code"] .box,body[data-view="code"] .shot{{max-height:880px}}
 section.mob{{--pw:375}}
 section.mob .box,section.mob .shot{{border-radius:9px;max-height:none}}
 body[data-view="code"] section.mob .box{{max-height:none}}
 body[data-view="code"] .pane.ref{{display:none}}
 body[data-view="code"] .pair{{gap:0}}
 
-.notes{{margin-top:28px;display:grid;gap:18px;grid-template-columns:repeat(4,1fr)}}
+.notes{{margin-bottom:12px;display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}}
+.notes[hidden]{{display:none}}
 .card{{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:16px 17px}}
-.card.c2{{grid-column:span 2}} .card.c4{{grid-column:span 4}}
+.card.c2,.card.c4{{grid-column:span 2}}
 .card h2{{margin:0 0 9px;font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}}
 .card p{{margin:0;font-size:13.5px}}
 .card em{{color:var(--muted);font-style:normal}}
@@ -333,22 +389,29 @@ body[data-view="code"] .pair{{gap:0}}
 .lnk{{color:var(--accent);font-size:13px;font-weight:500;text-decoration:none}}
 .lnk:hover{{text-decoration:underline}}
 code{{font-family:var(--mono);font-size:12.5px;background:var(--sunk);padding:1px 4px;border-radius:3px}}
-.foot{{margin-top:34px;display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}}
+.foot{{display:grid;gap:12px}}
 @media (max-width:900px){{
-  .notes{{grid-template-columns:repeat(2,1fr)}} .card.c2,.card.c4{{grid-column:span 2}}
-  .pair{{flex-direction:column;align-items:center}} .node{{text-align:left}}}}
+  .panes{{grid-template-columns:minmax(0,1fr);height:auto}}
+  .grip{{display:none}}
+  .side{{overflow:visible;border-bottom:1px solid var(--line);padding:24px 16px}}
+  .view{{overflow:visible;padding:24px 16px 40px}}
+  .box,.shot{{max-height:760px}}
+  .vbody{{flex-direction:column;align-items:stretch}} .prev{{flex:0 0 auto}}
+  .bento{{position:static;flex:0 0 auto;max-height:none;overflow:visible}}
+  .pair{{flex-direction:column;align-items:center}}}}
 </style></head>
-<body data-view="both" data-plat="desk"><div class="wrap">
+<body data-view="code" data-plat="all" data-bento="off"><div class="panes">
+<aside class="side">
 <header>
  <div>
   <h1>CodeCatalog</h1>
-  <p class="sub">{' &middot; '.join(title(p) for p in PROJECTS)} &middot; {len(D)} desktop and {len(M)} mobile screens, every one live HTML
+  <p class="sub">{' &middot; '.join(title(p) for p in PROJECTS)} &middot; {sum(s['meta']['platform']=='desktop' for s in screens)} desktop and {len(M)} mobile screens, every one live HTML
   and CSS rather than a picture of it. The desktop set was rebuilt from raster exports and squared up
   into one flow; the mobile set was read from the Figma file. Pick a screen, compare it with what it was
-  built from, or lift it out whole &mdash; each lives in its own folder with a drop-in embed.</p>
+  built from, or lift it out whole &mdash; each lives in its own folder with a drop-in embed. Every state
+  a desktop screen has is shown as a tile of its own, {len(D)} desktop views in all.</p>
  </div>
  <div class="node">
-  <span>screen <b id="nName">&nbsp;</b></span>
   <span>frame <b id="nFrame">&nbsp;</b></span>
   <span>source <b id="nScale">&nbsp;</b> &middot; <span id="nSrc">&nbsp;</span></span>
   <span id="nTag" style="color:var(--accent)">&nbsp;</span>
@@ -359,21 +422,25 @@ code{{font-family:var(--mono);font-size:12.5px;background:var(--sunk);padding:1p
  <label class="pick"><span>Project</span><select id="fProj">{options(PROJECTS,'All projects')}</select></label>
  <label class="pick"><span>Flow</span><select id="fFlow">{options(FLOWS,'All flows')}</select></label>
  <div class="seg" data-kind="plat" role="group" aria-label="Platform">
-  <button type="button" data-p="desk" aria-pressed="true">Desktop <i id="cDesk">{len(D)}</i></button>
+  <button type="button" data-p="all" aria-pressed="true">All <i id="cAll">{len(D)+len(M)}</i></button>
+  <button type="button" data-p="desk" aria-pressed="false">Desktop <i id="cDesk">{len(D)}</i></button>
   <button type="button" data-p="mob" aria-pressed="false">Mobile <i id="cMob">{len(M)}</i></button>
  </div>
- <div class="seg" data-kind="view" role="group" aria-label="View">
-  <button type="button" data-v="both" aria-pressed="true">Source + code</button>
-  <button type="button" data-v="code" aria-pressed="false">Code only</button>
- </div>
- <button type="button" class="ren" id="renBtn">Rename&hellip;</button>
- <span class="hint">&larr; &rarr; to step between screens</span>
+ <button type="button" class="tog" id="tSrc" aria-pressed="false">Show source</button>
+ <button type="button" class="tog" id="tBento" aria-pressed="false">Show bento</button>
 </div>
 
 <div class="strip" role="group" aria-label="Screens">{strip}</div>
 
+</aside>
+<div class="grip" id="grip" role="separator" aria-orientation="vertical" aria-label="Resize the left pane" tabindex="0" title="Drag to resize"></div>
+<main class="view" id="view">
+<div class="vbody">
+<div class="prev" id="prev">
 {secs}
-
+</div>
+<aside class="bento" aria-label="Notes">
+{notes}
 <div class="foot">
  <div class="card"><h2>Two different jobs</h2><p>The desktop screens had no design file behind them
   &mdash; only pictures. Sizes, colours and positions were measured out of the pixels and verified by
@@ -393,6 +460,9 @@ code{{font-family:var(--mono);font-size:12.5px;background:var(--sunk);padding:1p
   root so {len(D)+len(M)} stylesheets can share one page without colliding. Their scripts are left out, so
   the multi-state screens show one state each &mdash; the links above open the clickable versions.</p></div>
 </div>
+</aside>
+</div>
+</main>
 </div>
 <script>
 var DATA={json.dumps(META)};
@@ -405,7 +475,7 @@ var OLDKEYS={{"three": "penfold/desktop/three-things", "flow": "penfold/desktop/
 function migrate(o){{ var n={{}}; Object.keys(o||{{}}).forEach(function(k){{ n[OLDKEYS[k]||k]=o[k]; }}); return n; }}
 NAMES=migrate(NAMES);
 
-/* --- the filmstrip thumbnails are the builds themselves, cloned --- */
+/* --- the grid thumbnails are the builds themselves, cloned --- */
 function buildThumbs(){{
   document.querySelectorAll('.tscr').forEach(function(t){{
     if(t.shadowRoot) return;
@@ -421,10 +491,9 @@ function nameOf(k,el){{
   if(NAMES[k]) {{ el.textContent=NAMES[k]; }} else {{ el.innerHTML=DATA[k].n; }}
 }}
 function paintNames(){{
-  document.querySelectorAll('.fsn').forEach(function(el){{
+  document.querySelectorAll('.fsn,.vname').forEach(function(el){{
     if(!el.classList.contains('editing')) nameOf(el.dataset.k,el);
   }});
-  var cur=current(); if(cur) nameOf(cur,nName);
 }}
 function saveNames(){{
   try{{ localStorage.setItem(LS,JSON.stringify(NAMES)); }}catch(e){{}}
@@ -432,9 +501,8 @@ function saveNames(){{
 }}
 function current(){{ return K.filter(function(x){{return !document.getElementById('sec-'+x).hidden;}})[0]; }}
 
-function startRename(k){{
-  var el=document.querySelector('.fs[data-k="'+k+'"] .fsn');
-  if(!el||el.classList.contains('editing')) return;
+function startRename(k,el){{
+  if(!k||!el||el.classList.contains('editing')) return;
   var before=NAMES[k]||el.textContent.trim();
   el.textContent=before; el.classList.add('editing'); el.contentEditable='true';
   var r=document.createRange(); r.selectNodeContents(el);
@@ -456,16 +524,21 @@ function startRename(k){{
   }};
   el.onblur=function(){{ stop(true); }};
 }}
-renBtn.addEventListener('click',function(){{ var c=current(); if(c) startRename(c); }});
-document.querySelectorAll('.fsn').forEach(function(el){{
-  el.addEventListener('dblclick',function(e){{ e.preventDefault(); e.stopPropagation(); startRename(el.dataset.k); }});
+/* the name at the top right of the preview is the rename box: click it, type, Enter */
+document.querySelectorAll('.vname').forEach(function(el){{
+  el.addEventListener('click',function(){{ startRename(el.dataset.k,el); }});
+  el.addEventListener('keydown',function(e){{
+    if(e.key==='Enter'&&!el.classList.contains('editing')){{ e.preventDefault(); startRename(el.dataset.k,el); }} }});
 }});
 
 /* --- filters: project and flow, kept in the URL so a view can be bookmarked --- */
 function ok(k){{ var d=DATA[k]; return (!fProj.value||d.p===fProj.value)&&(!fFlow.value||d.fl===fFlow.value); }}
-function listFor(p){{ return (p==='desk'?KD:KM).filter(ok); }}
+function listFor(p){{ return (p==='desk'?KD:p==='mob'?KM:K).filter(ok); }}
 function writeHash(){{
   var q=[]; if(fProj.value) q.push('project='+fProj.value); if(fFlow.value) q.push('flow='+fFlow.value);
+  if(document.body.dataset.plat!=='all') q.push('show='+document.body.dataset.plat);
+  if(tSrc.getAttribute('aria-pressed')==='true') q.push('source=1');
+  if(tBento.getAttribute('aria-pressed')==='true') q.push('bento=1');
   var c=current(); if(c) q.push('screen='+c);
   try{{ history.replaceState(null,'',q.length?'#'+q.join('&'):location.pathname+location.search); }}catch(e){{}}
 }}
@@ -473,33 +546,72 @@ function readHash(){{
   var q={{}}; location.hash.slice(1).split('&').forEach(function(kv){{ var i=kv.indexOf('='); if(i>0) q[kv.slice(0,i)]=decodeURIComponent(kv.slice(i+1)); }});
   [[fProj,q.project],[fFlow,q.flow]].forEach(function(x){{
     if(x[1]&&[].some.call(x[0].options,function(o){{return o.value===x[1];}})) x[0].value=x[1]; }});
+  if(q.show==='desk'||q.show==='mob') document.body.dataset.plat=q.show;
+  setTog(tSrc,q.source==='1'); setTog(tBento,q.bento==='1');
   return DATA[q.screen]?q.screen:null;
 }}
 function applyFilter(want){{
   document.querySelectorAll('.fs').forEach(function(b){{ b.hidden=!ok(b.dataset.k); }});
-  var nd=listFor('desk').length, nm=listFor('mob').length;
-  cDesk.textContent=nd; cMob.textContent=nm;
-  document.querySelector('.grp.desk').hidden=!nd; document.querySelector('.grp.mob').hidden=!nm;
-  document.querySelectorAll('.seg[data-kind="plat"] button').forEach(function(b){{
-    b.disabled=!(b.dataset.p==='desk'?nd:nm); }});
+  var n={{all:listFor('all').length,desk:listFor('desk').length,mob:listFor('mob').length}};
+  cAll.textContent=n.all; cDesk.textContent=n.desk; cMob.textContent=n.mob;
+  document.querySelector('.grp.desk').hidden=!n.desk; document.querySelector('.grp.mob').hidden=!n.mob;
+  document.querySelectorAll('.seg[data-kind="plat"] button').forEach(function(b){{ b.disabled=!n[b.dataset.p]; }});
+  if(!n.all) return;
+  if(!n[document.body.dataset.plat]) setPlat('all',true);
   if(want&&ok(want)) {{ sel(want); return; }}
-  var p=document.body.dataset.plat; if(!listFor(p).length) p=(p==='desk'?'mob':'desk');
-  var L=listFor(p); if(!L.length) return;
+  var L=listFor(document.body.dataset.plat);
   sel(L.indexOf(current())>=0?current():L[0]);
 }}
 fProj.addEventListener('change',function(){{ applyFilter(); }});
 fFlow.addEventListener('change',function(){{ applyFilter(); }});
-addEventListener('hashchange',function(){{ applyFilter(readHash()); }});
+addEventListener('hashchange',function(){{ var w=readHash(); setPlat(document.body.dataset.plat,true); applyFilter(w); fitPreview(); }});
+
+/* --- the preview takes the width its pane has: two columns for source + code, one for code --- */
+function fitPreview(){{
+  var w=prev.clientWidth; if(!(w>0)) return;
+  var both=document.body.dataset.view==='both', stacked=matchMedia('(max-width:900px)').matches;
+  var pw=stacked?Math.min(w,both?544:800):both?Math.floor((w-28)/2):Math.min(w,800);
+  view.style.setProperty('--dpw',Math.max(240,pw));
+}}
+if(window.ResizeObserver) new ResizeObserver(fitPreview).observe(prev); else addEventListener('resize',fitPreview);
+
+/* --- the left pane's width: dragged, remembered in this browser --- */
+var SIDE='codecatalog-side', panes=document.querySelector('.panes');
+function setSide(w,save){{
+  w=Math.round(Math.max(176,Math.min(w,innerWidth-320)));
+  panes.style.setProperty('--side',w+'px'); grip.setAttribute('aria-valuenow',w);
+  if(save) try{{ localStorage.setItem(SIDE,w); }}catch(e){{}}
+}}
+function sideNow(){{ return document.querySelector('.side').getBoundingClientRect().width; }}
+try{{ var w0=parseInt(localStorage.getItem(SIDE),10); if(w0) setSide(w0); }}catch(e){{}}
+grip.addEventListener('pointerdown',function(e){{
+  e.preventDefault(); grip.setPointerCapture(e.pointerId); document.body.classList.add('dragging');
+  var off=e.clientX-sideNow();
+  function move(ev){{ setSide(ev.clientX-off); }}
+  function up(ev){{
+    grip.removeEventListener('pointermove',move); grip.removeEventListener('pointerup',up); grip.removeEventListener('pointercancel',up);
+    document.body.classList.remove('dragging'); setSide(sideNow(),true);
+  }}
+  grip.addEventListener('pointermove',move); grip.addEventListener('pointerup',up); grip.addEventListener('pointercancel',up);
+}});
+grip.addEventListener('dblclick',function(){{ setSide(400,true); }});
+grip.addEventListener('keydown',function(e){{
+  if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight') return;
+  e.preventDefault(); setSide(sideNow()+(e.key==='ArrowRight'?24:-24),true);
+}});
+addEventListener('resize',function(){{ if(panes.style.getPropertyValue('--side')) setSide(sideNow()); }});
 
 /* --- selection --- */
 function sel(k){{
   document.querySelectorAll('.fs').forEach(function(b){{b.setAttribute('aria-pressed',String(b.dataset.k===k));}});
   K.forEach(function(x){{document.getElementById('sec-'+x).hidden=(x!==k);}});
+  document.querySelectorAll('.notes').forEach(function(n){{n.hidden=(n.dataset.k!==k);}});
+  view.scrollTop=0;
   var d=DATA[k];
-  nameOf(k,nName); nFrame.textContent=d.f; nScale.textContent=d.sc; nSrc.textContent=d.src;
+  nFrame.textContent=d.f; nScale.textContent=d.sc; nSrc.textContent=d.src;
   nTag.textContent=d.tag||' ';
-  var p=KD.indexOf(k)>=0?'desk':'mob';
-  if(document.body.dataset.plat!==p) setPlat(p,true);
+  var p=KD.indexOf(k)>=0?'desk':'mob', now=document.body.dataset.plat;
+  if(now!=='all'&&now!==p) setPlat(p,true);
   var b=document.querySelector('.fs[data-k="'+k+'"]');
   if(b) b.scrollIntoView({{block:'nearest',inline:'nearest',behavior:'smooth'}});
   writeHash();
@@ -510,29 +622,22 @@ function setPlat(p,keep){{
     b.setAttribute('aria-pressed',String(b.dataset.p===p));}});
   if(keep) return;
   var list=listFor(p);
-  if(list.length&&list.indexOf(current())<0) sel(list[0]);
+  if(list.length&&list.indexOf(current())<0) sel(list[0]); else writeHash();
 }}
 document.querySelectorAll('.seg[data-kind="plat"] button').forEach(function(b){{
   b.addEventListener('click',function(){{setPlat(b.dataset.p,false);}});}});
 document.querySelectorAll('.fs').forEach(function(b){{
   b.addEventListener('click',function(){{sel(b.dataset.k);}});}});
-document.querySelectorAll('.seg[data-kind="view"] button').forEach(function(b){{
-  b.addEventListener('click',function(){{
-    document.body.dataset.view=b.dataset.v;
-    document.querySelectorAll('.seg[data-kind="view"] button').forEach(function(o){{
-      o.setAttribute('aria-pressed',String(o===b));}});
-  }});
-}});
-addEventListener('keydown',function(e){{
-  if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight') return;
-  if(document.querySelector('.fsn.editing')||/SELECT|INPUT/.test((document.activeElement||{{}}).tagName)) return;
-  var L=listFor(document.body.dataset.plat==='mob'?'mob':'desk'); if(!L.length) return;
-  var cur=L.indexOf(current()); if(cur<0) cur=0;
-  sel(L[(cur+(e.key==='ArrowRight'?1:L.length-1))%L.length]);
-}});
+/* --- the two switches: the source beside the code, the bento beside the preview --- */
+function setTog(b,on){{
+  b.setAttribute('aria-pressed',String(!!on));
+  if(b===tSrc) document.body.dataset.view=on?'both':'code'; else document.body.dataset.bento=on?'on':'off';
+}}
+[tSrc,tBento].forEach(function(b){{
+  b.addEventListener('click',function(){{ setTog(b,b.getAttribute('aria-pressed')!=='true'); fitPreview(); writeHash(); }});}});
 
 var WANT=readHash();   /* before anything writes the hash */
-buildThumbs(); setPlat('desk',true); applyFilter(WANT||K[0]); paintNames();
+buildThumbs(); setPlat(document.body.dataset.plat,true); applyFilter(WANT||K[0]); paintNames(); fitPreview();
 
 /* shared, durable names when the viewer can reach the store */
 if(window.claude&&claude.use) claude.use('db').then(function(db){{

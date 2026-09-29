@@ -94,9 +94,21 @@ Clickable desktop screens have a `live` URL in their meta.json: plan-selection,
 savings-calculator, sign-up-form, three-things. Static ones have none, because the embed
 already shows all of them. Mobile screens link to the Figma-vs-code comparison.
 
+## Every state is a tile
+
+A desktop screen with more than one state shows each state as a tile of its own on the catalogue page,
+right after the screen: 3 things about pensions (all closed, and states 1 to 6 from `states.html`),
+Plan selection (risk levels, risk acceptance, `state-choose.html`, `state-risk.html`) and Savings
+calculator (steps 1 to 3; the screen's own tile is step 4). 25 desktop views from 11 screens.
+
+They come from `"views"` in the screen's meta.json. Each has an `id` and a `name`, and any of `from` (the
+file), `state` (`[attribute, value]` set on `.page`), `pane` (one `<section class="v-pane">` of a page that
+holds several) and `frame`. A view's key is the screen's key plus `@id`, e.g.
+`penfold/desktop/three-things@state-3`. catalog.json lists them under each screen's `views`.
+
 ## Projects and flows
 
-The catalogue page filters by **Project** and **Flow** (two dropdowns above the filmstrip). Both
+The catalogue page filters by **Project** and **Flow** (two dropdowns in the left pane, which holds the header, the controls and the grid of screens; the right pane shows the selected screen, code only unless Show source is on, with the notes beside it when Show bento is on). Both
 come from each screen's meta.json: `project` is required, `flow` is optional - a screen with no
 flow shows under "All flows" only. A new project or flow appears in the dropdowns on the next build.
 
@@ -104,6 +116,7 @@ The current view lives in the URL, so a filtered view can be bookmarked or share
 
     index.html#project=penfold&flow=onboarding
     index.html#flow=onboarding&screen=penfold/mobile/details
+    index.html#show=mob&source=1&bento=1&screen=penfold/mobile/home
 
 ## Changing things
 
@@ -156,7 +169,7 @@ and **confirmation** centres on the shared column (568) rather than its export's
 - The mobile status bars use `-apple-system, 'SF Pro Text'`: Apple's system face on Apple
   devices, plain sans elsewhere. Deliberate - SF Pro cannot be served as a web font.
 - A `#id` selector cannot hold the `/` in a key. Look sections up with `getElementById`.
-- The page's Rename box only changes names in the browser you typed them in. Real names are the
+- Renaming on the page (click the name at the top right of the preview) only changes names in the browser you typed them in. Real names are the
   `name` in each meta.json, in git. No names were ever saved in the old artifact's database.
 
 ## History

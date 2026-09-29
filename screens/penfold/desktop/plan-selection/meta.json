@@ -54,5 +54,39 @@
     "note": "Three connected frames &mdash; the plan list, the risk scale it scrolls to, and the state after a plan is picked &mdash; folded into one page that builds over two taps. Cards land within 1px; the acceptance panel&rsquo;s bands within 4px. <em>Both panes show the opening state; the other two are in the live comparison.</em>",
     "tag": "Interactive · 3 states",
     "frame_label": "1182 × 2640 (3560 when open)"
-  }
+  },
+  "views": [
+    {
+      "id": "risk",
+      "name": "risk levels",
+      "state": [
+        "data-state",
+        "risk"
+      ],
+      "from": "screen.html"
+    },
+    {
+      "id": "accept",
+      "name": "risk acceptance",
+      "state": [
+        "data-state",
+        "accept"
+      ],
+      "frame": [
+        1182,
+        3560
+      ],
+      "from": "screen.html"
+    },
+    {
+      "id": "state-choose",
+      "name": "state-choose.html",
+      "from": "state-choose.html"
+    },
+    {
+      "id": "state-risk",
+      "name": "state-risk.html",
+      "from": "state-risk.html"
+    }
+  ]
 }
