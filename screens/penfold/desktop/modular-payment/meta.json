@@ -1,0 +1,54 @@
+{
+  "id": "modular-payment",
+  "project": "penfold",
+  "platform": "desktop",
+  "flow": "modular-onboarding",
+  "order": 26,
+  "name": "Modular payment",
+  "title": "Set up your Direct Debit",
+  "frame": [
+    1200,
+    1675
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "raster",
+  "figma_node": "19:5387",
+  "source_scale": "1.00×",
+  "source_frames": "2 screenshots",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/figma.png",
+      "source/screenshot-1.png",
+      "source/screenshot-2.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "modular payment",
+    "direct debit",
+    "set up your direct debit",
+    "direct debit guarantee",
+    "bank details"
+  ],
+  "seq": 126,
+  "tile": "Modular payment",
+  "catalogue": {
+    "m1": "6.51%",
+    "m1l": "pixels differing from the Figma render",
+    "m2": "4px",
+    "m2l": "worst offset",
+    "note": "Rebuilt from two 448px screenshots enlarged four times, so positions are good to about 4px and the small print was read against the standard Direct Debit Guarantee wording. The Direct Debit logo is a crop of the picture; borders, tick and top bar are reconstructed.",
+    "tag": "",
+    "frame_label": "1200 × 1675"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "modular-confirmation",
+  "project": "penfold",
+  "platform": "desktop",
+  "flow": "modular-onboarding",
+  "order": 25,
+  "name": "Modular confirmation",
+  "title": "You’re all set",
+  "frame": [
+    1200,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "raster",
+  "figma_node": "19:5150",
+  "source_scale": "0.72×",
+  "source_frames": "1 screenshot",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/figma.png",
+      "source/screenshot-1.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "congrats",
+    "modular confirmation",
+    "modular-onboarding-picture",
+    "onboarding picture",
+    "you're all set"
+  ],
+  "seq": 125,
+  "tile": "Modular confirmation",
+  "catalogue": {
+    "m1": "2.75%",
+    "m1l": "pixels differing from the Figma render",
+    "m2": "3px",
+    "m2l": "worst offset",
+    "note": "Rebuilt from a 512px screenshot enlarged four times, so positions are good to about 4px and the small text was read with the help of the earlier confirmation screen. The navbar is the real component; the Congrats illustration is a crop of the picture.",
+    "tag": "",
+    "frame_label": "1200 × 812"
+  }
+}
