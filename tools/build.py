@@ -291,7 +291,7 @@ h1{{font-size:23px;font-weight:600;margin:0;letter-spacing:-.015em;text-wrap:bal
 
 /* two panes, each scrolling on its own: everything about the catalogue on the left,
    nothing but the selected screen on the right */
-.panes{{display:grid;grid-template-columns:var(--side,min(888px,62vw)) 9px minmax(0,1fr);height:100vh}}
+.panes{{display:grid;grid-template-columns:var(--side,66vw) 9px minmax(0,1fr);height:100vh}}
 .side{{min-width:0;overflow-y:auto;padding:28px 20px 40px 24px;background:var(--panel);scrollbar-width:thin}}
 /* the divider: drag it, or focus it and use the arrow keys; double-click puts it back */
 .grip{{position:relative;cursor:col-resize;background:var(--panel);touch-action:none}}
@@ -601,7 +601,7 @@ grip.addEventListener('pointerdown',function(e){{
   }}
   grip.addEventListener('pointermove',move); grip.addEventListener('pointerup',up); grip.addEventListener('pointercancel',up);
 }});
-grip.addEventListener('dblclick',function(){{ setSide(Math.min(888,innerWidth*.62),true); }});
+grip.addEventListener('dblclick',function(){{ setSide(innerWidth*.66,true); }});
 grip.addEventListener('keydown',function(e){{
   if(e.key!=='ArrowLeft'&&e.key!=='ArrowRight') return;
   e.preventDefault(); setSide(sideNow()+(e.key==='ArrowRight'?24:-24),true);
