@@ -20,7 +20,9 @@
   "files": {
     "screen": "screen.html",
     "embed": "embed.html",
-    "extra": [],
+    "extra": [
+      "state-with-email.html"
+    ],
     "source": [
       "source/crop.png",
       "source/original.webp"
@@ -40,10 +42,19 @@
     "m1l": "2.0 design px per image px",
     "m2": "0px",
     "m2l": "all five field tops",
-    "note": "Shows a focused autofilled field &mdash; the pale yellow fill &mdash; and a date that failed validation.",
+    "note": "Shows a focused autofilled field &mdash; the pale yellow fill &mdash; and a date that failed validation. <em>A variant made on 29 Sep 2026 folds the Enter your email screen into this one as a field, before the password. It is not in the source; the original is unchanged.</em>",
     "tag": "",
     "frame_label": "1182 × 2640"
   },
   "seq": 8,
-  "tile": "Sign-up, upper half 08"
+  "tile": "Sign-up, upper half 08",
+  "views": [
+    {
+      "id": "with-email",
+      "name": "with email",
+      "tile": "Sign-up with email 07 08",
+      "seq": 8.5,
+      "from": "state-with-email.html"
+    }
+  ]
 }
