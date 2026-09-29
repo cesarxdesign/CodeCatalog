@@ -42,8 +42,8 @@
   ],
   "catalogue": {
     "sc": "1.0",
-    "diff": "2.49%",
+    "diff": "1.82%",
     "al": "±1px",
-    "note": "The two module buttons are the 181px component scaled to 140, so their values are fractional on purpose (16.24px label, 39.4475px fill) and the 6px radius scales to 4.641px, which the export confirms. The pink arc keeps the file&rsquo;s own &minus;90&deg; rotation inside a 195.106px box."
+    "note": "The two module buttons are the 181px component scaled to 140, so their values are fractional on purpose (16.24px label, 39.4475px fill) and the 6px radius scales to 4.641px, which the export confirms. The pink arc keeps the file&rsquo;s own &minus;90&deg; rotation inside a 195.106px box. The 21px heading and all 16px text, the donut centre included, move down 1px: a correction measured against the Figma render, where Chrome set their baseline about 1px higher, not a Figma value."
   }
 }

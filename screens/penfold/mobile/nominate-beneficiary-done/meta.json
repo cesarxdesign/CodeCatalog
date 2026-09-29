@@ -1,0 +1,49 @@
+{
+  "id": "nominate-beneficiary-done",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "nominate-beneficiary",
+  "order": 33,
+  "name": "Nominate beneficiary, success",
+  "title": "Nominate beneficiary",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "131:2909",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "nominate beneficiary done",
+    "nominate beneficiary success",
+    "nomben done"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.94%",
+    "al": "±1px",
+    "note": "The three fields are the empty-field component with overrides: no stroke, bold centred grey values. The 14 and 16px strings drew 1px higher than Figma in Chrome, so they carry a measured 1px correction. The 20, 24 and 28px strings needed none."
+  }
+}

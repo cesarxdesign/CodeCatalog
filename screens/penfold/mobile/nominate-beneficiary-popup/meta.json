@@ -1,0 +1,49 @@
+{
+  "id": "nominate-beneficiary-popup",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "nominate-beneficiary",
+  "order": 31,
+  "name": "Nominate beneficiary, explainer popup",
+  "title": "What is a beneficiary",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "131:2858",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "nominate beneficiary popup",
+    "what is a beneficiary",
+    "nomben popup"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.24%",
+    "al": "±1px",
+    "note": "The popup sits over a real background blur: Figma&rsquo;s blur 8 is <code>backdrop-filter: blur(4px)</code> on a 40% #F4F4F4 layer from y135 down. The card is placed at its metadata x=40 rather than 50% minus half its width, which Chrome snaps to 40.5. The &ldquo;Got it&rdquo; button sits at x126.5 in Figma; Chrome snaps it to whole pixels. This frame&rsquo;s heading reads &ldquo;Nominated beneficiary&rdquo; in the file. The 10, 14 and 16px strings drew 1px higher than Figma in Chrome, so they carry a measured 1px correction. The 12, 20, 24 and 28px strings needed none."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "nominate-beneficiary-form",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "nominate-beneficiary",
+  "order": 30,
+  "name": "Nominate beneficiary, form",
+  "title": "Nominate beneficiary",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "131:2837",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "nominate beneficiary",
+    "nominate form",
+    "nomben form"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.30%",
+    "al": "±1px",
+    "note": "Header back chevron and the dropdown chevron are <code>icon/chevron/Right</code> exports used as Left and Down, rotated to match the canvas. The frame-level response set the Back row to top-aligned; the instance&rsquo;s own metadata centres the label, so it sits 4px lower than the response implies. The 10, 14 and 16px strings drew 1px higher than Figma in Chrome, so they carry a measured 1px correction. The 12, 20, 24 and 28px strings needed none."
+  }
+}

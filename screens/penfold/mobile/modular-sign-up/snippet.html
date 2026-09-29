@@ -94,6 +94,10 @@ svg { display: block; }
 
 /* header/mobile here is the 92% fill with a 4-radius background blur */
 .hdr-bg   { background: rgba(251, 251, 251, 0.92); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
+
+/* Measured correction, not a Figma value: Chrome and Figma place the baseline differently here;
+   these styles rendered ~1px high against the Figma export, so they move down 1px. */
+.t-h1m { translate: 0 1px; }
 </style>
 <div class="frame" data-frame data-node-id="2052:6791">
 

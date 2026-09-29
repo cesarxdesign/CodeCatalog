@@ -42,8 +42,8 @@
   ],
   "catalogue": {
     "sc": "1.0",
-    "diff": "1.87%",
+    "diff": "1.75%",
     "al": "±1px",
-    "note": "The frame-level response described the wrong variants: an unchecked box and a chevron menu button where the canvas shows a checked box and a &ldquo;HOME&rdquo; label, so both came from the instances&rsquo; own ids. 28px heading sits 1px high: Chrome and Figma round the baseline differently."
+    "note": "The frame-level response described the wrong variants: an unchecked box and a chevron menu button where the canvas shows a checked box and a &ldquo;HOME&rdquo; label, so both came from the instances&rsquo; own ids. The 28px heading moves down 1px: a correction measured against the Figma render, where Chrome set its baseline about 1px higher, not a Figma value."
   }
 }

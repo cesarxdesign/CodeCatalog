@@ -46,7 +46,7 @@
     "m1l": "pixels differing from the Figma render",
     "m2": "3px",
     "m2l": "worst offset",
-    "note": "Rebuilt from a 512px screenshot enlarged four times, so positions are good to about 4px and the small text was read with the help of the earlier confirmation screen. The navbar is the real component; the Congrats illustration is a crop of the picture.",
+    "note": "Rebuilt from a 512px screenshot enlarged four times, so positions are good to about 4px and the small text was read with the help of the earlier confirmation screen. The navbar is the real component; the Congrats illustration is a crop of the picture. The Congrats illustration is set in type on a cream panel, as on the earlier confirmation screen, not a crop of the picture.",
     "tag": "",
     "frame_label": "1200 × 812"
   }

@@ -1,0 +1,48 @@
+{
+  "id": "nominate-beneficiary-filled",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "nominate-beneficiary",
+  "order": 32,
+  "name": "Nominate beneficiary, filled",
+  "title": "Nominate beneficiary",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "131:2887",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "nominate beneficiary filled",
+    "nomben filled"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.66%",
+    "al": "±1px",
+    "note": "The ticked box is a <code>checkbox/YesNo</code> check image laid over the unticked box, whose instance still carries the label, so both are built. The Nominate button sits at x103.5 in Figma; Chrome snaps it to whole pixels. The 10, 14 and 16px strings drew 1px higher than Figma in Chrome, so they carry a measured 1px correction. The 12, 20, 24 and 28px strings needed none."
+  }
+}

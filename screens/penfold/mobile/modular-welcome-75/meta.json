@@ -42,8 +42,8 @@
   ],
   "catalogue": {
     "sc": "1.0",
-    "diff": "2.03%",
+    "diff": "1.69%",
     "al": "±1px",
-    "note": "Same build as the 25% welcome with two modules in the complete state (<code>#43A800</code>) and the module block 11px higher, as the file has it. The 21px button labels and the 24.25px heading sit 1px high: baseline rounding differs between Chrome and Figma."
+    "note": "Same build as the 25% welcome with two modules in the complete state (<code>#43A800</code>) and the module block 11px higher, as the file has it. The 24.25px heading and the 21px button labels move down 1px: a correction measured against the Figma render, where Chrome set their baseline about 1px higher, not a Figma value."
   }
 }

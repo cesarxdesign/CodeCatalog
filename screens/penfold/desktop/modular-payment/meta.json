@@ -47,7 +47,7 @@
     "m1l": "pixels differing from the Figma render",
     "m2": "4px",
     "m2l": "worst offset",
-    "note": "Rebuilt from two 448px screenshots enlarged four times, so positions are good to about 4px and the small print was read against the standard Direct Debit Guarantee wording. The Direct Debit logo is a crop of the picture; borders, tick and top bar are reconstructed.",
+    "note": "Rebuilt from two 448px screenshots enlarged four times, so positions are good to about 4px and the small print was read against the standard Direct Debit Guarantee wording. The Direct Debit logo is a crop of the picture; borders, tick and top bar are reconstructed. The Direct Debit logo is the published logo (seeklogo.com), not a crop of the blurred picture.",
     "tag": "",
     "frame_label": "1200 × 1675"
   }

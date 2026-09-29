@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=375">
+<title>Penfold · Nominate beneficiary, form</title>
+<style>html,body{margin:0;background:#F4F4F4}</style>
+</head><body>
+<!-- CodeCatalog · penfold/mobile/nominate-beneficiary-form · 375×812 · built from snippet.html · fp e86fe516d1fe
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/mobile/nominate-beneficiary-form" style="--cc-w:375;--cc-h:812;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:375px;height:812px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:375px;height:812px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+:host{white-space:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-align:start;font-style:normal;font-variant:normal;line-height:normal;font-weight:400}
+:host{
+  --navy:#123456;      /* 123456 Navy */
+  --white:#FFFFFF;     /* FFFFFF White */
+  --grey2:#F4F4F4;     /* F4F4F4 Grey2 (BG) */
+  --grey3:#F0F0F0;     /* F0F0F0 Grey3 */
+  --grey4:#D8D8D8;     /* D8D8D8 Grey4 */
+  --grey5:#BABABA;     /* BABABA Grey5 */
+  --lightblue:#E7EBED; /* E7EBED Light blue */
+  --pinkfold:#FF5081;  /* FF5081 Pinkfold */
+  --dolfknip:#5081FF;  /* 5081FF dolfknip */
+  --cool:#FBFBFB;      /* textField/BG/value box */
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+svg{display:block}
+
+.fr{position:relative;width:375px;height:812px;overflow:hidden;background:var(--grey2);
+    font-family:'Montserrat',sans-serif;color:var(--navy)}
+.abs{position:absolute}
+
+/* named type styles (Figma text-style names in the comments). Line heights are the
+   Figma text boxes' heights / line count, never `normal`. */
+.t-nb28{font-weight:700;font-size:28px;line-height:34px;letter-spacing:-.8px}   /* N/B 28 */
+.t-nb24{font-weight:700;font-size:24px;line-height:29px;letter-spacing:-.8px}   /* N/B 24 */
+.t-nb16{font-weight:700;font-size:16px;line-height:20px;letter-spacing:-.8px}   /* N/B 16 */
+.t-nsb16{font-weight:600;font-size:16px;line-height:20px;letter-spacing:-.8px}  /* N/SB 16 */
+.t-tb20{font-weight:700;font-size:20px;line-height:24px}                        /* T/B 20 */
+.t-tr14{font-weight:400;font-size:14px;line-height:17px}                        /* T/R 14: h34 / 2 lines */
+.t-tr12{font-weight:400;font-size:12px;line-height:15px}                        /* T/R 12: h30 / 2 lines */
+.t-tm10{font-weight:500;font-size:10px;line-height:12px}                        /* T/M 10: h12 */
+.t-tr10{font-weight:400;font-size:10px;line-height:14px}                        /* T/R 10, lineHeight 14 */
+/* after every rule above: runs that carry LNUM + TNUM in the file */
+.num{font-feature-settings:"lnum" 1,"tnum" 1}
+/* CSS adds letter-spacing after the last glyph; Figma's box does not. On centred and
+   right-aligned strings the ink would drift, so the trailing -0.8px is cancelled. */
+.trk8{margin-right:.8px}
+
+/* Measured correction, not a Figma value: Chrome sets the baseline of these sizes ~1px
+   higher than Figma's export on this project (measured per string against source/figma.png).
+   Moves the ink down 1px without touching layout. */
+.bl1{position:relative;top:1px}
+
+
+/* ---------- iOS/smallSafariHeader (1:344) ---------- */
+.ios{left:0;top:0;width:375px;height:63px}
+.ios-bg{left:0;top:0}
+/* Divider: 0.5px black at 20% layer opacity, spanning y 62.5-63 = half of row 62 at 0.2,
+   inked as one crisp row at 0.1 (hairline rule; not the file's number) */
+.ios-div{left:0;top:62px;width:375px;height:1px;background:rgba(0,0,0,.1)}
+/* Figma names SF Pro Text; the system face is listed first on purpose (library convention) */
+.t-ios-url{position:absolute;left:145px;top:40px;width:84px;height:15px;display:flex;justify-content:center;
+           white-space:nowrap;text-align:center;font-family:-apple-system,'SF Pro Text',sans-serif;
+           font-weight:400;font-size:12px;line-height:15px;letter-spacing:-.35px;color:#000}
+.t-ios-url .trk{margin-right:.35px}
+.ios-st{left:0;top:0;width:375px;height:44px}
+.t-ios-time{position:absolute;left:19.894px;top:14px;width:54px;height:18px;text-align:center;
+            font-family:-apple-system,'SF Pro Text',sans-serif;font-weight:600;font-size:15px;
+            line-height:18px;letter-spacing:-.165px;color:#000}
+.t-ios-time .trk{margin-right:.165px}
+.ios-batt{right:14.5px;top:calc(50% + .91px);transform:translateY(-50%);width:24.5px;height:11.5px}
+.ios-fill{right:19px;top:calc(50% + .91px);transform:translateY(-50%);width:18px;height:7.667px;
+          border-radius:1.6px;background:#000}
+.ios-cell{right:64.4px;top:calc(50% + .95px);transform:translateY(-50%);width:17.1px;height:10.7px}
+.ios-wifi{right:44px;top:calc(50% + .93px);transform:translateY(-50%);width:15.4px;height:11.057px}
+
+/* ---------- header/mobile/module ---------- */
+.mh{left:0;top:63px;width:375px;height:72px}
+/* 0.333px #D8D8D8 stroke, outside the box (the export inks row 135, not 134):
+   one crisp row at the alpha its coverage produces; side bleed is clipped by the frame */
+.mh-bg{left:0;top:0;width:375px;height:72px;background:var(--white);box-shadow:0 0 0 1px rgba(216,216,216,.333)}
+/* Label.bold: x184 y18 159x34, right-aligned */
+.mh-ttl{right:32px;top:calc(50% - 1px);transform:translateY(-50%);display:flex;flex-direction:column;
+        justify-content:center;text-align:right;white-space:nowrap}
+/* the frame-level response says items-start; get_metadata on the instance puts label.padding(4)
+   at y4 in the 40px row (32 tall), i.e. centred. Metadata wins. */
+.mh-back{left:0;top:50%;transform:translateY(-50%);display:flex;align-items:center}
+/* icon/chevron/Left wraps the icon/chevron/Right export (points right); the canvas points left */
+.ch-l{position:relative;width:40px;height:40px;flex:0 0 auto;transform:rotate(180deg)}
+.mh-lab{display:flex;align-items:center;overflow:hidden;padding:4px;flex:0 0 auto}
+.mh-lab-t{display:flex;flex-direction:column;justify-content:center;white-space:nowrap}
+
+/* ---------- padding(vertical: 40).spacing(16) ---------- */
+.intro{left:50%;top:135px;transform:translateX(-50%);padding:40px 0;display:flex;flex-direction:column;
+       gap:24px;align-items:center}
+.intro-h{width:311px;flex:0 0 auto;display:flex;flex-direction:column;justify-content:flex-end}
+.intro-p8{display:flex;align-items:center;padding:0 8px;flex:0 0 auto}
+.intro-t{width:295px;flex:0 0 auto}
+.pre{white-space:pre-wrap}
+
+/* ---------- 24h warning ---------- */
+.warn{left:22px;top:302px;display:flex;align-items:center}
+.ico40{position:relative;width:40px;height:40px;flex:0 0 auto}
+.ec-dot{left:8px;top:8px}
+/* 5px-wide box (43.75% each side), ink wider: align-items centres the overflow */
+.ec-i{left:43.75%;right:43.75%;top:32.5%;bottom:25%;display:flex;flex-direction:column;justify-content:center;
+      align-items:center;text-align:center;color:var(--white)}
+.warn-f{display:flex;align-items:center;overflow:hidden;padding:8px;flex:0 0 auto}
+.warn-t{white-space:nowrap;text-align:center;flex:0 0 auto}
+
+/* ---------- details.spacing(8) ---------- */
+.dets{left:48px;top:360px;display:flex;flex-direction:column;gap:24px;align-items:center;overflow:hidden}
+.tf{position:relative;width:279px;height:40px;flex:0 0 auto}
+.tf-in{left:0;right:0;bottom:0;height:40px}
+.tf-box{inset:0;border-radius:8px}
+/* textField/BG/!value: white box, 2px #D8D8D8 stroke inside (Figma's inside stroke = inset shadow) */
+.box-empty{background:var(--white);box-shadow:inset 0 0 0 2px var(--grey4)}
+.box-value{background:var(--cool)}
+.box-plain{background:var(--white)}
+.tf-t{left:16px;right:16px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;justify-content:center}
+.tf-c{text-align:center;align-items:center}
+.c-grey4{color:var(--grey4)}
+/* icon/chevron/Down wraps the icon/chevron/Right export (points right); the canvas points down */
+.ch-d{right:0;bottom:0;width:40px;height:40px;transform:rotate(90deg)}
+
+/* ---------- control/checkbox/textRight ---------- */
+.cb{left:56px;top:606px;width:40px;height:40px}
+/* Text.short: x44 y12 229x30 */
+.cb-t{left:44px;top:12px;width:229px}
+.cb-link{color:var(--pinkfold);text-decoration:underline;text-decoration-thickness:from-font;text-decoration-skip-ink:none;text-underline-position:from-font}
+.cb-box{left:8px;top:8px;width:24px;height:24px;background:var(--white);border-radius:4px;
+        box-shadow:inset 0 0 0 2px var(--grey4)}
+/* checkbox/YesNo 1: check/checked 44x44 over the unchecked box (its label is hidden) */
+.yn{left:54px;top:604px;width:83px;height:44px}
+.yn-chk{left:0;top:0}
+
+/* ---------- button/Label/manualWidth.padding(horizontal: 32) ---------- */
+.btn{bottom:80px;left:calc(50% + .5px);transform:translateX(-50%);width:160px;height:40px;border-radius:8px}
+.btn-t{inset:8px 16px;display:flex;flex-direction:column;justify-content:center;text-align:center;color:var(--white)}
+</style>
+<div class="fr" data-frame data-node-id="131:2837">
+<div class="abs dets"><div class="tf"><div class="abs tf-box box-empty"></div><div class="abs tf-t t-nsb16 num c-grey4"><p class="bl1">Full name</p></div></div><div class="tf"><div class="abs tf-box box-empty"></div><div class="abs tf-t t-nsb16 num c-grey4"><p class="bl1">Date of birth</p></div></div><div class="tf"><div class="abs tf-in"><div class="abs tf-box box-empty"></div><div class="abs tf-t t-nsb16 num c-grey4"><p class="bl1">Relation to you</p></div></div><div class="abs ch-d"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="nb1-icon/chevron/Right"><path id="nb1-Vector" d="M19 15L23 20L19 25" stroke="#123456" stroke-width="3" stroke-linecap="round"/></g></svg></div></div></div><div class="abs cb"><p class="abs cb-t t-tr12"><span>I've read and accept the </span><span class="cb-link">nomination declaration</span><span>.</span></p><div class="abs cb-box"></div></div><div class="abs btn" style="background:var(--lightblue)"><div class="abs btn-t t-tb20"><p>Nominate</p></div></div><div class="abs intro"><div class="intro-h t-nb24 num"><p>Nominate beneficiary</p></div><div class="intro-p8"><div class="intro-t t-tr14 bl1">Please fill in the details below for your nominated beneficiary.</div></div></div><div class="abs warn"><div class="ico40"><svg class="abs ec-dot" preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle id="nb2-Ellipse" cx="12" cy="12" r="12" fill="#FF5081"/></svg><div class="abs ec-i t-nb16 num"><p><span class="trk8">i</span></p></div></div><div class="warn-f"><p class="warn-t t-tm10 bl1">What&rsquo;s a Beneficiary, and why should I nominate one?</p></div></div><div class="abs mh"><div class="abs mh-bg"></div><div class="abs mh-ttl t-nb28 num"><p><span class="trk8">Beneficiary</span></p></div><div class="abs mh-back"><div class="ch-l"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="nb3-icon/chevron/Right"><path id="nb3-Vector" d="M19 15L23 20L19 25" stroke="#123456" stroke-width="3" stroke-linecap="round"/></g></svg></div><div class="mh-lab"><div class="mh-lab-t t-tb20"><p>Back</p></div></div></div></div><div class="abs ios"><div class="abs ios-bg"><svg class="abs ios-bgsvg" preserveAspectRatio="none" overflow="visible" style="display: block;" width="375" height="63" viewBox="0 0 375 63" fill="none" xmlns="http://www.w3.org/2000/svg"><foreignObject x="-40.7742" y="-40.7742" width="456.548" height="144.548"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20.39px);clip-path:url(#nb4-bgblur_0_0_107_clip_path);height:100%;width:100%"></div></foreignObject><path id="nb4-Background" data-figma-bg-blur-radius="40.7742" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z" fill="#F8F8F8" fill-opacity="0.7"/><defs><clipPath id="nb4-bgblur_0_0_107_clip_path" transform="translate(40.7742 40.7742)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z"/></clipPath></defs></svg></div><div class="abs ios-div"></div><p class="t-ios-url"><span class="trk">getpenfold.com</span></p><div class="abs ios-st"><p class="t-ios-time"><span class="trk">8:24</span></p><div class="abs ios-batt"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="24.5" height="11.5" viewBox="0 0 24.5 11.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="nb5-Rectangle" d="M18.4102 0C19.6582 0 20.1111 0.130042 20.5674 0.374023C21.0237 0.618053 21.3819 0.976321 21.626 1.43262C21.87 1.88887 22 2.34185 22 3.58984V7.91016C22 9.15815 21.87 9.61113 21.626 10.0674C21.3819 10.5237 21.0237 10.8819 20.5674 11.126C20.1111 11.37 19.6582 11.5 18.4102 11.5H3.58984C2.34185 11.5 1.88887 11.37 1.43262 11.126C0.976321 10.8819 0.618053 10.5237 0.374023 10.0674C0.130042 9.61113 0 9.15815 0 7.91016V3.58984C0 2.34185 0.130042 1.88887 0.374023 1.43262C0.618053 0.976321 0.976321 0.618053 1.43262 0.374023C1.88887 0.130042 2.34185 0 3.58984 0H18.4102ZM3.58984 1C2.60305 1 2.25812 1.06668 1.9043 1.25586C1.62227 1.40669 1.40669 1.62227 1.25586 1.9043C1.06668 2.25812 1 2.60305 1 3.58984V7.91016C1 8.89695 1.06668 9.24188 1.25586 9.5957C1.40669 9.87773 1.62227 10.0933 1.9043 10.2441C2.25812 10.4333 2.60305 10.5 3.58984 10.5H18.4102C19.397 10.5 19.7419 10.4333 20.0957 10.2441C20.3777 10.0933 20.5933 9.87773 20.7441 9.5957C20.9333 9.24188 21 8.89695 21 7.91016V3.58984C21 2.60305 20.9333 2.25812 20.7441 1.9043C20.5933 1.62227 20.3777 1.40669 20.0957 1.25586C19.7419 1.06668 19.397 1 18.4102 1H3.58984ZM23 3.69043C23.0184 3.69985 24.5 4.46155 24.5 5.69043C24.4997 6.92675 23 7.69043 23 7.69043V3.69043Z" fill="black" fill-opacity="0.36"/></svg></div><div class="abs ios-fill"></div><div class="abs ios-cell"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="17.0996" height="10.7002" viewBox="0 0 17.0996 10.7002" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="nb6-Combined_Shape" d="M1.5 6.7002C1.77879 6.7002 1.91826 6.6996 2.03418 6.72266C2.51021 6.81734 2.88187 7.18999 2.97656 7.66602C2.99961 7.78193 3 7.92144 3 8.2002V9.2002C3 9.47886 2.99961 9.61848 2.97656 9.73438C2.88178 10.2102 2.51005 10.5821 2.03418 10.6768C1.91826 10.6998 1.77879 10.7002 1.5 10.7002C1.22121 10.7002 1.08174 10.6998 0.96582 10.6768C0.48995 10.5821 0.118223 10.2102 0.0234375 9.73438C0.000385105 9.61848 1.19764e-09 9.47886 0 9.2002V8.2002C0 7.92144 0.000388227 7.78193 0.0234375 7.66602C0.118125 7.18999 0.489792 6.81734 0.96582 6.72266C1.08174 6.6996 1.22121 6.7002 1.5 6.7002ZM6.2998 4.7002C6.57845 4.7002 6.7181 4.69964 6.83398 4.72266C7.31001 4.81734 7.68266 5.18999 7.77734 5.66602C7.80036 5.7819 7.7998 5.92156 7.7998 6.2002V9.2002C7.7998 9.47886 7.8004 9.61848 7.77734 9.73438C7.6826 10.2103 7.30996 10.5821 6.83398 10.6768C6.71808 10.6998 6.57854 10.7002 6.2998 10.7002C6.02113 10.7002 5.88152 10.6998 5.76562 10.6768C5.28983 10.582 4.918 10.2102 4.82324 9.73438C4.80019 9.61848 4.7998 9.47886 4.7998 9.2002V6.2002C4.7998 5.92146 4.8002 5.78192 4.82324 5.66602C4.91792 5.19004 5.28968 4.8174 5.76562 4.72266C5.88152 4.6996 6.02113 4.7002 6.2998 4.7002ZM10.9004 2.40039C11.1789 2.40039 11.3187 2.3998 11.4346 2.42285C11.9104 2.51767 12.2823 2.89032 12.377 3.36621C12.3999 3.48207 12.4004 3.62185 12.4004 3.90039V9.2002C12.4004 9.47886 12.4 9.61848 12.377 9.73438C12.2822 10.2101 11.9103 10.5819 11.4346 10.6768C11.3187 10.6998 11.1789 10.7002 10.9004 10.7002C10.6218 10.7002 10.4821 10.6998 10.3662 10.6768C9.89025 10.5821 9.51761 10.2103 9.42285 9.73438C9.3998 9.61848 9.40039 9.47886 9.40039 9.2002V3.90039C9.40039 3.62187 9.39986 3.48206 9.42285 3.36621C9.51754 2.89018 9.89018 2.51754 10.3662 2.42285C10.4821 2.39986 10.6219 2.40039 10.9004 2.40039ZM15.5996 0C15.8782 0 16.0179 0.000424711 16.1338 0.0234375C16.6098 0.118124 16.9825 0.489805 17.0771 0.96582C17.1002 1.08174 17.0996 1.22121 17.0996 1.5V9.2002C17.0996 9.47886 17.1002 9.61848 17.0771 9.73438C16.9824 10.2103 16.6097 10.5821 16.1338 10.6768C16.0179 10.6998 15.8782 10.7002 15.5996 10.7002C15.3211 10.7002 15.1813 10.6998 15.0654 10.6768C14.5897 10.5819 14.2178 10.2101 14.123 9.73438C14.1 9.61848 14.0996 9.47886 14.0996 9.2002V1.5C14.0996 1.22121 14.1 1.08174 14.123 0.96582C14.2177 0.489994 14.5897 0.118285 15.0654 0.0234375C15.1813 0.000390368 15.3211 4.79655e-09 15.5996 0Z" fill="black"/></svg></div><div class="abs ios-wifi"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15.4" height="11.0572" viewBox="0 0 15.4 11.0572" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="nb7-Wi-Fi" fill-rule="evenodd" clip-rule="evenodd" d="M7.70042 2.29636C9.93483 2.29646 12.0838 3.15501 13.7032 4.69457C13.8251 4.81343 14.02 4.81193 14.1401 4.69121L15.3058 3.51479C15.3666 3.45356 15.4005 3.37062 15.4 3.28433C15.3995 3.19803 15.3646 3.11549 15.3031 3.05498C11.0528 -1.01833 4.3474 -1.01833 0.0970716 3.05498C0.0355014 3.11545 0.000571881 3.19796 7.20154e-06 3.28426C-0.000567562 3.37055 0.033283 3.45352 0.0940465 3.51479L1.26005 4.69121C1.38006 4.81211 1.57513 4.81361 1.697 4.69457C3.31657 3.15491 5.46579 2.29636 7.70042 2.29636V2.29636ZM7.70042 6.12375C8.92809 6.12367 10.1119 6.57999 11.022 7.40402C11.145 7.52097 11.3389 7.51844 11.4589 7.39831L12.6232 6.22189C12.6845 6.16019 12.7186 6.07648 12.7177 5.98949C12.7168 5.90251 12.6811 5.8195 12.6185 5.75906C9.84735 3.18131 5.55584 3.18131 2.78469 5.75906C2.72209 5.8195 2.68637 5.90255 2.68555 5.98956C2.68473 6.07657 2.71887 6.16028 2.78031 6.22189L3.9443 7.39831C4.06427 7.51844 4.25817 7.52097 4.38125 7.40402C5.29065 6.58053 6.47357 6.12426 7.70042 6.12375V6.12375ZM9.93797 8.93135C10.0002 8.87024 10.0345 8.78614 10.0327 8.69891C10.031 8.61168 9.99327 8.52905 9.92855 8.47053C8.64232 7.38263 6.75852 7.38263 5.47229 8.47053C5.40753 8.529 5.36977 8.6116 5.36792 8.69883C5.36608 8.78606 5.40031 8.87019 5.46254 8.93135L7.4769 10.9639C7.53594 11.0236 7.61643 11.0572 7.70042 11.0572C7.78441 11.0572 7.8649 11.0236 7.92394 10.9639L9.93797 8.93135Z" fill="black"/></svg></div></div></div>
+</div>
+</template></div>
+</div>
+</body></html>

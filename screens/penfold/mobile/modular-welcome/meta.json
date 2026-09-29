@@ -42,8 +42,8 @@
   ],
   "catalogue": {
     "sc": "1.0",
-    "diff": "1.63%",
+    "diff": "1.38%",
     "al": "±1px",
-    "note": "The hamburger&rsquo;s icon export is navy <code>#123456</code> but the canvas overrides it to <code>#292929</code>; the node-level asset export carries the override. The progress bars are flipped in the file, yet the track&rsquo;s inner shadow still falls from the top, so the track is built unflipped."
+    "note": "The hamburger&rsquo;s icon export is navy <code>#123456</code> but the canvas overrides it to <code>#292929</code>; the node-level asset export carries the override. The progress bars are flipped in the file, yet the track&rsquo;s inner shadow still falls from the top, so the track is built unflipped. The 24.25px heading and the 21px button labels move down 1px: a correction measured against the Figma render, where Chrome set their baseline about 1px higher, not a Figma value."
   }
 }

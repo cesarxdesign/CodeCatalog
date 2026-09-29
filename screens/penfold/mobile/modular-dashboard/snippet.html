@@ -99,6 +99,10 @@ svg { display: block; }
             box-shadow: inset 0 0 0 1px var(--white), 0 4px 8px 0 rgba(0, 0, 0, 0.08); }
 .puck-ico { width: 60px; height: 60px; }
 .t-m14    { font-weight: 500; font-size: 14px; line-height: 22px; }
+
+/* Measured correction, not a Figma value: Chrome and Figma place the baseline differently here;
+   these styles rendered ~1px high against the Figma export, so they move down 1px. */
+.t-yg, .t-r16, .t-b16, .t-t3 { translate: 0 1px; }
 </style>
 <div class="frame" data-frame data-node-id="2052:6500">
 

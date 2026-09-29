@@ -122,6 +122,10 @@ svg { display: block; }
 /* combo/navbar/mobile/module */
 .back     { left: 4px; top: 16px; width: 120px; height: 44px; }
 .back-ico { left: 2px; top: 0; width: 44px; height: 44px; transform: rotate(180deg); }
+
+/* Measured correction, not a Figma value: Chrome and Figma place the baseline differently here;
+   these styles rendered ~1px high against the Figma export, so they move down 1px. */
+.t-h3, .t-h1m, .t-b2m, .t-b10, .t-i { translate: 0 1px; }
 </style>
 <div class="frame" data-frame data-node-id="2052:6303">
 
