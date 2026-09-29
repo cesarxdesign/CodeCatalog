@@ -1,0 +1,49 @@
+{
+  "id": "final-details",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "final-onboarding",
+  "order": 43,
+  "name": "Final onboarding, details",
+  "title": "Personal info",
+  "frame": [
+    375,
+    2329
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2055:7055",
+  "export_size": [
+    375,
+    2329
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "final details",
+    "final personal info",
+    "final personal details"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.96%",
+    "al": "±1px",
+    "note": "The frame fill is <code>#FBFBFB</code>. The Terms checkbox is <code>check/checked</code>; the frame-level response showed it unchecked. Two County fields share one box and only the top one shows, so only it is built. The notice body is 150% on 11px, which Figma lays out on 17px lines. The 24px section titles, the 28px header and the 10px copy move down 1px: a measured correction, not a Figma value."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "final-fund",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "final-onboarding",
+  "order": 41,
+  "name": "Final onboarding, fund",
+  "title": "Select risk level",
+  "frame": [
+    375,
+    1241
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2055:6872",
+  "export_size": [
+    375,
+    1241
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "final fund",
+    "final risk level"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.59%",
+    "al": "±1px",
+    "note": "A node-for-node copy of the modular fund screen: the two Figma renders differ by 3 antialiased pixels and every asset matches after normalising, so the build is regenerated from it with this frame&rsquo;s node ids. The hidden Group&nbsp;181 and the hidden &ldquo;selected&rdquo; groups on cards two and three are not built. The Risk acceptance checkbox is <code>check/checked</code>; the frame-level response showed it unchecked. The title, the 28px header, the 10px labels and the tooltip&rsquo;s &ldquo;i&rdquo; move down 1px: a measured correction, not a Figma value."
+  }
+}

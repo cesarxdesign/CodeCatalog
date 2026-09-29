@@ -1,0 +1,49 @@
+{
+  "id": "final-start",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "final-onboarding",
+  "order": 40,
+  "name": "Final onboarding, start",
+  "title": "Getting started",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2055:6855",
+  "export_size": [
+    410,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "final start",
+    "getting started",
+    "final onboarding start"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.08%",
+    "al": "±2px",
+    "note": "An instance of <code>onboarding/mobile/start</code>. Figma&rsquo;s render is 410&times;812: the popup&rsquo;s 32px shadow bleeds past a frame that clips it, so the frame sits at x&nbsp;17 of the export and the diff is taken on that 375 crop. The 14px body copy moves down 1px: a correction measured against the Figma render, where Chrome set its baseline about 1px higher, not a Figma value. The &#128071; renders in the system emoji face, wider than Figma&rsquo;s, so the popup&rsquo;s last line sits 1.6px left."
+  }
+}

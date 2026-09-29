@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=375">
+<title>Penfold · Final onboarding, fund</title>
+<style>html,body{margin:0;background:#F4F4F4}</style>
+</head><body>
+<!-- CodeCatalog · penfold/mobile/final-fund · 375×1241 · built from snippet.html · fp f2d0fb12a4ae
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/mobile/final-fund" style="--cc-w:375;--cc-h:1241;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:375px;height:1241px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:375px;height:1241px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+:host{white-space:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-align:start;font-style:normal;font-variant:normal;line-height:normal;font-weight:400}
+:host {
+  --navy: #123456;
+  --white: #FFFFFF;
+  --grey-cc: #CCCCCC;
+  --pinkfold: #FF5081;
+  --light-blue: #4ECFEF;
+  --cool-grey: #FBFBFB;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+svg { display: block; }
+
+.frame {
+  position: relative;
+  width: 375px;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy);
+}
+.abs { position: absolute; }
+/* runs that carry LNUM + TNUM in the file */
+.num { font-feature-settings: "lnum" 1, "tnum" 1; }
+
+/* Text boxes keep Figma's box; flex centres any overflow evenly. */
+.tx   { position: absolute; display: flex; white-space: nowrap; }
+.tx-c { justify-content: center; text-align: center; }
+.tx-r { justify-content: flex-end; text-align: right; }
+.tx-l { justify-content: flex-start; text-align: left; }
+/* multi-line text boxes: a column, each line its own block */
+.tb   { position: absolute; display: flex; flex-direction: column; white-space: nowrap; }
+.tb-c { align-items: center; text-align: center; }
+.tb-r { align-items: flex-end; text-align: right; }
+.tb-l { align-items: flex-start; text-align: left; }
+
+/* ---------- iOS Nav Bar (contracted) ---------- */
+.ios        { left: 0; top: 0; width: 375px; height: 63px; }
+.ios-bg     { left: 0; top: 0; width: 375px; height: 63px; }
+/* Divider: 0.5px black under a 20% group opacity, spanning y 62.5-63 = half of row 62
+   at 0.2, drawn as one crisp row at 0.1 */
+.ios-div    { left: 0; top: 62px; width: 375px; height: 1px; background: rgba(0, 0, 0, 0.1); }
+.ios-status { left: 0; top: 0; width: 375px; height: 44px; }
+.ios-ctr    { left: 293.5px; top: 17.16px; width: 67px; height: 11.5px; }
+.ios-fill   { left: 44.5px; top: 1.9167px; width: 18px; height: 7.6667px; background: #000; border-radius: 1.6px; }
+/* Figma names SF Pro Text; the system face is listed first on purpose (library convention) */
+.t-ios-time { font-family: -apple-system, 'SF Pro Text', sans-serif; font-feature-settings: normal;
+              font-weight: 600; font-size: 15px; line-height: 18px; letter-spacing: -0.165px; color: #000; }
+.t-ios-url  { font-family: -apple-system, 'SF Pro Text', sans-serif; font-feature-settings: normal;
+              font-weight: 400; font-size: 12px; line-height: 15px; letter-spacing: -0.35px; color: #000; }
+/* CSS adds letter-spacing after the last glyph; Figma's box does not */
+.t-ios-time .trk { margin-right: 0.165px; }
+.t-ios-url  .trk { margin-right: 0.35px; }
+
+/* ---------- header/mobile ---------- */
+.hdr       { left: 0; top: 63px; width: 375px; height: 72px; }
+/* 0.333px #CCCCCC stroke, outside the box (the export inks row 135, not row 134):
+   one crisp row at the alpha its coverage produces. Side bleed is clipped by the frame. */
+.hdr-bg    { left: 0; top: 0; width: 375px; height: 72px; background: var(--white);
+             box-shadow: 0 0 0 1px rgba(204, 204, 204, 0.333); }
+.hdr-logo  { left: 24px; top: 16px; width: 140px; height: 44px; }
+.hdr-btn   { left: 251px; top: 14px; width: 120px; height: 44px; }
+.hdr-ico   { left: 66px; top: 0; width: 44px; height: 44px; }
+/* icon/hamberder's vector, 24x22 at 10,11 of the 44 box. The instance overrides its fill to
+   Dark #292929; the icon-level export still carries the main component's #123456. */
+.hdr-vec   { left: 10px; top: 11px; width: 24px; height: 22px; }
+
+.frame { height: 1241px; background: #F6F6F6; }
+
+.t-h3     { font-weight: 700; font-size: 24px; line-height: 48px; letter-spacing: -1px; }   /* H3 Bold 24 */
+.t-h3 .trk { margin-right: 1px; }
+.t-h3m    { font-weight: 700; font-size: 24px; line-height: 29px; letter-spacing: -1px; }   /* H3.m Bold 24 */
+.t-h1m    { font-weight: 700; font-size: 28px; line-height: 29px; letter-spacing: -1px; }   /* H1.m Bold 28 */
+.t-h1m .trk { margin-right: 1px; }
+.t-b2     { font-weight: 400; font-size: 12px; line-height: 15px; }                          /* B2 / Disclaimer Regular 12 */
+.t-b2m    { font-weight: 400; font-size: 10px; line-height: 14px; }                          /* B2.m Regular 10 */
+.t-b10    { font-weight: 700; font-size: 10px; line-height: 14px; }
+.t-b1     { font-weight: 400; font-size: 20px; line-height: 28px; }                          /* B1 Regular 20 */
+.t-t2     { font-weight: 700; font-size: 20px; line-height: 24px; }                          /* T2 / Label Bold 20 */
+.t-risk   { font-weight: 700; font-size: 11.707px; line-height: 18px; letter-spacing: -0.2341px; color: #1B3454; }
+.t-i      { font-weight: 700; font-size: 14px; line-height: 17px; color: var(--white); }
+.t-link   { text-decoration: underline; text-decoration-skip-ink: none; text-underline-position: from-font; }
+.white    { color: var(--white); }
+.para     { white-space: normal; }
+
+/* copy/fundsHead */
+.head     { left: 48px; top: 147px; width: 280px; height: 167px; }
+.brlogo   { left: 0; top: 146px; width: 147px; height: 21px; overflow: hidden; }
+
+/* comp/riskIndicator2 */
+.ind      { left: 0; top: 683px; width: 375px; height: 69px; }
+.chev     { top: 6px; width: 44px; height: 44px; }
+/* the export is the chevron as drawn, pointing right; these three are used pointing left */
+.chev-l   { transform: rotate(180deg); }
+
+/* Group 72: risk acceptance. The BG export carries its two 1px #EEEEEE lines, the top one
+   a row above the panel. */
+.panel-bg { left: 0; top: 782px; width: 375px; height: 271px; }
+.chk      { left: 45px; top: 971px; width: 83px; height: 44px; }
+.chk-box  { left: 0; top: 0; width: 44px; height: 44px; }
+.more     { left: 302px; width: 18px; height: 18px; }
+
+/* button/Save */
+.btn      { left: 131px; top: 1093px; width: 114px; height: 48px; }
+.btn-bg   { inset: 0; background: var(--pinkfold); border-radius: 8px; }
+
+/* module/riskCarousselWide: four 244px cards in a 284px frame that does not clip; the
+   screen frame clips them at 375 */
+.car      { left: 46px; top: 354px; width: 284px; height: 289px; }
+.card     { top: 0; width: 244px; height: 289px; }
+.card-bg  { inset: 0; background: var(--white); border-radius: 12px;
+            box-shadow: 0 1.911px 19.108px 0 rgba(0, 0, 0, 0.12); }
+.sel      { left: 192px; top: 241px; width: 32px; height: 32px; }
+.sel-bg   { left: 144px; top: 241px; width: 80px; height: 32px; background: var(--white); }
+.dot8     { left: 144px; width: 8px; height: 8px; }
+.pie-box  { left: 24px; top: 141px; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; }
+.pie-rot  { flex: none; transform: rotate(-90deg); }
+.pie      { position: relative; width: 100px; height: 100px; }
+.tip      { left: 204px; top: 18px; width: 20px; height: 20px; }
+
+/* combo/navbar/mobile/module */
+.back     { left: 4px; top: 16px; width: 120px; height: 44px; }
+.back-ico { left: 2px; top: 0; width: 44px; height: 44px; transform: rotate(180deg); }
+
+/* Measured correction, not a Figma value: Chrome and Figma place the baseline differently here;
+   these styles rendered ~1px high against the Figma export, so they move down 1px. */
+.t-h3, .t-h1m, .t-b2m, .t-b10, .t-i { translate: 0 1px; }
+</style>
+<div class="frame" data-frame data-node-id="2055:6872">
+
+  <div class="abs head" data-node-id="2055:6899">
+    <div data-node-id="2055:6900">
+      <p class="tx tx-l t-b2m" style="left:225px;top:128px;width:55px;height:14px" data-node-id="2055:6902">Annual fee</p>
+      <p class="tx tx-l t-b1" style="left:223px;top:139px;width:57px;height:28px" data-node-id="2055:6903">0.75%</p>
+      <div class="abs brlogo" data-node-id="2055:6904"><svg class="abs" style="display:block;left:0;top:0" role="img" aria-label="BlackRock" preserveAspectRatio="none" overflow="visible" width="146.943" height="20.8297" viewBox="0 0 146.943 20.8297" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M18.7013 20.4324V0H23.3554V20.4324H18.7013ZM109.172 12.7986C109.172 7.86081 105.341 4.79595 100.857 4.79595C96.3446 4.79595 92.5419 7.88919 92.5419 12.7986C92.5419 17.7365 96.373 20.8297 100.857 20.8297C105.341 20.8297 109.172 17.7081 109.172 12.7986ZM104.574 12.7986C104.574 15.3811 102.843 16.8284 100.828 16.8284C98.8135 16.8284 97.0824 15.3811 97.0824 12.7986C97.0824 10.1878 98.8135 8.7973 100.828 8.7973C102.843 8.7973 104.574 10.1878 104.574 12.7986ZM16.8284 14.5581C16.8284 12.2595 15.6365 10.5 13.5081 9.7054C15.523 8.59865 16.2324 7.15135 16.2324 5.44865C16.2324 2.46892 14.0757 0 9.25135 0.0283784H0V20.4608H9.64865C14.5014 20.4324 16.8284 18.0203 16.8284 14.5581ZM11.2946 6.04459C11.2946 7.43513 10.4149 8.22973 8.71216 8.22973H4.8527V3.97297H8.71216C10.273 3.97297 11.2946 4.65405 11.2946 6.04459ZM11.7203 14.2459C11.7203 15.5797 10.7838 16.4595 9.0527 16.4595H4.8527V12.0324H9.0527C10.727 12.0324 11.7203 12.8838 11.7203 14.2459ZM57.3527 8.96757C56.0757 6.3 53.6919 4.82432 50.0878 4.82432C45.8311 4.82432 42.0284 7.49189 42.0284 12.7986C42.0284 17.9635 45.377 20.8297 50.0311 20.8297C53.2946 20.8297 56.0473 19.5243 57.3527 16.7149L53.6068 14.7851C52.9257 16.0338 51.8757 16.8284 50.2013 16.8284C48.0446 16.8284 46.6541 15.2959 46.6541 12.7986C46.6541 10.3014 48.2432 8.7973 50.173 8.7973C51.677 8.7973 52.8122 9.47838 53.5216 10.9541L57.3527 8.96757ZM125.943 8.96757C124.666 6.3 122.282 4.82432 118.678 4.82432C114.422 4.82432 110.619 7.49189 110.619 12.7986C110.619 17.9635 113.968 20.8297 118.622 20.8297C121.885 20.8297 124.638 19.5243 125.943 16.7149L122.197 14.7851C121.516 16.0338 120.466 16.8284 118.792 16.8284C116.635 16.8284 115.245 15.2959 115.245 12.7986C115.245 10.3014 116.834 8.7973 118.764 8.7973C120.268 8.7973 121.403 9.47838 122.112 10.9541L125.943 8.96757ZM86.923 20.4324L83.0351 13.5649H80.0554V20.4324H75.2595V0H83.9149C88.5973 0 91.8608 2.24189 91.8608 6.64054C91.8608 9.45 90.4703 11.4365 88.0014 12.6568L92.4851 20.4324H86.923ZM80.0838 9.50676H83.6595C85.873 9.50676 86.9514 8.25811 86.9514 6.78243C86.9514 5.02297 85.9297 4.05811 83.6595 4.05811H80.0838V9.50676ZM41.2622 20.177V16.9703C41.0635 17.027 40.7797 17.0838 40.4676 17.0838C39.8716 17.0838 39.5595 16.7716 39.5595 16.2324V10.9257C39.5595 6.9527 36.8919 4.8527 32.4932 4.8527C29.627 4.8527 27.1865 5.9027 25.6541 7.26486L28.2365 10.1595C29.2581 9.25135 30.6203 8.68378 31.9541 8.68378C33.9973 8.68378 34.9622 9.70541 34.9622 11.3797V11.8622C33.9973 11.6351 32.777 11.4081 31.3013 11.4081C27.5838 11.4081 25.1716 13.1959 25.1716 16.1473C25.1716 19.1838 27.1865 20.773 30.3081 20.773C32.4365 20.773 34.3378 19.8932 35.3311 18.7581C35.927 20.2622 37.2324 20.6595 38.5095 20.6595C39.3892 20.6878 40.4108 20.5459 41.2622 20.177ZM34.9905 15.3811C34.9905 16.7716 33.6568 17.6797 32.1243 17.6797C30.677 17.6797 29.9676 16.9419 29.9676 15.9203C29.9676 14.8419 30.7622 14.0473 32.3797 14.0473C33.373 14.0473 34.2527 14.2176 34.9905 14.3878V15.3811ZM142.573 20.4324L137.096 10.9257L142.232 5.33513H137.068L131.647 11.3514V0.0283784H127.022V20.4608H131.647V16.7716L133.861 14.4162L137.323 20.4608H142.573V20.4324ZM74.0392 20.4324L68.5622 10.9257L73.6986 5.33513H68.477L63.1135 11.3514V0.0283784H58.4878V20.4608H63.1135V16.7716L65.327 14.4162L68.7892 20.4608H74.0392V20.4324ZM145.411 17.5946C146.376 17.5946 146.943 18.1905 146.943 19.0986C146.943 20.0068 146.376 20.6027 145.411 20.6027C144.446 20.6027 143.878 20.0068 143.878 19.0986C143.878 18.1905 144.446 17.5946 145.411 17.5946ZM145.411 20.4041C146.177 20.4041 146.688 19.95 146.688 19.0986C146.688 18.2473 146.149 17.7932 145.411 17.7932C144.645 17.7932 144.134 18.2473 144.134 19.0986C144.105 19.9784 144.645 20.4041 145.411 20.4041ZM144.815 18.3324H145.439C145.808 18.3324 146.007 18.5311 146.007 18.8149C146.007 19.0703 145.893 19.2122 145.695 19.2973L145.978 19.8365H145.695L145.439 19.3541H145.099V19.8365H144.815V18.3324ZM145.099 18.5595V19.0986H145.411C145.609 19.0986 145.723 19.0419 145.723 18.8432C145.723 18.673 145.638 18.5878 145.439 18.5878H145.099V18.5595Z" fill="black"/>
+</g>
+</svg></div>
+    </div>
+    <p class="abs para t-b2" style="left:0;top:60px;width:280px;height:60px" data-node-id="2055:6908">Your savings will be managed by <span class="t-link">Blackrock</span>, the world's largest asset manager. They make your money work for you by investing it around the world, with FSCS protection.</p>
+    <p class="tx tx-c t-h3" style="left:50px;top:0px;width:180px;height:48px" data-node-id="2055:6909"><span class="trk">Select risk level</span></p>
+  </div>
+
+  <div class="abs ind" data-node-id="2055:6910">
+    <div data-node-id="2055:6911">
+      <div class="abs chev" style="left:198px" data-node-id="2055:6913"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<path d="M21 18L25 22L21 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg></div>
+      <div class="abs chev" style="left:210px" data-node-id="2055:6915"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.6">
+<path d="M21 18L25 22L21 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg></div>
+      <div class="abs chev" style="left:222px" data-node-id="2055:6917"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M21 18L25 22L21 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg></div>
+      <p class="tx tx-l t-b2m" style="left:216px;top:0px;width:55px;height:14px" data-node-id="2055:6919">Higher risk</p>
+      <div class="tb tb-l t-b2m" style="left:216px;top:41px;width:76px;height:28px" data-node-id="2055:6920"><p>Typically</p><p>higher rewards</p></div>
+    </div>
+    <div data-node-id="2055:6921">
+      <div class="abs chev chev-l" style="left:110px" data-node-id="2055:6923"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M21 18L25 22L21 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg></div>
+      <div class="abs chev chev-l" style="left:122px" data-node-id="2055:6925"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.6">
+<path d="M21 18L25 22L21 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg></div>
+      <div class="abs chev chev-l" style="left:134px" data-node-id="2055:6927"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.2">
+<path d="M21 18L25 22L21 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg></div>
+      <p class="tx tx-r t-b2m" style="left:109px;top:0px;width:51px;height:14px" data-node-id="2055:6929">Lower risk</p>
+      <div class="tb tb-r t-b2m" style="left:89px;top:41px;width:71px;height:28px" data-node-id="2055:6930"><p>Typically</p><p>lower rewards</p></div>
+    </div>
+  </div>
+
+  <div data-node-id="2055:6931">
+    <div class="abs panel-bg" data-node-id="2055:6932"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="375" height="271" viewBox="0 0 375 271" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<rect y="1" width="375" height="270" fill="white"/>
+<line y1="0.5" x2="375" y2="0.5" stroke="#EEEEEE"/>
+<line y1="270.5" x2="375" y2="270.5" stroke="#EEEEEE"/>
+</g>
+</svg></div>
+    <div class="abs chk" data-node-id="2055:6936">
+      <p class="tx tx-l t-b2" style="left:46px;top:14px;width:216px;height:15px">I understand and accept these risks.</p>
+      <div class="abs chk-box"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<rect x="11" y="11" width="22" height="22" rx="3" fill="white" stroke="#FF5081" stroke-width="2"/>
+<path d="M17 21L22 26L33 15" stroke="#FF5081" stroke-width="2"/>
+</g>
+</svg></div>
+    </div>
+    <p class="tx tx-l t-b2" style="left:28px;top:839px;width:223px;height:15px" data-node-id="2055:6937">There&rsquo;s 3 things we need to highligth</p>
+    <div data-node-id="2055:6938">
+      <div data-node-id="2055:6939">
+        <p class="tx tx-l t-risk" style="left:55px;top:886px;width:94px;height:18px" data-node-id="2055:6940">Capital is at risk</p>
+        <div class="abs more" style="top:886.5208px" data-node-id="2055:6941"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<circle cx="9" cy="9" r="8.5" stroke="#1B3454"/>
+<path d="M5 7.74316L8.78766 11.1865L12.5753 7.74316" stroke="#123457" stroke-width="1.37733" stroke-linecap="round"/>
+</g>
+</svg></div>
+      </div>
+      <div data-node-id="2055:6944">
+        <p class="tx tx-l t-risk" style="left:55px;top:908.0374px;width:176px;height:18px" data-node-id="2055:6945">Exchange rates affect growth</p>
+        <div class="abs more" style="top:908.5208px" data-node-id="2055:6946"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<circle cx="9" cy="9" r="8.5" stroke="#1B3454"/>
+<path d="M5 7.74316L8.78766 11.1865L12.5753 7.74316" stroke="#123457" stroke-width="1.37733" stroke-linecap="round"/>
+</g>
+</svg></div>
+      </div>
+      <div data-node-id="2055:6949">
+        <p class="tx tx-l t-risk" style="left:55px;top:930.0745px;width:191px;height:18px" data-node-id="2055:6950">Early withdrawls impact returns</p>
+        <div class="abs more" style="top:930.5208px" data-node-id="2055:6951"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<circle cx="9" cy="9" r="8.5" stroke="#1B3454"/>
+<path d="M5 7.74316L8.78766 11.1865L12.5753 7.74316" stroke="#123457" stroke-width="1.37733" stroke-linecap="round"/>
+</g>
+</svg></div>
+      </div>
+    </div>
+    <p class="tx tx-l t-h3m" style="left:28px;top:812px;width:193px;height:29px" data-node-id="2055:6954">Risk acceptance</p>
+  </div>
+
+  <div class="abs btn" data-node-id="2055:6955">
+    <div class="abs btn-bg"></div>
+    <p class="tx tx-c t-t2 white" style="left:32px;top:12px;width:50px;height:24px">Save</p>
+  </div>
+
+  <div class="abs car" data-node-id="2055:6956">
+    <div class="abs card" style="left:20px" data-node-id="2055:6957">
+      <div class="abs card-bg"></div>
+      <div class="abs sel"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="15.5223" stroke="#CCCCCC" stroke-width="0.955414"/>
+</svg></div>
+      <p class="tx tx-r t-b10 num" style="left:151px;top:250px;width:33px;height:14px">Select</p>
+      <div data-node-id="2055:6961">
+        <div class="abs sel-bg"></div>
+        <div class="abs sel"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8365 32 32 24.8366 32 16C32 7.16341 24.8365 0 16 0C7.16345 0 0 7.16341 0 16C0 24.8366 7.16345 32 16 32ZM22.2761 13.6095C22.7968 13.0888 22.7968 12.2445 22.2761 11.7239C21.7555 11.2031 20.9112 11.2031 20.3905 11.7239L14 18.1144L11.6095 15.7239C11.0888 15.2031 10.2445 15.2031 9.72388 15.7239C9.20317 16.2445 9.20317 17.0888 9.72388 17.6095L13.0572 20.9428C13.3073 21.1929 13.6464 21.3333 14 21.3333C14.3536 21.3333 14.6927 21.1929 14.9428 20.9428L22.2761 13.6095Z" fill="#43A800"/>
+</svg></div>
+        <p class="tx tx-r t-b10 num" style="left:138px;top:250px;width:46px;height:14px">Selected</p>
+      </div>
+      <div data-node-id="2055:6965">
+        <p class="tx tx-l t-b2m num" style="left:156px;top:177px;width:63px;height:14px">Bonds | 63%</p>
+        <div class="abs dot8" style="top:181px"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4" cy="4" r="4" fill="#4ECFEF"/>
+</svg></div>
+        <p class="tx tx-l t-b2m num" style="left:156px;top:191px;width:64px;height:14px">Stocks | 37%</p>
+        <div class="abs dot8" style="top:195px"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4" cy="4" r="4" fill="#123456"/>
+</svg></div>
+        <div class="abs pie-box"><div class="pie-rot"><div class="pie"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<circle cx="50" cy="50" r="50" fill="#123456"/>
+<path d="M100 50C100 58.289 97.9393 66.448 94.0032 73.7428C90.0671 81.0377 84.3792 87.2395 77.4511 91.7904C70.5231 96.3412 62.5724 99.0983 54.3143 99.8135C46.0562 100.529 37.7499 99.1797 30.1426 95.8877C22.5353 92.5958 15.8658 87.4642 10.7342 80.9547C5.60249 74.4452 2.16966 66.762 0.744541 58.5965C-0.68058 50.4309 -0.0532817 42.0391 2.57 34.1762C5.19327 26.3132 9.73023 19.2258 15.7726 13.5516L50 50H100Z" fill="#4ECFEF"/>
+</g>
+</svg></div></div></div>
+      </div>
+      <div class="tb tb-l t-b2" style="left:14px;top:64px;width:193px;height:45px"><p>&middot; Slow and steady growth</p><p>&middot; Less prone to ups and downs</p><p>&middot; Best if closer to retiring (&lt;10yrs)</p></div>
+      <p class="tx tx-l t-t2" style="left:20px;top:16px;width:69px;height:24px">Level 1</p>
+      <div class="abs tip">
+        <svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#FF5081"/>
+</svg>
+        <p class="tx tx-l t-i" style="left:8px;top:2px;width:5px;height:17px">i</p>
+      </div>
+    </div>
+    <div class="abs card" style="left:296px" data-node-id="2055:6981">
+      <div class="abs card-bg"></div>
+      <div class="abs sel"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="15.5223" stroke="#CCCCCC" stroke-width="0.955414"/>
+</svg></div>
+      <p class="tx tx-r t-b10 num" style="left:151px;top:250px;width:33px;height:14px">Select</p>
+      <div data-node-id="2055:6989">
+        <p class="tx tx-l t-b2m num" style="left:156px;top:177px;width:63px;height:14px">Bonds | 44%</p>
+        <div class="abs dot8" style="top:181px"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4" cy="4" r="4" fill="#4ECFEF"/>
+</svg></div>
+        <p class="tx tx-l t-b2m num" style="left:156px;top:191px;width:64px;height:14px">Stocks | 56%</p>
+        <div class="abs dot8" style="top:195px"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4" cy="4" r="4" fill="#123456"/>
+</svg></div>
+        <div class="abs pie-box"><div class="pie-rot"><div class="pie"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<circle cx="50" cy="50" r="50" fill="#123456"/>
+<path d="M100 50C100 61.6352 95.9422 72.9061 88.5257 81.8712C81.1091 90.8363 70.7982 96.9341 59.3691 99.1144C47.94 101.295 36.1083 99.4206 25.9123 93.8153C15.7163 88.21 7.79438 79.2244 3.51118 68.4062L50 50H100Z" fill="#4ECFEF"/>
+</g>
+</svg></div></div></div>
+      </div>
+      <div class="tb tb-l t-b2" style="left:14px;top:64px;width:211px;height:45px"><p>&middot; More growth potential</p><p>&middot; Some ups and downs</p><p>&middot; Midway from retirement (10-15yrs)</p></div>
+      <p class="tx tx-l t-t2" style="left:20px;top:16px;width:73px;height:24px">Level 2</p>
+      <div class="abs tip">
+        <svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#FF5081"/>
+</svg>
+        <p class="tx tx-l t-i" style="left:8px;top:2px;width:5px;height:17px">i</p>
+      </div>
+    </div>
+    <div class="abs card" style="left:572px" data-node-id="2055:7005">
+      <div class="abs card-bg"></div>
+      <div class="abs sel"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="15.5223" stroke="#CCCCCC" stroke-width="0.955414"/>
+</svg></div>
+      <p class="tx tx-r t-b10 num" style="left:151px;top:250px;width:33px;height:14px">Select</p>
+      <div data-node-id="2055:7013">
+        <p class="tx tx-l t-b2m num" style="left:156px;top:177px;width:63px;height:14px">Bonds | 28%</p>
+        <div class="abs dot8" style="top:181px"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4" cy="4" r="4" fill="#4ECFEF"/>
+</svg></div>
+        <p class="tx tx-l t-b2m num" style="left:156px;top:191px;width:64px;height:14px">Stocks | 72%</p>
+        <div class="abs dot8" style="top:195px"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4" cy="4" r="4" fill="#123456"/>
+</svg></div>
+        <div class="abs pie-box"><div class="pie-rot"><div class="pie"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<circle cx="50" cy="50" r="50" fill="#123456"/>
+<path d="M100 50C100 57.3601 98.3751 64.6294 95.2414 71.289C92.1076 77.9486 87.5422 83.8342 81.8712 88.5257C76.2002 93.2171 69.5633 96.5988 62.4345 98.4292C55.3057 100.26 47.8606 100.494 40.6309 99.1144L50 50H100Z" fill="#4ECFEF"/>
+</g>
+</svg></div></div></div>
+      </div>
+      <div class="tb tb-l t-b2" style="left:14px;top:64px;width:197px;height:45px"><p>&middot; Significant growth potential</p><p>&middot; Significant ups and downs</p><p>&middot; Long way to retirement (15 yrs+)</p></div>
+      <p class="tx tx-l t-t2" style="left:20px;top:16px;width:73px;height:24px">Level 3</p>
+      <div class="abs tip">
+        <svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#FF5081"/>
+</svg>
+        <p class="tx tx-l t-i" style="left:8px;top:2px;width:5px;height:17px">i</p>
+      </div>
+    </div>
+    <div class="abs card" style="left:848px" data-node-id="2055:7029">
+      <div class="abs card-bg"></div>
+      <div class="abs sel"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="15.5223" stroke="#CCCCCC" stroke-width="0.955414"/>
+</svg></div>
+      <p class="tx tx-r t-b10 num" style="left:151px;top:250px;width:33px;height:14px">Select</p>
+      <div data-node-id="2055:7033">
+        <div class="abs sel-bg"></div>
+        <div class="abs sel"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16 32C24.8365 32 32 24.8366 32 16C32 7.16341 24.8365 0 16 0C7.16345 0 0 7.16341 0 16C0 24.8366 7.16345 32 16 32ZM22.2761 13.6095C22.7968 13.0888 22.7968 12.2445 22.2761 11.7239C21.7555 11.2031 20.9112 11.2031 20.3905 11.7239L14 18.1144L11.6095 15.7239C11.0888 15.2031 10.2445 15.2031 9.72388 15.7239C9.20317 16.2445 9.20317 17.0888 9.72388 17.6095L13.0572 20.9428C13.3073 21.1929 13.6464 21.3333 14 21.3333C14.3536 21.3333 14.6927 21.1929 14.9428 20.9428L22.2761 13.6095Z" fill="#43A800"/>
+</svg></div>
+        <p class="tx tx-r t-b10 num" style="left:138px;top:250px;width:46px;height:14px">Selected</p>
+      </div>
+      <div data-node-id="2055:7037">
+        <p class="tx tx-l t-b2m num" style="left:156px;top:177px;width:63px;height:14px">Bonds | 14%</p>
+        <div class="abs dot8" style="top:181px"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4" cy="4" r="4" fill="#4ECFEF"/>
+</svg></div>
+        <p class="tx tx-l t-b2m num" style="left:156px;top:191px;width:64px;height:14px">Stocks | 86%</p>
+        <div class="abs dot8" style="top:195px"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="4" cy="4" r="4" fill="#123456"/>
+</svg></div>
+        <div class="abs pie-box"><div class="pie-rot"><div class="pie"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<circle cx="50" cy="50" r="50" fill="#123456"/>
+<path d="M100 50C100 57.3601 98.3751 64.6294 95.2414 71.289C92.1076 77.9486 87.5422 83.8342 81.8712 88.5257L50 50H100Z" fill="#4ECFEF"/>
+</g>
+</svg></div></div></div>
+      </div>
+      <div class="tb tb-l t-b2" style="left:14px;top:64px;width:176px;height:45px"><p>&middot; Highest growth potential</p><p>&middot; Large ups and downs</p><p>&middot; Far from retirement (15 yrs+)</p></div>
+      <p class="tx tx-l t-t2" style="left:20px;top:16px;width:75px;height:24px">Level 4</p>
+      <div class="abs tip">
+        <svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="10" cy="10" r="10" fill="#FF5081"/>
+</svg>
+        <p class="tx tx-l t-i" style="left:8px;top:2px;width:5px;height:17px">i</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="abs hdr" data-node-id="2055:7053">
+    <div class="abs hdr-bg"></div>
+    <div class="abs back" data-node-id="I2055:7053;114:490">
+      <p class="tx tx-r t-t2" style="left:47px;top:10px;width:53px;height:24px">Back</p>
+      <div class="abs back-ico"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M21 18L25 22L21 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg></div>
+    </div>
+    <p class="tx tx-r t-h1m" style="left:258px;top:21px;width:85px;height:29px" data-node-id="I2055:7053;114:500"><span class="trk">Invest</span></p>
+  </div>
+
+  <div class="abs ios" data-node-id="2055:7054">
+    <div class="abs ios-bg">
+      <svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="375" height="63" viewBox="0 0 375 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-40.7742" y="-40.7742" width="456.548" height="144.548"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20.39px);clip-path:url(#final-fund-36-bgblur_0_0_74_clip_path);height:100%;width:100%"></div></foreignObject><path data-figma-bg-blur-radius="40.7742" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z" fill="#F8F8F8" fill-opacity="0.7"/>
+<defs>
+<clipPath id="final-fund-36-bgblur_0_0_74_clip_path" transform="translate(40.7742 40.7742)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z"/>
+</clipPath></defs>
+</svg>
+      <div class="abs ios-div"></div>
+    </div>
+    <p class="tx tx-c t-ios-url" style="left:145px;top:40px;width:84px;height:15px"><span class="trk">getpenfold.com</span></p>
+    <div class="abs ios-status">
+      <p class="tx tx-c t-ios-time" style="left:19.894px;top:14px;width:54px;height:18px"><span class="trk">9:24</span></p>
+      <div class="abs ios-ctr">
+        <svg class="abs" style="display:block;left:42.5px;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="24.5" height="11.5" viewBox="0 0 24.5 11.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.58944 0H18.4106C19.6587 0 20.1113 0.129956 20.5676 0.373986C21.0239 0.618016 21.382 0.97612 21.626 1.43242C21.87 1.88871 22 2.34131 22 3.58944V7.91056C22 9.15869 21.87 9.61129 21.626 10.0676C21.382 10.5239 21.0239 10.882 20.5676 11.126C20.1113 11.37 19.6587 11.5 18.4106 11.5H3.58944C2.34131 11.5 1.88871 11.37 1.43242 11.126C0.97612 10.882 0.618016 10.5239 0.373986 10.0676C0.129956 9.61129 0 9.15869 0 7.91056V3.58944C0 2.34131 0.129956 1.88871 0.373986 1.43242C0.618016 0.97612 0.97612 0.618016 1.43242 0.373986C1.88871 0.129956 2.34131 0 3.58944 0ZM3.58944 1C2.60246 1 2.2579 1.06654 1.90401 1.2558C1.62199 1.40663 1.40663 1.62199 1.2558 1.90401C1.06654 2.2579 1 2.60246 1 3.58944V7.91056C1 8.89754 1.06654 9.2421 1.2558 9.59599C1.40663 9.87801 1.62199 10.0934 1.90401 10.2442C2.2579 10.4335 2.60246 10.5 3.58944 10.5H18.4106C19.3975 10.5 19.7421 10.4335 20.096 10.2442C20.378 10.0934 20.5934 9.87801 20.7442 9.59599C20.9335 9.2421 21 8.89754 21 7.91056V3.58944C21 2.60246 20.9335 2.2579 20.7442 1.90401C20.5934 1.62199 20.378 1.40663 20.096 1.2558C19.7421 1.06654 19.3975 1 18.4106 1H3.58944ZM24.5 5.69C24.5 6.92657 23 7.69 23 7.69V3.69C23 3.69 24.5 4.45343 24.5 5.69Z" fill="black" fill-opacity="0.36"/>
+</svg>
+        <div class="abs ios-fill"></div>
+        <svg class="abs" style="display:block;left:0;top:0.4401px" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="17.1" height="10.7" viewBox="0 0 17.1 10.7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.123 0.965892C14.1 1.08181 14.1 1.22121 14.1 1.5V9.2C14.1 9.47879 14.1 9.61819 14.123 9.73411C14.2177 10.2101 14.5899 10.5823 15.0659 10.6769C15.1818 10.7 15.3212 10.7 15.6 10.7C15.8788 10.7 16.0182 10.7 16.1341 10.6769C16.6101 10.5823 16.9822 10.2101 17.0769 9.73411C17.1 9.61819 17.1 9.47879 17.1 9.2V1.5C17.1 1.22121 17.1 1.08181 17.0769 0.965892C16.9822 0.489863 16.6101 0.117746 16.1341 0.0230577C16.0182 0 15.8788 0 15.6 0C15.3212 0 15.1818 0 15.0659 0.0230577C14.5899 0.117746 14.2177 0.489863 14.123 0.965892ZM9.39999 3.9C9.39999 3.62121 9.39999 3.48181 9.42305 3.36589C9.51774 2.88986 9.88986 2.51775 10.3659 2.42306C10.4818 2.4 10.6212 2.4 10.9 2.4C11.1788 2.4 11.3182 2.4 11.4341 2.42306C11.9101 2.51775 12.2822 2.88986 12.3769 3.36589C12.4 3.48181 12.4 3.62121 12.4 3.9V9.2C12.4 9.4788 12.4 9.61819 12.3769 9.73411C12.2822 10.2101 11.9101 10.5823 11.4341 10.6769C11.3182 10.7 11.1788 10.7 10.9 10.7C10.6212 10.7 10.4818 10.7 10.3659 10.6769C9.88986 10.5823 9.51774 10.2101 9.42305 9.73411C9.39999 9.61819 9.39999 9.4788 9.39999 9.2V3.9ZM4.82305 5.6659C4.79999 5.78182 4.79999 5.92121 4.79999 6.2V9.2C4.79999 9.4788 4.79999 9.61819 4.82305 9.73411C4.91773 10.2101 5.28985 10.5823 5.76588 10.6769C5.8818 10.7 6.02119 10.7 6.29999 10.7C6.57878 10.7 6.71818 10.7 6.8341 10.6769C7.31012 10.5823 7.68224 10.2101 7.77693 9.73411C7.79999 9.61819 7.79999 9.4788 7.79999 9.2V6.2C7.79999 5.92121 7.79999 5.78182 7.77693 5.6659C7.68224 5.18987 7.31012 4.81775 6.8341 4.72306C6.71818 4.7 6.57878 4.7 6.29999 4.7C6.02119 4.7 5.8818 4.7 5.76588 4.72306C5.28985 4.81775 4.91773 5.18987 4.82305 5.6659ZM0.0230577 7.6659C0 7.78182 0 7.92121 0 8.2V9.2C0 9.4788 0 9.61819 0.0230577 9.73411C0.117746 10.2101 0.489863 10.5823 0.965892 10.6769C1.08181 10.7 1.22121 10.7 1.5 10.7C1.77879 10.7 1.91819 10.7 2.03411 10.6769C2.51014 10.5823 2.88225 10.2101 2.97694 9.73411C3 9.61819 3 9.4788 3 9.2V8.2C3 7.92121 3 7.78182 2.97694 7.6659C2.88225 7.18987 2.51014 6.81775 2.03411 6.72306C1.91819 6.7 1.77879 6.7 1.5 6.7C1.22121 6.7 1.08181 6.7 0.965892 6.72306C0.489863 6.81775 0.117746 7.18987 0.0230577 7.6659Z" fill="black"/>
+</svg>
+        <svg class="abs" style="display:block;left:22.1001px;top:0.24px" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="15.4" height="11.0572" viewBox="0 0 15.4 11.0572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.70042 2.29636C9.93483 2.29646 12.0838 3.15501 13.7032 4.69457C13.8251 4.81343 14.02 4.81193 14.1401 4.69121L15.3058 3.51479C15.3666 3.45356 15.4005 3.37062 15.4 3.28433C15.3995 3.19803 15.3646 3.11549 15.3031 3.05498C11.0528 -1.01833 4.3474 -1.01833 0.0970716 3.05498C0.0355014 3.11545 0.000571881 3.19796 7.20154e-06 3.28426C-0.000567562 3.37055 0.033283 3.45352 0.0940465 3.51479L1.26005 4.69121C1.38006 4.81211 1.57513 4.81361 1.697 4.69457C3.31657 3.15491 5.46579 2.29636 7.70042 2.29636V2.29636ZM7.70042 6.12375C8.92809 6.12367 10.1119 6.57999 11.022 7.40402C11.145 7.52097 11.3389 7.51844 11.4589 7.39831L12.6232 6.22189C12.6845 6.16019 12.7186 6.07648 12.7177 5.98949C12.7168 5.90251 12.6811 5.8195 12.6185 5.75906C9.84735 3.18131 5.55584 3.18131 2.78469 5.75906C2.72209 5.8195 2.68637 5.90255 2.68555 5.98956C2.68473 6.07657 2.71887 6.16028 2.78031 6.22189L3.9443 7.39831C4.06427 7.51844 4.25817 7.52097 4.38125 7.40402C5.29065 6.58053 6.47357 6.12426 7.70042 6.12375V6.12375ZM9.93797 8.93135C10.0002 8.87024 10.0345 8.78614 10.0327 8.69891C10.031 8.61168 9.99327 8.52905 9.92855 8.47053C8.64232 7.38263 6.75852 7.38263 5.47229 8.47053C5.40753 8.529 5.36977 8.6116 5.36792 8.69883C5.36608 8.78606 5.40031 8.87019 5.46254 8.93135L7.4769 10.9639C7.53594 11.0236 7.61643 11.0572 7.70042 11.0572C7.78441 11.0572 7.8649 11.0236 7.92394 10.9639L9.93797 8.93135Z" fill="black"/>
+</svg>
+      </div>
+    </div>
+  </div>
+
+</div>
+</template></div>
+</div>
+</body></html>

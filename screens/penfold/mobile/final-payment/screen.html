@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=375">
+<title>Penfold · Final onboarding, payment</title>
+<style>html,body{margin:0;background:#F4F4F4}</style>
+</head><body>
+<!-- CodeCatalog · penfold/mobile/final-payment · 375×1365 · built from snippet.html · fp 026b4116905d
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<div class="cc-screen" data-cc="penfold/mobile/final-payment" style="--cc-w:375;--cc-h:1365;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:375px;height:1365px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:375px;height:1365px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+:host{white-space:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-align:start;font-style:normal;font-variant:normal;line-height:normal;font-weight:400}
+:host {
+  --navy: #123456;
+  --white: #FFFFFF;
+  --grey-cc: #CCCCCC;
+  --pinkfold: #FF5081;
+  --light-blue: #4ECFEF;
+  --cool-grey: #FBFBFB;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+svg { display: block; }
+
+.frame {
+  position: relative;
+  width: 375px;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--navy);
+}
+.abs { position: absolute; }
+/* runs that carry LNUM + TNUM in the file */
+.num { font-feature-settings: "lnum" 1, "tnum" 1; }
+
+/* Text boxes keep Figma's box; flex centres any overflow evenly. */
+.tx   { position: absolute; display: flex; white-space: nowrap; }
+.tx-c { justify-content: center; text-align: center; }
+.tx-r { justify-content: flex-end; text-align: right; }
+.tx-l { justify-content: flex-start; text-align: left; }
+/* multi-line text boxes: a column, each line its own block */
+.tb   { position: absolute; display: flex; flex-direction: column; white-space: nowrap; }
+.tb-c { align-items: center; text-align: center; }
+.tb-r { align-items: flex-end; text-align: right; }
+.tb-l { align-items: flex-start; text-align: left; }
+
+/* ---------- iOS Nav Bar (contracted) ---------- */
+.ios        { left: 0; top: 0; width: 375px; height: 63px; }
+.ios-bg     { left: 0; top: 0; width: 375px; height: 63px; }
+/* Divider: 0.5px black under a 20% group opacity, spanning y 62.5-63 = half of row 62
+   at 0.2, drawn as one crisp row at 0.1 */
+.ios-div    { left: 0; top: 62px; width: 375px; height: 1px; background: rgba(0, 0, 0, 0.1); }
+.ios-status { left: 0; top: 0; width: 375px; height: 44px; }
+.ios-ctr    { left: 293.5px; top: 17.16px; width: 67px; height: 11.5px; }
+.ios-fill   { left: 44.5px; top: 1.9167px; width: 18px; height: 7.6667px; background: #000; border-radius: 1.6px; }
+/* Figma names SF Pro Text; the system face is listed first on purpose (library convention) */
+.t-ios-time { font-family: -apple-system, 'SF Pro Text', sans-serif; font-feature-settings: normal;
+              font-weight: 600; font-size: 15px; line-height: 18px; letter-spacing: -0.165px; color: #000; }
+.t-ios-url  { font-family: -apple-system, 'SF Pro Text', sans-serif; font-feature-settings: normal;
+              font-weight: 400; font-size: 12px; line-height: 15px; letter-spacing: -0.35px; color: #000; }
+/* CSS adds letter-spacing after the last glyph; Figma's box does not */
+.t-ios-time .trk { margin-right: 0.165px; }
+.t-ios-url  .trk { margin-right: 0.35px; }
+
+/* ---------- header/mobile ---------- */
+.hdr       { left: 0; top: 63px; width: 375px; height: 72px; }
+/* 0.333px #CCCCCC stroke, outside the box (the export inks row 135, not row 134):
+   one crisp row at the alpha its coverage produces. Side bleed is clipped by the frame. */
+.hdr-bg    { left: 0; top: 0; width: 375px; height: 72px; background: var(--white);
+             box-shadow: 0 0 0 1px rgba(204, 204, 204, 0.333); }
+.hdr-logo  { left: 24px; top: 16px; width: 140px; height: 44px; }
+.hdr-btn   { left: 251px; top: 14px; width: 120px; height: 44px; }
+.hdr-ico   { left: 66px; top: 0; width: 44px; height: 44px; }
+/* icon/hamberder's vector, 24x22 at 10,11 of the 44 box. The instance overrides its fill to
+   Dark #292929; the icon-level export still carries the main component's #123456. */
+.hdr-vec   { left: 10px; top: 11px; width: 24px; height: 22px; }
+
+.frame { height: 1365px; background: #F4F4F4; }
+
+.t-h3m    { font-weight: 700; font-size: 24px; line-height: 29px; letter-spacing: -1px; font-feature-settings: "lnum" 1, "tnum" 1; }  /* H3.m Bold 24 */
+.t-lbl    { font-weight: 500; font-size: 12px; line-height: 20px; }                          /* LabelS.m / T3.m Medium 12 */
+.t-b2m    { font-weight: 400; font-size: 10px; line-height: 14px; }                          /* B2.m Regular 10 */
+.t-b2     { font-weight: 400; font-size: 12px; line-height: 15px; }                          /* Disclaimer Regular 12 */
+.t-pct    { font-weight: 600; font-size: 14px; line-height: 17px; letter-spacing: -1px; font-feature-settings: "lnum" 1, "tnum" 1; }
+.t-pct .trk { margin-right: 1px; }
+.t-amt    { font-weight: 700; font-size: 24px; line-height: 29px; letter-spacing: -0.8px; font-feature-settings: "lnum" 1, "tnum" 1; }
+.t-amt .trk { margin-right: 0.8px; }
+.t-day    { font-weight: 700; font-size: 16px; line-height: 20px; letter-spacing: -0.4px; font-feature-settings: "lnum" 1, "tnum" 1; }
+.t-phn    { font-weight: 500; font-size: 12px; line-height: 15px; letter-spacing: -0.4px; font-feature-settings: "lnum" 1, "tnum" 1; color: var(--grey-cc); }
+.t-sw     { font-weight: 500; font-size: 12px; line-height: 14px; }   /* Medium 12 at 120%: Figma lays 14.4 out on 14px lines (28px box, 2 lines) */
+.t-dd     { font-weight: 700; font-size: 16px; line-height: 20px; letter-spacing: -1px; }
+.t-r10    { font-weight: 400; font-size: 10px; line-height: 12px; }                          /* Regular 10 at 120% */
+.t-link   { font-weight: 600; color: var(--pinkfold); text-decoration: underline; text-decoration-skip-ink: none; text-underline-position: from-font; }
+.wrap     { white-space: normal; }
+
+/* inputBox/mobile */
+.in       { width: 152px; height: 60px; }
+.in-box   { left: 0; top: 20px; width: 152px; height: 40px; background: var(--white); border-radius: 8px; }
+.in-str   { box-shadow: inset 0 0 0 2px var(--grey-cc); }   /* 2px #CCCCCC inside stroke */
+/* icon/chevronRight turned 90deg in the instance */
+.in-chev  { left: 104px; top: 19px; width: 44px; height: 44px; transform: rotate(90deg); }
+
+/* button/edit */
+.edit     { left: 290px; top: 196px; width: 40px; height: 64px; }
+.edit-bg  { left: 0; top: 24px; width: 40px; height: 40px; background: #5081FF; border-radius: 20px; }
+.edit-ico { left: 9px; top: 31px; width: 24px; height: 24px; }
+/* Frame 2: 1px #E7EBED inside stroke */
+.pct      { left: 192px; top: 220px; width: 49px; height: 40px; }
+.pct-bg   { left: 1px; top: 0; width: 46px; height: 40px; background: var(--white); border-radius: 8px; box-shadow: inset 0 0 0 1px #E7EBED; }
+
+/* comp/switch/Salary */
+.sw       { width: 96px; height: 71px; }
+.sw-btn   { left: 13px; top: 29px; width: 70px; height: 44px; }
+.sw-trk   { left: 2px; top: 2px; width: 66px; height: 40px; border-radius: 20px; background: var(--pinkfold);
+            box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.08); }
+.sw-cap   { left: 26px; top: 0; width: 44px; height: 44px; }
+.sw-lbl   { left: 0; width: 97px; height: 28px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; text-align: center; white-space: nowrap; }
+
+/* recurring icon: -scale-y then rotate 180 in the file = mirrored left-right */
+.rec      { left: 200px; top: 300px; width: 32px; height: 32px; transform: scaleX(-1); }
+
+/* Frame 13: Direct Debit guarantee panel. Rectangle 173 is the 1px #123456 stroke, drawn on top */
+.ddp      { left: 32px; top: 665px; width: 311px; height: 400px; }
+.ddp-str  { left: 0; top: 0; width: 311px; height: 400px; box-shadow: inset 0 0 0 1px var(--navy); }
+.ddlogo   { left: 156px; top: 0; width: 123px; height: 39px; }
+.ddimg    { left: 0; top: 0; width: 123px; height: 39.0086px; object-fit: cover; max-width: none; }
+
+/* checkbox/Terms, check/unchecked: 24px box, 2px #CCCCCC inside stroke, radius 4 */
+.chk      { left: 46px; top: 1073px; width: 83px; height: 44px; }
+.chk-un   { left: 10px; top: 10px; width: 24px; height: 24px; background: var(--white); border-radius: 4px; box-shadow: inset 0 0 0 2px var(--grey-cc); }
+
+/* button/Save */
+.save     { left: 131px; top: 1157px; width: 114px; height: 48px; background: var(--pinkfold); border-radius: 8px; }
+.white    { color: var(--white); }
+
+.t-t2     { font-weight: 700; font-size: 20px; line-height: 24px; }                          /* T2 / Label Bold 20 */
+.t-h1m    { font-weight: 700; font-size: 28px; line-height: 29px; letter-spacing: -1px; }   /* H1.m Bold 28, 104% */
+.t-h1m .trk { margin-right: 1px; }
+.back     { left: 4px; top: 16px; width: 120px; height: 44px; }
+/* the chevron export points right; the canvas shows it pointing left */
+.back-ico { left: 2px; top: 0; width: 44px; height: 44px; transform: rotate(180deg); }
+
+/* Measured correction, not a Figma value: Chrome and Figma place the baseline differently here;
+   these styles rendered ~1px high against the Figma export, so they move down 1px. */
+.t-h1m, .t-b2m, .t-pct, .t-day, .t-phn, .t-dd, .t-r10 { translate: 0 1px; }
+</style>
+<div class="frame" data-frame data-node-id="2055:7195">
+
+  <p class="tx tx-l t-h3m" style="left:32px;top:155px;width:173px;height:29px" data-node-id="2055:7241">Pay-in amount</p>
+  <div class="abs edit" data-node-id="2055:7196">
+    <div class="abs edit-bg"></div>
+    <div class="abs edit-ico"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 3H21V9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 14L21 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg></div>
+    <p class="tx tx-c t-lbl" style="left:-8px;top:0px;width:55px;height:20px" data-node-id="2055:7202">Estimate</p>
+  </div>
+  <div class="abs pct" data-node-id="2055:7206">
+    <div class="abs pct-bg"></div>
+    <p class="tx tx-c t-pct" style="left:9px;top:11px;width:30px;height:17px" data-node-id="2055:7208"><span class="trk">23%</span></p>
+  </div>
+  <p class="tx tx-c t-b2m" style="left:195px;top:203px;width:42px;height:14px" data-node-id="2055:7210">Salary %</p>
+  
+  <div class="abs in" style="left:32px;top:200px" data-node-id="2055:7209">
+    <div class="abs in-box"></div>
+    <p class="tx tx-c t-amt" style="left:12px;top:25.5px;width:128px;height:29px" data-node-id="I2055:7209;4:61"><span class="trk">&pound; 250</span></p>
+    <p class="tx tx-l t-lbl" style="left:4px;top:0px;width:144px;height:20px">One off top up</p>
+  </div>
+  
+  <div class="abs in" style="left:32px;top:276px" data-node-id="2055:7211">
+    <div class="abs in-box"></div>
+    <div class="abs in-chev" data-node-id="I2055:7211;6:93"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M22 18L26 22L22 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg></div><p class="tx tx-l t-day" style="left:12px;top:30px;width:128px;height:20px" data-node-id="I2055:7211;4:61">1st</p>
+    <p class="tx tx-l t-lbl" style="left:4px;top:0px;width:144px;height:20px">Paid on:</p>
+  </div>
+  <div data-node-id="2055:7212">
+    <p class="tx tx-l t-h3m" style="left:32px;top:384px;width:149px;height:29px" data-node-id="2055:7213">Debit details</p>
+  <div class="abs in" style="left:32px;top:429px" data-node-id="2055:7214">
+    <div class="abs in-box in-str"></div>
+    <p class="tx tx-l t-phn" style="left:12px;top:32.5px;width:128px;height:15px">123456</p>
+    <p class="tx tx-l t-lbl" style="left:4px;top:0px;width:144px;height:20px">Account number</p>
+  </div>
+  <div class="abs in" style="left:32px;top:497px" data-node-id="2055:7215">
+    <div class="abs in-box in-str"></div>
+    <p class="tx tx-l t-phn" style="left:12px;top:32.5px;width:128px;height:15px">12 - 12 - 12</p>
+    <p class="tx tx-l t-lbl" style="left:4px;top:0px;width:144px;height:20px">Sort code</p>
+  </div>
+  <div class="abs in" style="left:32px;top:565px" data-node-id="2055:7216">
+    <div class="abs in-box in-str"></div>
+    <p class="tx tx-l t-phn" style="left:12px;top:32.5px;width:128px;height:15px">654321</p>
+    <p class="tx tx-l t-lbl" style="left:4px;top:0px;width:144px;height:20px">Company number</p>
+  </div>
+  <div class="abs sw" style="left:262px;top:418px" data-node-id="2055:7217">
+    <div class="abs sw-btn">
+      <div class="abs sw-trk"></div>
+      <div class="abs sw-cap"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g filter="url(#final-payment-3-filter0_d_0_95)">
+<circle cx="22" cy="22" r="14" fill="#FBFBFB"/>
+<circle cx="22" cy="22" r="13.5" stroke="white"/>
+</g>
+</g>
+<defs>
+<filter id="final-payment-3-filter0_d_0_95" x="6" y="8" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_95"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_95" result="shape"/>
+</filter>
+</defs>
+</svg></div>
+    </div>
+    <div class="abs sw-lbl t-sw" style="top:0" data-node-id="2055:7222"><p>Business</p><p>account</p></div>
+  </div>
+  </div>
+  
+  <div class="abs sw" style="left:262px;top:265px" data-node-id="2055:7223">
+    <div class="abs sw-btn">
+      <div class="abs sw-trk"></div>
+      <div class="abs sw-cap"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g filter="url(#final-payment-4-filter0_d_0_95)">
+<circle cx="22" cy="22" r="14" fill="#FBFBFB"/>
+<circle cx="22" cy="22" r="13.5" stroke="white"/>
+</g>
+</g>
+<defs>
+<filter id="final-payment-4-filter0_d_0_95" x="6" y="8" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_95"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_95" result="shape"/>
+</filter>
+</defs>
+</svg></div>
+    </div>
+    <div class="abs sw-lbl t-sw" style="top:0" data-node-id="2055:7228"><p>One off</p></div>
+  </div>
+  <div class="abs rec" data-node-id="2055:7242"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<g>
+<path d="M16.0002 8.12306C17.8489 8.12306 18.2233 8.18768 19.9392 9.17836C20.4102 9.45026 21.0123 9.28891 21.2842 8.81797C21.5561 8.34704 21.3948 7.74485 20.9238 7.47296C19.3676 6.57721 17.6741 6.15383 16.0002 6.15383C14.4465 6.15383 12.9768 6.51371 11.67 7.15466L13.1643 8.64899C14.0443 8.30931 15.0005 8.12306 16.0002 8.12306Z" fill="#FF5081"/>
+<path d="M6.15408 16V19.7525L3.51971 17.4711C3.10864 17.1151 2.48682 17.1597 2.13082 17.5708C1.77483 17.9819 1.81948 18.6037 2.23054 18.9597L7.13863 23.2102L12.0467 18.9597C12.4578 18.6037 12.5024 17.9819 12.1464 17.5708C11.7905 17.1597 11.1686 17.1151 10.7576 17.4711L8.12331 19.7524V16C8.12331 13.47 9.31609 11.2186 11.17 9.77741L9.7688 8.37622C7.56234 10.1819 6.15408 12.9265 6.15408 16Z" fill="#FF5081"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.47311 4.47299C4.08859 4.8575 4.08859 5.48093 4.47311 5.86544L26.1346 27.527C26.5192 27.9115 27.1426 27.9115 27.5271 27.527C27.9116 27.1425 27.9116 26.519 27.5271 26.1345L5.86557 4.47299C5.48105 4.08847 4.85763 4.08847 4.47311 4.47299Z" fill="#FF5081"/>
+<path d="M16 23.8769C14.3528 23.8769 13.0463 23.3846 12.061 22.8216C11.59 22.5497 10.9879 22.7111 10.716 23.182C10.4441 23.6529 10.6054 24.2551 11.0764 24.527C12.6326 25.4228 14.3261 25.8461 16 25.8461C19.0736 25.8461 21.8182 24.4378 23.6239 22.2313L22.2227 20.8301C20.7815 22.6841 18.53 23.8769 16 23.8769Z" fill="#FF5081"/>
+<path d="M25.8461 16V12.2475L28.4805 14.5289C28.8916 14.8849 29.5134 14.8402 29.8694 14.4292C30.2254 14.0181 30.1807 13.3963 29.7697 13.0403L24.8616 8.78977L19.9535 13.0403C19.5424 13.3963 19.4978 14.0181 19.8538 14.4292C20.2098 14.8402 20.8316 14.8849 21.2427 14.5289L23.8769 12.2476V16C23.8769 16.9996 23.6907 17.9558 23.351 18.8357L24.8454 20.33C25.4863 19.0233 25.8461 17.5536 25.8461 16Z" fill="#FF5081"/>
+</g>
+</g>
+</svg></div>
+
+  <div class="abs ddp" data-node-id="2055:7230">
+    <div class="abs wrap t-r10" style="left:24px;top:88px;width:263px" data-node-id="2055:7231">
+      <p>&middot; The Guarantee is offered by all banks and building societies that accept instructions to pay Direct Debits</p><p>&#8203;</p>
+      <p>&middot; If there are any changes to the amount, date or frequency of your Direct Debit Penfold will notify you (normally 10 working days) in advance of your account being debited or as otherwise agreed. If you request Penfold to collect a payment, confirmation of the amount and date will be given to you at the time of the request</p><p>&#8203;</p>
+      <p>&middot; If an error is made in the payment of your Direct Debit, by Penfold or your bank or building society, you are entitled to a full and immediate refund of the amount paid from your bank or building society</p><p>&#8203;</p>
+      <p>&middot; If you receive a refund you are not entitled to, you must pay it back when Penfold asks you to</p><p>&#8203;</p>
+      <p>&middot; You can cancel a Direct Debit at any time by simply contacting your bank or building society. Written confirmation may be required. Please also notify the organisation.</p>
+    </div>
+    <div class="abs" style="left:16px;top:16px;width:279px;height:40px" data-node-id="2055:7232">
+      <div class="abs t-dd" style="left:0;top:0;white-space:nowrap" data-node-id="2055:7233"><p>Direct Debit</p><p>Guarantee</p></div>
+      <div class="abs ddlogo" data-node-id="2055:7234">
+        <!-- "Unknown 1": the Direct Debit logo, an image fill (raw 350x111 PNG from the file), object-fit cover -->
+        <img class="abs ddimg" data-node-id="2055:7235" alt="Direct Debit" src="data:image/png;base64,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">
+      </div>
+    </div>
+    <div class="abs ddp-str" data-node-id="2055:7236"></div>
+  </div>
+
+  <div data-node-id="2055:7237">
+    <div class="abs wrap t-r10" style="left:32px;top:1245px;width:311px" data-node-id="2055:7238">
+      <p>Your payments are powered by Seccl Custody Limited, which will be the reference name on your bank statements. Their Direct Debit service user number is 184276.</p><p>&#8203;</p>
+      <p>Please also read <span class="t-link">this notice</span> in relation to your clawback rights.</p>
+    </div>
+    <div class="abs save" data-node-id="2055:7239">
+      <p class="tx tx-c t-t2 white" style="left:32px;top:12px;width:50px;height:24px">Save</p>
+    </div>
+    <div class="abs chk" data-node-id="2055:7240">
+      <div class="abs t-b2" style="left:46px;top:14px;white-space:pre"><p>I understand and accept </p><p>this Direct Debit mandate.</p></div>
+      <div class="abs chk-un" data-node-id="I2055:7240;6:86"></div>
+    </div>
+  </div>
+
+  <div class="abs hdr" data-node-id="2055:7244">
+    <div class="abs hdr-bg"></div>
+    <div class="abs back" data-node-id="I2055:7244;114:490">
+      <p class="tx tx-r t-t2" style="left:47px;top:10px;width:53px;height:24px">Back</p>
+      <div class="abs back-ico"><svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<path d="M22 18L26 22L22 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/>
+</g>
+</svg></div>
+    </div>
+    <p class="tx tx-r t-h1m" style="left:258px;top:21px;width:85px;height:29px" data-node-id="I2055:7244;114:500"><span class="trk">Payment</span></p>
+  </div>
+
+  <div class="abs ios" data-node-id="2055:7245">
+    <div class="abs ios-bg">
+      <svg class="abs" style="display:block;left:0;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="375" height="63" viewBox="0 0 375 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<foreignObject x="-40.7742" y="-40.7742" width="456.548" height="144.548"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20.39px);clip-path:url(#final-payment-7-bgblur_0_0_89_clip_path);height:100%;width:100%"></div></foreignObject><path data-figma-bg-blur-radius="40.7742" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z" fill="#F8F8F8" fill-opacity="0.7"/>
+<defs>
+<clipPath id="final-payment-7-bgblur_0_0_89_clip_path" transform="translate(40.7742 40.7742)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z"/>
+</clipPath></defs>
+</svg>
+      <div class="abs ios-div"></div>
+    </div>
+    <p class="tx tx-c t-ios-url" style="left:145px;top:40px;width:84px;height:15px"><span class="trk">getpenfold.com</span></p>
+    <div class="abs ios-status">
+      <p class="tx tx-c t-ios-time" style="left:19.894px;top:14px;width:54px;height:18px"><span class="trk">9:24</span></p>
+      <div class="abs ios-ctr">
+        <svg class="abs" style="display:block;left:42.5px;top:0" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="24.5" height="11.5" viewBox="0 0 24.5 11.5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.58944 0H18.4106C19.6587 0 20.1113 0.129956 20.5676 0.373986C21.0239 0.618016 21.382 0.97612 21.626 1.43242C21.87 1.88871 22 2.34131 22 3.58944V7.91056C22 9.15869 21.87 9.61129 21.626 10.0676C21.382 10.5239 21.0239 10.882 20.5676 11.126C20.1113 11.37 19.6587 11.5 18.4106 11.5H3.58944C2.34131 11.5 1.88871 11.37 1.43242 11.126C0.97612 10.882 0.618016 10.5239 0.373986 10.0676C0.129956 9.61129 0 9.15869 0 7.91056V3.58944C0 2.34131 0.129956 1.88871 0.373986 1.43242C0.618016 0.97612 0.97612 0.618016 1.43242 0.373986C1.88871 0.129956 2.34131 0 3.58944 0ZM3.58944 1C2.60246 1 2.2579 1.06654 1.90401 1.2558C1.62199 1.40663 1.40663 1.62199 1.2558 1.90401C1.06654 2.2579 1 2.60246 1 3.58944V7.91056C1 8.89754 1.06654 9.2421 1.2558 9.59599C1.40663 9.87801 1.62199 10.0934 1.90401 10.2442C2.2579 10.4335 2.60246 10.5 3.58944 10.5H18.4106C19.3975 10.5 19.7421 10.4335 20.096 10.2442C20.378 10.0934 20.5934 9.87801 20.7442 9.59599C20.9335 9.2421 21 8.89754 21 7.91056V3.58944C21 2.60246 20.9335 2.2579 20.7442 1.90401C20.5934 1.62199 20.378 1.40663 20.096 1.2558C19.7421 1.06654 19.3975 1 18.4106 1H3.58944ZM24.5 5.69C24.5 6.92657 23 7.69 23 7.69V3.69C23 3.69 24.5 4.45343 24.5 5.69Z" fill="black" fill-opacity="0.36"/>
+</svg>
+        <div class="abs ios-fill"></div>
+        <svg class="abs" style="display:block;left:0;top:0.4401px" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="17.1" height="10.7" viewBox="0 0 17.1 10.7" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.123 0.965892C14.1 1.08181 14.1 1.22121 14.1 1.5V9.2C14.1 9.47879 14.1 9.61819 14.123 9.73411C14.2177 10.2101 14.5899 10.5823 15.0659 10.6769C15.1818 10.7 15.3212 10.7 15.6 10.7C15.8788 10.7 16.0182 10.7 16.1341 10.6769C16.6101 10.5823 16.9822 10.2101 17.0769 9.73411C17.1 9.61819 17.1 9.47879 17.1 9.2V1.5C17.1 1.22121 17.1 1.08181 17.0769 0.965892C16.9822 0.489863 16.6101 0.117746 16.1341 0.0230577C16.0182 0 15.8788 0 15.6 0C15.3212 0 15.1818 0 15.0659 0.0230577C14.5899 0.117746 14.2177 0.489863 14.123 0.965892ZM9.39999 3.9C9.39999 3.62121 9.39999 3.48181 9.42305 3.36589C9.51774 2.88986 9.88986 2.51775 10.3659 2.42306C10.4818 2.4 10.6212 2.4 10.9 2.4C11.1788 2.4 11.3182 2.4 11.4341 2.42306C11.9101 2.51775 12.2822 2.88986 12.3769 3.36589C12.4 3.48181 12.4 3.62121 12.4 3.9V9.2C12.4 9.4788 12.4 9.61819 12.3769 9.73411C12.2822 10.2101 11.9101 10.5823 11.4341 10.6769C11.3182 10.7 11.1788 10.7 10.9 10.7C10.6212 10.7 10.4818 10.7 10.3659 10.6769C9.88986 10.5823 9.51774 10.2101 9.42305 9.73411C9.39999 9.61819 9.39999 9.4788 9.39999 9.2V3.9ZM4.82305 5.6659C4.79999 5.78182 4.79999 5.92121 4.79999 6.2V9.2C4.79999 9.4788 4.79999 9.61819 4.82305 9.73411C4.91773 10.2101 5.28985 10.5823 5.76588 10.6769C5.8818 10.7 6.02119 10.7 6.29999 10.7C6.57878 10.7 6.71818 10.7 6.8341 10.6769C7.31012 10.5823 7.68224 10.2101 7.77693 9.73411C7.79999 9.61819 7.79999 9.4788 7.79999 9.2V6.2C7.79999 5.92121 7.79999 5.78182 7.77693 5.6659C7.68224 5.18987 7.31012 4.81775 6.8341 4.72306C6.71818 4.7 6.57878 4.7 6.29999 4.7C6.02119 4.7 5.8818 4.7 5.76588 4.72306C5.28985 4.81775 4.91773 5.18987 4.82305 5.6659ZM0.0230577 7.6659C0 7.78182 0 7.92121 0 8.2V9.2C0 9.4788 0 9.61819 0.0230577 9.73411C0.117746 10.2101 0.489863 10.5823 0.965892 10.6769C1.08181 10.7 1.22121 10.7 1.5 10.7C1.77879 10.7 1.91819 10.7 2.03411 10.6769C2.51014 10.5823 2.88225 10.2101 2.97694 9.73411C3 9.61819 3 9.4788 3 9.2V8.2C3 7.92121 3 7.78182 2.97694 7.6659C2.88225 7.18987 2.51014 6.81775 2.03411 6.72306C1.91819 6.7 1.77879 6.7 1.5 6.7C1.22121 6.7 1.08181 6.7 0.965892 6.72306C0.489863 6.81775 0.117746 7.18987 0.0230577 7.6659Z" fill="black"/>
+</svg>
+        <svg class="abs" style="display:block;left:22.1001px;top:0.24px" aria-hidden="true" preserveAspectRatio="none" overflow="visible" width="15.4" height="11.0572" viewBox="0 0 15.4 11.0572" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.70042 2.29636C9.93483 2.29646 12.0838 3.15501 13.7032 4.69457C13.8251 4.81343 14.02 4.81193 14.1401 4.69121L15.3058 3.51479C15.3666 3.45356 15.4005 3.37062 15.4 3.28433C15.3995 3.19803 15.3646 3.11549 15.3031 3.05498C11.0528 -1.01833 4.3474 -1.01833 0.0970716 3.05498C0.0355014 3.11545 0.000571881 3.19796 7.20154e-06 3.28426C-0.000567562 3.37055 0.033283 3.45352 0.0940465 3.51479L1.26005 4.69121C1.38006 4.81211 1.57513 4.81361 1.697 4.69457C3.31657 3.15491 5.46579 2.29636 7.70042 2.29636V2.29636ZM7.70042 6.12375C8.92809 6.12367 10.1119 6.57999 11.022 7.40402C11.145 7.52097 11.3389 7.51844 11.4589 7.39831L12.6232 6.22189C12.6845 6.16019 12.7186 6.07648 12.7177 5.98949C12.7168 5.90251 12.6811 5.8195 12.6185 5.75906C9.84735 3.18131 5.55584 3.18131 2.78469 5.75906C2.72209 5.8195 2.68637 5.90255 2.68555 5.98956C2.68473 6.07657 2.71887 6.16028 2.78031 6.22189L3.9443 7.39831C4.06427 7.51844 4.25817 7.52097 4.38125 7.40402C5.29065 6.58053 6.47357 6.12426 7.70042 6.12375V6.12375ZM9.93797 8.93135C10.0002 8.87024 10.0345 8.78614 10.0327 8.69891C10.031 8.61168 9.99327 8.52905 9.92855 8.47053C8.64232 7.38263 6.75852 7.38263 5.47229 8.47053C5.40753 8.529 5.36977 8.6116 5.36792 8.69883C5.36608 8.78606 5.40031 8.87019 5.46254 8.93135L7.4769 10.9639C7.53594 11.0236 7.61643 11.0572 7.70042 11.0572C7.78441 11.0572 7.8649 11.0236 7.92394 10.9639L9.93797 8.93135Z" fill="black"/>
+</svg>
+      </div>
+    </div>
+  </div>
+
+</div>
+</template></div>
+</div>
+</body></html>

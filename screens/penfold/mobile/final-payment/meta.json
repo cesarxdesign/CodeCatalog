@@ -1,0 +1,49 @@
+{
+  "id": "final-payment",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "final-onboarding",
+  "order": 45,
+  "name": "Final onboarding, payment",
+  "title": "Pay-in amount",
+  "frame": [
+    375,
+    1365
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2055:7195",
+  "export_size": [
+    375,
+    1365
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "final payment",
+    "pay-in amount",
+    "debit details"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.60%",
+    "al": "±1px",
+    "note": "The Direct Debit logo is the file&rsquo;s own image fill (&ldquo;Unknown 1&rdquo;, a 350&times;111 PNG) embedded as it came. The hidden Frame&nbsp;1 is not built. The recurring icon is flipped vertically and turned 180&deg; in the file, which mirrors it left to right. The two-line switch label is 120% of 12px, which Figma lays out on 14px lines. The 28px header, the 10px copy, 23%, 1st, the grey placeholders and the Direct Debit title move down 1px: a measured correction, not a Figma value."
+  }
+}

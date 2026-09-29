@@ -1,0 +1,49 @@
+{
+  "id": "final-continue",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "final-onboarding",
+  "order": 42,
+  "name": "Final onboarding, continue",
+  "title": "Personal info",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2055:6856",
+  "export_size": [
+    410,
+    868
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "final continue",
+    "personal info intro",
+    "final onboarding continue"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.81%",
+    "al": "±2px",
+    "note": "Two popups share the slot. <code>popUp/DOB</code> has every child hidden, so it draws nothing and only its box is kept; the visible card is the sibling <code>popUp/Full</code> at x&nbsp;14, one pixel left of the others. Figma&rsquo;s render is 410&times;868 with the frame at x&nbsp;18; the diff is taken on the 375&times;812 crop. The 14px copy carries the same measured 1px correction as the start screen."
+  }
+}
