@@ -1,0 +1,50 @@
+{
+  "id": "closer-payment",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "closer",
+  "seq": 9,
+  "order": 76,
+  "name": "Closer, payment",
+  "title": "Payment",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "2065:7495",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "closer payment",
+    "pay-in amount",
+    "debit details"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.24%",
+    "al": "±1px",
+    "note": "The hidden Frame&nbsp;1 is not built. The Business account switch is a <code>control/toggle</code> OFF instance that nests a vertical and a horizontal flip; Figma still draws its inner shadow at the top and the cap&rsquo;s drop shadow below (the export confirms), so it is built unflipped. The recurring icon is flipped horizontally in the file, so its export is mirrored left to right. The Save label sits at x54.912 in its 160px button, as the file has it. The One off label is 120% of 12px, laid out on a 14px line; the two-line Business account label is auto height, 15px lines. 23%, Salary&nbsp;%, 1st, the 28px Payment title and the 10px legal copy move down 1px: a measured correction, not a Figma value. The grey placeholders needed none here. The status bar names SF Pro Text, which the verifier does not have, so its two strings differ in width."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "website-home-simplest",
+  "project": "penfold",
+  "platform": "desktop",
+  "flow": "Website",
+  "order": 31,
+  "name": "Website home, simplest way to save",
+  "title": "The pension for the self-employed.",
+  "frame": [
+    1600,
+    10201
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "42:3298",
+  "source_scale": "1.00×",
+  "source_frames": "Figma frame",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "website home",
+    "home page",
+    "the simplest way to save",
+    "easy setup",
+    "choose how much to save",
+    "25% savings bonus",
+    "mentioned by",
+    "designed for simplicity",
+    "powered by",
+    "flexible payments",
+    "professionally managed",
+    "find and combine",
+    "protected",
+    "soon",
+    "app renders home page"
+  ],
+  "seq": 2,
+  "tile": "Website home, simplest way to save",
+  "catalogue": {
+    "m1": "1.26%",
+    "m1l": "pixels differing from the Figma render",
+    "m2": "1px",
+    "m2l": "worst offset",
+    "note": "Read from the Figma file (page &ldquo;old website&rdquo;, frame &ldquo;desktop&rdquo;), class for class from the design context; the frame is 1600 wide and unscaled. Figma lays lines on whole pixels (28px at 160% is 45px, not 44.8) and so does this build. The handwritten note (&ldquo;You can add more info but this button is all you need.&rdquo;) is set in Journal, a face that cannot be served, so it ships as Figma&rsquo;s own SVG export of that text node, outlined. The phone renders are the file&rsquo;s images at 2x, WebP. The step numbers 2 and 3 are Montserrat ExtraLight (200) and &ldquo;Alex Heaton, Designer&rdquo; is Bold Italic: screen.html loads both, but the embed and this page load Montserrat 400&ndash;800 and italic 400 only, so here they draw in the nearest weight. What remains in the diff is glyph edges, resampled photo edges, and a 1px baseline on the 28px body copy, where Chrome and Figma round half-leading differently.",
+    "tag": "",
+    "frame_label": "1600 × 10201"
+  }
+}

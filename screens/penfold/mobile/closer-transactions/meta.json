@@ -1,0 +1,50 @@
+{
+  "id": "closer-transactions",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "closer",
+  "seq": 12,
+  "order": 78,
+  "name": "Closer, transactions pull-down",
+  "title": "Transactions",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "92:18714",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "closer transactions",
+    "closer tx",
+    "transactions pull-down"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.70%",
+    "al": "±1px",
+    "note": "Every string was read from the file&rsquo;s text data, not from the faint export, so none is uncertain. The file itself spells <code>jonhsmith</code> and <code>kinkybits78</code>, and the Tax bonus amount is a bare <code>46</code> with no &pound; (its layer is still named &pound;500). Built as it is. Behind the 8px blur, only the three action pucks are built: their labels reach the strip under the bottom bar. The donut, goal and top buttons sit wholly under the opaque list, and no blur reaches them. Both Shadow/spread 32+4+8 shadows are 32px box-shadows, not the 16px drop-shadow the design-context code gave. The export&rsquo;s shadow pixels confirm 32. The bottom bar&rsquo;s alpha mask and the toggle&rsquo;s mask are plain rounded rects, so they are built as clips. The 16, 14 and 10px strings drew 1px higher than Figma in Chrome, so they carry a measured 1px correction."
+  }
+}

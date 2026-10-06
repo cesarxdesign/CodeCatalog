@@ -2,7 +2,13 @@
   "id": "nominate-beneficiary-popup",
   "project": "penfold",
   "platform": "mobile",
-  "flow": "nominate-beneficiary",
+  "flow": [
+    "nominate-beneficiary",
+    "closer"
+  ],
+  "seq": {
+    "closer": 11
+  },
   "order": 31,
   "name": "Nominate beneficiary, explainer popup",
   "title": "What is a beneficiary",

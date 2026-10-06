@@ -121,6 +121,12 @@ The catalogue page filters by **Project** and **Flow** (two dropdowns in the lef
 come from each screen's meta.json: `project` is required, `flow` is optional - a screen with no
 flow shows under "All flows" only. A new project or flow appears in the dropdowns on the next build.
 
+A screen can sit in more than one flow: `flow` is then a list, e.g. `["master-combine", "closer"]`.
+`seq` is the screen's place in its flow, and with one flow picked the grid runs in `seq` order.
+It is a number, or `{"closer": 6}` when the screen's place differs from flow to flow. The
+`closer` flow is the Penfold grid (Figma node 92:18503) that closes the case study, in the grid's
+reading order.
+
 The current view lives in the URL, so a filtered view can be bookmarked or shared:
 
     index.html#project=penfold&flow=onboarding

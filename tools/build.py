@@ -18,7 +18,7 @@ CACHE = os.path.join(ROOT, '.cache', 'previews')
 # Web fonts an embed may need, and how Google Fonts names them. A screen gets a link for
 # exactly the families its own CSS asks for. System faces (-apple-system, SF Pro) need none.
 WEB_FONTS = {
-    'Montserrat':  'Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400',
+    'Montserrat':  'Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,400;1,700',
     'Roboto Mono': 'Roboto+Mono:wght@400;700',
 }
 def fonts_used(css):
@@ -36,6 +36,19 @@ def fingerprint(folder, meta):
     h.update(open(__file__, 'rb').read())      # a change to this tool rebuilds everything
     return h.hexdigest()[:12]
 def wr(p, s): open(p, 'w', encoding='utf-8').write(s)
+
+# ---------- flows ----------
+# "flow" is one flow name, or a list of them when a screen belongs to several flows.
+# "seq" is the screen's place in its flow: a number, or {flow: number} when the place differs per flow.
+def flows_of(m):
+    f = m.get('flow')
+    return [f] if isinstance(f, str) and f else [x for x in (f or []) if x]
+def seq_of(m, flow=None):
+    s = m.get('seq')
+    if isinstance(s, dict):
+        if flow in s: return s[flow]
+        return s[flows_of(m)[0]] if flows_of(m) and flows_of(m)[0] in s else 1000 + m['order']
+    return s if s is not None else 1000 + m['order']
 
 # ---------- the screen, as a shadow root: (css, body) ----------
 def shadow_parts(folder, meta):
@@ -150,7 +163,7 @@ catalog = {
   'build': BUILD,
   'screens': [dict(
       key=s['key'], id=s['meta']['id'], project=s['meta']['project'], platform=s['meta']['platform'],
-      flow=s['meta'].get('flow'), name=s['meta']['name'], title=s['meta'].get('title'), aliases=s['meta'].get('aliases', []),
+      flow=s['meta'].get('flow'), flows=flows_of(s['meta']), name=s['meta']['name'], title=s['meta'].get('title'), aliases=s['meta'].get('aliases', []),
       frame=s['meta']['frame'], interactive=s['meta']['interactive'], states=s['meta']['states'],
       provenance=s['meta']['provenance'], fonts=fonts_used(s['css']), live=s['meta'].get('live'),
       folder=s['dir'].replace(os.sep, '/'),
@@ -168,16 +181,17 @@ D = []; M = []
 for s in screens:
     m = s['meta']; c = m['catalogue']
     # "tile" names a tile after its step in the flow ("3 things 05"); "seq" is its place in the flow
-    d = dict(k=s['key'], n=m.get('tile') or m['name'], seq=m.get('seq', 1000 + m['order']), iw=m['frame'][0], ih=m['frame'][1], live=m.get('live'),
-             p=m['project'], fl=m.get('flow') or '',
+    d = dict(k=s['key'], n=m.get('tile') or m['name'], seq=seq_of(m), iw=m['frame'][0], ih=m['frame'][1], live=m.get('live'),
+             p=m['project'], fl=flows_of(m), sq={f: seq_of(m, f) for f in flows_of(m)},
              s=preview_b64(s['dir'], m, s['key']), css=s['css'], body=s['body'])
     if m['platform'] == 'desktop':
         d.update(f=c['frame_label'], sc=m['source_scale'], src=m['source_frames'], tag=c.get('tag', ''),
                  m1=c['m1'], m1l=c['m1l'], m2=c['m2'], m2l=c['m2l'], note=c['note'])
         D.append(d)
         for v in s['views']:            # every further state of the screen gets a tile of its own
+            vseq = v['seq'] if v['seq'] is not None else d['seq'] + .5
             D.append(dict(d, k=s['key'] + '@' + v['id'], n=v['tile'] or m['name'] + ' &middot; ' + v['name'],
-                          seq=v['seq'] if v['seq'] is not None else d['seq'] + .5,
+                          seq=vseq, sq={f: (v['seq'] if v['seq'] is not None else q + .5) for f, q in d['sq'].items()},
                           iw=v['frame'][0], ih=v['frame'][1], css=v['css'], body=v['body'], live=None, s='',   # the source picture stays with the screen
                           f='%d × %d' % tuple(v['frame']), tag=v['src']))
     else:
@@ -193,13 +207,13 @@ def scr(s):
 
 def title(x): return x.replace('-', ' ').title()
 PROJECTS = sorted({s['p'] for s in D + M})
-FLOWS = sorted({s['fl'] for s in D + M if s['fl']})
+FLOWS = sorted({f for s in D + M for f in s['fl']})
 def options(values, all_label):
     return (f'<option value="">{all_label}</option>' +
             ''.join(f'<option value="{v}">{title(v)}</option>' for v in values))
 
 def chip(s,i):
-    return (f'<button type="button" class="fs" data-k="{s["k"]}" data-proj="{s["p"]}" data-fl="{s["fl"]}" '
+    return (f'<button type="button" class="fs" data-k="{s["k"]}" data-proj="{s["p"]}" data-fl="{" ".join(s["fl"])}" '
             f'style="--iw:{s["iw"]};--ih:{s["ih"]}" '
             f'aria-pressed="{"true" if i==0 else "false"}">'
             f'<span class="fsimg"><span class="tscr" data-k="{s["k"]}"></span></span>'
@@ -253,10 +267,10 @@ def notes_m(s):
 secs = "".join(sec_d(s,i) for i,s in enumerate(D)) + "".join(sec_m(s) for s in M)
 notes = "".join(notes_d(s,i) for i,s in enumerate(D)) + "".join(notes_m(s) for s in M)
 META={}
-for s in D: META[s['k']]=dict(n=s['n'],f=s['f'],sc=s['sc'],src=s['src'],tag=s['tag'],p=s['p'],fl=s['fl'])
+for s in D: META[s['k']]=dict(n=s['n'],f=s['f'],sc=s['sc'],src=s['src'],tag=s['tag'],p=s['p'],fl=s['fl'],sq=s['sq'])
 for s in M:
     META[s['k']]=dict(n=s['n'],f='%d × %d'%(s['iw'],s['ih']),sc=s['sc']+'×',src='node '+s['node'],tag='',
-                      p=s['p'],fl=s['fl'])
+                      p=s['p'],fl=s['fl'],sq=s['sq'])
 
 page=f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
@@ -265,7 +279,7 @@ page=f"""<!doctype html>
 <title>CodeCatalog</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Montserrat:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 :root{{
   --bg:#EDEFF2; --panel:#FFFFFF; --sunk:#E3E7EC;
@@ -539,8 +553,16 @@ document.querySelectorAll('.vname').forEach(function(el){{
 }});
 
 /* --- filters: project and flow, kept in the URL so a view can be bookmarked --- */
-function ok(k){{ var d=DATA[k]; return (!fProj.value||d.p===fProj.value)&&(!fFlow.value||d.fl===fFlow.value); }}
-function listFor(p){{ return (p==='desk'?KD:p==='mob'?KM:K).filter(ok); }}
+function ok(k){{ var d=DATA[k]; return (!fProj.value||d.p===fProj.value)&&(!fFlow.value||d.fl.indexOf(fFlow.value)>=0); }}
+/* with one flow picked, its screens run in that flow's order ("seq"); otherwise in catalogue order */
+function bySeq(a,b,ia,ib){{ var f=fFlow.value; if(!f) return ia-ib;
+  var x=DATA[a].sq[f], y=DATA[b].sq[f]; x=x==null?1e9:x; y=y==null?1e9:y; return x-y||ia-ib; }}
+function sortKeys(L){{ return L.map(function(k,i){{return [k,i];}}).sort(function(a,b){{return bySeq(a[0],b[0],a[1],b[1]);}}).map(function(x){{return x[0];}}); }}
+var ROWS=[].map.call(document.querySelectorAll('.strip .row'),function(r){{ return [r,[].slice.call(r.children)]; }});
+function orderTiles(){{ ROWS.forEach(function(x){{
+  x[1].map(function(c,i){{return [c,i];}}).sort(function(a,b){{return bySeq(a[0].dataset.k,b[0].dataset.k,a[1],b[1]);}})
+      .forEach(function(c){{ x[0].appendChild(c[0]); }}); }}); }}
+function listFor(p){{ return sortKeys((p==='desk'?KD:p==='mob'?KM:K).filter(ok)); }}
 function writeHash(){{
   var q=[]; if(fProj.value) q.push('project='+fProj.value); if(fFlow.value) q.push('flow='+fFlow.value);
   if(document.body.dataset.plat!=='all') q.push('show='+document.body.dataset.plat);
@@ -558,6 +580,7 @@ function readHash(){{
   return DATA[q.screen]?q.screen:null;
 }}
 function applyFilter(want){{
+  orderTiles();
   document.querySelectorAll('.fs').forEach(function(b){{ b.hidden=!ok(b.dataset.k); }});
   var n={{all:listFor('all').length,desk:listFor('desk').length,mob:listFor('mob').length}};
   cAll.textContent=n.all; cDesk.textContent=n.desk; cMob.textContent=n.mob;

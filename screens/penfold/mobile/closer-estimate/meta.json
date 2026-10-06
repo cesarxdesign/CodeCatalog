@@ -1,0 +1,50 @@
+{
+  "id": "closer-estimate",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "closer",
+  "seq": 7,
+  "order": 75,
+  "name": "Closer, estimate",
+  "title": "Estimate",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "92:19446",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "closer estimate",
+    "estimate",
+    "pay-in estimate"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.47%",
+    "al": "±1px",
+    "note": "The hidden &ldquo;copy helper()&rdquo; text is not built. The bar chart is the file&rsquo;s own export of its masked group (a 296&times;61 mask cuts the bar bottoms; the #FBFBFB baseline sits inside it). The recurring icon and the stepper symbols are mirrored left to right in the file; both switch tracks are flipped vertically, but the export still draws the cap&rsquo;s shadow below, so the switches are built unflipped. Income&rsquo;s text field is top-aligned and its stepper bottom-aligned in the same row (per-child alignment in the file). The Controls grey is 239 tall in a 219 frame and runs off the bottom of the screen. The chart&rsquo;s blue, dark blue and green are untokenized in the file. The 10px chart strings and the 16px 2% move down 1px: a measured correction, not a Figma value."
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "website-home",
+  "project": "penfold",
+  "platform": "desktop",
+  "flow": "Website",
+  "order": 30,
+  "name": "Website home",
+  "title": "The pension for the self-employed",
+  "frame": [
+    1600,
+    10201
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "146:6713",
+  "source_scale": "1.00×",
+  "source_frames": "Figma frame",
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "screen.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "website home",
+    "home page",
+    "the pension for the self-employed",
+    "simple to use & completely flexible",
+    "how it works",
+    "simple & easy to use",
+    "combine old pensions",
+    "join thousands of self-employed",
+    "25% savings bonus",
+    "completely flexible",
+    "how much should I save?",
+    "protected",
+    "illustrated home page"
+  ],
+  "seq": 1,
+  "tile": "Website home",
+  "catalogue": {
+    "m1": "2.02%",
+    "m1l": "pixels differing from the Figma render",
+    "m2": "1px",
+    "m2l": "worst offset",
+    "note": "Read from the Figma file (page &ldquo;old website&rdquo;, frame &ldquo;Desktop&rdquo;), class for class from the design context. The content column inside the frame is scaled in the file by about 1.196 (the 140px logo reads 167.45), so values are fractional; they are built as read, not rounded. Figma lays lines and paragraph gaps on whole pixels (35px, not 34.54; 33, not 32.89) and so does this build. Two instance values came from the Plugin API, because the design context gave the main component&rsquo;s: the nav &ldquo;More&rdquo; and &ldquo;Log in&rdquo; are 18.09px, not 29.75, and the phone&rsquo;s &ldquo;Back&rdquo; label is centred in its button. The faint crowd behind the testimonials (283 vector pieces at 12% opacity, 1.9 MB as SVG) ships as one 2x image rendered from Figma&rsquo;s own SVG exports; the phone screenshots are the file&rsquo;s images at 2x, WebP. 357 image layers that sit wholly outside the frame (an off-canvas copy of the testimonials) are left out; they drew nothing. The phone status bar is SF Pro Text, which cannot be served: it shows in the system face. What remains in the diff is glyph and vector edges, 1px baselines on some sizes where Chrome and Figma round half-leading differently, and a 1.645px divider Chrome inks on one row where Figma spreads it over three.",
+    "tag": "",
+    "frame_label": "1600 × 10201"
+  }
+}

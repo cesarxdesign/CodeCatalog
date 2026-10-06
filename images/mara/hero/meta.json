@@ -1,0 +1,31 @@
+{
+  "id": "hero",
+  "project": "mara",
+  "kind": "image",
+  "name": "Hero",
+  "alt": "The Mara wallet home screen on an iPhone and an Android phone beside the Mara logo",
+  "frame": [
+    1920,
+    960
+  ],
+  "provenance": "figma export",
+  "figma_file": "Z9p4dGIT13UAJSSESrOAd5",
+  "figma_node": "74:9540",
+  "figma_layer": "hero / 01 Mara",
+  "exported": "2026-10-06",
+  "note": "export.png is the frame at 2x, untouched. image.webp is it at 2400 wide with the frame's rounded corners (24 radius, filled #1E1E1E outside) painted square, so the page's own 12 radius clips clean. Edited 2026-10-06, in image.webp only: the logo scaled to the heroes' shared rule (on the 1200x600 page hero: 65 from the left, 20px letters, centred 114 down). The Figma frame and export.png keep the old logo.",
+  "files": {
+    "web": "image.webp",
+    "export": "export.png"
+  },
+  "sizes": {
+    "web": [
+      2400,
+      1200
+    ],
+    "export": [
+      3840,
+      1920
+    ]
+  }
+}

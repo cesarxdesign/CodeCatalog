@@ -3,6 +3,7 @@
 
 Checks, in order:
   1. every screen folder has a complete meta.json and every file it names exists
+     ("flow" may be one name or a list; "seq" a number or {flow: number})
   2. catalog.json, index.html and every embed.html are newer than what they are built from
   3. nothing refers to a path on this machine (/Users, /private, file://)
   4. each embed loads the web fonts its CSS asks for
@@ -36,6 +37,20 @@ for dirpath, _, files in os.walk('screens'):
     f = m.get('files', {})
     for name in [f.get('screen'), f.get('embed'), f.get('preview'), m.get('embed_from')] + f.get('extra', []) + f.get('source', []):
         if name and not os.path.exists(os.path.join(dirpath, name)): bad(key, 'missing file ' + name)
+    # "flow": one name, or a list of names; "seq": a number, or {flow: number} naming only its own flows
+    fl = m.get('flow')
+    if fl is not None and not ((isinstance(fl, str) and fl) or
+                               (isinstance(fl, list) and fl and all(isinstance(x, str) and x for x in fl))):
+        bad(key, '"flow" must be a name or a list of names')
+    fls = [fl] if isinstance(fl, str) else (fl if isinstance(fl, list) else [])
+    if isinstance(fl, list) and len(set(fl)) != len(fl): bad(key, '"flow" lists a flow twice')
+    sq = m.get('seq')
+    if isinstance(sq, dict):
+        for f, v in sq.items():
+            if f not in fls: bad(key, '"seq" names flow "%s", which the screen is not in' % f)
+            if not isinstance(v, (int, float)) or isinstance(v, bool): bad(key, '"seq" for "%s" must be a number' % f)
+    elif sq is not None and (not isinstance(sq, (int, float)) or isinstance(sq, bool)):
+        bad(key, '"seq" must be a number or {flow: number}')
     if m.get('platform') == 'desktop' and bool(m.get('interactive')) != bool(m.get('live')):
         bad(key, 'interactive screens need a live link, static ones must not have one')
     screens.append((key, dirpath, m))

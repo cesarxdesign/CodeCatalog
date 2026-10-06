@@ -1,0 +1,34 @@
+{
+  "id": "closer-beneficiary",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "closer",
+  "seq": 10,
+  "order": 77,
+  "name": "Closer, beneficiary",
+  "title": "Nominate beneficiary",
+  "frame": [375, 812],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "92:19041",
+  "export_size": [375, 812],
+  "fonts": ["Montserrat"],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": ["snippet.html"],
+    "source": ["source/figma.png"],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": ["closer beneficiary", "beneficiary unticked", "nominate beneficiary unticked"],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.72%",
+    "al": "±1px",
+    "note": "The filled beneficiary form with the declaration box <em>unticked</em>: in this frame the ticked <code>checkbox/YesNo</code> group (Group&nbsp;120) is hidden, so only the unticked box is built. Every other value matches Nominate beneficiary, filled, node for node. The frame has a 32px corner radius and clips, so the code does too. The 10, 14 and 16px strings carry the same measured 1px baseline correction; the Nominate button sits at x103.5 in Figma and Chrome snaps it to whole pixels."
+  }
+}

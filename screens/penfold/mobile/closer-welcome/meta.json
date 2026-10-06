@@ -1,0 +1,34 @@
+{
+  "id": "closer-welcome",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "closer",
+  "seq": 2,
+  "order": 71,
+  "name": "Closer, welcome",
+  "title": "Getting started",
+  "frame": [375, 812],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "92:19603",
+  "export_size": [375, 812],
+  "fonts": ["Montserrat"],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": ["snippet.html"],
+    "source": ["source/figma.png"],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": ["closer welcome", "closer start", "getting started grid"],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.38%",
+    "al": "±2px",
+    "note": "The same <code>onboarding/mobile/start</code> layout as Final onboarding, start, in this grid&rsquo;s earlier version: the intro wraps differently and the Start button is its own width. The file&rsquo;s popup copy ends in &#128071;; Figma&rsquo;s 1&times; PNG export leaves the emoji out, the canvas shows it, and the code keeps it in the system emoji face, which is wider, so that centred line sits 2px left of the export. The 14px copy moves down 1px: a correction measured against the Figma render, where Chrome set its baseline about 1px higher, not a Figma value. The frame has a 32px corner radius and clips, so the code does too."
+  }
+}

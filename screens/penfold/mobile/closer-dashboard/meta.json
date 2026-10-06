@@ -1,0 +1,50 @@
+{
+  "id": "closer-dashboard",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "closer",
+  "seq": 3,
+  "order": 72,
+  "name": "Closer, dashboard",
+  "title": "Yearly goal",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "92:18524",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "closer dashboard",
+    "dashboard yearly goal",
+    "closer home"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.55%",
+    "al": "±1px",
+    "note": "A later version of <code>home</code>, rebuilt from this frame: the payment line under the buttons, the Yearly goal row without vertical padding, the pink Paid in figures, the squished chevron and the higher Combine, Top up and Share row all belong to this version. The payment line carries literal &lt; and &gt; around its dates in the file, kept as written. The hidden numeric keyboard is not built. The Combine, Top up and Share row sits at x39.5 in Figma; Chrome snaps it to whole pixels. Combine&rsquo;s label is centred, Top up and Share for &pound;25 sit 0.5px right, as in the file. Total pot and &pound;529 keep their Figma box widths (63 and 42) so Growth lands where Figma puts it. The 10, 14 and 16px strings drew 1px higher than Figma in Chrome, so they carry a measured 1px correction; the 12 and 20px strings needed none."
+  }
+}

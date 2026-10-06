@@ -1,0 +1,207 @@
+<div class="scr ph" style="--iw:375;--ih:812"><template shadowrootmode="open">
+<style>
+:host{white-space:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-align:start;font-style:normal;font-variant:normal;line-height:normal;font-weight:400}
+:host{
+  --navy:#123456;      /* 123456 Navy / Cool blue 123456 */
+  --white:#FFFFFF;     /* FFFFFF White */
+  --bg:#F4F4F4;        /* Background (F4F4F4) */
+  --greycc:#CCCCCC;    /* Grey CCCCCC */
+  --lightblue:#E7EBED; /* E7EBED Light blue */
+  --pinkfold:#FF5081;  /* Pinkfold FF5081 */
+  --dolfknip:#5081FF;  /* button/edit fill */
+  --cool:#FBFBFB;      /* FBFBFB Gray1 (switch caps) */
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+svg{display:block}
+
+.fr{position:relative;width:375px;height:812px;overflow:hidden;background:var(--bg);
+    font-family:'Montserrat',sans-serif;color:var(--navy)}
+.abs{position:absolute}
+
+/* Text boxes keep Figma's box; flex centres any overflow evenly. */
+.tx{position:absolute;display:flex;flex-direction:column;justify-content:center;white-space:nowrap}
+.tx-c{align-items:center;text-align:center}
+.tx-r{align-items:flex-end;text-align:right}
+.tx-l{align-items:flex-start;text-align:left}
+.tx-b{justify-content:flex-end}
+
+/* named type styles (Figma text-style names in the comments). Line heights are the
+   Figma text boxes' heights / line count, never `normal`. */
+.t-h1m28{font-weight:700;font-size:28px;line-height:29px;letter-spacing:-1px}   /* H1.m Bold 28, 104%: h29 */
+.t-h3m24{font-weight:700;font-size:24px;line-height:29px;letter-spacing:-1px}   /* H3.m Bold 24, auto: h29 */
+.t-t2b20{font-weight:700;font-size:20px;line-height:24px}                       /* T2 Bold 20 / Label Bold 20: h24 */
+.t-lab12{font-weight:500;font-size:12px;line-height:20px}                       /* LabelS.m / T3.m Medium 12, lineHeight 20 */
+.t-tm12{font-weight:500;font-size:12px;line-height:15px}                        /* T/M 12, auto: h30 / 2 lines */
+.t-sw12{font-weight:500;font-size:12px;line-height:14px}                        /* Medium 12 at 120%: h14 */
+.t-b2m10{font-weight:400;font-size:10px;line-height:14px}                       /* B2.m Regular 10, lineHeight 14 */
+.t-r10{font-weight:400;font-size:10px;line-height:12px}                         /* Regular 10 at 120%: h72 / 6 lines */
+/* untokenized one-offs from the inputBox and Frame 2 instances */
+.t-pct{font-weight:600;font-size:14px;line-height:17px;letter-spacing:-1px}     /* SemiBold 14, auto: h17 */
+.t-amt{font-weight:700;font-size:24px;line-height:29px;letter-spacing:-.8px}    /* Bold 24, auto: h29 */
+.t-day{font-weight:700;font-size:16px;line-height:20px;letter-spacing:-.4px}    /* Bold 16, auto: h20 */
+.t-phn{font-weight:500;font-size:12px;line-height:15px;letter-spacing:-.4px;color:var(--greycc)} /* Medium 12, auto: h15 */
+/* after every rule above: runs that carry LNUM + TNUM in the file */
+.num{font-feature-settings:"lnum" 1,"tnum" 1}
+/* CSS adds letter-spacing after the last glyph; Figma's box does not. On centred and
+   right-aligned strings the ink would drift, so the trailing spacing is cancelled. */
+.trk8{margin-right:.8px}
+.trk1{margin-right:1px}
+
+/* Measured correction, not a Figma value: Chrome sets the baseline of these strings ~1px
+   higher than Figma's export on this project (measured per string against source/figma.png).
+   Moves the ink down 1px without touching layout. */
+.bl1{position:relative;top:1px}
+
+/* ---------- button/edit ---------- */
+.edit{left:290px;top:196px;width:40px;height:64px}
+.edit-bg{left:0;top:24px;width:40px;height:40px;border-radius:20px;background:var(--dolfknip)}
+.edit-ico{left:9px;top:31px;width:24px;height:24px}
+
+/* ---------- Frame 2: salary % box, 1px #E7EBED inside stroke ---------- */
+.pct{left:192px;top:220px;width:49px;height:40px}
+.pct-bg{left:1px;top:0;width:46px;height:40px;border-radius:8px;background:var(--white);
+        box-shadow:inset 0 0 0 1px var(--lightblue)}
+
+/* ---------- inputBox/mobile ---------- */
+.in{width:152px;height:60px}
+.in-box{left:0;top:20px;width:152px;height:40px;border-radius:8px;background:var(--white)}
+/* 2px #CCCCCC inside stroke (Figma's inside stroke = inset shadow) */
+.in-str{box-shadow:inset 0 0 0 2px var(--greycc)}
+/* icon/chevronRight turned -90deg in the file's y-down matrix: the right-pointing export points down */
+.in-chev{left:104px;top:19px;width:44px;height:44px;transform:rotate(90deg)}
+
+/* ---------- comp/switch/Salary ---------- */
+.sw{width:96px;height:71px}
+.sw-on{left:13px;top:29px;width:70px;height:44px}
+.sw-trk{left:2px;top:2px;width:66px;height:40px;border-radius:20px;background:var(--pinkfold);
+        box-shadow:inset 0 1px 3px 0 rgba(0,0,0,.08)}   /* InnerShadow/toggle */
+.sw-cap{left:26px;top:0;width:44px;height:44px}
+/* control/toggle (OFF). The instance nests a y-flip and an x-flip; Figma still draws the
+   inner shadow at the top and the cap's drop shadow below (the export confirms), so it is built unflipped. */
+.tg{left:15px;top:31px;width:66px;height:40px}
+.tg-bg{inset:0;border-radius:20px;background:var(--lightblue);box-shadow:inset 0 1px 3px 0 rgba(0,0,0,.08)}
+/* cap: 28px ellipse at 6,6; its export is 32x32 with the circle at 16,14 */
+.tg-cap{left:4px;top:6px;width:32px;height:32px}
+
+/* recurring icon: flipped horizontally in the file (the export is the unflipped artwork) */
+.rec{left:200px;top:300px;width:32px;height:32px;transform:scaleX(-1)}
+
+/* legal copy */
+.legal{left:32px;top:567px;width:311px;white-space:normal}
+.link{font-weight:600;color:var(--pinkfold);text-decoration:underline;text-decoration-thickness:from-font;
+      text-decoration-skip-ink:none;text-underline-position:from-font}
+
+/* button/Save */
+.save{left:107px;top:692px;width:160px;height:48px;border-radius:8px;background:var(--pinkfold)}
+.white{color:var(--white)}
+
+/* ---------- combo/navbar/mobile/module ---------- */
+.mh{left:0;top:63px;width:375px;height:72px}
+/* 0.333px #CCCCCC stroke, outside the box (the export inks row 135, not 134):
+   one crisp row at the alpha its coverage produces; side bleed is clipped by the frame */
+.mh-bg{left:0;top:0;width:375px;height:72px;background:var(--white);box-shadow:0 0 0 1px rgba(204,204,204,.333)}
+.back{left:4px;top:16px;width:120px;height:44px}
+/* the chevronRight export points right; the instance is turned 180deg */
+.back-ico{left:2px;top:0;width:44px;height:44px;transform:rotate(180deg)}
+
+/* ---------- iOS Nav Bar (contracted) ---------- */
+.ios{left:0;top:0;width:375px;height:63px}
+.ios-bg{left:0;top:0}
+/* Divider: 0.5px black at 20% layer opacity, spanning y 62.5-63 = half of row 62 at 0.2,
+   inked as one crisp row at 0.1 (hairline rule; not the file's number) */
+.ios-div{left:0;top:62px;width:375px;height:1px;background:rgba(0,0,0,.1)}
+/* Figma names SF Pro Text; the system face is listed first on purpose (library convention) */
+.t-ios-url{position:absolute;left:145px;top:40px;width:84px;height:15px;display:flex;justify-content:center;
+           white-space:nowrap;text-align:center;font-family:-apple-system,'SF Pro Text',sans-serif;
+           font-weight:400;font-size:12px;line-height:15px;letter-spacing:-.35px;color:#000}
+.t-ios-url .trk{margin-right:.35px}
+.ios-st{left:0;top:0;width:375px;height:44px}
+.t-ios-time{position:absolute;left:19.894px;top:14px;width:54px;height:18px;text-align:center;
+            font-family:-apple-system,'SF Pro Text',sans-serif;font-weight:600;font-size:15px;
+            line-height:18px;letter-spacing:-.165px;color:#000}
+.t-ios-time .trk{margin-right:.165px}
+.ios-batt{right:14.5px;top:calc(50% + .91px);transform:translateY(-50%);width:24.5px;height:11.5px}
+.ios-fill{right:19px;top:calc(50% + .91px);transform:translateY(-50%);width:18px;height:7.667px;
+          border-radius:1.6px;background:#000}
+.ios-cell{right:64.4px;top:calc(50% + .95px);transform:translateY(-50%);width:17.1px;height:10.7px}
+.ios-wifi{right:44px;top:calc(50% + .93px);transform:translateY(-50%);width:15.4px;height:11.057px}
+</style>
+<div class="fr" data-frame data-node-id="2065:7495">
+
+<div class="abs edit" data-node-id="2065:7496">
+  <div class="abs edit-bg"></div>
+  <div class="abs edit-ico"><svg preserveAspectRatio="none" overflow="visible" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="cp1-external-link"><path d="M18 13V19C18 19.5304 17.7893 20.0391 17.4142 20.4142C17.0391 20.7893 16.5304 21 16 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V8C3 7.46957 3.21071 6.96086 3.58579 6.58579C3.96086 6.21071 4.46957 6 5 6H11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 3H21V9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14L21 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg></div>
+  <div class="tx tx-c t-lab12" style="left:-8px;top:0;width:55px;height:20px" data-node-id="2065:7502"><p>Estimate</p></div>
+</div>
+
+<div class="abs pct" data-node-id="2065:7506">
+  <div class="abs pct-bg"></div>
+  <div class="tx tx-c t-pct num" style="left:9px;top:11px;width:30px;height:17px" data-node-id="2065:7508"><p class="bl1"><span class="trk1">23%</span></p></div>
+</div>
+
+<div class="abs in" style="left:32px;top:200px" data-node-id="2065:7509">
+  <div class="abs in-box"></div>
+  <div class="tx tx-c t-amt num" style="left:12px;top:26px;width:128px;height:29px"><p><span class="trk8">&pound; 250</span></p></div>
+  <div class="tx tx-l t-lab12" style="left:4px;top:0;width:89px;height:20px"><p>One off top up</p></div>
+</div>
+
+<div class="tx tx-c t-b2m10" style="left:195px;top:203px;width:42px;height:14px" data-node-id="2065:7510"><p class="bl1">Salary %</p></div>
+
+<div class="abs in" style="left:32px;top:276px" data-node-id="2065:7511">
+  <div class="abs in-box"></div>
+  <div class="abs in-chev"><svg preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="cp2-icon/chevronRight"><path d="M22 18L26 22L22 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/></g></svg></div>
+  <div class="tx tx-l t-day num" style="left:12px;top:30px;width:128px;height:20px"><p class="bl1">1st</p></div>
+  <div class="tx tx-l t-lab12" style="left:4px;top:0;width:49px;height:20px"><p>Paid on:</p></div>
+</div>
+
+<div class="abs" style="left:32px;top:384px;width:326px;height:241px" data-node-id="2065:7512">
+  <div class="tx tx-l t-h3m24 num" style="left:0;top:0;width:149px;height:29px" data-node-id="2065:7513"><p>Debit details</p></div>
+  <div class="abs in" style="left:0;top:45px" data-node-id="2065:7514">
+    <div class="abs in-box in-str"></div>
+    <div class="tx tx-l t-phn num" style="left:12px;top:33px;width:128px;height:15px"><p>123456</p></div>
+    <div class="tx tx-l t-lab12" style="left:4px;top:0;width:104px;height:20px"><p>Account number</p></div>
+  </div>
+  <div class="abs in" style="left:0;top:113px" data-node-id="2065:7515">
+    <div class="abs in-box in-str"></div>
+    <div class="tx tx-l t-phn num" style="left:12px;top:33px;width:128px;height:15px"><p>12 - 12 - 12</p></div>
+    <div class="tx tx-l t-lab12" style="left:4px;top:0;width:59px;height:20px"><p>Sort code</p></div>
+  </div>
+  <div class="abs sw" style="left:230px;top:34px" data-node-id="2065:7517">
+    <div class="abs tg" data-node-id="2065:7681">
+      <div class="abs tg-bg"></div>
+      <div class="abs tg-cap"><svg preserveAspectRatio="none" overflow="visible" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="cp3-cap" filter="url(#cp3-filter0_d_0_92)"><circle cx="16" cy="14" r="14" fill="#FBFBFB"/><circle cx="16" cy="14" r="13.5" stroke="white"/></g><defs><filter id="cp3-filter0_d_0_92" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_92"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_92" result="shape"/></filter></defs></svg></div>
+      <div class="tx tx-c tx-b t-tm12" style="left:6px;top:-34px;width:55px;height:30px" data-node-id="I2065:7681;2:337"><p>Business</p><p>account</p></div>
+    </div>
+  </div>
+</div>
+
+<div class="abs sw" style="left:262px;top:265px" data-node-id="2065:7523">
+  <div class="abs sw-on" data-node-id="2065:7524">
+    <div class="abs sw-trk"></div>
+    <div class="abs sw-cap"><svg preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="cp4-button/buttonCap"><g filter="url(#cp4-filter0_d_0_86)"><circle cx="22" cy="22" r="14" fill="#FBFBFB"/><circle cx="22" cy="22" r="13.5" stroke="white"/></g></g><defs><filter id="cp4-filter0_d_0_86" x="6" y="8" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_86"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_86" result="shape"/></filter></defs></svg></div>
+  </div>
+  <div class="tx tx-c tx-b t-sw12" style="left:26px;top:14px;width:45px;height:14px" data-node-id="2065:7528"><p>One off</p></div>
+</div>
+
+<div class="abs t-r10 legal" data-node-id="2065:7538"><p class="bl1">Your payments are powered by Seccl Custody Limited, which will be the reference name on your bank statements. Their Direct Debit service user number is 184276.</p><p>&#8203;</p><p class="bl1">Please also read <span class="link">this notice</span> in relation to your clawback rights.</p></div>
+<div class="abs save" data-node-id="2065:7539">
+  <div class="tx tx-c t-t2b20 white" style="left:54.912px;top:12px;width:50px;height:24px"><p>Save</p></div>
+</div>
+
+<div class="tx tx-l t-h3m24 num" style="left:32px;top:155px;width:173px;height:29px" data-node-id="2065:7541"><p>Pay-in amount</p></div>
+
+<div class="abs rec" data-node-id="2065:7542"><svg preserveAspectRatio="none" overflow="visible" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="cp5-recurring-icon"><path d="M15.9999 8.12206C17.8485 8.12206 18.223 8.18668 19.9389 9.17736C20.4098 9.44925 21.012 9.2879 21.2839 8.81697C21.5558 8.34603 21.3944 7.74385 20.9235 7.47195C19.3673 6.57621 17.6737 6.15282 15.9999 6.15282C14.4462 6.15282 12.9765 6.51271 11.6697 7.15366L13.164 8.64799C14.0439 8.3083 15.0002 8.12206 15.9999 8.12206Z" fill="#FF5081"/><path d="M6.15374 15.999V19.7515L3.51936 17.4701C3.10829 17.1141 2.48647 17.1587 2.13048 17.5698C1.77449 17.9808 1.81913 18.6027 2.2302 18.9587L7.13829 23.2092L12.0464 18.9587C12.4574 18.6027 12.5021 17.9808 12.1461 17.5698C11.7901 17.1587 11.1683 17.1141 10.7572 17.4701L8.12297 19.7514V15.999C8.12297 13.469 9.31575 11.2176 11.1696 9.7764L9.76845 8.37521C7.56199 10.1809 6.15374 12.9255 6.15374 15.999Z" fill="#FF5081"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.47276 4.47198C4.08825 4.8565 4.08825 5.47992 4.47276 5.86444L26.1343 27.526C26.5188 27.9105 27.1422 27.9105 27.5268 27.526C27.9113 27.1415 27.9113 26.518 27.5268 26.1335L5.86522 4.47198C5.4807 4.08746 4.85728 4.08746 4.47276 4.47198Z" fill="#FF5081"/><path d="M15.9996 23.8759C14.3524 23.8759 13.0459 23.3836 12.0606 22.8206C11.5897 22.5487 10.9875 22.7101 10.7156 23.181C10.4437 23.6519 10.6051 24.2541 11.076 24.526C12.6322 25.4218 14.3258 25.8451 15.9996 25.8451C19.0732 25.8451 21.8179 24.4368 23.6235 22.2303L22.2223 20.8291C20.7812 22.6831 18.5297 23.8759 15.9996 23.8759Z" fill="#FF5081"/><path d="M25.8458 15.999V12.2465L28.4802 14.5279C28.8912 14.8839 29.5131 14.8392 29.869 14.4282C30.225 14.0171 30.1804 13.3953 29.7693 13.0393L24.8612 8.78876L19.9531 13.0393C19.5421 13.3953 19.4974 14.0171 19.8534 14.4282C20.2094 14.8392 20.8312 14.8839 21.2423 14.5279L23.8766 12.2466V15.999C23.8766 16.9986 23.6903 17.9548 23.3507 18.8347L24.845 20.329C25.4859 19.0223 25.8458 17.5526 25.8458 15.999Z" fill="#FF5081"/></g></svg></div>
+
+<div class="abs mh" data-node-id="2065:7544">
+  <div class="abs mh-bg"></div>
+  <div class="abs back" data-node-id="I2065:7544;114:490">
+    <div class="tx tx-r t-t2b20" style="left:47px;top:10px;width:53px;height:24px"><p>Back</p></div>
+    <div class="abs back-ico"><svg preserveAspectRatio="none" overflow="visible" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="cp6-icon/chevronRight"><path d="M22 18L26 22L22 26" stroke="#123456" stroke-width="3" stroke-linecap="round"/></g></svg></div>
+  </div>
+  <div class="tx tx-r t-h1m28" style="left:216px;top:21px;width:127px;height:29px" data-node-id="I2065:7544;114:500"><p class="bl1"><span class="trk1">Payment</span></p></div>
+</div>
+
+<div class="abs ios" data-node-id="2065:7545"><div class="abs ios-bg"><svg preserveAspectRatio="none" overflow="visible" width="375" height="63" viewBox="0 0 375 63" fill="none" xmlns="http://www.w3.org/2000/svg"><foreignObject x="-40.7742" y="-40.7742" width="456.548" height="144.548"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20.39px);clip-path:url(#cp7-bgblur_0_0_84_clip_path);height:100%;width:100%"></div></foreignObject><path id="cp7-Background" data-figma-bg-blur-radius="40.7742" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z" fill="#F8F8F8" fill-opacity="0.7"/><defs><clipPath id="cp7-bgblur_0_0_84_clip_path" transform="translate(40.7742 40.7742)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z"/></clipPath></defs></svg></div><div class="abs ios-div"></div><p class="t-ios-url"><span class="trk">getpenfold.com</span></p><div class="abs ios-st"><p class="t-ios-time"><span class="trk">8:24</span></p><div class="abs ios-batt"><svg preserveAspectRatio="none" overflow="visible" width="24.5" height="11.5" viewBox="0 0 24.5 11.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="cp8-Rectangle" fill-rule="evenodd" clip-rule="evenodd" d="M3.58944 0H18.4106C19.6587 0 20.1113 0.129956 20.5676 0.373986C21.0239 0.618016 21.382 0.97612 21.626 1.43242C21.87 1.88871 22 2.34131 22 3.58944V7.91056C22 9.15869 21.87 9.61129 21.626 10.0676C21.382 10.5239 21.0239 10.882 20.5676 11.126C20.1113 11.37 19.6587 11.5 18.4106 11.5H3.58944C2.34131 11.5 1.88871 11.37 1.43242 11.126C0.97612 10.882 0.618016 10.5239 0.373986 10.0676C0.129956 9.61129 0 9.15869 0 7.91056V3.58944C0 2.34131 0.129956 1.88871 0.373986 1.43242C0.618016 0.97612 0.97612 0.618016 1.43242 0.373986C1.88871 0.129956 2.34131 0 3.58944 0ZM3.58944 1C2.60246 1 2.2579 1.06654 1.90401 1.2558C1.62199 1.40663 1.40663 1.62199 1.2558 1.90401C1.06654 2.2579 1 2.60246 1 3.58944V7.91056C1 8.89754 1.06654 9.2421 1.2558 9.59599C1.40663 9.87801 1.62199 10.0934 1.90401 10.2442C2.2579 10.4335 2.60246 10.5 3.58944 10.5H18.4106C19.3975 10.5 19.7421 10.4335 20.096 10.2442C20.378 10.0934 20.5934 9.87801 20.7442 9.59599C20.9335 9.2421 21 8.89754 21 7.91056V3.58944C21 2.60246 20.9335 2.2579 20.7442 1.90401C20.5934 1.62199 20.378 1.40663 20.096 1.2558C19.7421 1.06654 19.3975 1 18.4106 1H3.58944ZM24.5 5.69C24.5 6.92657 23 7.69 23 7.69V3.69C23 3.69 24.5 4.45343 24.5 5.69Z" fill="black" fill-opacity="0.36"/></svg></div><div class="abs ios-fill"></div><div class="abs ios-cell"><svg preserveAspectRatio="none" overflow="visible" width="17.1" height="10.7" viewBox="0 0 17.1 10.7" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="cp9-Combined_Shape" fill-rule="evenodd" clip-rule="evenodd" d="M14.123 0.965892C14.1 1.08181 14.1 1.22121 14.1 1.5V9.2C14.1 9.47879 14.1 9.61819 14.123 9.73411C14.2177 10.2101 14.5899 10.5823 15.0659 10.6769C15.1818 10.7 15.3212 10.7 15.6 10.7C15.8788 10.7 16.0182 10.7 16.1341 10.6769C16.6101 10.5823 16.9822 10.2101 17.0769 9.73411C17.1 9.61819 17.1 9.47879 17.1 9.2V1.5C17.1 1.22121 17.1 1.08181 17.0769 0.965892C16.9822 0.489863 16.6101 0.117746 16.1341 0.0230577C16.0182 0 15.8788 0 15.6 0C15.3212 0 15.1818 0 15.0659 0.0230577C14.5899 0.117746 14.2177 0.489863 14.123 0.965892ZM9.39999 3.9C9.39999 3.62121 9.39999 3.48181 9.42305 3.36589C9.51774 2.88986 9.88986 2.51775 10.3659 2.42306C10.4818 2.4 10.6212 2.4 10.9 2.4C11.1788 2.4 11.3182 2.4 11.4341 2.42306C11.9101 2.51775 12.2822 2.88986 12.3769 3.36589C12.4 3.48181 12.4 3.62121 12.4 3.9V9.2C12.4 9.4788 12.4 9.61819 12.3769 9.73411C12.2822 10.2101 11.9101 10.5823 11.4341 10.6769C11.3182 10.7 11.1788 10.7 10.9 10.7C10.6212 10.7 10.4818 10.7 10.3659 10.6769C9.88986 10.5823 9.51774 10.2101 9.42305 9.73411C9.39999 9.61819 9.39999 9.4788 9.39999 9.2V3.9ZM4.82305 5.6659C4.79999 5.78182 4.79999 5.92121 4.79999 6.2V9.2C4.79999 9.4788 4.79999 9.61819 4.82305 9.73411C4.91773 10.2101 5.28985 10.5823 5.76588 10.6769C5.8818 10.7 6.02119 10.7 6.29999 10.7C6.57878 10.7 6.71818 10.7 6.8341 10.6769C7.31012 10.5823 7.68224 10.2101 7.77693 9.73411C7.79999 9.61819 7.79999 9.4788 7.79999 9.2V6.2C7.79999 5.92121 7.79999 5.78182 7.77693 5.6659C7.68224 5.18987 7.31012 4.81775 6.8341 4.72306C6.71818 4.7 6.57878 4.7 6.29999 4.7C6.02119 4.7 5.8818 4.7 5.76588 4.72306C5.28985 4.81775 4.91773 5.18987 4.82305 5.6659ZM0.0230577 7.6659C0 7.78182 0 7.92121 0 8.2V9.2C0 9.4788 0 9.61819 0.0230577 9.73411C0.117746 10.2101 0.489863 10.5823 0.965892 10.6769C1.08181 10.7 1.22121 10.7 1.5 10.7C1.77879 10.7 1.91819 10.7 2.03411 10.6769C2.51014 10.5823 2.88225 10.2101 2.97694 9.73411C3 9.61819 3 9.4788 3 9.2V8.2C3 7.92121 3 7.78182 2.97694 7.6659C2.88225 7.18987 2.51014 6.81775 2.03411 6.72306C1.91819 6.7 1.77879 6.7 1.5 6.7C1.22121 6.7 1.08181 6.7 0.965892 6.72306C0.489863 6.81775 0.117746 7.18987 0.0230577 7.6659Z" fill="black"/></svg></div><div class="abs ios-wifi"><svg preserveAspectRatio="none" overflow="visible" width="15.4" height="11.0572" viewBox="0 0 15.4 11.0572" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="cp10-Wi-Fi" fill-rule="evenodd" clip-rule="evenodd" d="M7.70042 2.29636C9.93483 2.29646 12.0838 3.15501 13.7032 4.69457C13.8251 4.81343 14.02 4.81193 14.1401 4.69121L15.3058 3.51479C15.3666 3.45356 15.4005 3.37062 15.4 3.28433C15.3995 3.19803 15.3646 3.11549 15.3031 3.05498C11.0528 -1.01833 4.3474 -1.01833 0.0970716 3.05498C0.0355014 3.11545 0.000571881 3.19796 7.20154e-06 3.28426C-0.000567562 3.37055 0.033283 3.45352 0.0940465 3.51479L1.26005 4.69121C1.38006 4.81211 1.57513 4.81361 1.697 4.69457C3.31657 3.15491 5.46579 2.29636 7.70042 2.29636V2.29636ZM7.70042 6.12375C8.92809 6.12367 10.1119 6.57999 11.022 7.40402C11.145 7.52097 11.3389 7.51844 11.4589 7.39831L12.6232 6.22189C12.6845 6.16019 12.7186 6.07648 12.7177 5.98949C12.7168 5.90251 12.6811 5.8195 12.6185 5.75906C9.84735 3.18131 5.55584 3.18131 2.78469 5.75906C2.72209 5.8195 2.68637 5.90255 2.68555 5.98956C2.68473 6.07657 2.71887 6.16028 2.78031 6.22189L3.9443 7.39831C4.06427 7.51844 4.25817 7.52097 4.38125 7.40402C5.29065 6.58053 6.47357 6.12426 7.70042 6.12375V6.12375ZM9.93797 8.93135C10.0002 8.87024 10.0345 8.78614 10.0327 8.69891C10.031 8.61168 9.99327 8.52905 9.92855 8.47053C8.64232 7.38263 6.75852 7.38263 5.47229 8.47053C5.40753 8.529 5.36977 8.6116 5.36792 8.69883C5.36608 8.78606 5.40031 8.87019 5.46254 8.93135L7.4769 10.9639C7.53594 11.0236 7.61643 11.0572 7.70042 11.0572C7.78441 11.0572 7.8649 11.0236 7.92394 10.9639L9.93797 8.93135Z" fill="black"/></svg></div></div></div>
+
+</div>
+</template></div>

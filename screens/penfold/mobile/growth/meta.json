@@ -2,6 +2,8 @@
   "id": "growth",
   "project": "penfold",
   "platform": "mobile",
+  "flow": "closer",
+  "seq": 8,
   "order": 3,
   "name": "Growth",
   "title": null,

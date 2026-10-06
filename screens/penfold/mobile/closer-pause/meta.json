@@ -1,0 +1,50 @@
+{
+  "id": "closer-pause",
+  "project": "penfold",
+  "platform": "mobile",
+  "flow": "closer",
+  "seq": 5,
+  "order": 74,
+  "name": "Closer, pause contributions pop-up",
+  "title": "Pause contributions",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "92:19091",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Montserrat"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "closer pause",
+    "pause contributions",
+    "pause popup"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.88%",
+    "al": "±0.5px",
+    "note": "The dashboard under the blur is not the one behind <em>Pause &amp; resume</em>: both pills are blue, the second reads &pound;422 on 2nd, and the payment warning is hidden. The pop-up sits at <code>left:0</code> here and its card stacks at 32px, not 40. Its pink warning line carries no text style (Montserrat Bold 10). Every Montserrat run has ligatures off, so <code>liga</code> and <code>clig</code> are off throughout. <em>Total pot</em> and &pound;529 keep their Figma box widths (63 and 42px) so the Growth column lands where Figma puts it. The 10, 14 and 16px strings drew 1px higher than Figma in Chrome and carry a measured 1px correction; under the blur it is applied by size, since those strings cannot be measured one by one. The status-bar time and URL are SF Pro Text in Figma and render in the system face, which accounts for most of the header difference."
+  }
+}

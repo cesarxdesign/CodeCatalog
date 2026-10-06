@@ -2,7 +2,13 @@
   "id": "master-combine-success",
   "project": "penfold",
   "platform": "mobile",
-  "flow": "master-combine",
+  "flow": [
+    "master-combine",
+    "closer"
+  ],
+  "seq": {
+    "closer": 6
+  },
   "order": 65,
   "name": "Combine, v1.2 success",
   "title": "Success",

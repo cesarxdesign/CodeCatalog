@@ -1,0 +1,159 @@
+<!-- CodeCatalog · penfold/mobile/closer-estimate · 375×812 · built from snippet.html · fp cd74a26ba96e
+     Drop-in, style-isolated copy of the screen. Paste it into any page.
+     Scale:      .cc-screen{--cc-scale:.5}      (default 1)
+     Background: .cc-screen{--cc-bg:#F6F6F6}    (default transparent)
+     Scripts are not included; for the clickable version use screen.html. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,400;1,700&display=swap">
+<div class="cc-screen" data-cc="penfold/mobile/closer-estimate" style="--cc-w:375;--cc-h:812;width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+<div style="width:375px;height:812px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
+:host{display:block;width:375px;height:812px;overflow:hidden;font-family:'Montserrat',-apple-system,sans-serif;color:#133253}
+:host{white-space:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;text-indent:0;text-align:start;font-style:normal;font-variant:normal;line-height:normal;font-weight:400}
+:host{
+  --navy:#123456;      /* 123456 Navy */
+  --white:#FFFFFF;     /* FFFFFF White */
+  --grey2:#F4F4F4;     /* Background (F4F4F4) */
+  --grey3:#F0F0F0;     /* F0F0F0 Gray3 */
+  --grey4:#D8D8D8;     /* D8D8D8 Gray4 */
+  --grey1:#FBFBFB;     /* FBFBFB Gray1 / Cool grey */
+  --lightblue:#E7EBED; /* E7EBED Light blue */
+  --pinkfold:#FF5081;  /* FF5081 Pinkfold */
+  --paidin:#5C85D6;    /* chart: Paid in (untokenized in the file) */
+  --growth:#20499A;    /* chart: Growth (untokenized in the file) */
+  --green:#4CD964;     /* chart: ideal-pot dot (untokenized in the file) */
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+svg{display:block}
+
+/* cornerRadius 32 with clipping: the export's corners are transparent; built square, on request (2026-09-29) */
+.fr{position:relative;width:375px;height:812px;overflow:hidden;background:var(--grey2);
+    font-family:'Montserrat',sans-serif;color:var(--navy)}
+.abs{position:absolute}
+
+/* named type styles (Figma text-style names in the comments). Line heights are the
+   Figma text boxes' heights, never `normal`. */
+.t-nb28{font-weight:700;font-size:28px;line-height:34px;letter-spacing:-.8px}   /* N/B 28 */
+.t-nb24{font-weight:700;font-size:24px;line-height:29px;letter-spacing:-.8px}   /* N/B 24 */
+.t-nsb16{font-weight:600;font-size:16px;line-height:20px;letter-spacing:-.8px}  /* N/SB 16 */
+.t-tb20{font-weight:700;font-size:20px;line-height:24px}                        /* T/B 20 */
+.t-tm12{font-weight:500;font-size:12px;line-height:15px}                        /* T/M 12 */
+/* the chart strings carry no text style in the file: Montserrat 10 / 8, auto line height */
+.t-b10{font-weight:700;font-size:10px;line-height:12px}                         /* Bold 10: h12 */
+.t-r10{font-weight:400;font-size:10px;line-height:12px}                         /* Regular 10: h12 */
+.t-r8{font-weight:400;font-size:8px;line-height:10px}                           /* Regular 8: h10 */
+.t-b{font-weight:700}
+/* after every rule above: runs that carry LNUM + TNUM in the file */
+.num{font-feature-settings:"lnum" 1,"tnum" 1}
+/* CSS adds letter-spacing after the last glyph; Figma's box does not. On centred and
+   right-aligned strings the ink would drift, so the trailing -0.8px is cancelled. */
+.trk8{margin-right:.8px}
+
+/* Measured correction, not a Figma value: Chrome sets the baseline of these sizes ~1px
+   higher than Figma's export on this project (measured per string against source/figma.png).
+   Moves the ink down 1px without touching layout. */
+.bl1{position:relative;top:1px}
+
+
+/* ---------- iOS/smallSafariHeader (92:19575) ---------- */
+.ios{left:0;top:0;width:375px;height:63px}
+.ios-bg{left:0;top:0}
+/* Divider: 0.5px black at 20% layer opacity, spanning y 62.5-63 = half of row 62 at 0.2,
+   inked as one crisp row at 0.1 (hairline rule; not the file's number) */
+.ios-div{left:0;top:62px;width:375px;height:1px;background:rgba(0,0,0,.1)}
+/* Figma names SF Pro Text; the system face is listed first on purpose (library convention) */
+.t-ios-url{position:absolute;left:145px;top:40px;width:84px;height:15px;display:flex;justify-content:center;
+           white-space:nowrap;text-align:center;font-family:-apple-system,'SF Pro Text',sans-serif;
+           font-weight:400;font-size:12px;line-height:15px;letter-spacing:-.35px;color:#000}
+.t-ios-url .trk{margin-right:.35px}
+.ios-st{left:0;top:0;width:375px;height:44px}
+.t-ios-time{position:absolute;left:19.894px;top:14px;width:54px;height:18px;text-align:center;
+            font-family:-apple-system,'SF Pro Text',sans-serif;font-weight:600;font-size:15px;
+            line-height:18px;letter-spacing:-.165px;color:#000}
+.t-ios-time .trk{margin-right:.165px}
+.ios-batt{right:14.5px;top:calc(50% + .91px);transform:translateY(-50%);width:24.5px;height:11.5px}
+.ios-fill{right:19px;top:calc(50% + .91px);transform:translateY(-50%);width:18px;height:7.667px;
+          border-radius:1.6px;background:#000}
+.ios-cell{right:64.4px;top:calc(50% + .95px);transform:translateY(-50%);width:17.1px;height:10.7px}
+.ios-wifi{right:44px;top:calc(50% + .93px);transform:translateY(-50%);width:15.4px;height:11.057px}
+
+/* ---------- header/mobile/module (92:19567) ---------- */
+.mh{left:0;top:63px;width:375px;height:72px}
+/* 0.333px #D8D8D8 stroke, outside the box (the export inks row 135, not 134):
+   one crisp row at the alpha its coverage produces; side bleed is clipped by the frame */
+.mh-bg{left:0;top:0;width:375px;height:72px;background:var(--white);box-shadow:0 0 0 1px rgba(216,216,216,.333)}
+/* Title: x218 y18 125x34, right-aligned */
+.mh-ttl{right:32px;top:calc(50% - 1px);transform:translateY(-50%);display:flex;flex-direction:column;
+        justify-content:center;text-align:right;white-space:nowrap}
+.mh-back{left:0;top:50%;transform:translateY(-50%);display:flex;align-items:center}
+/* the icon/chevron export points right; the instance is turned 180deg, the canvas points left */
+.ch-l{position:relative;width:40px;height:40px;flex:0 0 auto;transform:rotate(180deg)}
+.mh-lab{display:flex;align-items:center;overflow:hidden;padding:4px;flex:0 0 auto}
+.mh-lab-t{display:flex;flex-direction:column;justify-content:center;white-space:nowrap}
+
+/* ---------- textField/roundCorners (shared by Pay in and Income) ---------- */
+.tf{position:relative;width:148px;height:81px;flex:0 0 auto}
+.tf-val{left:0;right:0;bottom:0;height:40px}
+.tf-box{inset:0;border-radius:8px;background:var(--grey1)}
+/* aux copy: x16 y6 116x29, centred */
+.tf-t{left:16px;right:16px;top:6px;height:29px;display:flex;justify-content:center;text-align:center;white-space:nowrap}
+/* Bold Label: x0 y0, h29, bottom-aligned */
+.tf-lab{left:0;top:0;white-space:nowrap}
+
+/* ---------- control/toggle, ON (shared by One off and Salary based) ----------
+   control/toggleBG/ON is flipped vertically in the file; the export still draws the cap's
+   shadow below and the track's inner shadow at the top, so neither is flipped here. */
+.tg{position:relative;width:66px;height:40px;flex:0 0 auto}
+.tg-bg{inset:0;border-radius:20px;background:var(--pinkfold);box-shadow:inset 0 1px 3px 0 rgba(0,0,0,.08)}
+/* cap: 28x28 at x32 y6; its export is 32x32 with the drop shadow, inset -2 / -2 / -4 */
+.tg-cap{left:32px;top:6px;width:28px;height:28px}
+.tg-capsvg{left:-2px;top:0}
+.tg-lab{top:-19px;height:15px;display:flex;justify-content:center;align-items:flex-end;text-align:center;white-space:nowrap}
+
+/* ---------- Pay in().padding(horizontal: 32, vertical:24).spacing(16) (92:19550) ---------- */
+.pay{left:0;top:135px;display:flex;gap:16px;align-items:flex-end;padding:24px 32px}
+.rec{position:relative;width:65px;height:40px;flex:0 0 auto}
+/* icon/recurringOFF is mirrored left to right in the file (the export is not) */
+.rec-i{left:13px;top:0;width:40px;height:40px;transform:scaleX(-1)}
+
+/* ---------- Income().padding(horizontal: 32, vertical:24) (92:19525) ---------- */
+/* Fixed 177 tall; the text field is aligned to the top and the stepper to the bottom
+   (per-child layoutAlign MIN / MAX in the file) */
+.inc{left:0;top:264px;width:375px;height:177px;display:flex;gap:97px;padding:24px 32px;overflow:hidden}
+.inc-up{align-self:flex-start}
+.stp{position:relative;width:66px;height:88px;flex:0 0 auto;align-self:flex-end}
+.stp-col{left:-7px;top:0;width:80px;display:flex;flex-direction:column;gap:8px;align-items:center}
+/* textField/pill/vLabel: white, 1px #E7EBED inside stroke */
+.pill{position:relative;width:66px;height:40px;flex:0 0 auto}
+.pill-bg{inset:0;border-radius:20px;background:var(--white);box-shadow:inset 0 0 0 1px var(--lightblue)}
+.pill-t{left:21px;top:10px;width:25px;height:20px;display:flex;justify-content:center;text-align:center;white-space:nowrap}
+.pill-lab{left:-1px;top:-19px;width:69px;height:15px;display:flex;justify-content:center;align-items:flex-end;text-align:center;white-space:nowrap}
+.stps{position:relative;width:80px;height:40px;flex:0 0 auto}
+.stp1{top:0;width:40px;height:40px}
+/* platter: 32x32, #FBFBFB, 1px white inside stroke, Shadow/subtle (0 2 2 16%) */
+.plat{left:4px;top:4px;width:32px;height:32px;border-radius:20px;background:var(--grey1);
+      box-shadow:0 2px 2px 0 rgba(0,0,0,.16),inset 0 0 0 1px var(--white)}
+/* symbol: mirrored left to right in the file */
+.sym{top:8px;height:24px;display:flex;justify-content:center;text-align:center;white-space:nowrap;transform:scaleX(-1)}
+
+/* ---------- Graph/recurring (92:19458) ---------- */
+.gr{left:0;top:441px;width:375px;height:152px}
+.dot{width:8px;height:8px;border-radius:4px}
+.g-ttl{left:57px;top:16px;width:82px;white-space:nowrap}
+/* bars: one export of the masked group (296x61 mask, bar bottoms cut, #FBFBFB baseline) */
+.g-bars{left:39px;top:36px;width:296px;height:61px}
+.g-tot{left:211px;top:101px;width:104px;display:flex;justify-content:flex-end;text-align:right;white-space:nowrap}
+.g-key{top:102px;height:10px;white-space:nowrap}
+
+/* ---------- Controls (92:19447) ---------- */
+/* bg is 239 tall in a 219 frame that does not clip; the screen's own clip cuts it at 812 */
+.ctl{left:0;top:577px;width:375px;height:219px}
+.ctl-bg{left:0;top:0;width:375px;height:239px;background:var(--grey3)}
+.ctl-col{left:calc(50% - .5px);top:45px;transform:translateX(-50%);display:flex;flex-direction:column;gap:40px;align-items:center}
+/* button/!icon.padding(vertical: 32): 160 wide, padding 11 / 32 */
+.btn{width:160px;padding:11px 32px;border-radius:8px;background:var(--pinkfold);display:flex;align-items:center;flex:0 0 auto}
+.btn-t{flex:1 0 0;text-align:center;color:var(--white);white-space:nowrap}
+</style>
+<div class="fr" data-frame data-node-id="92:19446">
+<div class="abs ctl"><div class="abs ctl-bg"></div><div class="abs ctl-col"><div class="tg"><div class="abs tg-bg"></div><div class="abs tg-cap"><svg class="abs tg-capsvg" preserveAspectRatio="none" overflow="visible" style="display: block;" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="es1-cap" filter="url(#es1-filter0_d_0_84)"><circle cx="16" cy="14" r="14" fill="#FBFBFB"/><circle cx="16" cy="14" r="13.5" stroke="white"/></g><defs><filter id="es1-filter0_d_0_84" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_84"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_84" result="shape"/></filter></defs></svg></div><p class="abs tg-lab t-tm12" style="left:-6px;width:78px">Salary based</p></div><div class="btn"><p class="btn-t t-tb20">Save</p></div></div></div><div class="abs gr"><p class="abs g-tot t-b10 num"><span class="bl1">Total pot: &pound;312,281</span></p><p class="abs g-key t-r8 num" style="left:69px;width:28px">Paid in</p><div class="abs dot" style="left:57px;top:103px;background:var(--paidin)"></div><p class="abs g-key t-r8 num" style="left:119px;width:31px">Growth</p><div class="abs dot" style="left:107px;top:103px;background:var(--growth)"></div><div class="abs g-bars"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="296" height="61" viewBox="0 0 296 61" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="es2-bars"><mask id="es2-mask0_0_15" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="296" height="61"><path id="es2-Line_4_(Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M296 0H0V61H296V0Z" fill="#E7EBED"/></mask><g mask="url(#es2-mask0_0_15)"><g id="es2-Group_127"><rect id="es2-Rectangle_143" width="8" height="14" rx="4" transform="matrix(1 0 0 -1 18 64)" fill="#5C85D6"/><rect id="es2-Rectangle_144" width="8" height="18" rx="4" transform="matrix(1 0 0 -1 28 64)" fill="#5C85D6"/><rect id="es2-Rectangle_145" width="8" height="18" rx="4" transform="matrix(1 0 0 -1 48 64)" fill="#5C85D6"/><rect id="es2-Rectangle_146" width="8" height="28" rx="4" transform="matrix(1 0 0 -1 78 64)" fill="#5C85D6"/><rect id="es2-Rectangle_147" width="8" height="28" rx="4" transform="matrix(1 0 0 -1 88 64)" fill="#5C85D6"/><rect id="es2-Rectangle_148" width="8" height="32" rx="4" transform="matrix(1 0 0 -1 108 64)" fill="#5C85D6"/><path id="es2-Rectangle_149" d="M118 60C118 62.2091 119.791 64 122 64C124.209 64 126 62.2091 126 60V33C126 30.7909 124.209 29 122 29C119.791 29 118 30.7909 118 33V60Z" fill="#5C85D6"/><rect id="es2-Rectangle_150" width="8" height="37" rx="4" transform="matrix(1 0 0 -1 138 64)" fill="#5C85D6"/><rect id="es2-Rectangle_151" width="8" height="37" rx="4" transform="matrix(1 0 0 -1 128 64)" fill="#5C85D6"/><rect id="es2-Rectangle_152" width="8" height="37" rx="4" transform="matrix(1 0 0 -1 148 64)" fill="#5C85D6"/><rect id="es2-Rectangle_153" width="8" height="37" rx="4" transform="matrix(1 0 0 -1 158 64)" fill="#5C85D6"/><rect id="es2-Rectangle_154" width="8" height="41" rx="4" transform="matrix(1 0 0 -1 178 64)" fill="#5C85D6"/><rect id="es2-Rectangle_155" width="8" height="41" rx="4" transform="matrix(1 0 0 -1 168 64)" fill="#5C85D6"/><rect id="es2-Rectangle_156" width="8" height="51" rx="4" transform="matrix(1 0 0 -1 218 64)" fill="#5C85D6"/><rect id="es2-Rectangle_157" width="8" height="46" rx="4" transform="matrix(1 0 0 -1 188 64)" fill="#5C85D6"/><rect id="es2-Rectangle_158" width="8" height="51" rx="4" transform="matrix(1 0 0 -1 208 64)" fill="#5C85D6"/><rect id="es2-Rectangle_159" width="8" height="55" rx="4" transform="matrix(1 0 0 -1 238 64)" fill="#5C85D6"/><rect id="es2-Rectangle_160" width="8" height="32" rx="4" transform="matrix(1 0 0 -1 98 64)" fill="#5C85D6"/><rect id="es2-Rectangle_161" width="8" height="23" rx="4" transform="matrix(1 0 0 -1 58 64)" fill="#5C85D6"/><rect id="es2-Rectangle_162" width="8" height="23" rx="4" transform="matrix(1 0 0 -1 68 64)" fill="#5C85D6"/><rect id="es2-Rectangle_163" width="8" height="18" rx="4" transform="matrix(1 0 0 -1 38 64)" fill="#5C85D6"/><path id="es2-Rectangle_164" d="M198 60C198 62.2091 199.791 64 202 64C204.209 64 206 62.2091 206 60V19C206 16.7909 204.209 15 202 15C199.791 15 198 16.7909 198 19V60Z" fill="#5C85D6"/><rect id="es2-Rectangle_165" width="8" height="54" rx="4" transform="matrix(1 0 0 -1 228 64)" fill="#5C85D6"/><path id="es2-Rectangle_166" d="M248 60C248 62.2091 249.791 64 252 64C254.209 64 256 62.2091 256 60V9C256 6.79086 254.209 5 252 5C249.791 5 248 6.79086 248 9V60Z" fill="#5C85D6"/><rect id="es2-Rectangle_167" width="8" height="64" rx="4" transform="matrix(1 0 0 -1 268 64)" fill="#5C85D6"/><rect id="es2-Rectangle_168" width="8" height="60" rx="4" transform="matrix(1 0 0 -1 258 64)" fill="#5C85D6"/></g><g id="es2-Group_128"><rect id="es2-Rectangle_143_2" width="8" height="8.96875" rx="4" transform="matrix(1 0 0 -1 18 64)" fill="#20499A"/><rect id="es2-Rectangle_144_2" width="8" height="11.5312" rx="4" transform="matrix(1 0 0 -1 28 64)" fill="#20499A"/><rect id="es2-Rectangle_145_2" width="8" height="11.5312" rx="4" transform="matrix(1 0 0 -1 38 64)" fill="#20499A"/><rect id="es2-Rectangle_146_2" width="8" height="17.9375" rx="4" transform="matrix(1 0 0 -1 78 64)" fill="#20499A"/><rect id="es2-Rectangle_147_2" width="8" height="17.9375" rx="4" transform="matrix(1 0 0 -1 88 64)" fill="#20499A"/><rect id="es2-Rectangle_148_2" width="8" height="20.5" rx="4" transform="matrix(1 0 0 -1 98 64)" fill="#20499A"/><rect id="es2-Rectangle_149_2" width="8" height="23.7031" rx="4" transform="matrix(1 0 0 -1 118 64)" fill="#20499A"/><rect id="es2-Rectangle_150_2" width="8" height="23.7031" rx="4" transform="matrix(1 0 0 -1 128 64)" fill="#20499A"/><rect id="es2-Rectangle_151_2" width="8" height="23.7031" rx="4" transform="matrix(1 0 0 -1 138 64)" fill="#20499A"/><rect id="es2-Rectangle_152_2" width="8" height="23.7031" rx="4" transform="matrix(1 0 0 -1 148 64)" fill="#20499A"/><rect id="es2-Rectangle_153_2" width="8" height="23.7031" rx="4" transform="matrix(1 0 0 -1 158 64)" fill="#20499A"/><rect id="es2-Rectangle_154_2" width="8" height="26.2656" rx="4" transform="matrix(1 0 0 -1 168 64)" fill="#20499A"/><rect id="es2-Rectangle_155_2" width="8" height="26.2656" rx="4" transform="matrix(1 0 0 -1 178 64)" fill="#20499A"/><rect id="es2-Rectangle_156_2" width="8" height="32.6719" rx="4" transform="matrix(1 0 0 -1 198 64)" fill="#20499A"/><rect id="es2-Rectangle_157_2" width="8" height="29.4688" rx="4" transform="matrix(1 0 0 -1 188 64)" fill="#20499A"/><rect id="es2-Rectangle_158_2" width="8" height="32.6719" rx="4" transform="matrix(1 0 0 -1 208 64)" fill="#20499A"/><rect id="es2-Rectangle_159_2" width="8" height="35.2344" rx="4" transform="matrix(1 0 0 -1 238 64)" fill="#20499A"/><rect id="es2-Rectangle_160_2" width="8" height="20.5" rx="4" transform="matrix(1 0 0 -1 108 64)" fill="#20499A"/><rect id="es2-Rectangle_161_2" width="8" height="14.7344" rx="4" transform="matrix(1 0 0 -1 58 64)" fill="#20499A"/><rect id="es2-Rectangle_162_2" width="8" height="14.7344" rx="4" transform="matrix(1 0 0 -1 68 64)" fill="#20499A"/><rect id="es2-Rectangle_163_2" width="8" height="11.5312" rx="4" transform="matrix(1 0 0 -1 48 64)" fill="#20499A"/><rect id="es2-Rectangle_164_2" width="8" height="32.6719" rx="4" transform="matrix(1 0 0 -1 218 64)" fill="#20499A"/><rect id="es2-Rectangle_165_2" width="8" height="32.6719" rx="4" transform="matrix(1 0 0 -1 228 64)" fill="#20499A"/><path id="es2-Rectangle_166_2" d="M268 60C268 62.2091 269.791 64 272 64C274.209 64 276 62.2091 276 60V25C276 22.7909 274.209 21 272 21C269.791 21 268 22.7909 268 25V60Z" fill="#20499A"/><rect id="es2-Rectangle_167_2" width="8" height="38.4375" rx="4" transform="matrix(1 0 0 -1 248 64)" fill="#20499A"/><path id="es2-Rectangle_168_2" d="M258 60C258 62.2091 259.791 64 262 64C264.209 64 266 62.2091 266 60V27.5625C266 25.3534 264.209 23.5625 262 23.5625C259.791 23.5625 258 25.3534 258 27.5625V60Z" fill="#20499A"/></g><path id="es2-Line_4_(Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M296 61H0V60H296V61Z" fill="#FBFBFB"/></g></g></svg></div><div class="abs dot" style="left:45px;top:18px;background:var(--green)"></div><p class="abs g-ttl t-r10 num"><span class="bl1"><span class="t-b">87%</span> of ideal pot</span></p></div><div class="abs inc"><div class="tf inc-up"><div class="abs tf-val"><div class="abs tf-box"></div><p class="abs tf-t t-nb24 num"><span class="trk8">&pound; 2,500</span></p></div><p class="abs tf-lab t-nb24 num">Monthly income</p></div><div class="stp"><div class="abs stp-col"><div class="pill"><div class="abs pill-bg"></div><p class="abs pill-t t-nsb16 num"><span class="trk8 bl1">2%</span></p><p class="abs pill-lab t-tm12">Save as a %</p></div><div class="stps"><div class="abs stp1" style="left:40px"><div class="abs plat"></div><p class="abs sym t-tb20" style="left:14px;width:12px">+</p></div><div class="abs stp1" style="left:0"><div class="abs plat"></div><p class="abs sym t-tb20" style="left:16px;width:8px">-</p></div></div></div></div></div><div class="abs pay"><div class="tf"><div class="abs tf-val"><div class="abs tf-box"></div><p class="abs tf-t t-nb24 num"><span class="trk8">&pound; 250</span></p></div><p class="abs tf-lab t-nb24 num">Pay-in amount</p></div><div class="rec"><div class="abs rec-i"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="es3-icon_recurringOFF"><g id="es3-Vector"><path d="M20.0001 12C21.8777 12 22.2579 12.0656 24.0007 13.0718C24.479 13.3479 25.0906 13.1841 25.3667 12.7058C25.6428 12.2275 25.479 11.6159 25.0007 11.3397C23.4201 10.43 21.7001 10 20.0001 10C18.4221 10 16.9295 10.3655 15.6023 11.0165L17.1199 12.5341C18.0136 12.1892 18.9848 12 20.0001 12Z" fill="#FF5081"/><path d="M10.0001 20V23.8112L7.32459 21.4941C6.9071 21.1325 6.27556 21.1779 5.91401 21.5953C5.55245 22.0128 5.5978 22.6444 6.01528 23.0059L11.0001 27.3229L15.9848 23.0059C16.4023 22.6444 16.4477 22.0128 16.0861 21.5953C15.7246 21.1779 15.093 21.1325 14.6755 21.4941L12.0001 23.811V20C12.0001 17.4305 13.2115 15.1439 15.0944 13.6802L13.6713 12.2571C11.4304 14.091 10.0001 16.8785 10.0001 20Z" fill="#FF5081"/><path fill-rule="evenodd" clip-rule="evenodd" d="M8.29289 8.29289C7.90237 8.68342 7.90237 9.31658 8.29289 9.70711L30.2929 31.7071C30.6834 32.0976 31.3166 32.0976 31.7071 31.7071C32.0976 31.3166 32.0976 30.6834 31.7071 30.2929L9.70711 8.29289C9.31658 7.90237 8.68342 7.90237 8.29289 8.29289Z" fill="#FF5081"/><path d="M19.9999 28C18.3269 28 17 27.5 15.9993 26.9282C15.521 26.6521 14.9094 26.8159 14.6333 27.2942C14.3572 27.7725 14.521 28.3841 14.9993 28.6603C16.5799 29.57 18.2999 30 19.9999 30C23.1215 30 25.909 28.5697 27.7429 26.3287L26.3198 24.9056C24.8561 26.7885 22.5695 28 19.9999 28Z" fill="#FF5081"/><path d="M29.9999 20V16.1888L32.6754 18.5059C33.0929 18.8675 33.7244 18.8221 34.086 18.4047C34.4475 17.9872 34.4022 17.3556 33.9847 16.9941L28.9999 12.6771L24.0152 16.9941C23.5977 17.3556 23.5523 17.9872 23.9139 18.4047C24.2754 18.8221 24.907 18.8675 25.3245 18.5059L27.9999 16.189V20C27.9999 21.0153 27.8107 21.9864 27.4658 22.88L28.9835 24.3977C29.6344 23.0705 29.9999 21.5779 29.9999 20Z" fill="#FF5081"/></g></g></svg></div></div><div class="tg"><div class="abs tg-bg"></div><div class="abs tg-cap"><svg class="abs tg-capsvg" preserveAspectRatio="none" overflow="visible" style="display: block;" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="es4-cap" filter="url(#es4-filter0_d_0_84)"><circle cx="16" cy="14" r="14" fill="#FBFBFB"/><circle cx="16" cy="14" r="13.5" stroke="white"/></g><defs><filter id="es4-filter0_d_0_84" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="2"/><feGaussianBlur stdDeviation="1"/><feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.16 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_84"/><feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_84" result="shape"/></filter></defs></svg></div><p class="abs tg-lab t-tm12" style="left:11px;width:45px">One off</p></div></div><div class="abs mh"><div class="abs mh-bg"></div><div class="abs mh-ttl t-nb28 num"><p><span class="trk8">Estimate</span></p></div><div class="abs mh-back"><div class="ch-l"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="es5-icon_chevron"><path id="es5-Vector" d="M18 16L22 20L18 24" stroke="#123456" stroke-width="3" stroke-linecap="round"/></g></svg></div><div class="mh-lab"><div class="mh-lab-t t-tb20"><p>Back</p></div></div></div></div><div class="abs ios"><div class="abs ios-bg"><svg class="abs ios-bgsvg" preserveAspectRatio="none" overflow="visible" style="display: block;" width="375" height="63" viewBox="0 0 375 63" fill="none" xmlns="http://www.w3.org/2000/svg"><foreignObject x="-40.7742" y="-40.7742" width="456.548" height="144.548"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(20.39px);clip-path:url(#es6-bgblur_0_0_77_clip_path);height:100%;width:100%"></div></foreignObject><path id="es6-Background" data-figma-bg-blur-radius="40.7742" fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z" fill="#F8F8F8" fill-opacity="0.7"/><defs><clipPath id="es6-bgblur_0_0_77_clip_path" transform="translate(40.7742 40.7742)"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H375V63H0V0Z"/></clipPath></defs></svg></div><div class="abs ios-div"></div><p class="t-ios-url"><span class="trk">getpenfold.com</span></p><div class="abs ios-st"><p class="t-ios-time"><span class="trk">8:24</span></p><div class="abs ios-batt"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="24.5" height="11.5" viewBox="0 0 24.5 11.5" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="es7-Rectangle" fill-rule="evenodd" clip-rule="evenodd" d="M3.58944 0H18.4106C19.6587 0 20.1113 0.129956 20.5676 0.373986C21.0239 0.618016 21.382 0.97612 21.626 1.43242C21.87 1.88871 22 2.34131 22 3.58944V7.91056C22 9.15869 21.87 9.61129 21.626 10.0676C21.382 10.5239 21.0239 10.882 20.5676 11.126C20.1113 11.37 19.6587 11.5 18.4106 11.5H3.58944C2.34131 11.5 1.88871 11.37 1.43242 11.126C0.97612 10.882 0.618016 10.5239 0.373986 10.0676C0.129956 9.61129 0 9.15869 0 7.91056V3.58944C0 2.34131 0.129956 1.88871 0.373986 1.43242C0.618016 0.97612 0.97612 0.618016 1.43242 0.373986C1.88871 0.129956 2.34131 0 3.58944 0ZM3.58944 1C2.60246 1 2.2579 1.06654 1.90401 1.2558C1.62199 1.40663 1.40663 1.62199 1.2558 1.90401C1.06654 2.2579 1 2.60246 1 3.58944V7.91056C1 8.89754 1.06654 9.2421 1.2558 9.59599C1.40663 9.87801 1.62199 10.0934 1.90401 10.2442C2.2579 10.4335 2.60246 10.5 3.58944 10.5H18.4106C19.3975 10.5 19.7421 10.4335 20.096 10.2442C20.378 10.0934 20.5934 9.87801 20.7442 9.59599C20.9335 9.2421 21 8.89754 21 7.91056V3.58944C21 2.60246 20.9335 2.2579 20.7442 1.90401C20.5934 1.62199 20.378 1.40663 20.096 1.2558C19.7421 1.06654 19.3975 1 18.4106 1H3.58944ZM24.5 5.69C24.5 6.92657 23 7.69 23 7.69V3.69C23 3.69 24.5 4.45343 24.5 5.69Z" fill="black" fill-opacity="0.36"/></svg></div><div class="abs ios-fill"></div><div class="abs ios-cell"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="17.1" height="10.7" viewBox="0 0 17.1 10.7" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="es8-Combined_Shape" fill-rule="evenodd" clip-rule="evenodd" d="M14.123 0.965892C14.1 1.08181 14.1 1.22121 14.1 1.5V9.2C14.1 9.47879 14.1 9.61819 14.123 9.73411C14.2177 10.2101 14.5899 10.5823 15.0659 10.6769C15.1818 10.7 15.3212 10.7 15.6 10.7C15.8788 10.7 16.0182 10.7 16.1341 10.6769C16.6101 10.5823 16.9822 10.2101 17.0769 9.73411C17.1 9.61819 17.1 9.47879 17.1 9.2V1.5C17.1 1.22121 17.1 1.08181 17.0769 0.965892C16.9822 0.489863 16.6101 0.117746 16.1341 0.0230577C16.0182 0 15.8788 0 15.6 0C15.3212 0 15.1818 0 15.0659 0.0230577C14.5899 0.117746 14.2177 0.489863 14.123 0.965892ZM9.39999 3.9C9.39999 3.62121 9.39999 3.48181 9.42305 3.36589C9.51774 2.88986 9.88986 2.51775 10.3659 2.42306C10.4818 2.4 10.6212 2.4 10.9 2.4C11.1788 2.4 11.3182 2.4 11.4341 2.42306C11.9101 2.51775 12.2822 2.88986 12.3769 3.36589C12.4 3.48181 12.4 3.62121 12.4 3.9V9.2C12.4 9.4788 12.4 9.61819 12.3769 9.73411C12.2822 10.2101 11.9101 10.5823 11.4341 10.6769C11.3182 10.7 11.1788 10.7 10.9 10.7C10.6212 10.7 10.4818 10.7 10.3659 10.6769C9.88986 10.5823 9.51774 10.2101 9.42305 9.73411C9.39999 9.61819 9.39999 9.4788 9.39999 9.2V3.9ZM4.82305 5.6659C4.79999 5.78182 4.79999 5.92121 4.79999 6.2V9.2C4.79999 9.4788 4.79999 9.61819 4.82305 9.73411C4.91773 10.2101 5.28985 10.5823 5.76588 10.6769C5.8818 10.7 6.02119 10.7 6.29999 10.7C6.57878 10.7 6.71818 10.7 6.8341 10.6769C7.31012 10.5823 7.68224 10.2101 7.77693 9.73411C7.79999 9.61819 7.79999 9.4788 7.79999 9.2V6.2C7.79999 5.92121 7.79999 5.78182 7.77693 5.6659C7.68224 5.18987 7.31012 4.81775 6.8341 4.72306C6.71818 4.7 6.57878 4.7 6.29999 4.7C6.02119 4.7 5.8818 4.7 5.76588 4.72306C5.28985 4.81775 4.91773 5.18987 4.82305 5.6659ZM0.0230577 7.6659C0 7.78182 0 7.92121 0 8.2V9.2C0 9.4788 0 9.61819 0.0230577 9.73411C0.117746 10.2101 0.489863 10.5823 0.965892 10.6769C1.08181 10.7 1.22121 10.7 1.5 10.7C1.77879 10.7 1.91819 10.7 2.03411 10.6769C2.51014 10.5823 2.88225 10.2101 2.97694 9.73411C3 9.61819 3 9.4788 3 9.2V8.2C3 7.92121 3 7.78182 2.97694 7.6659C2.88225 7.18987 2.51014 6.81775 2.03411 6.72306C1.91819 6.7 1.77879 6.7 1.5 6.7C1.22121 6.7 1.08181 6.7 0.965892 6.72306C0.489863 6.81775 0.117746 7.18987 0.0230577 7.6659Z" fill="black"/></svg></div><div class="abs ios-wifi"><svg class="v" preserveAspectRatio="none" overflow="visible" style="display: block;" width="15.4" height="11.0572" viewBox="0 0 15.4 11.0572" fill="none" xmlns="http://www.w3.org/2000/svg"><path id="es9-Wi-Fi" fill-rule="evenodd" clip-rule="evenodd" d="M7.70042 2.29636C9.93483 2.29646 12.0838 3.15501 13.7032 4.69457C13.8251 4.81343 14.02 4.81193 14.1401 4.69121L15.3058 3.51479C15.3666 3.45356 15.4005 3.37062 15.4 3.28433C15.3995 3.19803 15.3646 3.11549 15.3031 3.05498C11.0528 -1.01833 4.3474 -1.01833 0.0970716 3.05498C0.0355014 3.11545 0.000571881 3.19796 7.20154e-06 3.28426C-0.000567562 3.37055 0.033283 3.45352 0.0940465 3.51479L1.26005 4.69121C1.38006 4.81211 1.57513 4.81361 1.697 4.69457C3.31657 3.15491 5.46579 2.29636 7.70042 2.29636V2.29636ZM7.70042 6.12375C8.92809 6.12367 10.1119 6.57999 11.022 7.40402C11.145 7.52097 11.3389 7.51844 11.4589 7.39831L12.6232 6.22189C12.6845 6.16019 12.7186 6.07648 12.7177 5.98949C12.7168 5.90251 12.6811 5.8195 12.6185 5.75906C9.84735 3.18131 5.55584 3.18131 2.78469 5.75906C2.72209 5.8195 2.68637 5.90255 2.68555 5.98956C2.68473 6.07657 2.71887 6.16028 2.78031 6.22189L3.9443 7.39831C4.06427 7.51844 4.25817 7.52097 4.38125 7.40402C5.29065 6.58053 6.47357 6.12426 7.70042 6.12375V6.12375ZM9.93797 8.93135C10.0002 8.87024 10.0345 8.78614 10.0327 8.69891C10.031 8.61168 9.99327 8.52905 9.92855 8.47053C8.64232 7.38263 6.75852 7.38263 5.47229 8.47053C5.40753 8.529 5.36977 8.6116 5.36792 8.69883C5.36608 8.78606 5.40031 8.87019 5.46254 8.93135L7.4769 10.9639C7.53594 11.0236 7.61643 11.0572 7.70042 11.0572C7.78441 11.0572 7.8649 11.0236 7.92394 10.9639L9.93797 8.93135Z" fill="black"/></svg></div></div></div>
+</div>
+</template></div>
+</div>
