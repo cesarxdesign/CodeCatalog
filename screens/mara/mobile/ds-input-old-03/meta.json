@@ -1,0 +1,55 @@
+{
+  "id": "ds-input-old-03",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "ds-input-old",
+  "group": "design system: input, old",
+  "seq": 3,
+  "order": 1303,
+  "name": "DS · input, old 03 · Swipe to send",
+  "title": "Amount to send",
+  "frame": [
+    375,
+    302
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:17236",
+  "figma_layer": "11 essentials / 1.0 (503)",
+  "export_size": [
+    375,
+    302
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "ds-input-old-03",
+    "ds input old 03",
+    "send from",
+    "swipe to send",
+    "503"
+  ],
+  "catalogue": {
+    "sc": "0.7253",
+    "diff": "4.19%",
+    "al": "±1px",
+    "note": "The 1.0 input as the folio redrew it small, on a 272-wide card. 272 wide in Figma is 375 real: factor 0.72533, the scaleFactor the keyboard instance in this section carries (its 241, 42 and 8 land whole). Every value is the Figma value divided by 0.72533, so hand-set numbers do not land whole: type 10 &rarr; 13.79, 40-high field &rarr; 55.15; 5.76 and 11.52 are 8 and 16 at 0.72. The same pieces inside the full-dress screens are another drawing (0.7389, 327 wide, 64-high field, regular 23px &ldquo;501&rdquo;), so the two do not agree and neither was changed. The card&rsquo;s own 8px corners are left off; the frame is 302 high, the last fraction of a pixel is white. The naira sign is not in Satoshi (the files on this Mac hold 431 glyphs, none of them U+20A6) and Figma draws it from a fallback face, the same outline at every weight: it is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. The SF Pro Display symbols (chevrons, info, close, arrow) are Figma&rsquo;s outlines of those text nodes; SF Pro is not among the project fonts. Figma snaps each text baseline to a whole pixel at its own small scale, so some lines sit up to 1px lower in Figma than in a browser; they are left where the browser puts them. Edges that fall on fractions of a pixel are blurred over two rows by Figma and snapped to one by Chrome. Flat fills match exactly."
+  }
+}

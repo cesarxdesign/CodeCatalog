@@ -1,0 +1,53 @@
+{
+  "id": "ds-full-old-02",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "ds-full-old",
+  "group": "design system: full dress, old",
+  "seq": 2,
+  "order": 1332,
+  "name": "DS · full dress, old 02 · Withdrawal",
+  "title": "Withdrawal amount",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:17382",
+  "figma_layer": "13 full dress / Transactions / Withdrawal / Filled",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "ds-full-old-02",
+    "ds full old 02",
+    "withdrawal old"
+  ],
+  "catalogue": {
+    "sc": "0.7389",
+    "diff": "1.68%",
+    "al": "±1px",
+    "note": "1.0 full screen. Drawn in Figma at 0.7389 of real size (277.09&times;600; library instances carry scaleFactor 0.7389): built at 375&times;812 with every value divided by 0.7389: 24 margins, 56 buttons, 50 radius, type 23/19/18/16/14/11. Square-cornered: the frame&rsquo;s 12px corners are left off. The status bar and bottom bar are the Android instances (Figma&rsquo;s export of their vectors); the bottom bar is drawn at 0.75, not 0.7389, and is kept that way. The older status bar underneath is at opacity 0 and keeps its height. The naira sign is not in Satoshi (the files on this Mac hold 431 glyphs, none of them U+20A6) and Figma draws it from a fallback face, the same outline at every weight: it is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. Figma snaps each text baseline to a whole pixel at its own small scale, so some lines sit up to 1px lower in Figma than in a browser; they are left where the browser puts them. Edges that fall on fractions of a pixel are blurred over two rows by Figma and snapped to one by Chrome. Flat fills match exactly."
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ds-input-new-03",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "ds-input-new",
+  "group": "design system: input, new",
+  "seq": 3,
+  "order": 1313,
+  "name": "DS · input, new 03 · Amount to send",
+  "title": "Amount to send",
+  "frame": [
+    363,
+    160
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:17161",
+  "figma_layer": "11 essentials / 2.0 (503)",
+  "export_size": [
+    363,
+    160
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "ds-input-new-03",
+    "ds input new 03",
+    "amount input 503"
+  ],
+  "catalogue": {
+    "sc": "0.75",
+    "diff": "1.35%",
+    "al": "±1px",
+    "note": "The 2.0 amount input on its 272-wide card. Drawn in Figma at 0.75 of real size (0.75 stroke, 9 radius, 4.5 gap, 18/10/9 type): built at 362.67&times;160 with every value divided by 0.75: 96-high input, 12 radius, 1px stroke of black at 2%, type 24/13.33/12. The component is 320 wide here and 312 inside the full-dress screens (the card is 272 with 16 padding, the screens 270 with 18); height, radius and amount type are the same in both. The frame is 363 wide, the last third of a pixel is white. The card&rsquo;s own 8px corners are left off. The naira sign is not in Satoshi (the files on this Mac hold 431 glyphs, none of them U+20A6) and Figma draws it from a fallback face, the same outline at every weight: it is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. The SF Pro Display symbols (chevrons, info, close, arrow) are Figma&rsquo;s outlines of those text nodes; SF Pro is not among the project fonts. Figma snaps each text baseline to a whole pixel at its own small scale, so some lines sit up to 1px lower in Figma than in a browser; they are left where the browser puts them. Edges that fall on fractions of a pixel are blurred over two rows by Figma and snapped to one by Chrome. Flat fills match exactly."
+  }
+}

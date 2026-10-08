@@ -1,0 +1,54 @@
+{
+  "id": "ds-input-new-03-dock",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "ds-input-new",
+  "group": "design system: input, new",
+  "seq": 4,
+  "order": 1314,
+  "name": "DS · input, new 03 · button dock",
+  "title": "Send",
+  "frame": [
+    363,
+    131
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:17203",
+  "figma_layer": "11 essentials / Frame 144933 (button dock + bottom bar)",
+  "export_size": [
+    363,
+    131
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "ds-input-new-03-dock",
+    "ds input new 03 dock",
+    "button dock",
+    "send dock"
+  ],
+  "catalogue": {
+    "sc": "0.75",
+    "diff": "0.75%",
+    "al": "±1px",
+    "note": "The button dock and Android bottom bar that sit under the third 2.0 card, detached from it in Figma (129 below, with a zigzag between them), so it is a piece of its own. Drawn at 0.75: built at 362.67&times;130.67 with every value divided by 0.75: 40-high button, 24 radius, 16 top corners on the dock (they are the dock&rsquo;s own, kept). The button label is 11px in Figma here (14.67 real) against 10.5 (14) in the full-dress screens. Back, home and recents are Figma&rsquo;s export of the group. Figma snaps each text baseline to a whole pixel at its own small scale, so some lines sit up to 1px lower in Figma than in a browser; they are left where the browser puts them. Edges that fall on fractions of a pixel are blurred over two rows by Figma and snapped to one by Chrome. Flat fills match exactly."
+  }
+}

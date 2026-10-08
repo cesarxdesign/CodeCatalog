@@ -1,0 +1,54 @@
+{
+  "id": "ds-full-old-03",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "ds-full-old",
+  "group": "design system: full dress, old",
+  "seq": 3,
+  "order": 1333,
+  "name": "DS · full dress, old 03 · Send Note",
+  "title": "Send",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:17419",
+  "figma_layer": "13 full dress / Send Note",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "Roboto",
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "ds-full-old-03",
+    "ds full old 03",
+    "send note old"
+  ],
+  "catalogue": {
+    "sc": "0.7389",
+    "diff": "2.50%",
+    "al": "±1px",
+    "note": "1.0 full screen. Drawn in Figma at 0.7389 of real size (277.09&times;600; library instances carry scaleFactor 0.7389): built at 375&times;812 with every value divided by 0.7389: 24 margins, 56 buttons, 50 radius, type 23/19/18/16/14/11. Square-cornered: the frame&rsquo;s 12px corners are left off and so is its 0.74px #DDDDDD outline; the diff leaves that ring out. The status bar and bottom bar are the Android instances (Figma&rsquo;s export of their vectors); the bottom bar is drawn at 0.75, not 0.7389, and is kept that way. The older status bar underneath is at opacity 0 and keeps its height. The swipe button was drawn at yet another size (1.267 stroke, 11.4 type, 20.27 radius: 2, 18 and 32 at 0.6334): its numbers are kept. The thumbs-up emoji at the end of the description is in the text but Figma&rsquo;s render draws nothing for it; it is kept invisible. The keyboard (Android library instances, digits in Roboto 400) covers the swipe button&rsquo;s lower half: as in the file. The naira sign is not in Satoshi (the files on this Mac hold 431 glyphs, none of them U+20A6) and Figma draws it from a fallback face, the same outline at every weight: it is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. Figma snaps each text baseline to a whole pixel at its own small scale, so some lines sit up to 1px lower in Figma than in a browser; they are left where the browser puts them. Edges that fall on fractions of a pixel are blurred over two rows by Figma and snapped to one by Chrome. Flat fills match exactly."
+  }
+}

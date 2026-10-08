@@ -1,0 +1,80 @@
+{
+  "id": "ds-system-old-01",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "ds-system-old",
+  "group": "design system: system",
+  "seq": 1,
+  "order": 1321,
+  "name": "DS · system, old 01 · Peer to Peer deposit",
+  "title": "Peer to Peer deposit",
+  "frame": [
+    375,
+    340
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:17300",
+  "figma_layer": "12 system / 1.0 (Peer to Peer deposit)",
+  "export_size": [
+    375,
+    340
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "ds-system-old-01",
+    "ds system old 01",
+    "p2p partial"
+  ],
+  "highlights": [
+    {
+      "figma_node": "94:17361",
+      "name": "Rectangle 824",
+      "rect": {
+        "x": -13.787,
+        "y": -13.787,
+        "w": 402.574,
+        "h": 151.654
+      },
+      "fill": "#FFEDAD",
+      "fill_opacity": 0.4,
+      "stroke": "#FFD43A",
+      "stroke_width": 1.379,
+      "stroke_align": "inside",
+      "radius": 11.029,
+      "blend": "linear-burn",
+      "figma_rect": {
+        "x": -10,
+        "y": -10,
+        "w": 292,
+        "h": 110,
+        "stroke_width": 1,
+        "radius": 8
+      }
+    }
+  ],
+  "catalogue": {
+    "sc": "0.7253",
+    "diff": "2.39%",
+    "al": "±1px",
+    "note": "A 1.0 partial screen, redrawn small for the folio. 272 wide in Figma is 375 real: factor 0.72533, the scaleFactor the keyboard instance in this section carries (its 241, 42 and 8 land whole). Every value is the Figma value divided by 0.72533, so hand-set numbers do not land whole: type 10 &rarr; 13.79, 40-high field &rarr; 55.15; 5.76 and 11.52 are 8 and 16 at 0.72. The same pieces inside the full-dress screens are another drawing (0.7389, 327 wide, 64-high field, regular 23px &ldquo;501&rdquo;), so the two do not agree and neither was changed. The card&rsquo;s own 8px corners are left off; the frame is 340 high, the last fraction of a pixel is white. The coloured highlight boxes over the screen are not drawn: their rectangles are in meta.json under &ldquo;highlights&rdquo;, in this screen&rsquo;s real pixels. The naira sign is not in Satoshi (the files on this Mac hold 431 glyphs, none of them U+20A6) and Figma draws it from a fallback face, the same outline at every weight: it is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. The SF Pro Display symbols (chevrons, info, close, arrow) are Figma&rsquo;s outlines of those text nodes; SF Pro is not among the project fonts. Figma snaps each text baseline to a whole pixel at its own small scale, so some lines sit up to 1px lower in Figma than in a browser; they are left where the browser puts them. Edges that fall on fractions of a pixel are blurred over two rows by Figma and snapped to one by Chrome. Flat fills match exactly."
+  }
+}
