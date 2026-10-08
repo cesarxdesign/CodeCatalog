@@ -1,0 +1,52 @@
+{
+  "id": "travel-rule-01",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "travel-rule",
+  "group": "travel rule",
+  "seq": 1,
+  "order": 701,
+  "name": "travel rule · Verification required",
+  "title": "Verification required",
+  "frame": [
+    560,
+    978
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:521",
+  "export_size": [
+    560,
+    978
+  ],
+  "fonts": [
+    "IBM Plex Sans",
+    "IBM Plex Sans Condensed",
+    "IBM Plex Mono"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "travel-rule-01",
+    "verification required"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "0.97%",
+    "al": "±1px",
+    "note": "Built at Figma&rsquo;s own 560&times;978, square-cornered: the 26px artboard corners are left off, so the diff runs on the region both share (660 corner pixels excluded). IBM Plex faces are the installed static files, subset to woff2 and embedded. SF Symbols are the outlines from the frame&rsquo;s SVG export; the &ldquo;linear stroke&rdquo; style is drawn as that export draws it. Text at 12, 15, 16, 20 and 24px is set one pixel down, where Figma and Chrome round the baseline differently. Figma layer &ldquo;EXTRA SCREEN&rdquo;. The purple button under the lilac token panel is fully covered by it in Figma, so only the panel is built."
+  }
+}

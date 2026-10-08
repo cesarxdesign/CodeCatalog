@@ -1,0 +1,53 @@
+{
+  "id": "travel-rule-03",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "travel-rule",
+  "group": "travel rule",
+  "seq": 3,
+  "order": 703,
+  "name": "travel rule · Details for funds from",
+  "title": "First time buyer verification",
+  "frame": [
+    560,
+    978
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:727",
+  "export_size": [
+    560,
+    978
+  ],
+  "fonts": [
+    "IBM Plex Sans",
+    "IBM Plex Sans Condensed",
+    "Helvetica"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "details for funds from",
+    "first time buyer verification",
+    "travel-rule-03"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.37%",
+    "al": "±1px",
+    "note": "Built at Figma&rsquo;s own 560&times;978, square-cornered: the 26px artboard corners are left off, so the diff runs on the region both share (660 corner pixels excluded). IBM Plex faces are the installed static files, subset to woff2 and embedded. SF Symbols are the outlines from the frame&rsquo;s SVG export; the &ldquo;linear stroke&rdquo; style is drawn as that export draws it. Text at 12, 15, 16, 20 and 24px is set one pixel down, where Figma and Chrome round the baseline differently. The form is set in Helvetica, a system face that is not embedded: it renders on Apple devices and falls back to Arial elsewhere. The Continue button is a picture in Figma (&ldquo;image 17&rdquo;) and is used as that picture."
+  }
+}
