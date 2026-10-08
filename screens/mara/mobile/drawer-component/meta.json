@@ -1,0 +1,53 @@
+{
+  "id": "drawer-component",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "drawer-component",
+  "group": "drawer: the component",
+  "seq": 1,
+  "order": 1221,
+  "name": "Drawer · the component",
+  "title": "Header",
+  "frame": [
+    375,
+    377
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:16429",
+  "figma_layer": "07 foundation / Drawer with buttons",
+  "export_size": [
+    375,
+    377
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "drawer-component",
+    "drawer with buttons",
+    "bottom drawer"
+  ],
+  "catalogue": {
+    "sc": "0.53",
+    "diff": "3.39%",
+    "al": "±2px",
+    "note": "The component on its own: &ldquo;Drawer with buttons&rdquo; with every part switched on (header, body, aux line, two buttons), 375&times;376. The instance on the page is 199 wide, so its values are divided by 199/375 = 0.5307; the master is 375 wide with 32/24/40/24 padding and 24 gaps. Two things on this instance are page dressing: a 1px #888888 outline, left off, and a 12px top radius where the master and every screen use 16. The radius is kept as drawn (12 on 199 = 22.6 on 375). The diff leaves the outline ring out. Baselines: the 23px title and the 14px aux line sit 1.5px lower in Figma than in a browser, 18px text under 1px; left where the browser puts them. Satoshi 400/500/700/900 embedded whole from files on this Mac."
+  }
+}

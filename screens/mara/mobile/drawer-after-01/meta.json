@@ -1,0 +1,54 @@
+{
+  "id": "drawer-after-01",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "drawer-after",
+  "group": "drawer: 1 after",
+  "seq": 1,
+  "order": 1211,
+  "name": "Drawer · after 01 · Verify identity",
+  "title": "You’re doing great!",
+  "frame": [
+    375,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:16325",
+  "figma_layer": "07 foundation / after / 08",
+  "export_size": [
+    375,
+    800
+  ],
+  "fonts": [
+    "Satoshi",
+    "Roboto"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "drawer-after-01",
+    "drawer after 01",
+    "verify identity"
+  ],
+  "catalogue": {
+    "sc": "0.53",
+    "diff": "2.05%",
+    "al": "±2px",
+    "note": "After, screen 1 of 8 (Figma layer &ldquo;08&rdquo;): the one &ldquo;Drawer with buttons&rdquo; component, 192 tall here. Drawn in Figma at 0.53 of real size (198.75&times;424; every instance carries scaleFactor 0.53 and the master component is 375 wide), built at 375&times;800 with every value divided by 0.53: 24/32/40 padding, 56 buttons, 16 radius, type 33/23/18/16/14. Square-cornered: the artboard&rsquo;s 16px corners and its 1px #DDDDDD outline are left off, and the diff leaves that ring out. Figma snaps each text line to a whole pixel at its own small scale, so line heights are whole Figma pixels &divide; 0.53 (26.4 for 18px type, not 27), and it sets some baselines lower than a browser does: 23px titles and 14px medium text sit up to 2px lower in Figma, 18px text under 1px. They are left where the browser puts them. Box edges fall on fractions of a pixel, which Figma blurs over two rows and Chrome snaps to one. Satoshi 400/500/700/900 and Roboto 500 are embedded whole from files on this Mac. Icons are Figma&rsquo;s SVG exports of the icon nodes. Flat fills match exactly. The drawer has no fill here and is the lowest layer. The illustration is Figma&rsquo;s own export of the instance, used as a picture."
+  }
+}
