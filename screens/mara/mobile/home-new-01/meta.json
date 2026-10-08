@@ -1,0 +1,56 @@
+{
+  "id": "home-new-01",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "home-new",
+  "group": "Home: his",
+  "seq": 1,
+  "order": 1611,
+  "name": "Home: his 01 · Home",
+  "title": "Home",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:46912",
+  "figma_layer": "Home",
+  "export_size": [
+    360,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "home-new-01",
+    "home new 01",
+    "home his",
+    "portfolio",
+    "balance",
+    "refer for 240 mara"
+  ],
+  "catalogue": {
+    "sc": "0.75",
+    "diff": "1.61%",
+    "al": "±1px",
+    "note": "The redesigned Home. Drawn in Figma at 0.75 of real size (270&times;600; instances carry scaleFactor 0.75): built at 360&times;800 with every value divided by 0.75, which lands the type on 24/14/12/11/10, margins on 24, list rows on 72 with 16 padding and 12 radius, the button on 40. Square-cornered: the frame&rsquo;s own 12px corners are left off and the diff leaves the four corners out. Auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment. The balance is Satoshi Black with the #FF7500 to #FF9000 gradient run over its 32px line box; the button carries the same gradient. Satoshi has no &#8358; (U+20A6) in the files on this Mac (431 glyphs); in Figma the sign is drawn at each weight with its own outline (0.552em wide, advance 0.572em, read off Figma&rsquo;s glyph positions): each one here is Figma&rsquo;s outline for that weight, inline. The naira sign in the Nigerian Naira circle is a text layer too (Medium, 20px at Figma&rsquo;s scale): Figma&rsquo;s outline, with the circle. The navbar&rsquo;s top line is a 2px outside stroke, #696969 at 4%, multiplied. Status bar, bottom bar and every icon are Figma&rsquo;s SVG export of the vectors, unchanged. Type is live Satoshi from the files on this Mac, embedded whole. Figma snaps each text baseline to a whole pixel at its own 0.75 scale and Chrome floors its own at this one: the type styles where the two land apart carry the difference as a sub-pixel offset, so at 3&times; every string sits on Figma&rsquo;s baseline (0px off, all strings measured) and at 1&times; within a third of a pixel, except 16px labels, which sit two thirds high. What is left in the diff is glyph and curve antialiasing; flat fills match exactly."
+  }
+}
