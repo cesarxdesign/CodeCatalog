@@ -1,0 +1,57 @@
+{
+  "id": "onb-new-08",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "onb-new",
+  "group": "new onboarding",
+  "seq": 8,
+  "order": 1108,
+  "name": "New onboarding 08 · Home",
+  "title": "Total Balance:",
+  "frame": [
+    375,
+    808
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:16916",
+  "figma_layer": "32 / 31",
+  "export_size": [
+    232,
+    500
+  ],
+  "fonts": [
+    "Satoshi",
+    "Roboto"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "onb-new-08",
+    "home",
+    "total balance",
+    "graph",
+    "tab bar",
+    "wallet"
+  ],
+  "catalogue": {
+    "sc": "4.0",
+    "diff": "2.20%",
+    "al": "±0.5px",
+    "note": "Figma draws this frame at 58&times;125, but its content is a 375-wide design scaled by 58.0037/375: multiplied by 6.46511 the type lands on 14, 16, 18, 23, 28 and 33px, the paddings on 24 and 32, the buttons on 327&times;56. Built at 375&times;808 (the frame is 374.98&times;808.14; the design under it is 375&times;812, cut at the frame). Square-cornered: the artboard&rsquo;s corner radius and grey outline are left off, and the diff leaves out that ring and the four corners (6368 pixels). Boxes sit where the Plugin API resolved them; icons and shapes are Figma&rsquo;s SVG export, unchanged. Type is live: Satoshi and Roboto from the files on this Mac, embedded whole. Each string&rsquo;s first baseline and line height come from Figma&rsquo;s own outline and text box, because at 58px wide Figma snaps every line to a whole pixel (6.47px here); all strings land within 0.5px. The Pixel status bar is the one part drawn on a different base (371.2 wide), kept at Figma&rsquo;s size. Diff is against Figma&rsquo;s 4&times; PNG export (232&times;500), the build captured at 2&times; and resampled; against Figma&rsquo;s SVG export at full size it is 1.44%. Satoshi on this Mac has no &#8358; (U+20A6): each of the 13 naira signs is Figma&rsquo;s own outline of it, cut from the SVG export, and the digits after it are live text. The list runs past the frame: the fourth row is under the tab bar and the fifth is cut by the frame edge, as in Figma. The home indicator instance has nothing visible in it."
+  }
+}
