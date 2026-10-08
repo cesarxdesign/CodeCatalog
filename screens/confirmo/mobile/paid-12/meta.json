@@ -1,0 +1,50 @@
+{
+  "id": "paid-12",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "paid-states",
+  "group": "paid states",
+  "seq": 12,
+  "order": 912,
+  "name": "Refund in process",
+  "title": "In refund process",
+  "frame": [
+    560,
+    448
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "image",
+  "figma_node": "17:17555",
+  "export_size": [
+    1116,
+    893
+  ],
+  "fonts": [
+    "IBM Plex Sans"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "refund in process",
+    "paid 12"
+  ],
+  "catalogue": {
+    "sc": "0.502",
+    "diff": "2.81%",
+    "al": "±1.5px",
+    "note": "Rebuilt from a screenshot (image2code), not from Figma layers; the diff is against that screenshot scaled to 560 wide and is indicative only. The screenshot is the same 560-wide checkout as the inherited screens, captured at 80% browser zoom and enlarged in Figma (1.6 source pixels per layout pixel, so nothing is measured finer than 0.6px). Header, type styles, the Invoice overview pill, log rows, buttons and the status block carry the Figma-exact values of the inherited screens; block positions, the header gradient and the newer parts are measured. Not recovered: the avatar (<code>logo-slot</code> is an empty placeholder circle); the exact typeface release and letter I / l in the invoice ID. Status icons, arrow, spinner and tick are drawn, not traced. Frame chrome (rounded outer corners) is left off. Diff leaves out the avatar, the outer corners."
+  }
+}

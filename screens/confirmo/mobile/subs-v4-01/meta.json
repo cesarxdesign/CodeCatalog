@@ -1,0 +1,51 @@
+{
+  "id": "subs-v4-01",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "subs-v4",
+  "group": "v4",
+  "seq": 1,
+  "order": 821,
+  "name": "v4 · 01 Wallets",
+  "title": null,
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "17:10017",
+  "export_size": [
+    402,
+    874
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "subs-v4-01",
+    "v4 · 01 wallets",
+    "subscriptions v4 01"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.37%",
+    "al": "±1px",
+    "note": "Version 4, the full base flow (Cesar: &ldquo;v4 is full bed&rdquo;): every screen of the checkout drawn as plain frames, no components. Built at Figma&rsquo;s own 402&times;874 (iPhone 16 Pro points): every position, size, gap, radius and type size in the frame is a whole number or a deliberate half, so no scale was recovered. Square-cornered: the 24px artboard corners and the 1px rgba(0,0,0,.06) artboard outline are left off, and the diff runs on the region both share (4664 pixels excluded). Node values come from the Figma Plugin API (auto-layout as flex, strokes as box-shadow, line height from the text box); icons and logos are cut unchanged from Figma&rsquo;s SVG export of the section. Inter is the variable file found on this Mac (Portfolio/fonts/Inter-var.woff2, v4.001, already a Latin subset), embedded whole at optical size 14, which is what Figma drew. Figma&rsquo;s own Inter is a different build: the &ldquo;&hellip;&rdquo; glyph is tighter there and text boxes are whole pixels wide, so some strings sit up to 1px off. Baselines are left at Figma&rsquo;s values. Flat fills match exactly; translucent fills differ by one level out of 255."
+  }
+}

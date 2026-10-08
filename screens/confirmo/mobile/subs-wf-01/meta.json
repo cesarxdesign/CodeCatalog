@@ -1,0 +1,51 @@
+{
+  "id": "subs-wf-01",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "subs-wf",
+  "group": "wf",
+  "seq": 1,
+  "order": 801,
+  "name": "Plan details",
+  "title": "CONFIRMO Subscriptions",
+  "frame": [
+    390,
+    632
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "17:9795",
+  "export_size": [
+    392,
+    634
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "subs-wf-01",
+    "plan details",
+    "subscriptions wireframe 1"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.28%",
+    "al": "±0px",
+    "note": "Built at Figma&rsquo;s own 390 wide and own height: every size in the frame is a whole number, no scale to recover. Square and unframed: Figma&rsquo;s 1px black outside stroke on the frame is left off, so the diff runs on the 390-wide region inside it (the export is 2px larger each way). Inter Regular and Bold, as Figma names them, from the Inter Variable 4.001 file on this Mac, embedded whole; the width probe shows Inter rendering. Every text box matches Figma&rsquo;s position and size; flat colours are exact; what differs is glyph-edge antialiasing. Dashed rules are drawn as Figma draws them: one row above their slot, pattern fitted to the length with half a dash at each end."
+  }
+}

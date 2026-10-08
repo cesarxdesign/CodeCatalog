@@ -1,0 +1,53 @@
+{
+  "id": "travel-rule-v2-11",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "travel-rule-v2",
+  "group": "TR v2",
+  "seq": 3,
+  "order": 723,
+  "name": "11 — PII (Company)",
+  "title": "Your details",
+  "frame": [
+    402,
+    1063
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "1:11853",
+  "figma_layer": "TR v2 / 11 — PII (Company)",
+  "export_size": [
+    402,
+    1063
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "pii company",
+    "wallet ownership check after payment",
+    "travel rule"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.14%",
+    "al": "±1px",
+    "note": "Plain 402&times;1063 rectangle: no bezel (hidden in the file) and no 56px artboard radius; diffed inside the rounded screen that source/figma.png shows. Top Nav, HeaderBody, notification line, Divider Beam, status bar and Safari bar are the same components as the last-shipped screens and reuse their code, checked against this frame's own nodes. Status bar and Safari bar are Figma's SVG export of the instances (SF Pro cannot be shipped), so their text is outlined vector. The select chevron &#8964; (U+2304) is not in the Inter file on this Mac, so it is Figma's own outline of that glyph; every other string is live Inter. This section lays Body out absolutely and the form as a 14px column; fields are 70 high around 15 + 6 + 48, as in the file. Safari's pills lose Figma's Glass effect and read flat <code>#F7F7F7</code>."
+  }
+}

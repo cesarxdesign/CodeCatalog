@@ -1,0 +1,33 @@
+{
+  "id": "paid-10",
+  "project": "confirmo",
+  "kind": "image",
+  "name": "Paid, overpaid, refund form",
+  "flow": "paid-states",
+  "seq": 10,
+  "alt": "Old Confirmo checkout, paid and overpaid by 4.90709 USDT, with the refund form asking for a wallet address and an email",
+  "frame": [
+    372,
+    602
+  ],
+  "provenance": "figma export",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "17:17553",
+  "figma_layer": "Section 1 (paid states)",
+  "exported": "2026-10-08",
+  "note": "A pasted screenshot of the inherited product, so it is exported whole and not coded. export.png is the node at 3x, untouched; image.webp is the same picture as WebP. The email address in the form was a real person's and is covered with a flat white patch in both files.",
+  "files": {
+    "web": "image.webp",
+    "export": "export.png"
+  },
+  "sizes": {
+    "web": [
+      1116,
+      1807
+    ],
+    "export": [
+      1116,
+      1807
+    ]
+  }
+}
