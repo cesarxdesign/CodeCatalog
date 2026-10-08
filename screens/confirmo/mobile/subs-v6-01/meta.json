@@ -1,0 +1,51 @@
+{
+  "id": "subs-v6-01",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "subs-v6",
+  "group": "v6",
+  "seq": 1,
+  "order": 854,
+  "name": "v6 · 01 Wallets",
+  "title": null,
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "17:12829",
+  "export_size": [
+    402,
+    874
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "subs-v6-01",
+    "v6 · 01 wallets",
+    "subscriptions v6 01"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.70%",
+    "al": "±1px",
+    "note": "Version 6, frame 01 of 8. Against the same v5 frame: the Binance Pay tile shows the logo alone on white and the stablecoin stack sits higher, between two equal spacers. Built at Figma&rsquo;s own 402&times;874 (iPhone 16 Pro points): every position, size, gap, radius and type size in the frame is a whole number or a deliberate half, so no scale was recovered. Square-cornered: the 24px artboard corners and the 1px rgba(0,0,0,.06) artboard outline are left off, and the diff runs on the region both share (4664 pixels excluded). Node values come from the Figma Plugin API (auto-layout as flex, strokes as box-shadow, line height from the text box); icons and logos are cut unchanged from Figma&rsquo;s SVG export of the section. Inter is the variable file found on this Mac (Portfolio/fonts/Inter-var.woff2, v4.001, already a Latin subset), embedded whole at optical size 14, which is what Figma drew. Figma&rsquo;s own Inter is a different build: the &ldquo;&hellip;&rdquo; glyph is tighter there and text boxes are whole pixels wide, so some strings sit up to 1px off. Baselines are left at Figma&rsquo;s values. Flat fills match exactly; translucent fills differ by one level out of 255."
+  }
+}
