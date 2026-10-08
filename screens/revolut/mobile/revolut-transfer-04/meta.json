@@ -1,0 +1,52 @@
+{
+  "id": "revolut-transfer-04",
+  "project": "revolut",
+  "platform": "mobile",
+  "flow": "revolut-transfer",
+  "group": "Revolut: transfer",
+  "seq": 4,
+  "order": 2004,
+  "name": "Recipient profile",
+  "title": "Recipient profile",
+  "frame": [
+    390,
+    844
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "image",
+  "figma_node": "77:4592",
+  "export_size": [
+    1170,
+    2532
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "recipient profile",
+    "transactions",
+    "total sent",
+    "revolut transfer 04"
+  ],
+  "catalogue": {
+    "sc": "0.333",
+    "diff": "0.86%",
+    "al": "±0.33px",
+    "note": "Rebuilt from a screenshot (image2code), not from Figma layers: an iPhone screenshot pasted into Figma, 1170 x 2532, the 3x render of a 390 x 844 screen, stored as a JPEG, so one source pixel is 0.33px and nothing is measured finer. The diff is against that screenshot at 3x, pixels differing by more than 24 levels, measured on the build that carries the screenshot's own text: 0.86% of the screen, 0.05% outside the text boxes, 5.2% inside them (glyph edges). The IBAN shown here is made up (same shape and width as the one in the screenshot) and it is painted out of the stored source picture; nothing else differs from the measured build. Text is live Inter 4 (variable, embedded whole, optical size following the font size): 11px for labels and values, 14px for names, buttons and the header account line, 16 to 16.75px titles, 41px/700 amount, 28px/600 pad digits; sizes fitted by string advance, weights by ink mass and shape. Per string the advance is within 1 source pixel for most and up to 3 (0.5 to 1%) for a few. The status-bar time is Inter 17px/600 standing in for the system face. Corners are plain border-radius (24px cards, pills at half height), not iOS continuous corners. Built as revolut-transfer-02 underneath, then a layer with a real backdrop blur (30px) and a 67% dark tint, then the profile; the glows are that screen's white buttons, reference field and header showing through. Cards, avatars and the back button are translucent white over the blur, with alphas solved from the screenshot. The blur's glow runs about 4 levels brighter than the screenshot along the bottom edge of the frame. Traced as SVG: back arrow, pencil, the arrow in the white badges; status-bar icons shared with revolut-transfer-06. Every text carrying personal or account data has a data-field attribute. No frame chrome."
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "revolut-transfer-02",
+  "project": "revolut",
+  "platform": "mobile",
+  "flow": "revolut-transfer",
+  "group": "Revolut: transfer",
+  "seq": 2,
+  "order": 2002,
+  "name": "Amount, reference chips",
+  "title": "Amount, reference chips",
+  "frame": [
+    390,
+    844
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "image",
+  "figma_node": "77:4591",
+  "export_size": [
+    1170,
+    2532
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "amount",
+    "reference chips",
+    "revolut transfer 02"
+  ],
+  "catalogue": {
+    "sc": "0.333",
+    "diff": "0.70%",
+    "al": "±0.33px",
+    "note": "Rebuilt from a screenshot (image2code), not from Figma layers: an iPhone screenshot pasted into Figma, 1170 x 2532, the 3x render of a 390 x 844 screen, stored as a JPEG, so one source pixel is 0.33px and nothing is measured finer. The diff is against that screenshot at 3x, pixels differing by more than 24 levels, measured on the build that carries the screenshot's own text: 0.70% of the screen, 0.07% outside the text boxes, 8.4% inside them (glyph edges). The IBAN shown here is made up (same shape and width as the one in the screenshot) and it is painted out of the stored source picture; nothing else differs from the measured build. Text is live Inter 4 (variable, embedded whole, optical size following the font size): 11px for labels and values, 14px for names, buttons and the header account line, 16 to 16.75px titles, 41px/700 amount, 28px/600 pad digits; sizes fitted by string advance, weights by ink mass and shape. Per string the advance is within 1 source pixel for most and up to 3 (0.5 to 1%) for a few. The status-bar time is Inter 17px/600 standing in for the system face. Corners are plain border-radius (24px cards, pills at half height), not iOS continuous corners. The first chip is 3px wider than the second although both carry the same text; it is reproduced as measured (its own padding), not explained. Traced from the 3x pixels as SVG: back arrow, chevron, calendar; status-bar icons shared with revolut-transfer-06. Raster: the round EU flag and the bank badge (48px lossless crops of the screenshot). Every text carrying personal or account data has a data-field attribute. No frame chrome."
+  }
+}
