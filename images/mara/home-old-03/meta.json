@@ -15,7 +15,7 @@
   "figma_node": "38:46929",
   "figma_layer": "MicrosoftTeams-image (2)",
   "exported": "2026-10-08",
-  "note": "A pasted device screenshot of the old app, so it is exported whole and not coded. Drawn in Figma at 306x680 with 12px rounded corners; export.png is the image fill itself at its original 1080x2400 (the fill is uncropped, same proportions as the box), square-cornered, decoded from the JPEG Figma holds and saved lossless, with its colour profile kept. image.webp is the same pixels as lossless WebP.",
+  "note": "A pasted device screenshot of the old app, so it is exported whole and not coded. Drawn in Figma at 306x680 with 12px rounded corners; export.png is the image fill itself at its original 1080x2400 (the fill is uncropped, same proportions as the box), square-cornered, decoded from the JPEG Figma holds and saved lossless, with its colour profile kept. image.webp is the same pixels as lossless WebP. One change from the source: the white caption strip on the third video thumbnail, which carried part of a real person's name, is painted plain white (2026-10-08).",
   "files": {
     "web": "image.webp",
     "export": "export.png"
