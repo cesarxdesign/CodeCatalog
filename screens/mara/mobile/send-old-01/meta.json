@@ -1,0 +1,54 @@
+{
+  "id": "send-old-01",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "send-old",
+  "group": "Send: old",
+  "seq": 1,
+  "order": 1401,
+  "name": "Send: old 01 · action sheet",
+  "title": "Trade",
+  "frame": [
+    375,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:47366",
+  "figma_layer": "1.0 / Send 1.0",
+  "export_size": [
+    375,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "send-old-01",
+    "send old 01",
+    "action sheet",
+    "trade deposit withdrawal send"
+  ],
+  "catalogue": {
+    "sc": "1",
+    "diff": "1.50%",
+    "al": "±1px",
+    "note": "Mara 1.0 Send, the agency design, 375&times;800 at real size: no scaling, every number is the file&rsquo;s. Built static and for show: overlaps, collisions and off-grid values are reproduced as Figma renders them, nothing is tidied. Auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment, and each box carries the size Figma resolved (all element boxes land within 0.25px of Figma&rsquo;s). No frame chrome: the frame&rsquo;s own 16px corners are left off. Home under the dark scrim with the Trade / Deposit / Withdrawal / Send sheet. The scrim (#454545 at 60%, multiply) is 812 high in an 800 frame and keeps its square corners. The iOS status bar time is SF Pro Text: Figma&rsquo;s outline of it. The tab bar&rsquo;s contents are 46 high in 45-high tabs, so icons and labels sit on half pixels (719.5 and 747.5); Chrome snaps the four labels to whole rows, Figma draws them between rows. The graph line is 419 wide and cut by the frame on both sides. Type is live Satoshi from the files on this Mac, embedded whole. Satoshi has no &#8358; (U+20A6): each naira sign is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. Icons and shapes are Figma&rsquo;s SVG export of each node, unchanged. Figma rounds every text baseline to the nearest pixel and Chrome floors it; where the two differ (12, 11, 19, 32 and 33px type) the line carries a 1px offset worked out from Satoshi&rsquo;s own metrics, so glyphs sit on Figma&rsquo;s rows. What is left in the diff is glyph and curve antialiasing; flat fills match exactly."
+  }
+}

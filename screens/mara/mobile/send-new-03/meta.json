@@ -1,0 +1,53 @@
+{
+  "id": "send-new-03",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "send-new",
+  "group": "Send: his",
+  "seq": 3,
+  "order": 1413,
+  "name": "Send: his 03 · preview",
+  "title": "Send",
+  "frame": [
+    375,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:47544",
+  "figma_layer": "2.0 / Send 2.0",
+  "export_size": [
+    375,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "send-new-03",
+    "send new 03",
+    "preview"
+  ],
+  "catalogue": {
+    "sc": "1",
+    "diff": "0.82%",
+    "al": "±1px",
+    "note": "Mara 2.0 Send, the redesign, 375&times;800 at real size: no scaling, every number is the file&rsquo;s. Built static and for show. Auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment, and each box carries the size Figma resolved (all element boxes land within 0.25px of Figma&rsquo;s). No frame chrome: the frame&rsquo;s own 24px corners are left off. Preview with the Send button. The contact photo is Figma&rsquo;s export of the avatar at 4&times;, circle included, unchanged. The status bar time is Figma&rsquo;s outline. Type is live Satoshi from the files on this Mac, embedded whole. Satoshi has no &#8358; (U+20A6): each naira sign is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. Icons and shapes are Figma&rsquo;s SVG export of each node, unchanged. Figma rounds every text baseline to the nearest pixel and Chrome floors it; where the two differ (12, 11, 19, 32 and 33px type) the line carries a 1px offset worked out from Satoshi&rsquo;s own metrics, so glyphs sit on Figma&rsquo;s rows. What is left in the diff is glyph and curve antialiasing; flat fills match exactly."
+  }
+}

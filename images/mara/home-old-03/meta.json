@@ -1,0 +1,33 @@
+{
+  "id": "home-old-03",
+  "project": "mara",
+  "kind": "image",
+  "name": "Home, Academy tab",
+  "flow": "home-old",
+  "seq": 3,
+  "alt": "The old Mara app home on Android, Academy tab: total balance ₦2,896, a row of article cards and a row of video cards, cut off by the floating bottom bar",
+  "frame": [
+    306,
+    680
+  ],
+  "provenance": "figma export",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:46929",
+  "figma_layer": "MicrosoftTeams-image (2)",
+  "exported": "2026-10-08",
+  "note": "A pasted device screenshot of the old app, so it is exported whole and not coded. Drawn in Figma at 306x680 with 12px rounded corners; export.png is the image fill itself at its original 1080x2400 (the fill is uncropped, same proportions as the box), square-cornered, decoded from the JPEG Figma holds and saved lossless, with its colour profile kept. image.webp is the same pixels as lossless WebP.",
+  "files": {
+    "web": "image.webp",
+    "export": "export.png"
+  },
+  "sizes": {
+    "web": [
+      1080,
+      2400
+    ],
+    "export": [
+      1080,
+      2400
+    ]
+  }
+}

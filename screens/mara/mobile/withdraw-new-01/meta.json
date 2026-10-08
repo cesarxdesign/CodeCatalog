@@ -1,0 +1,55 @@
+{
+  "id": "withdraw-new-01",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "withdraw-new",
+  "group": "Withdraw: his",
+  "seq": 1,
+  "order": 1511,
+  "name": "Withdraw, his 01 · Withdraw to",
+  "title": "Withdraw",
+  "frame": [
+    375,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "46:48446",
+  "figma_layer": "2.0 / Withdraw 2.0 (Withdraw to)",
+  "export_size": [
+    375,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "withdraw-new-01",
+    "withdraw to",
+    "withdraw new 01",
+    "bank accounts",
+    "search for bank account"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.03%",
+    "al": "±0.5px",
+    "note": "Read from Figma at real size (375&times;800, nothing scaled): auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment, everything else sits at its Figma offset, and all 39 boxes land on Figma&rsquo;s to 0.05px. Square-cornered: the frame&rsquo;s own 16px corners are left off and the diff leaves the four corners out (308 pixels). The account numbers are Satoshi Regular 11px with tabular lining figures (lnum, tnum) and 2% tracking, not a monospace face. Union Bank&rsquo;s logo is a vector: Figma&rsquo;s SVG export. Access Bank and GTCO are pictures: each is Figma&rsquo;s own PNG export of the list at 4&times;, cut to the 40&times;40 instance, unchanged (the source PNGs carry gamma and colour chunks that Chrome applies and Figma does not, so the raw files come out a shade off: #E14200 for Figma&rsquo;s #E04403). &ldquo;Guaranty Trust Holding Company PLC&rdquo; is cut short by Figma to &ldquo;Guaranty Trust Holding Company&hellip;&rdquo; (it drops the cut word whole, where CSS would keep &ldquo;P&hellip;&rdquo;): the page shows what Figma shows and keeps the full name in aria-label. The search box&rsquo;s clear icon is in the file at opacity 0: it keeps its room and draws nothing. List items and the search box have a 1px inside stroke of black at 2%, drawn as an inset shadow. The search icon and back chevron are Figma&rsquo;s SVG export. The iOS status bar is Figma&rsquo;s SVG export: the time (SF Pro Text Semibold 17) as Figma&rsquo;s outline, signal, wifi and battery as its vectors. No baseline needed moving here. What is left in the diff is glyph and curve edges: Figma&rsquo;s rasteriser against Chrome&rsquo;s. Flat fills match exactly."
+  }
+}
