@@ -1,0 +1,50 @@
+{
+  "id": "inherited-09",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "inherited",
+  "seq": 9,
+  "order": 109,
+  "name": "Invoice 09",
+  "title": "Total to pay",
+  "frame": [
+    560,
+    905
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:13389",
+  "export_size": [
+    564,
+    909
+  ],
+  "fonts": [
+    "IBM Plex Sans"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "invoice 09",
+    "inherited 09",
+    "total to pay"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.95%",
+    "al": "±1px",
+    "note": "Connected-wallet label tracks at 0.24px (the node's value; its runs report 0.32px, which overruns the export by 3px). Frame chrome is left off: the 32px corner radius and the 2px green ring, which Figma strokes outside this frame, so its export is 564&times;909 while the screen is the 560 frame alone. Diff is on the shared region (the export's inner 560 box, less its outer 3px and four corner squares). IBM Plex Sans Regular, Medium, SemiBold, Bold and Bold Italic are embedded from the installed static TTFs (3.201). SF Symbols are the outlines from Figma's own SVG export of this frame (SF Pro cannot be shipped). Text set at 12, 15, 16 and 20px sits 1px higher than the export: Chrome rounds the half-pixel of leading down, Figma rounds it up; left as is, not nudged."
+  }
+}

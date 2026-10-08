@@ -1,0 +1,52 @@
+{
+  "id": "last-shipped-04",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "last-shipped",
+  "seq": 4,
+  "order": 504,
+  "name": "Checkout 04 · Network selected",
+  "title": "Select network",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "1:14958",
+  "figma_layer": "last shipped / Checkout 04",
+  "export_size": [
+    402,
+    874
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "checkout 04",
+    "network selected",
+    "time remaining"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.20%",
+    "al": "±1px",
+    "note": "Plain 402&times;874 rectangle: the artboard's 56px corner radius is left off; diffed inside the rounded screen that source/figma.png shows. iOS status bar, Safari bar are Figma's own SVG export of those instances, inlined: SF Pro cannot be shipped, so their text is outlined vector, not live text. Same list as 03 with Ethereum selected. Strokes are the file's gradient stroke (<code>#323232</code> &rarr; <code>#D4D4D4</code> &rarr; <code>#EBEBEB</code> &rarr; <code>#333333</code>, 80%, soft-light or lighten), read from the SVG export; the design context flattens it to <code>#323232</code>. Safari's pills lose Figma's Glass effect (no exported values) and read flat <code>#F7F7F7</code>."
+  }
+}

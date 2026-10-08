@@ -1,0 +1,50 @@
+{
+  "id": "inherited-14",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "inherited",
+  "seq": 14,
+  "order": 114,
+  "name": "Invoice 14",
+  "title": "Expired",
+  "frame": [
+    560,
+    860
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:13441",
+  "export_size": [
+    560,
+    860
+  ],
+  "fonts": [
+    "IBM Plex Sans"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "invoice 14",
+    "inherited 14",
+    "expired"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.80%",
+    "al": "±1px",
+    "note": "The two row icons are SF Symbols set inside the token-icon component. Frame chrome is left off: the 32px corner radius and the 2px green ring Figma strokes inside the frame edge. Diff is on the shared region (the export less its outer 3px and four corner squares). IBM Plex Sans Regular, Medium, SemiBold, Bold and Bold Italic are embedded from the installed static TTFs (3.201). SF Symbols are the outlines from Figma's own SVG export of this frame (SF Pro cannot be shipped). Text set at 12, 15, 16 and 20px sits 1px higher than the export: Chrome rounds the half-pixel of leading down, Figma rounds it up; left as is, not nudged."
+  }
+}

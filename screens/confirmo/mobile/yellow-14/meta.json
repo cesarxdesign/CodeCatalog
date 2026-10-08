@@ -1,0 +1,49 @@
+{
+  "id": "yellow-14",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "yellow",
+  "seq": 14,
+  "order": 214,
+  "name": "Payment received",
+  "title": "Payment received",
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:5389",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "IBM Plex Sans"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "payment received",
+    "yellow-14"
+  ],
+  "catalogue": {
+    "sc": "0.468",
+    "diff": "5.15%",
+    "al": "±2px",
+    "note": "Artboard is a 375&times;812 frame shrunk to 175.68&times;380.41 (scale 0.46848); built at 375&times;812, every px divided by the scale. <code>source/figma.png</code> is the frame exported at 2.13453&times;. SF Symbols are Figma's own outline exports (SF Pro is not shipped). Text sits 0&ndash;2px higher than in the export: Figma lays text on whole pixels at the shrunk size. The progressive background blur under the rate strip is stepped in 24 bands. Reworked 2026-10-08: the artboard's 34px corner radius and black outline ring are removed (plain 375&times;812 rectangle); <code>source/figma.png</code> still shows them, so the diff is taken on the shared region inside the ring and corner. IBM Plex faces are built from the installed static TTFs (IBM Plex Sans 400, IBM Plex Sans 500, IBM Plex Sans 700)."
+  }
+}

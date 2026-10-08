@@ -1,0 +1,51 @@
+{
+  "id": "breadcrumbs-06",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "breadcrumbs",
+  "seq": 6,
+  "order": 306,
+  "name": "QR code, summary open",
+  "title": null,
+  "frame": [
+    375,
+    812
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:6653",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "IBM Plex Sans",
+    "IBM Plex Mono"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "summary open",
+    "cancel payment",
+    "exchange rate"
+  ],
+  "catalogue": {
+    "sc": "0.468",
+    "diff": "6.60%",
+    "al": "±2px",
+    "note": "Frame is 175.49&times;380 in the file, scaled 0.468 from 375&times;812; built at 375&times;812 from Plugin API values. IBM Plex text sits 0.5&ndash;2px lower in the Figma export: an engine difference, not nudged. Every SF Pro / SF Compact text node (status bar time, browser bar, SF Symbols) is Figma&rsquo;s own outlined SVG export of that node; no SF family is used. Browser-bar pills carry a Figma Glass effect CSS cannot draw; they render about 5 levels lighter. QR image is a lossless crop of the visible region of the 4096&times;2304 source. Rework 2026-10-08: the artboard&rsquo;s 20.3px corner radius and 1.27px black edge stroke are left out, so the screen is a plain 375&times;812 rectangle; the diff is taken on the shared region inside that edge (2px inset, corners excluded). IBM Plex faces are the installed static TTFs (Sans 3.201, Mono 2.005) as woff2, exact weights."
+  }
+}

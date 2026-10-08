@@ -51,11 +51,23 @@ def seq_of(m, flow=None):
     return s if s is not None else 1000 + m['order']
 
 # ---------- the screen, as a shadow root: (css, body) ----------
+# A snippet may carry its own fonts as @font-face rules with data: URIs. Chrome ignores @font-face
+# inside a shadow root, so they sit outside the <template>; they are carried to the embed and to the
+# catalogue page as they are. folder -> the rules.
+OWN_FONTS = {}
+def own_faces(css):
+    return re.findall(r'@font-face\s*\{[^}]*\}', css)
+def face_key(rule):
+    g = lambda prop, d: (re.search(prop + r'\s*:\s*([^;}]+)', rule) or [0, d])[1].strip().strip('"\'').lower()
+    return (g('font-family', ''), g('font-weight', '400'), g('font-style', 'normal'), g('font-stretch', 'normal'))
+
 def shadow_parts(folder, meta):
     """Everything a shadow root needs, taken from the file the embed is built from."""
     w, h = meta['frame']
     src = rd(os.path.join(folder, meta['embed_from']))
     if meta['platform'] == 'mobile':           # already a shadow-root snippet
+        outside = src[:src.index('<template')] + src[src.rindex('</template>'):]
+        if own_faces(outside): OWN_FONTS[folder] = "\n".join(own_faces(outside))
         inner = re.search(r'<template shadowrootmode="open">([\s\S]*)</template>', src).group(1)
         css = re.search(r'<style>([\s\S]*?)</style>', inner).group(1)
         body = re.sub(r'<style>[\s\S]*?</style>', '', inner, count=1).strip()
@@ -91,16 +103,17 @@ def view_parts(folder, meta, view):
         body = re.search(r'<section class="v-pane" id="%s"[^>]*>([\s\S]*?)</section>' % re.escape(view['pane']), body).group(1)
     return css, body, m['frame']
 
-def embed_html(key, meta, css, body, fp):
+def embed_html(key, meta, css, body, fp, own=''):
     w, h = meta['frame']
     link = font_link(fonts_used(css))
+    own = '<style data-cc-fonts>\n%s\n</style>\n' % own if own else ''
     return f'''<!-- CodeCatalog · {key} · {w}×{h} · built from {meta['embed_from']} · fp {fp}
      Drop-in, style-isolated copy of the screen. Paste it into any page.
      Scale:      .cc-screen{{--cc-scale:.5}}      (default 1)
      Background: .cc-screen{{--cc-bg:#F6F6F6}}    (default transparent)
      Scripts are not included; for the clickable version use screen.html. -->
 <link rel="stylesheet" href="{link}">
-<div class="cc-screen" data-cc="{key}" style="--cc-w:{w};--cc-h:{h};width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
+{own}<div class="cc-screen" data-cc="{key}" style="--cc-w:{w};--cc-h:{h};width:calc(var(--cc-w)*var(--cc-scale,1)*1px);height:calc(var(--cc-h)*var(--cc-scale,1)*1px);overflow:hidden;background:var(--cc-bg,transparent)">
 <div style="width:{w}px;height:{h}px;transform:scale(var(--cc-scale,1));transform-origin:0 0"><template shadowrootmode="open"><style>
 {css}
 </style>
@@ -139,7 +152,7 @@ for dirpath, _, files in os.walk('screens'):
     key = '%s/%s/%s' % (meta['project'], meta['platform'], meta['id'])
     css, body = shadow_parts(dirpath, meta)
     fp = fingerprint(dirpath, meta)
-    emb = embed_html(key, meta, css, body, fp)
+    emb = embed_html(key, meta, css, body, fp, OWN_FONTS.get(dirpath, ''))
     wr(os.path.join(dirpath, 'embed.html'), emb)
     if meta.get('screen_generated') or not os.path.exists(os.path.join(dirpath, 'screen.html')):
         wr(os.path.join(dirpath, 'screen.html'), standalone_from_embed(key, meta, emb))
@@ -165,7 +178,8 @@ catalog = {
       key=s['key'], id=s['meta']['id'], project=s['meta']['project'], platform=s['meta']['platform'],
       flow=s['meta'].get('flow'), flows=flows_of(s['meta']), name=s['meta']['name'], title=s['meta'].get('title'), aliases=s['meta'].get('aliases', []),
       frame=s['meta']['frame'], interactive=s['meta']['interactive'], states=s['meta']['states'],
-      provenance=s['meta']['provenance'], fonts=fonts_used(s['css']), live=s['meta'].get('live'),
+      provenance=s['meta']['provenance'], live=s['meta'].get('live'),
+      fonts=s['meta'].get('fonts') if s['dir'] in OWN_FONTS else fonts_used(s['css']),
       folder=s['dir'].replace(os.sep, '/'),
       files={k: (s['dir'].replace(os.sep, '/') + '/' + v if isinstance(v, str)
                  else [s['dir'].replace(os.sep, '/') + '/' + x for x in v])
@@ -272,6 +286,12 @@ for s in M:
     META[s['k']]=dict(n=s['n'],f='%d × %d'%(s['iw'],s['ih']),sc=s['sc']+'×',src='node '+s['node'],tag='',
                       p=s['p'],fl=s['fl'],sq=s['sq'])
 
+# one copy of each face the screens carry themselves, for the catalogue page
+_seen = {}
+for _s in screens:
+    for _r in own_faces(OWN_FONTS.get(_s['dir'], '')): _seen.setdefault(face_key(_r), _r)
+OWNFACES = '<style id="cc-own-fonts">\n%s\n</style>' % "\n".join(_seen.values()) if _seen else ''
+
 page=f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -280,6 +300,7 @@ page=f"""<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Montserrat:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+{OWNFACES}
 <style>
 :root{{
   --bg:#EDEFF2; --panel:#FFFFFF; --sunk:#E3E7EC;

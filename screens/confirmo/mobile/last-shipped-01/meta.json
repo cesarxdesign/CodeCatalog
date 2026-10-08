@@ -1,0 +1,55 @@
+{
+  "id": "last-shipped-01",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "last-shipped",
+  "seq": 1,
+  "order": 501,
+  "name": "Checkout 01 · Support",
+  "title": null,
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "1:14894",
+  "figma_layer": "last shipped / Checkout 01",
+  "export_size": [
+    450,
+    920
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "checkout 01",
+    "support",
+    "close",
+    "language",
+    "payment id",
+    "send feedback"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.43%",
+    "al": "±1px",
+    "note": "Plain 402&times;874 rectangle: the artboard's 56px corner radius is left off, and so is the phone bezel that source/figma.png shows (450&times;920). Diffed on the shared 402&times;874 region inside the rounded screen; the bezel's inner edge and its Dynamic Island are in the export and not in the code, which is the extra diff. iOS status bar, Safari bar are Figma's own SVG export of those instances, inlined: SF Pro cannot be shipped, so their text is outlined vector, not live text. Safari's pills lose Figma's Glass effect (no exported values) and read flat <code>#F7F7F7</code>."
+  }
+}

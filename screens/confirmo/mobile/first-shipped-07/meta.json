@@ -1,0 +1,51 @@
+{
+  "id": "first-shipped-07",
+  "project": "confirmo",
+  "platform": "mobile",
+  "flow": "first-shipped",
+  "seq": 7,
+  "order": 407,
+  "name": "Processing your payment",
+  "title": "Processing your payment",
+  "frame": [
+    560,
+    978
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:3102",
+  "export_size": [
+    560,
+    978
+  ],
+  "fonts": [
+    "IBM Plex Sans",
+    "IBM Plex Sans Condensed",
+    "IBM Plex Mono"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "first-shipped-07",
+    "processing your payment"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "0.92%",
+    "al": "±1px",
+    "note": "Built at Figma&rsquo;s own 560&times;978: 89% of its sizes are whole numbers there and no phone size divides out; the fractions belong to component instances scaled 1.75 and 535/480. Square-cornered: Figma&rsquo;s 26px artboard corners are left off, so the diff runs on the region both share (660 corner pixels excluded). IBM Plex faces are the installed static files, subset to woff2 and embedded; every face Figma names renders as itself. Figma set the text with the variable build, so long lines can drift under a pixel. SF Symbols are the outlines from the frame&rsquo;s SVG export; the &ldquo;linear stroke&rdquo; style is drawn as that export draws it. Text at 12, 15, 16 and 20px is set one pixel down, where Figma and Chrome round the baseline differently."
+  }
+}
