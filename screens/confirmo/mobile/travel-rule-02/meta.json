@@ -6,8 +6,8 @@
   "group": "travel rule",
   "seq": 2,
   "order": 702,
-  "name": "travel rule · Valid email required",
-  "title": "Payment",
+  "name": "travel rule · Valid email required (front)",
+  "title": "Valid email required",
   "frame": [
     560,
     978
@@ -15,14 +15,13 @@
   "interactive": false,
   "states": [],
   "provenance": "figma",
-  "figma_node": "1:356",
+  "figma_node": "31:18507",
   "export_size": [
-    560,
-    978
+    694,
+    1112
   ],
   "fonts": [
     "IBM Plex Sans",
-    "IBM Plex Sans Condensed",
     "IBM Plex Mono"
   ],
   "files": {
@@ -40,14 +39,15 @@
   "embed_state": null,
   "live": null,
   "aliases": [
-    "payment",
+    "select token",
     "travel-rule-02",
-    "valid email required"
+    "valid email required",
+    "valid email required (front)"
   ],
   "catalogue": {
     "sc": "1.0",
-    "diff": "0.20%",
+    "diff": "0.67%",
     "al": "±1px",
-    "note": "Built at Figma&rsquo;s own 560&times;978, square-cornered: the 26px artboard corners are left off, so the diff runs on the region both share (660 corner pixels excluded). IBM Plex faces are the installed static files, subset to woff2 and embedded. SF Symbols are the outlines from the frame&rsquo;s SVG export; the &ldquo;linear stroke&rdquo; style is drawn as that export draws it. Text at 12, 15, 16, 20 and 24px is set one pixel down, where Figma and Chrome round the baseline differently. The payment screen sits under a 24% grey layer with a 2px background blur; the email sheet is on top."
+    "note": "Built at Figma&rsquo;s own 560&times;978, square-cornered: the 26px artboard corners and the artboard&rsquo;s drop shadow are left off. Because of that shadow Figma&rsquo;s export of this frame is 694&times;1112 with the screen at 66.667, 63.333, on half pixels; <code>source/figma.png</code> is that untouched export, and the diff renders the build at the same offset and compares the screen area only. On whole pixels the two parts were also checked on their own: the email sheet against the export of <code>31:18681</code> (0.42%) and the Select token screen against <code>31:18508</code> (0.95%). The Select token screen is the first-shipped-01 build, whose values this frame&rsquo;s nodes repeat; over it sit Figma&rsquo;s 24% grey layer with a 2px background blur and the sheet. Layer <code>31:18639</code> is hidden in Figma and absent. IBM Plex faces are the installed static files, subset to woff2 and embedded. SF Symbols are the outlines from the frame&rsquo;s SVG export; the &ldquo;linear stroke&rdquo; and &ldquo;shiny border&rdquo; styles are drawn as that export draws them. Text at 12, 15, 16, 20 and 24px is set one pixel down, where Figma and Chrome round the baseline differently."
   }
 }
