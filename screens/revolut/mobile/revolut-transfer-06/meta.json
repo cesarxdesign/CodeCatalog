@@ -1,0 +1,51 @@
+{
+  "id": "revolut-transfer-06",
+  "project": "revolut",
+  "platform": "mobile",
+  "flow": "revolut-transfer",
+  "group": "Revolut: transfer",
+  "seq": 6,
+  "order": 2006,
+  "name": "Account drawer",
+  "title": "Account drawer",
+  "frame": [
+    390,
+    844
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "image",
+  "figma_node": "77:4593",
+  "export_size": [
+    1170,
+    2532
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "account drawer",
+    "choose account",
+    "revolut transfer 06"
+  ],
+  "catalogue": {
+    "sc": "0.333",
+    "diff": "0.33%",
+    "al": "±0.33px",
+    "note": "Rebuilt from a screenshot (image2code), not from Figma layers: an iPhone screenshot pasted into Figma, 1170 x 2532, the 3x render of a 390 x 844 screen, stored as a JPEG, so one source pixel is 0.33px and nothing is measured finer. The diff is against that screenshot at 3x, pixels differing by more than 24 levels: 0.33% of the screen, 0.06% outside the text boxes, 7.3% inside them (glyph edges). Every text block, icon and container edge lands within 1 source pixel, except the digits 90 of the selected balance (1px right) and the status-bar digits (up to 0.7px). Text is live Inter (variable, embedded whole, opsz 14): names 14px/500, card labels 11px/500, balances 14px/400, section headings 16.7px/500, sizes fitted by string advance and weights by ink mass. The status-bar time is Inter 17px/600 standing in for the system face. Sheet, cards and the selected row use iOS continuous corners (radius 38, 24 and 20, fitted) as clip paths. Traced from the 3x pixels as SVG: moon, signal, wifi, battery, close cross, tick, info symbol, wallet. Raster: the three round flags (EU, UK, US), 120px lossless crops of the screenshot with the rim alpha recovered. The close button's glass (gradient and rims) is modelled, not exact; the Savings circle's 1px two-tone rim is approximated. No frame chrome."
+  }
+}
