@@ -1,0 +1,54 @@
+{
+  "id": "travel-rule-01",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "travel-rule",
+  "group": "travel rule",
+  "seq": 1,
+  "order": 701,
+  "name": "travel rule · Verification required",
+  "title": "Verification required",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:521",
+  "export_size": [
+    560,
+    978
+  ],
+  "fonts": [
+    "IBM Plex Sans",
+    "IBM Plex Sans Condensed",
+    "IBM Plex Mono"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "travel-rule-01",
+    "verification required"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "0.97%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/travel-rule-01 with the shared iPhone chrome. The 560&times;978 inside is scaled 0.7179 to 402 wide and cut once at y=903: the part above is pinned to the top, the part below to the bottom, the 76px between filled with the inside&rsquo;s own background. Nothing inside is restyled. Built at Figma&rsquo;s own 560&times;978, square-cornered: the 26px artboard corners are left off, so the diff runs on the region both share (660 corner pixels excluded). IBM Plex faces are the installed static files, subset to woff2 and embedded. SF Symbols are the outlines from the frame&rsquo;s SVG export; the &ldquo;linear stroke&rdquo; style is drawn as that export draws it. Text at 12, 15, 16, 20 and 24px is set one pixel down, where Figma and Chrome round the baseline differently. Figma layer &ldquo;EXTRA SCREEN&rdquo;. The purple button under the lilac token panel is fully covered by it in Figma, so only the panel is built."
+  },
+  "normalised_from": "mobile/travel-rule-01",
+  "screen_generated": true
+}

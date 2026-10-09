@@ -1,0 +1,55 @@
+{
+  "id": "travel-rule-02",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "travel-rule",
+  "group": "travel rule",
+  "seq": 2,
+  "order": 702,
+  "name": "travel rule · Valid email required (front)",
+  "title": "Valid email required",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "31:18507",
+  "export_size": [
+    694,
+    1112
+  ],
+  "fonts": [
+    "IBM Plex Sans",
+    "IBM Plex Mono"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "select token",
+    "travel-rule-02",
+    "valid email required",
+    "valid email required (front)"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "0.67%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/travel-rule-02 with the shared iPhone chrome. The 560&times;978 inside is scaled 0.7179 to 402 wide and cut once at y=690: the part above is pinned to the top, the part below to the bottom, the 76px between filled with the inside&rsquo;s own background. Nothing inside is restyled. Built at Figma&rsquo;s own 560&times;978, square-cornered: the 26px artboard corners and the artboard&rsquo;s drop shadow are left off. Because of that shadow Figma&rsquo;s export of this frame is 694&times;1112 with the screen at 66.667, 63.333, on half pixels; <code>source/figma.png</code> is that untouched export, and the diff renders the build at the same offset and compares the screen area only. On whole pixels the two parts were also checked on their own: the email sheet against the export of <code>31:18681</code> (0.42%) and the Select token screen against <code>31:18508</code> (0.95%). The Select token screen is the first-shipped-01 build, whose values this frame&rsquo;s nodes repeat; over it sit Figma&rsquo;s 24% grey layer with a 2px background blur and the sheet. Layer <code>31:18639</code> is hidden in Figma and absent. IBM Plex faces are the installed static files, subset to woff2 and embedded. SF Symbols are the outlines from the frame&rsquo;s SVG export; the &ldquo;linear stroke&rdquo; and &ldquo;shiny border&rdquo; styles are drawn as that export draws them. Text at 12, 15, 16, 20 and 24px is set one pixel down, where Figma and Chrome round the baseline differently."
+  },
+  "normalised_from": "mobile/travel-rule-02",
+  "screen_generated": true
+}
