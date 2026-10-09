@@ -1,0 +1,55 @@
+{
+  "id": "send-new-03-inspiration",
+  "project": "mara",
+  "platform": "mobile",
+  "flow": "send-new",
+  "group": "Send: his",
+  "seq": 3.5,
+  "order": 1414,
+  "name": "Send: his 03 · preview, in Revolut's language",
+  "title": "Preview",
+  "twin_of": "send-new-03",
+  "frame": [
+    375,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "built",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:47544",
+  "figma_layer": "2.0 / Send 2.0",
+  "export_size": [
+    750,
+    1600
+  ],
+  "fonts": [
+    "IBM Plex Sans"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/preview.png"
+    ],
+    "preview": "source/preview.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "send-new-03-inspiration",
+    "inspiration",
+    "preview in revolut's language",
+    "revolut twin"
+  ],
+  "catalogue": {
+    "sc": "1",
+    "diff": "twin",
+    "al": "built",
+    "note": "Not read from Figma: built in code as a twin of send-new-03 (node 38:47544, 375&times;800), the same screen dressed in the language measured off the Revolut transfer rebuilds (revolut-transfer-01 to 06, 390&times;844). Everything on it is Mara&rsquo;s data &mdash; the recipient, the phone number, the amount, the fee, the total, the note, the Send label &mdash; and nothing on it is Mara&rsquo;s styling: black ground, #161618 cards with 24px corners inside 16px margins, 37.67px rows with a 500 grey (#A5A5A6) label and a 400 white value, the 41px/700 amount centred 37px under a 44px nav with a glassy 44px back circle and a centred 16.75px/600 title, a muted note line over the 52px white pill 42px off the bottom. Revolut&rsquo;s numbers were kept as measured in a 390-wide frame and placed in Mara&rsquo;s 375-wide one. The recipient&rsquo;s photo became initials in a 42.67px grey circle; the orange check went, because the review card carries no mark for a recipient that is fine; the picture at the left is a render of this build, not a design. Type is IBM Plex Sans, the owner&rsquo;s choice for Mara, embedded from the Confirmo screens (400, 500, 600, 700, naira sign included). No Revolut text, logo or wordmark anywhere; the status-bar glyphs and the back arrow are the generic iOS shapes."
+  }
+}
