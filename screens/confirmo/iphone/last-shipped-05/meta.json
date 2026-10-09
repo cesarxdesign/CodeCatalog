@@ -1,0 +1,55 @@
+{
+  "id": "last-shipped-05",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "last-shipped",
+  "seq": 5,
+  "order": 505,
+  "name": "Checkout 05 · Valid email required",
+  "title": "Valid email required",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "1:14969",
+  "figma_layer": "last shipped / Checkout 05",
+  "export_size": [
+    430,
+    874
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "checkout 05",
+    "email popup",
+    "keyboard",
+    "valid email required"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "9.48%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/last-shipped-05 on the 402&times;874 iPhone frame, copied as it is: it already carries Figma&rsquo;s own iOS status bar and Safari bar with the home indicator. Plain 402&times;874 rectangle: the artboard's 56px corner radius is left off; diffed inside the rounded screen that source/figma.png shows. The keyboard's two bottom corners (40px, following the phone) are squared, so its background fills the screen's bottom corners. iOS status bar, Safari bar and keyboard are Figma's own SVG export of those instances, inlined: SF Pro and SF Compact cannot be shipped, so their text is outlined vector, not live text. The keyboard's background is three blended fills under Figma's Glass effect; Chrome has no <code>plus-darker</code> and Glass is in no export, so it renders flat <code>#E6E9ED</code> where the canvas shows the page through it. That is most of the diff. The export is 430 wide (the keyboard bar's blur overhangs 14 each side); diffed on the 402 frame. Strokes are the file's gradient stroke (<code>#323232</code> &rarr; <code>#D4D4D4</code> &rarr; <code>#EBEBEB</code> &rarr; <code>#333333</code>, 80%, soft-light or lighten), read from the SVG export; the design context flattens it to <code>#323232</code>. Safari's pills lose Figma's Glass effect (no exported values) and read flat <code>#F7F7F7</code>."
+  },
+  "normalised_from": "mobile/last-shipped-05",
+  "screen_generated": true
+}

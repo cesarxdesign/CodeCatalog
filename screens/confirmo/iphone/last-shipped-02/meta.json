@@ -1,0 +1,54 @@
+{
+  "id": "last-shipped-02",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "last-shipped",
+  "seq": 2,
+  "order": 502,
+  "name": "Checkout 02 · Select token",
+  "title": "Select token",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "1:14915",
+  "figma_layer": "last shipped / Checkout 02",
+  "export_size": [
+    450,
+    920
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "checkout 02",
+    "select token",
+    "token list"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.33%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/last-shipped-02 on the 402&times;874 iPhone frame, copied as it is: it already carries Figma&rsquo;s own iOS status bar and Safari bar with the home indicator. Plain 402&times;874 rectangle: the artboard's 56px corner radius is left off, and so is the phone bezel that source/figma.png shows (450&times;920). Diffed on the shared 402&times;874 region inside the rounded screen; the bezel's inner edge and its Dynamic Island are in the export and not in the code, which is the extra diff. iOS status bar, Safari bar are Figma's own SVG export of those instances, inlined: SF Pro cannot be shipped, so their text is outlined vector, not live text. Icons of the five rows in view are lifted from the list's SVG export; four more rows sit below the clip, as in the file. Strokes are the file's gradient stroke (<code>#323232</code> &rarr; <code>#D4D4D4</code> &rarr; <code>#EBEBEB</code> &rarr; <code>#333333</code>, 80%, soft-light or lighten), read from the SVG export; the design context flattens it to <code>#323232</code>. Safari's pills lose Figma's Glass effect (no exported values) and read flat <code>#F7F7F7</code>."
+  },
+  "normalised_from": "mobile/last-shipped-02",
+  "screen_generated": true
+}
