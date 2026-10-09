@@ -1,0 +1,55 @@
+{
+  "id": "ds-full-new-01",
+  "project": "mara",
+  "platform": "android",
+  "flow": "ds-full-new",
+  "group": "design system: full dress, new",
+  "seq": 1,
+  "order": 1341,
+  "name": "DS · full dress, new 01 · Add Funds",
+  "title": "Add Funds",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:17484",
+  "figma_layer": "13 full dress / Home / Add Funds",
+  "export_size": [
+    360,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "ds-full-new-01",
+    "ds full new 01",
+    "add funds new"
+  ],
+  "catalogue": {
+    "sc": "0.75",
+    "diff": "1.32%",
+    "al": "±1px",
+    "note": "2.0 full screen. Drawn in Figma at 0.75 of real size (270&times;600; instances carry scaleFactor 0.75): built at 360&times;800 with every value divided by 0.75: 24 margins, 40 button, 24 radius, 96-high amount input, type 24/18/14/13/12/11. Square-cornered: the frame&rsquo;s 12px corners and its 1px #DDDDDD outline are left off, and the diff leaves that ring out. Status bar, bottom bar and icons are Figma&rsquo;s export of the vectors. The naira sign is not in Satoshi (the files on this Mac hold 431 glyphs, none of them U+20A6) and Figma draws it from a fallback face, the same outline at every weight: it is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. The info symbol after the fee is SF Pro Display: Figma&rsquo;s outline of it. Figma snaps each text baseline to a whole pixel at its own small scale, so some lines sit up to 1px lower in Figma than in a browser; they are left where the browser puts them. Edges that fall on fractions of a pixel are blurred over two rows by Figma and snapped to one by Chrome. Flat fills match exactly."
+  },
+  "normalised_from": "mobile/ds-full-new-01",
+  "screen_generated": true
+}

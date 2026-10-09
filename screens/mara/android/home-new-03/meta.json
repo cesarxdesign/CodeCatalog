@@ -1,0 +1,58 @@
+{
+  "id": "home-new-03",
+  "project": "mara",
+  "platform": "android",
+  "flow": "home-new",
+  "group": "Home: his",
+  "seq": 3,
+  "order": 1613,
+  "name": "Home: his 03 · Profile",
+  "title": "Akin Musga",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:47076",
+  "figma_layer": "Profile",
+  "export_size": [
+    360,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "home-new-03",
+    "home new 03",
+    "profile",
+    "akin musga",
+    "logout",
+    "referrals"
+  ],
+  "catalogue": {
+    "sc": "0.75",
+    "diff": "1.32%",
+    "al": "±1px",
+    "note": "The redesigned Profile. Drawn in Figma at 0.75 of real size (270&times;600; instances carry scaleFactor 0.75): built at 360&times;800 with every value divided by 0.75 (type 24/16/14/11/10, rows 280&times;64 with a 32px icon disc). Square-cornered: the frame&rsquo;s own 12px corners are left off and the diff leaves the four corners out. The rows sit in a plain frame at fixed offsets, not auto-layout; kept. The Referrals card was drawn after the scale, at round numbers of its own (236&times;48 at x 17.8037, radius 8, 1px white at 60% inside, shadow 0 1 8 black 8%): divided by 0.75 like everything else, so it lands on 314.667&times;64, radius 10.667, shadow 0 1.333 10.667. Its chevron carries the orange gradient. The name is Satoshi Black with the #FF7500 to #FF9000 gradient; the name is the design&rsquo;s sample user. The navbar&rsquo;s top line is a 2px outside stroke, #696969 at 4%, multiplied. Status bar, bottom bar and every icon are Figma&rsquo;s SVG export of the vectors, unchanged. Type is live Satoshi from the files on this Mac, embedded whole. Figma snaps each text baseline to a whole pixel at its own 0.75 scale and Chrome floors its own at this one: the type styles where the two land apart carry the difference as a sub-pixel offset, so at 3&times; every string sits on Figma&rsquo;s baseline (0px off, all strings measured) and at 1&times; within a third of a pixel, except 16px labels, which sit two thirds high. What is left in the diff is glyph and curve antialiasing; flat fills match exactly."
+  },
+  "normalised_from": "mobile/home-new-03",
+  "screen_generated": true
+}

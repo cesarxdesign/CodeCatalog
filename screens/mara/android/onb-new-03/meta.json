@@ -1,0 +1,57 @@
+{
+  "id": "onb-new-03",
+  "project": "mara",
+  "platform": "android",
+  "flow": "onb-new",
+  "group": "new onboarding",
+  "seq": 3,
+  "order": 1103,
+  "name": "New onboarding 03 · Check your email",
+  "title": "Check your email",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "mCCYcUUeekYmQalfkNNeGU",
+  "figma_node": "94:16848",
+  "figma_layer": "32 / 30",
+  "export_size": [
+    232,
+    500
+  ],
+  "fonts": [
+    "Satoshi",
+    "Roboto"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "onb-new-03",
+    "check your email",
+    "magic link",
+    "open email app"
+  ],
+  "catalogue": {
+    "sc": "4.0",
+    "diff": "2.82%",
+    "al": "±0.5px",
+    "note": "Figma draws this frame at 58&times;125, but its content is a 375-wide design scaled by 58.0037/375: multiplied by 6.46511 the type lands on 14, 16, 18, 23, 28 and 33px, the paddings on 24 and 32, the buttons on 327&times;56. Built at 375&times;808 (the frame is 374.98&times;808.14; the design under it is 375&times;812, cut at the frame). Square-cornered: the artboard&rsquo;s corner radius and grey outline are left off, and the diff leaves out that ring and the four corners (6368 pixels). Boxes sit where the Plugin API resolved them; icons and shapes are Figma&rsquo;s SVG export, unchanged. Type is live: Satoshi and Roboto from the files on this Mac, embedded whole. Each string&rsquo;s first baseline and line height come from Figma&rsquo;s own outline and text box, because at 58px wide Figma snaps every line to a whole pixel (6.47px here); all strings land within 0.5px. The Pixel status bar is the one part drawn on a different base (371.2 wide), kept at Figma&rsquo;s size. Diff is against Figma&rsquo;s 4&times; PNG export (232&times;500), the build captured at 2&times; and resampled; against Figma&rsquo;s SVG export at full size it is 6.68%. The envelope picture carries Figma&rsquo;s image filter Saturation +100, which neither the raw file nor the SVG export includes; it is applied to the picture with a rule fitted to Figma&rsquo;s own render (mean error under 1 level of 255), which is why the SVG figure is higher here. The picture is Figma&rsquo;s 2400px source shipped at 3&times; its slot."
+  },
+  "normalised_from": "mobile/onb-new-03",
+  "screen_generated": true
+}

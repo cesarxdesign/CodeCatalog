@@ -1,0 +1,56 @@
+{
+  "id": "send-full-14",
+  "project": "mara",
+  "platform": "android",
+  "flow": "send-full",
+  "group": "Send: full flow",
+  "seq": 15,
+  "order": 1715,
+  "name": "Send: full flow 14 · Success sheet over a scrim",
+  "title": "Success",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "46:50582",
+  "figma_layer": "full send / Send",
+  "export_size": [
+    360,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "send-full-14",
+    "send full 14",
+    "success",
+    "bottom sheet"
+  ],
+  "catalogue": {
+    "sc": "1",
+    "diff": "0.21%",
+    "al": "±1px",
+    "note": "Mara 2.0 (Android) Send, the user&rsquo;s redesign, the whole flow with the add-contact branch: 360&times;800 at real size, nothing scaled, every number is the file&rsquo;s (Plugin API). Built to be wired into a prototype: all 15 screens of the flow carry one and the same stylesheet, a class is a component and the same component is the same markup on every screen; an element&rsquo;s style attribute holds only where this instance sits (and a text&rsquo;s width). data-part marks what a user taps or types into and the layers a prototype shows, hides or moves; data-state marks the drawn state (enabled, disabled, insufficient, active, inactive, selected) and the stylesheet keys the state&rsquo;s fill, colour and opacity on it. No JavaScript. Auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment; hug-sized frames size themselves (every box lands within 0.25px of Figma&rsquo;s). No frame chrome: the frame&rsquo;s 0 4 24 shadow is left off (it has no corner radius and no stroke). Preview under the scrim with the Success sheet: scrim and sheet are their own layers above the screen; the sheet covers the bottom bar, as in the file. Every avatar in the file is a photo with an opaque &ldquo;CG&rdquo; monogram circle on top of it, the same box: the photo never shows and is not built; the monogram (gradient ring, gradient letters) is code. Type is live Satoshi 400/500/700 and Roboto 400 (the keyboard digits) from the files on this Mac, embedded whole. Satoshi here has no &#8358; (U+20A6): each naira sign is Figma&rsquo;s own outline of the glyph at that weight (Regular, Medium, Bold), inline, 0.572em wide. Status bar, bottom bar, icons and the keyboard&rsquo;s four function keys are Figma&rsquo;s SVG export of each node, unchanged. Figma rounds every text baseline to the nearest pixel and Chrome floors it; where the two differ the line carries a 1px offset worked out from the font&rsquo;s own metrics. What is left in the diff is glyph and curve antialiasing; flat fills match, except two that Figma&rsquo;s export draws one level darker than the file&rsquo;s value (#FDECE4 comes out #FCECE4, #B71723 at 56% on white comes out #D67D84 for #D77D84). The Figma export is the frame with its shadow (408&times;848), cut to the frame."
+  },
+  "normalised_from": "mobile/send-full-14",
+  "screen_generated": true
+}

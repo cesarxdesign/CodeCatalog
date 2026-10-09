@@ -1,0 +1,58 @@
+{
+  "id": "home-new-02",
+  "project": "mara",
+  "platform": "android",
+  "flow": "home-new",
+  "group": "Home: his",
+  "seq": 2,
+  "order": 1612,
+  "name": "Home: his 02 · Academy",
+  "title": "Academy",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:47052",
+  "figma_layer": "Academy",
+  "export_size": [
+    360,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "home-new-02",
+    "home new 02",
+    "academy",
+    "search for content",
+    "this week",
+    "bitcoin article"
+  ],
+  "catalogue": {
+    "sc": "0.75",
+    "diff": "4.55%",
+    "al": "±1px",
+    "note": "The redesigned Academy. Drawn in Figma at 0.75 of real size (270&times;600; instances carry scaleFactor 0.75): built at 360&times;800 with every value divided by 0.75 (type 14/13/12/11/10, margins 24, thumbnails 104&times;96 with 16 radius). Square-cornered: the frame&rsquo;s own 12px corners are left off and the diff leaves the four corners out. Static, no scrolling: the scroll area (270&times;406.5 in Figma) does not clip there, so the 816-tall body runs on under the navbar, which covers it from 702; built as the frame shows it, and the part that lies wholly under the navbar and bottom bar (the rest of &ldquo;It&rsquo;s dry!&rdquo; is there, the Older section and its four articles are not built). The four pictures are the files Figma holds, unchanged, cropped by CSS the way Figma crops them (fill, centred): the Bitcoin banner is 1500&times;500 and shows at 2.6&times;, the three thumbnails at 3.1&times; to 3.5&times;. The first article is a plain 234&times;186 frame, not auto-layout: its picture is 228 wide and starts 0.8 in, and its copy block starts 1 above the picture&rsquo;s foot (Figma units); kept. Each thumbnail picture sits 0.375 left of its slot in the component; kept. The search box is the orange gradient at 8% with a 1px inside stroke of the same gradient at 8%; its clear icon is in the file at opacity 0 and keeps its room. The three-line summaries are cut by Figma with an ellipsis; CSS line-clamp cuts at the same word. Of the diff, half is inside the four pictures (Figma&rsquo;s resampling against Chrome&rsquo;s; 3.06% outside them). Status bar, bottom bar and every icon are Figma&rsquo;s SVG export of the vectors, unchanged. Type is live Satoshi from the files on this Mac, embedded whole. Figma snaps each text baseline to a whole pixel at its own 0.75 scale and Chrome floors its own at this one: the type styles where the two land apart carry the difference as a sub-pixel offset, so at 3&times; every string sits on Figma&rsquo;s baseline (0px off, all strings measured) and at 1&times; within a third of a pixel, except 16px labels, which sit two thirds high. What is left in the diff is glyph and curve antialiasing; flat fills match exactly."
+  },
+  "normalised_from": "mobile/home-new-02",
+  "screen_generated": true
+}
