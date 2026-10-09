@@ -1,0 +1,35 @@
+{
+  "id": "iphone-paid-01",
+  "project": "confirmo",
+  "kind": "image",
+  "name": "Confirming",
+  "flow": "paid-states",
+  "seq": 1,
+  "alt": "Old Confirmo checkout, payment sent and confirming: 0 of 10 confirmations, with the invoice overview log open",
+  "frame": [
+    402,
+    874
+  ],
+  "provenance": "figma export",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "17:17548",
+  "figma_layer": "Section 1 (paid states)",
+  "exported": "2026-10-08",
+  "note": "Normalised copy of paid-01 on the 402&times;874 iPhone frame at 3x: the picture scaled to 402 wide and pinned under a 62px status bar, the 263px below it filled with its bottom row; the status bar and the 34px home-indicator zone repeat the picture&rsquo;s own top and bottom rows, the chrome (9:41, signal, wifi, battery, home indicator) is composited on top. The picture itself is untouched. A pasted screenshot of the inherited product, so it is exported whole and not coded. export.png is the node at 3x, untouched; image.webp is the same picture as WebP.",
+  "files": {
+    "web": "image.webp",
+    "export": "export.png"
+  },
+  "sizes": {
+    "web": [
+      1206,
+      2622
+    ],
+    "export": [
+      1206,
+      2622
+    ]
+  },
+  "platform": "iphone",
+  "normalised_from": "paid-01"
+}
