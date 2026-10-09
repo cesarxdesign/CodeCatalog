@@ -1,0 +1,34 @@
+{
+  "id": "android-home-old-01",
+  "project": "mara",
+  "kind": "image",
+  "name": "Home, Referrals tab, Android frame",
+  "flow": "home-old",
+  "seq": 1,
+  "alt": "The old Mara app home on Android, Referrals tab: total balance ₦1,500, a yellow Verification Not Complete card, the referral code field with Copy and share, Your referrals (0), and the floating bottom bar; on the one 360x800 Android frame with the shared status bar and gesture pill",
+  "frame": [
+    360,
+    800
+  ],
+  "provenance": "figma export, normalised",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:46927",
+  "figma_layer": "MicrosoftTeams-image 3",
+  "exported": "2026-10-09",
+  "note": "home-old-01 scaled to 360x800 (its 1080x2400 pixels are exactly 3x that, so nothing is cropped or letterboxed), then the one Android chrome composited over it: a white 48px band with 9:41 and the signal, wifi and battery marks covers the device's own status bar, a white 42px band with the 108x4 pill covers its 3-button bar. Nothing between them is touched. export.png is the composite as PNG, image.webp the same pixels lossless.",
+  "files": {
+    "web": "image.webp",
+    "export": "export.png"
+  },
+  "sizes": {
+    "web": [
+      360,
+      800
+    ],
+    "export": [
+      360,
+      800
+    ]
+  },
+  "normalised_from": "images/mara/home-old-01"
+}

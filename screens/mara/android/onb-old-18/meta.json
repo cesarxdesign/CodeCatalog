@@ -1,0 +1,57 @@
+{
+  "id": "onb-old-18",
+  "project": "mara",
+  "platform": "android",
+  "flow": "onb-old",
+  "group": "old onboarding",
+  "seq": 18,
+  "order": 1018,
+  "name": "Old onboarding 18 · Time to take a selfie",
+  "title": "Time to take a selfie",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "code (Portfolio deck d82204e)",
+  "figma_file": null,
+  "figma_node": "deck 18",
+  "figma_layer": null,
+  "export_size": [
+    360,
+    800
+  ],
+  "fonts": [
+    "Satoshi",
+    "Roboto"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/render.png"
+    ],
+    "preview": "source/render.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "onb-old-18",
+    "old onboarding 18",
+    "time to take a selfie"
+  ],
+  "catalogue": {
+    "sc": "1",
+    "diff": "—",
+    "al": "—",
+    "note": "The old Mara onboarding as it shipped in the Portfolio hero deck (commit d82204e): screen 18 of 27, coded at 371.2x800 with a Pixel 5 status bar. Brought to 360x800: full-bleed boxes and the 24px column lose 11.2px, left-anchored boxes stay, right-anchored ones follow the edge, centred ones stay centred; nothing inside is restyled. The deck's own status bar goes and the one Android chrome (9:41, gesture pill) is drawn over it. Fonts and pictures are embedded from the deck's own files. The preview is this screen rendered headless."
+  },
+  "normalised_from": "material/mara-old-onboarding-deck/coded/deck.html",
+  "deck_index": 18,
+  "screen_generated": true
+}
