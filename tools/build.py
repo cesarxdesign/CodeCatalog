@@ -65,7 +65,7 @@ def shadow_parts(folder, meta):
     """Everything a shadow root needs, taken from the file the embed is built from."""
     w, h = meta['frame']
     src = rd(os.path.join(folder, meta['embed_from']))
-    if meta['platform'] == 'mobile':           # already a shadow-root snippet
+    if meta['platform'] != 'desktop':          # a shadow-root snippet (mobile, android, iphone, ...)
         outside = src[:src.index('<template')] + src[src.rindex('</template>'):]
         if own_faces(outside): OWN_FONTS[folder] = "\n".join(own_faces(outside))
         inner = re.search(r'<template shadowrootmode="open">([\s\S]*)</template>', src).group(1)
@@ -164,8 +164,8 @@ for dirpath, _, files in os.walk('screens'):
                           tile=v.get('tile'), seq=v.get('seq')))
     screens.append(dict(key=key, dir=dirpath, meta=meta, css=css, body=body, fp=fp, views=views))
 
-order = {'desktop': 0, 'mobile': 1}
-screens.sort(key=lambda s: (s['meta']['project'], order[s['meta']['platform']], s['meta']['order']))
+order = {'desktop': 0, 'mobile': 1}            # other platform folders (android, iphone: normalised copies) sort after
+screens.sort(key=lambda s: (s['meta']['project'], order.get(s['meta']['platform'], 2), s['meta']['order']))
 BUILD = hashlib.sha1(''.join(x['key'] + x['fp'] for x in screens).encode()).hexdigest()[:12]
 
 # ---------- catalog.json: the index ----------
