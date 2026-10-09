@@ -1,0 +1,52 @@
+{
+  "id": "yellow-02",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "yellow",
+  "seq": 2,
+  "order": 202,
+  "name": "Select token",
+  "title": "Select Token",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:4721",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "IBM Plex Sans",
+    "IBM Plex Mono"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "select token",
+    "yellow-02"
+  ],
+  "catalogue": {
+    "sc": "0.468",
+    "diff": "3.91%",
+    "al": "±2px",
+    "note": "Normalised copy of mobile/yellow-02: the 375&times;812 screen scaled 1.0764 to the frame&rsquo;s height, centred, 0.8px cropped at each side; its own status bar and Safari bar keep their place. Artboard is a 375&times;812 frame shrunk to 175.68&times;380.41 (scale 0.46848); built at 375&times;812, every px divided by the scale. <code>source/figma.png</code> is the frame exported at 2.13453&times;. SF Symbols are Figma's own outline exports (SF Pro is not shipped). Text sits 0&ndash;2px higher than in the export: Figma lays text on whole pixels at the shrunk size. The progressive background blur under the rate strip is stepped in 24 bands. Reworked 2026-10-08: the artboard's 34px corner radius and black outline ring are removed (plain 375&times;812 rectangle); <code>source/figma.png</code> still shows them, so the diff is taken on the shared region inside the ring and corner. IBM Plex faces are built from the installed static TTFs (IBM Plex Mono 700, IBM Plex Sans 400, IBM Plex Sans 500, IBM Plex Sans 700)."
+  },
+  "normalised_from": "mobile/yellow-02",
+  "screen_generated": true
+}
