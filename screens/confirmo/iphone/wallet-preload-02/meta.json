@@ -1,0 +1,55 @@
+{
+  "id": "wallet-preload-02",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "wallet-preload",
+  "seq": 2,
+  "order": 602,
+  "name": "Wallet pre-load 02 · Wallet connected",
+  "title": "Select Wallet",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "1:9780",
+  "figma_layer": "wallet pre load (unshipped) / Frame 21",
+  "export_size": [
+    630,
+    683
+  ],
+  "fonts": [
+    "IBM Plex Sans",
+    "IBM Plex Mono"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "wallet connected",
+    "pay with metamask",
+    "select crypto network"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.26%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/wallet-preload-02 with the shared iPhone chrome: a 568&times;621 mock, not a phone layout, scaled 0.7077 to 402 wide, pinned to the top under the status bar, the rest of the frame filled with the colour of its bottom edge. Nothing inside is restyled. Plain rectangle: the frame's 14.11px corner radius and its drop shadow are left off; source/figma.png shows both, and the diff is taken on the frame's own area only. Desktop browser mock, not a phone frame: 568&times;621 (567.998&times;620.829 in the file), built at the file's literal sub-pixel values. Scale recovery does not validate: at 0.63968 the widget is 512&times;800 and its positions are whole, but type lands on 17.26 / 13.43 and the frame on 887.9&times;970.5 (40% of values whole, bar is 85%). Three factors coexist, each 25/24 apart: 0.6397 (widget positions), 0.6135 (type 18 / 14 / 54, summary panel, pay button, screenshots 2048 wide), 0.6663 (countdown). The two pasted screenshots are the frame's raster layers, resampled to twice their displayed size as WebP (originals are 4096&times;2520 PNG) and embedded; the wallet artwork likewise. The widget (Frame 14466) is coded, text live in IBM Plex, each weight its own face built from the installed TTFs (Basic Latin to Latin Extended-A, punctuation, currency, arrows; all features kept). SF Symbols, the countdown rings and logo are lifted as vectors from the widget's SVG export. The countdown's yellow ring is <code>plus-darker</code> in the file, normal in Chrome. The export is 630&times;683 because it includes the frame's drop shadow, and its pixel grid is offset by a fraction, so text edges diff as outlines."
+  },
+  "normalised_from": "mobile/wallet-preload-02",
+  "screen_generated": true
+}
