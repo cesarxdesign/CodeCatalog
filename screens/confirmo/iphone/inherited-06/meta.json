@@ -1,0 +1,52 @@
+{
+  "id": "inherited-06",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "inherited",
+  "seq": 6,
+  "order": 106,
+  "name": "Invoice 06",
+  "title": "Total to pay",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:13366",
+  "export_size": [
+    560,
+    871
+  ],
+  "fonts": [
+    "IBM Plex Sans"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "invoice 06",
+    "inherited 06",
+    "total to pay"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.09%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/inherited-06 with the shared iPhone chrome. The 560&times;871 inside is scaled 0.7179 to 402 wide and cut once at y=756: the part above is pinned to the top, the part below to the bottom, the 153px between filled with the inside&rsquo;s own background. Nothing inside is restyled. Frame chrome is left off: the 32px corner radius and the 2px green ring Figma strokes inside the frame edge. Diff is on the shared region (the export less its outer 3px and four corner squares). IBM Plex Sans Regular, Medium, SemiBold, Bold and Bold Italic are embedded from the installed static TTFs (3.201). SF Symbols are the outlines from Figma's own SVG export of this frame (SF Pro cannot be shipped). Text set at 12, 15, 16 and 20px sits 1px higher than the export: Chrome rounds the half-pixel of leading down, Figma rounds it up; left as is, not nudged."
+  },
+  "normalised_from": "mobile/inherited-06",
+  "screen_generated": true
+}
