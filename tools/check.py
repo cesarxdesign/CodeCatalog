@@ -73,7 +73,7 @@ for key, d, m in screens:
         got = (re.search(r'· fp ([0-9a-f]{12})', rd(emb)) or [None, None])[1]
         if got != fps[key]: bad(key, 'embed.html is out of date - run tools/build.py')
 build = hashlib.sha1(''.join(k + fps[k] for k in sorted(fps, key=lambda k: next(
-    (m['project'], {'desktop': 0, 'mobile': 1}[m['platform']], m['order']) for kk, _, m in screens if kk == k))).encode()).hexdigest()[:12]
+    (m['project'], {'desktop': 0, 'mobile': 1}.get(m['platform'], 2), m['order']) for kk, _, m in screens if kk == k))).encode()).hexdigest()[:12]
 if os.path.exists('catalog.json'):
     cat = json.load(open('catalog.json', encoding='utf-8'))
     if cat.get('build') != build: bad('catalog.json', 'out of date - run tools/build.py')
@@ -141,7 +141,7 @@ else:
     jobs = []
     for key, d, m in screens:
         jobs.append((key, os.path.join(d, 'embed.html'), 'embed', True))
-        jobs.append((key, os.path.join(d, 'screen.html'), 'screen', m['platform'] == 'mobile'))
+        jobs.append((key, os.path.join(d, 'screen.html'), 'screen', m['platform'] != 'desktop'))
     jobs.append(('index.html', 'index.html', 'page', True))   # the catalogue page itself
     with ThreadPoolExecutor(4) as ex:
         for res in ex.map(lambda j: probe(*j) if os.path.exists(j[1]) else (j[0], j[2], 'file missing'), jobs):
