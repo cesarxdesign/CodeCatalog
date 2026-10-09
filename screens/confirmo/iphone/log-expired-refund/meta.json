@@ -1,0 +1,57 @@
+{
+  "id": "log-expired-refund",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "log-states",
+  "group": "log states",
+  "seq": 1,
+  "order": 741,
+  "name": "Expired with payment · Request refund",
+  "title": "Expired with payment",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "26:18092",
+  "figma_layer": "Section 1 / iPhone 16 Pro - 77",
+  "export_size": [
+    375,
+    812
+  ],
+  "fonts": [
+    "IBM Plex Sans",
+    "IBM Plex Mono"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "expired with payment",
+    "invoice expired with payment",
+    "request refund",
+    "payment history log"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.78%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/log-expired-refund: the 375&times;812 screen scaled 1.0764 to the frame&rsquo;s height, centred, 0.8px cropped at each side; its own status bar and Safari bar keep their place. Plain 375&times;812 rectangle: the artboard's 64px corner radius and its <code>#8F49FF</code> fill (fully covered by the screen) are left out; diffed inside the rounded screen that source/figma.png shows. Hidden layers are absent (bezel, a second status bar and accessory bar, the 402-wide chrome frame, warning, support view, tab switcher, payment body, two history rows, feedback). Scale recovery: 375&times;812 stands. Every visible padding, gap and type size is whole (8 / 12 / 16 / 24 / 32; type 12, 13, 14, 16, 18); only the hidden children are 402 wide. The 80px token inside the button is a nested component at 5/6 of 96 (stroke 1.667, shadow 3.333 / 13.333), kept as the file has it. Values come from a Plugin API read of the visible tree. Text is live IBM Plex Sans and Mono from the installed TTFs, each weight its own face. Apple glyphs (back chevron, globe, help, the clock on the button, the alert badge on the entry, copy, link) and the status bar and Safari bar are Figma's outlines. The whole button dock is at 40% opacity, as in the file. The link badge's fill is linear-burn in the file, normal in Chrome. Safari's pills lose Figma's Glass effect. The log entry's label and explanation land on Figma's pixels; the timestamps, the two right-hand values, 'Request refund', the sub-heading and the 'Payment history' caption sit 1px higher than Figma (baseline left as delivered)."
+  },
+  "normalised_from": "mobile/log-expired-refund",
+  "screen_generated": true
+}
