@@ -1,0 +1,53 @@
+{
+  "id": "subs-wf-03",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "subs-wf",
+  "group": "wf",
+  "seq": 3,
+  "order": 803,
+  "name": "Spending limit",
+  "title": "CONFIRM SPENDING LIMIT",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "17:9896",
+  "export_size": [
+    392,
+    611
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "subs-wf-03",
+    "spending limit",
+    "subscriptions wireframe 3"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.81%",
+    "al": "±0px",
+    "note": "Normalised copy of mobile/subs-wf-03 with the shared iPhone chrome. The 390&times;609 inside is scaled 1.0308 to 402 wide and cut once at y=539: the part above is pinned to the top, the part below to the bottom, the 150px between filled with the inside&rsquo;s own background. Nothing inside is restyled. Built at Figma&rsquo;s own 390 wide and own height: every size in the frame is a whole number, no scale to recover. Square and unframed: Figma&rsquo;s 1px black outside stroke on the frame is left off, so the diff runs on the 390-wide region inside it (the export is 2px larger each way). Inter Regular and Bold, as Figma names them, from the Inter Variable 4.001 file on this Mac, embedded whole; the width probe shows Inter rendering. Every text box matches Figma&rsquo;s position and size; flat colours are exact; what differs is glyph-edge antialiasing. The circled i is not in Inter: it is the outline from Figma&rsquo;s SVG export of that text, in the same place. &ldquo;0&times;8f4a&rdquo;: the layer says 0x8f4a and Figma&rsquo;s older Inter turns the x between digits into a multiplication sign; Inter 4 does not, so the sign is written out. Dashed rules are drawn as Figma draws them: one row above their slot, pattern fitted to the length."
+  },
+  "normalised_from": "mobile/subs-wf-03",
+  "screen_generated": true
+}

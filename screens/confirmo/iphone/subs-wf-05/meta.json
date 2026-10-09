@@ -1,0 +1,53 @@
+{
+  "id": "subs-wf-05",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "subs-wf",
+  "group": "wf",
+  "seq": 5,
+  "order": 805,
+  "name": "Success",
+  "title": "✓ SUBSCRIPTION ACTIVATED",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "17:9970",
+  "export_size": [
+    392,
+    532
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "subs-wf-05",
+    "success",
+    "subscriptions wireframe 5"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.55%",
+    "al": "±0px",
+    "note": "Normalised copy of mobile/subs-wf-05 with the shared iPhone chrome. The 390&times;530 inside is scaled 1.0308 to 402 wide and cut once at y=381: the part above is pinned to the top, the part below to the bottom, the 232px between filled with the inside&rsquo;s own background. Nothing inside is restyled. Built at Figma&rsquo;s own 390 wide and own height: every size in the frame is a whole number, no scale to recover. Square and unframed: Figma&rsquo;s 1px black outside stroke on the frame is left off, so the diff runs on the 390-wide region inside it (the export is 2px larger each way). Inter Regular and Bold, as Figma names them, from the Inter Variable 4.001 file on this Mac, embedded whole; the width probe shows Inter rendering. Every text box matches Figma&rsquo;s position and size; flat colours are exact; what differs is glyph-edge antialiasing. The north-east arrow after &ldquo;First payment&rdquo; is a different, wider glyph in Figma than in Inter 4: it is the outline from Figma&rsquo;s SVG export, at Figma&rsquo;s advance. &ldquo;0&times;8f4a&rdquo; is written with the multiplication sign Figma&rsquo;s older Inter shows for the layer&rsquo;s 0x8f4a."
+  },
+  "normalised_from": "mobile/subs-wf-05",
+  "screen_generated": true
+}

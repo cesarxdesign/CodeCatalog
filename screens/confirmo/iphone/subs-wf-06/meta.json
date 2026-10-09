@@ -1,0 +1,53 @@
+{
+  "id": "subs-wf-06",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "subs-wf",
+  "group": "wf",
+  "seq": 6,
+  "order": 806,
+  "name": "Wallet rejected",
+  "title": "✗ SUBSCRIPTION FAILED",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "17:9998",
+  "export_size": [
+    392,
+    387
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "subs-wf-06",
+    "wallet rejected",
+    "subscriptions wireframe 6"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.87%",
+    "al": "±0px",
+    "note": "Normalised copy of mobile/subs-wf-06 with the shared iPhone chrome. The 390&times;385 inside is scaled 1.0308 to 402 wide and cut once at y=236: the part above is pinned to the top, the part below to the bottom, the 381px between filled with the inside&rsquo;s own background. Nothing inside is restyled. Built at Figma&rsquo;s own 390 wide and own height: every size in the frame is a whole number, no scale to recover. Square and unframed: Figma&rsquo;s 1px black outside stroke on the frame is left off, so the diff runs on the 390-wide region inside it (the export is 2px larger each way). Inter Regular and Bold, as Figma names them, from the Inter Variable 4.001 file on this Mac, embedded whole; the width probe shows Inter rendering. Every text box matches Figma&rsquo;s position and size; flat colours are exact; what differs is glyph-edge antialiasing."
+  },
+  "normalised_from": "mobile/subs-wf-06",
+  "screen_generated": true
+}

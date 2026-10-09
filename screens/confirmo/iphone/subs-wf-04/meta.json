@@ -1,0 +1,53 @@
+{
+  "id": "subs-wf-04",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "subs-wf",
+  "group": "wf",
+  "seq": 4,
+  "order": 804,
+  "name": "Activating",
+  "title": "ACTIVATING SUBSCRIPTION...",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "17:9939",
+  "export_size": [
+    392,
+    380
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "subs-wf-04",
+    "activating",
+    "subscriptions wireframe 4"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "3.38%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/subs-wf-04 with the shared iPhone chrome. The 390&times;378 inside is scaled 1.0308 to 402 wide and cut once at y=306: the part above is pinned to the top, the part below to the bottom, the 388px between filled with the inside&rsquo;s own background. Nothing inside is restyled. Built at Figma&rsquo;s own 390 wide and own height: every size in the frame is a whole number, no scale to recover. Square and unframed: Figma&rsquo;s 1px black outside stroke on the frame is left off, so the diff runs on the 390-wide region inside it (the export is 2px larger each way). Inter Regular and Bold, as Figma names them, from the Inter Variable 4.001 file on this Mac, embedded whole; the width probe shows Inter rendering. Every text box matches Figma&rsquo;s position and size; flat colours are exact; what differs is glyph-edge antialiasing, plus the 11px text (13px line), which Chrome sets one pixel higher than Figma where the box sits on a whole pixel: an engine difference in baseline rounding, left uncorrected. &ldquo;0&times;8f4a&rdquo; is written with the multiplication sign Figma&rsquo;s older Inter shows for the layer&rsquo;s 0x8f4a."
+  },
+  "normalised_from": "mobile/subs-wf-04",
+  "screen_generated": true
+}
