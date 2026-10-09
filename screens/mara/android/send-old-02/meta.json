@@ -1,0 +1,57 @@
+{
+  "id": "send-old-02",
+  "project": "mara",
+  "platform": "android",
+  "flow": "send-old",
+  "group": "Send: old",
+  "seq": 2,
+  "order": 1402,
+  "name": "Send: old 02 · Send Note",
+  "title": "Send",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:48184",
+  "figma_layer": "1.0 / Send Note",
+  "export_size": [
+    375,
+    800
+  ],
+  "fonts": [
+    "Roboto",
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png",
+      "source/figma-export.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "send-old-02",
+    "send old 02",
+    "send note",
+    "swipe to send"
+  ],
+  "catalogue": {
+    "sc": "1",
+    "diff": "1.23%",
+    "al": "±1px",
+    "note": "Mara 1.0 Send, the agency design, 375&times;800 at real size: no scaling, every number is the file&rsquo;s. Built static and for show: overlaps, collisions and off-grid values are reproduced as Figma renders them, nothing is tidied. Auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment, and each box carries the size Figma resolved (all element boxes land within 0.25px of Figma&rsquo;s). No frame chrome: the frame&rsquo;s own 16px corners are left off. Send to, Description, Send from, Amount to send, with the Android keyboard over the form. The keyboard block starts at y 475 while the form runs to 512: it covers the lower 21px of &ldquo;Swipe to send&rdquo; and the bottom of the amount card, as in the file. The header starts at y 44, 4px inside the 48-high Android status bar, which is 374 wide in a 375 frame. Keyboard digits are live Roboto 400; the status bar and keyboard icons are Figma&rsquo;s export. The sunglasses emoji that ends the description is in the text but Figma&rsquo;s export draws nothing for it: kept, invisible. This frame alone carries a 1px #DDDDDD outline and a 0 4 80 shadow: frame chrome, left off; the diff leaves the 1px ring out. Figma&rsquo;s untouched export (535&times;960, shadow included) is source/figma-export.png; source/figma.png is that export cut to the frame. Type is live Satoshi from the files on this Mac, embedded whole. Satoshi has no &#8358; (U+20A6): each naira sign is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. Icons and shapes are Figma&rsquo;s SVG export of each node, unchanged. Figma rounds every text baseline to the nearest pixel and Chrome floors it; where the two differ (12, 11, 19, 32 and 33px type) the line carries a 1px offset worked out from Satoshi&rsquo;s own metrics, so glyphs sit on Figma&rsquo;s rows. What is left in the diff is glyph and curve antialiasing; flat fills match exactly."
+  },
+  "normalised_from": "mobile/send-old-02"
+}
