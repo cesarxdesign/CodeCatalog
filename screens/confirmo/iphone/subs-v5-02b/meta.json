@@ -1,0 +1,53 @@
+{
+  "id": "subs-v5-02b",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "subs-v5",
+  "group": "v5",
+  "seq": 3,
+  "order": 843,
+  "name": "v5 · 02b No balance",
+  "title": null,
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "17:11340",
+  "export_size": [
+    402,
+    874
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "subs-v5-02b",
+    "v5 · 02b no balance",
+    "subscriptions v5 02b"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.12%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/subs-v5-02b with the shared iPhone chrome: status bar above, home indicator below; the design&rsquo;s own flex column is given the 778px between them, so its header stays top, its action bottom and its spacer absorbs the difference. Nothing inside is restyled. Version 5: the same flow rebuilt on a component set. Against v4 it adds the &ldquo;Refresh balances&rdquo; button in the wallet recap and the accent colour #E0563A on the no-balance warning; it also redraws the wallet, token and network logos, replaces the bordered stablecoin card with a centred coin stack, and tightens the header (help button 26&rarr;24, merchant chip 14&rarr;18). Built at Figma&rsquo;s own 402&times;874 (iPhone 16 Pro points): every position, size, gap, radius and type size in the frame is a whole number or a deliberate half, so no scale was recovered. Square-cornered: the 24px artboard corners and the 1px rgba(0,0,0,.06) artboard outline are left off, and the diff runs on the region both share (4664 pixels excluded). Node values come from the Figma Plugin API (auto-layout as flex, strokes as box-shadow, line height from the text box); icons and logos are cut unchanged from Figma&rsquo;s SVG export of the section. Inter is the variable file found on this Mac (Portfolio/fonts/Inter-var.woff2, v4.001, already a Latin subset), embedded whole at optical size 14, which is what Figma drew. Figma&rsquo;s own Inter is a different build: the &ldquo;&hellip;&rdquo; glyph is tighter there and text boxes are whole pixels wide, so some strings sit up to 1px off. Baselines are left at Figma&rsquo;s values. Flat fills match exactly; translucent fills differ by one level out of 255."
+  },
+  "normalised_from": "mobile/subs-v5-02b",
+  "screen_generated": true
+}
