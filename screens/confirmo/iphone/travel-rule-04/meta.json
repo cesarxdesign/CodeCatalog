@@ -1,0 +1,55 @@
+{
+  "id": "travel-rule-04",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "travel-rule",
+  "group": "travel rule",
+  "seq": 4,
+  "order": 704,
+  "name": "travel rule · Personal information",
+  "title": "First time buyer verification",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_node": "1:781",
+  "export_size": [
+    560,
+    978
+  ],
+  "fonts": [
+    "IBM Plex Sans",
+    "IBM Plex Sans Condensed",
+    "Helvetica"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "first time buyer verification",
+    "personal information",
+    "travel-rule-04"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "0.94%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/travel-rule-04 with the shared iPhone chrome. The 560&times;978 inside is scaled 0.7179 to 402 wide and cut once at y=860: the part above is pinned to the top, the part below to the bottom, the 76px between filled with the inside&rsquo;s own background. Nothing inside is restyled. Built at Figma&rsquo;s own 560&times;978, square-cornered: the 26px artboard corners are left off, so the diff runs on the region both share (660 corner pixels excluded). IBM Plex faces are the installed static files, subset to woff2 and embedded. SF Symbols are the outlines from the frame&rsquo;s SVG export; the &ldquo;linear stroke&rdquo; style is drawn as that export draws it. Text at 12, 15, 16, 20 and 24px is set one pixel down, where Figma and Chrome round the baseline differently. The form is set in Helvetica, a system face that is not embedded: it renders on Apple devices and falls back to Arial elsewhere. The step bar with the back arrow and &ldquo;En&rdquo; is a picture in Figma (&ldquo;image 17&rdquo;) and is used as that picture. The flag is a live emoji."
+  },
+  "normalised_from": "mobile/travel-rule-04",
+  "screen_generated": true
+}
