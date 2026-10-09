@@ -1,0 +1,55 @@
+{
+  "id": "travel-rule-v2-10",
+  "project": "confirmo",
+  "platform": "iphone",
+  "flow": "travel-rule-v2",
+  "group": "TR v2",
+  "seq": 2,
+  "order": 722,
+  "name": "10 — PII (Individual over €1,000)",
+  "title": "Your details",
+  "frame": [
+    402,
+    874
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "1:11816",
+  "figma_layer": "TR v2 / 10 — PII (Individual over €1,000)",
+  "export_size": [
+    402,
+    874
+  ],
+  "fonts": [
+    "Inter"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "pii individual over 1000",
+    "quick id check after payment",
+    "travel rule"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "2.75%",
+    "al": "±1px",
+    "note": "Normalised copy of mobile/travel-rule-v2-10, copied as it is: already 402&times;874 and carrying Figma&rsquo;s own iOS status bar and Safari bar with the home indicator. Plain 402&times;874 rectangle: no bezel (hidden in the file) and no 56px artboard radius; diffed inside the rounded screen that source/figma.png shows. Top Nav, HeaderBody, notification line, Divider Beam, status bar and Safari bar are the same components as the last-shipped screens and reuse their code, checked against this frame's own nodes. Status bar and Safari bar are Figma's SVG export of the instances (SF Pro cannot be shipped), so their text is outlined vector. The select chevron &#8964; (U+2304) is not in the Inter file on this Mac, so it is Figma's own outline of that glyph; every other string is live Inter. This section lays Body out absolutely and the form as a 14px column; fields are 70 high around 15 + 6 + 48, as in the file. Safari's pills lose Figma's Glass effect and read flat <code>#F7F7F7</code>."
+  },
+  "normalised_from": "mobile/travel-rule-v2-10",
+  "screen_generated": true
+}
