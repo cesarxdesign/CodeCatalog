@@ -1,0 +1,56 @@
+{
+  "id": "withdraw-old-03",
+  "project": "mara",
+  "platform": "android",
+  "flow": "withdraw-old",
+  "group": "Withdraw: old",
+  "seq": 3,
+  "order": 1503,
+  "name": "Withdraw, old 03 · Review and confirm",
+  "title": "Review and confirm",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "46:48410",
+  "figma_layer": "1.0 / Withdraw 1.0 (Review and confirm)",
+  "export_size": [
+    375,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "withdraw-old-03",
+    "review and confirm",
+    "withdraw old 03",
+    "drawer"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "0.96%",
+    "al": "±0.5px",
+    "note": "Read from Figma at real size (375&times;800, nothing scaled): auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment, everything else sits at its Figma offset, and all 32 boxes land on Figma&rsquo;s to 0.05px. Square-cornered: the frame&rsquo;s own 16px corners are left off and the diff leaves the four corners out (308 pixels). Nothing overlaps on this screen. The drawer (&ldquo;Drawer with buttons&rdquo;, 0,608 375&times;192) has its own 16px top corners, kept; Cancel has a 1px #DDDDDD inside stroke, drawn as an inset shadow. The title is at y 118 (110 on the amount screen). The info icon and back chevron are Figma&rsquo;s SVG export. The naira sign is not in Satoshi (the files on this Mac hold no U+20A6) and Figma draws it from a fallback face: each one is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. The iOS status bar is Figma&rsquo;s SVG export: the time (SF Pro Text Semibold 17) as Figma&rsquo;s outline, signal, wifi and battery as its vectors. Baselines: Figma rounds a line&rsquo;s baseline to a whole pixel where Chrome rounds ascent and descent apart; the 23px title and the 19px nav title sit 1px lower than Chrome puts them, and the two button labels land on a half pixel that Figma draws on the row above (&minus;0.5px). The offsets are Figma&rsquo;s baseline (its render bounds plus the glyph height from the font file) minus Chrome&rsquo;s, not fitted to the picture. What is left in the diff is glyph and curve edges: Figma&rsquo;s rasteriser against Chrome&rsquo;s. Flat fills match exactly."
+  },
+  "normalised_from": "mobile/withdraw-old-03",
+  "screen_generated": true
+}

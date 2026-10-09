@@ -1,0 +1,57 @@
+{
+  "id": "send-new-01",
+  "project": "mara",
+  "platform": "android",
+  "flow": "send-new",
+  "group": "Send: his",
+  "seq": 1,
+  "order": 1411,
+  "name": "Send: his 01 · contacts",
+  "title": "Enter MaraID",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:47556",
+  "figma_layer": "2.0 / Send 2.0",
+  "export_size": [
+    375,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "send-new-01",
+    "send new 01",
+    "contacts",
+    "enter maraid",
+    "search for contact"
+  ],
+  "catalogue": {
+    "sc": "1",
+    "diff": "0.99%",
+    "al": "±1px",
+    "note": "Mara 2.0 Send, the redesign, 375&times;800 at real size: no scaling, every number is the file&rsquo;s. Built static and for show. Auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment, and each box carries the size Figma resolved (all element boxes land within 0.25px of Figma&rsquo;s). No frame chrome: the frame&rsquo;s own 24px corners are left off. Search, Enter MaraID and the contact list A to Z. Static: the list is drawn as the frame shows it and cut where the frame cuts it; the two blocks that lie wholly below the frame (the three M contacts and section N) are not built. The list&rsquo;s scroll frame (0,143, 375&times;542) does not clip in Figma, so the list runs on under the tab bar: kept. Contact photos are Figma&rsquo;s export of each avatar at 4&times;, circle included, unchanged (lossless WebP). The QR icon is Figma&rsquo;s export with stroke simplification off: the simplified export loses its three corner squares. The status bar time is SF Pro Text: Figma&rsquo;s outline. Type is live Satoshi from the files on this Mac, embedded whole. Satoshi has no &#8358; (U+20A6): each naira sign is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. Icons and shapes are Figma&rsquo;s SVG export of each node, unchanged. Figma rounds every text baseline to the nearest pixel and Chrome floors it; where the two differ (12, 11, 19, 32 and 33px type) the line carries a 1px offset worked out from Satoshi&rsquo;s own metrics, so glyphs sit on Figma&rsquo;s rows. What is left in the diff is glyph and curve antialiasing; flat fills match exactly."
+  },
+  "normalised_from": "mobile/send-new-01",
+  "screen_generated": true
+}

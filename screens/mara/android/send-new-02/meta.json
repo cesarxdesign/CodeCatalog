@@ -1,0 +1,56 @@
+{
+  "id": "send-new-02",
+  "project": "mara",
+  "platform": "android",
+  "flow": "send-new",
+  "group": "Send: his",
+  "seq": 2,
+  "order": 1412,
+  "name": "Send: his 02 · amount",
+  "title": "Send",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "38:47530",
+  "figma_layer": "2.0 / Send 2.0",
+  "export_size": [
+    375,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "send-new-02",
+    "send new 02",
+    "enter amount",
+    "numpad"
+  ],
+  "catalogue": {
+    "sc": "1",
+    "diff": "1.41%",
+    "al": "±1px",
+    "note": "Mara 2.0 Send, the redesign, 375&times;800 at real size: no scaling, every number is the file&rsquo;s. Built static and for show. Auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment, and each box carries the size Figma resolved (all element boxes land within 0.25px of Figma&rsquo;s). No frame chrome: the frame&rsquo;s own 24px corners are left off. Send to and Enter amount, Preview button, percent row and the iOS numpad. Numpad digits (SF Pro Display) and letters (SF Pro Text), the status bar time and the delete key are Figma&rsquo;s outlines; the keys themselves are code. The numpad&rsquo;s background blur is kept (it sits on an opaque #D1D3D9, so it shows nothing). The contact photo is Figma&rsquo;s export of the avatar at 4&times;, circle included, unchanged. Type is live Satoshi from the files on this Mac, embedded whole. Satoshi has no &#8358; (U+20A6): each naira sign is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. Icons and shapes are Figma&rsquo;s SVG export of each node, unchanged. Figma rounds every text baseline to the nearest pixel and Chrome floors it; where the two differ (12, 11, 19, 32 and 33px type) the line carries a 1px offset worked out from Satoshi&rsquo;s own metrics, so glyphs sit on Figma&rsquo;s rows. What is left in the diff is glyph and curve antialiasing; flat fills match exactly."
+  },
+  "normalised_from": "mobile/send-new-02",
+  "screen_generated": true
+}

@@ -50,5 +50,6 @@
     "al": "±1px",
     "note": "Mara 1.0 Send, the agency design, 375&times;800 at real size: no scaling, every number is the file&rsquo;s. Built static and for show: overlaps, collisions and off-grid values are reproduced as Figma renders them, nothing is tidied. Auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment, and each box carries the size Figma resolved (all element boxes land within 0.25px of Figma&rsquo;s). No frame chrome: the frame&rsquo;s own 16px corners are left off. Transaction successful. The two button labels sit on half pixels (654.5 and 718.5: 27-high labels centred in 56-high buttons); they are put on the upper row. The amount field has no fill and no outline here, unlike the screen before: as in the file. The iOS status bar time is Figma&rsquo;s outline. Type is live Satoshi from the files on this Mac, embedded whole. Satoshi has no &#8358; (U+20A6): each naira sign is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. Icons and shapes are Figma&rsquo;s SVG export of each node, unchanged. Figma rounds every text baseline to the nearest pixel and Chrome floors it; where the two differ (12, 11, 19, 32 and 33px type) the line carries a 1px offset worked out from Satoshi&rsquo;s own metrics, so glyphs sit on Figma&rsquo;s rows. What is left in the diff is glyph and curve antialiasing; flat fills match exactly."
   },
-  "normalised_from": "mobile/send-old-03"
+  "normalised_from": "mobile/send-old-03",
+  "screen_generated": true
 }

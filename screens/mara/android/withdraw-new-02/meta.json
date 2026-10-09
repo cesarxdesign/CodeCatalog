@@ -1,0 +1,57 @@
+{
+  "id": "withdraw-new-02",
+  "project": "mara",
+  "platform": "android",
+  "flow": "withdraw-new",
+  "group": "Withdraw: his",
+  "seq": 2,
+  "order": 1512,
+  "name": "Withdraw, his 02 · Enter amount",
+  "title": "Withdraw",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "46:48459",
+  "figma_layer": "2.0 / Withdraw 2.0 (Enter amount)",
+  "export_size": [
+    375,
+    800
+  ],
+  "fonts": [
+    "Satoshi"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "withdraw-new-02",
+    "enter amount",
+    "withdraw new 02",
+    "preview button",
+    "numpad"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.33%",
+    "al": "±0.5px",
+    "note": "Read from Figma at real size (375&times;800, nothing scaled): auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment, everything else sits at its Figma offset, and all 94 boxes land on Figma&rsquo;s to 0.05px. Square-cornered: the frame&rsquo;s own 16px corners are left off and the diff leaves the four corners out (308 pixels). The account number is Satoshi Regular 11px with tabular lining figures and 2% tracking, not a monospace face. The iOS numpad is the library instance: key plates are CSS (white, 4.6 radius, 1px shadow of black at 30%; Figma&rsquo;s 60% corner smoothing is not in CSS and not in Figma&rsquo;s SVG export either), digits (SF Pro Display 25) and letters (SF Pro Text Bold 10) are Figma&rsquo;s outlines, the delete key is its vector. The numpad&rsquo;s 108.7 background blur is kept (54.4px backdrop blur) though its #D1D3D9 fill is opaque. Bank logo, round check, clear button and chevrons are Figma&rsquo;s SVG export. The dock (0,380) starts 5px under the body (ends 375) and the percent row follows at 468: no overlap. The naira sign is not in Satoshi (the files on this Mac hold no U+20A6) and Figma draws it from a fallback face: each one is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. The iOS status bar is Figma&rsquo;s SVG export: the time (SF Pro Text Semibold 17) as Figma&rsquo;s outline, signal, wifi and battery as its vectors. Baselines: Figma rounds a line&rsquo;s baseline to a whole pixel where Chrome rounds ascent and descent apart; the fee line and the four percent labels (12px bold) sit 1px lower than Chrome puts them. The offsets are Figma&rsquo;s baseline (its render bounds plus the glyph height from the font file) minus Chrome&rsquo;s, not fitted to the picture. What is left in the diff is glyph and curve edges: Figma&rsquo;s rasteriser against Chrome&rsquo;s. Flat fills match exactly."
+  },
+  "normalised_from": "mobile/withdraw-new-02",
+  "screen_generated": true
+}

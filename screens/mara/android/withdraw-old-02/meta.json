@@ -1,0 +1,58 @@
+{
+  "id": "withdraw-old-02",
+  "project": "mara",
+  "platform": "android",
+  "flow": "withdraw-old",
+  "group": "Withdraw: old",
+  "seq": 2,
+  "order": 1502,
+  "name": "Withdraw, old 02 · Withdrawal amount",
+  "title": "Withdrawal amount",
+  "frame": [
+    360,
+    800
+  ],
+  "interactive": false,
+  "states": [],
+  "provenance": "figma",
+  "figma_file": "6Jnf9SsBkrxovcD2Qv2KgC",
+  "figma_node": "46:48349",
+  "figma_layer": "1.0 / Withdraw 1.0 (Withdrawal amount)",
+  "export_size": [
+    375,
+    800
+  ],
+  "fonts": [
+    "Satoshi",
+    "Roboto"
+  ],
+  "files": {
+    "screen": "screen.html",
+    "embed": "embed.html",
+    "extra": [
+      "snippet.html"
+    ],
+    "source": [
+      "source/figma.png"
+    ],
+    "preview": "source/figma.png"
+  },
+  "embed_from": "snippet.html",
+  "embed_state": null,
+  "live": null,
+  "aliases": [
+    "withdraw-old-02",
+    "withdrawal amount",
+    "withdraw old 02",
+    "amount to receive",
+    "numeric keyboard"
+  ],
+  "catalogue": {
+    "sc": "1.0",
+    "diff": "1.08%",
+    "al": "±0.5px",
+    "note": "Read from Figma at real size (375&times;800, nothing scaled): auto-layout frames are flex with Figma&rsquo;s direction, gap, padding and alignment, everything else sits at its Figma offset, and all 76 boxes land on Figma&rsquo;s to 0.05px. Square-cornered: the frame&rsquo;s own 16px corners are left off and the diff leaves the four corners out (308 pixels). Kept as Figma renders it, flaws included. The orange &ldquo;Withdraw &#8358;6,500&rdquo; button (24,403 327&times;56) lies over the grey card (24,275 327&times;149): it covers the card&rsquo;s last 21px and the bottom 2px of the fee line &ldquo;Total will include &#8358;500 fee&rdquo; (ink y 397.6 to 405.1), whose letters are cut at y 403. The frame holds two keyboards in the same place, both starting at y 475, 46px above the top of the frame that holds them (0,521): the iOS instance &ldquo;NumericKeyboard&rdquo; (46:48365, 375&times;279) lies wholly under the Android set (46:48867: toolbar 42, keyboard 241, bottom nav 42, 375&times;325), which is opaque. What shows, and what is built, is the Android one; the iOS one is not drawn. So an Android keyboard and Android bottom nav sit under an iOS status bar. The title is at y 110 here against 118 on the other two old screens. &ldquo;&#8358;30,000&rdquo; (22px, 33-high box) and &ldquo;Current Balance&rdquo; (14px, 21-high box) are top-aligned, so their baselines are 9px apart. Keyboard digits are live Roboto 400 25px; the keys with symbols, the toolbar icons and the nav icons are Figma&rsquo;s SVG export, shadows included. The naira sign is not in Satoshi (the files on this Mac hold no U+20A6) and Figma draws it from a fallback face: each one is Figma&rsquo;s own outline of the glyph, inline, 0.572em wide. The iOS status bar is Figma&rsquo;s SVG export: the time (SF Pro Text Semibold 17) as Figma&rsquo;s outline, signal, wifi and battery as its vectors. Baselines: Figma rounds a line&rsquo;s baseline to a whole pixel where Chrome rounds ascent and descent apart; the 23px title, the 19px nav title and the 28px amount sit 1px lower than Chrome puts them, and the button label lands on a half pixel that Figma draws on the row above (&minus;0.5px). The offsets are Figma&rsquo;s baseline (its render bounds plus the glyph height from the font file) minus Chrome&rsquo;s, not fitted to the picture. What is left in the diff is glyph and curve edges: Figma&rsquo;s rasteriser against Chrome&rsquo;s. Flat fills match exactly."
+  },
+  "normalised_from": "mobile/withdraw-old-02",
+  "screen_generated": true
+}
